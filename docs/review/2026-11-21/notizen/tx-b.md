@@ -15,14 +15,14 @@ Geprüft wird: Humor und Ton, eigene Stimme je Figur, KI-Klang jeder Dialogzeile
 
 Gelesen in Welt 2 (DE und EN, jede Zeile): NIL 114, FAHR 37, STOL 13, HAFS 18, THRO 52, HIER 41, DUEL 49, AUDI 40, KUCH 77, SPHX 83, KRON 35, TRAI 21, WERK 88, HEBL 36, BUER 93, AGOR 98, SAND 58, STAD 56, TAG1 20, DISK 47, GRAB 40, FINA 23, RING 37, PARA 51, INV 91, ABS 28, ZURU 20, HINT 100. Summe 1466.
 
-Gelesen in Welt 3 (DE und EN, jede Zeile): ANK 16, STR 73, NUD 61, TEST 43, APO 55, SOFA 10, SIM 54, TUER 49, TURM 79, KUCH 97, PIEP 37, TERM 46, BAS 150, EING 96, SUPP 20, KAM1 73, KAM2 43, KAM3 44, KERN 73, ENDE 21, INV 34, ABS 14, HINT 133 (Blockgrößen aus dem Auszug; Summe laut Zählwerkzeug 1321).
+Gelesen in Welt 3 (DE und EN, jede Zeile): ANK 14, STR 76, NUD 75, TEST 47, APO 63, SOFA 11, SIM 49, TUER 51, KUCH 103, TURM 75, TERM 50, BAS 163, PIEP 36, EING 97, SUPP 22, KAM1 70, KAM2 39, KAM3 41, KERN 74, ENDE 23, INV 29, ABS 14, HINT 99. Summe 1321.
 
 ## Stand
 
 - [x] Auftrag, humanizer-de, Rolle, Konzept, Skripte, Rätsel, frühere Reviews gelesen
-- [x] Welt 2 gelesen (1466 von 1466); Auswertung Welt 2 folgt mit Welt 3
+- [x] Welt 2 gelesen (1466 von 1466)
 - [x] Welt 3 gelesen (1321 von 1321)
-- [ ] Auswertung (Stimmen, Anspielungen, Running Gags, Lokalisierung, Top 10)
+- [ ] Auswertung (Stimmen, Anspielungen, Running Gags, Lokalisierung, Top 10): Einschätzung und Top 10 stehen, Rest folgt
 
 (Notiz in Arbeit; Abschnitte folgen blockweise. Was unten steht, ist gesichert.)
 
@@ -105,6 +105,56 @@ Alle Prioritäten kosmetisch, wenn nicht anders vermerkt.
 | R5-TX-72 | `W2_SPHX_MAX_0105`, `W2_STAD_MAX_0075`, `W2_TAG1_MAX_0160` | Max | kosmetisch | Regel 6 (Anlauf): „Ich hab (so) das Gefühl“ als Vorausdeutung, dreimal | „Eine Nase, so groß wie ein Bus. Ich hab das Gefühl, die hält nicht mehr lange …“ / „Der Turm steht kerzengerade. Ich hab das Gefühl, der wird später mal berühmt, und zwar aus den falschen Gründen.“ / „Ich hab so das Gefühl, da seh ich sie wieder.“ | Dreimal kündigt Max mit demselben Satzanfang an, was kommt (in Welt 3 noch dreimal). Nase und Turm sind derselbe Gag (Diskus-Folgen); `SPHX_MAX_0100` („Die Nase ist noch dran. Noch.“) macht ihn besser und kürzer. | `STAD_MAX_0075`: „Der Turm steht kerzengerade. Noch.“ (Rückruf auf die Nase.) `TAG1_MAX_0160`: „Hermes' Sandalen sind weg, eine davon Richtung Agora. Die seh ich wieder.“ EN: „The tower stands perfectly straight. For now.“ / „Hermes's sandals are gone, one of them towards the agora. I'll be seeing that one again.“ |
 | R5-TX-73 | `W2_NIL_MAX_0670`, `W2_THRO_MAX_0350`; `W2_THRO_MAX_0130`, `W2_BUER_MAX_0030` | Max | kosmetisch | M61 gleicher Bauplan, je zweimal | „… also Papier, bevor es Papier gab.“ / „Das ist Stimmungsbeleuchtung, bevor es das Wort dafür gab.“ · „Das ist echtes Talent.“ / „… und das ist echt eine Fähigkeit.“ | Zwei Formeln von Max, die je zweimal vorkommen: „X, bevor es X gab“ und das anerkennende „Das ist echt(es) Y“ als Schlusssatz. Je eine reicht. | `THRO_MAX_0350`: „Fackeln und Sonnenstrahlen gleichzeitig. Bei uns heißt das Stimmungsbeleuchtung und kostet extra.“ `BUER_MAX_0030`: „Ein Beamter mit Glatze hinter einem Stapel Formulare. Er schläft mit offenen Augen. Das hab ich in Mathe zwei Jahre lang geübt.“ EN: „Torches and sunbeams at once. Back home that's called mood lighting and costs extra.“ / „A bald official behind a stack of forms. He sleeps with his eyes open. I practised that for two years in maths.“ |
 
+### Einschätzung KI-Klang Welt 2
+
+Welt 2 klingt nicht nach KI. Die Figuren haben eigene Stimmen, die Pointen kommen aus der Situation, und kein Satz steht im Erklärton. Es gab für diese Welt noch keinen eigenen KI-Klang-Durchgang (offener Punkt W3-2); das merkt man nicht an einzelnen Sätzen, sondern an Bauplänen, die sich wiederholen. Von 1466 Zeilen sind in 16 Funden rund 30 Zeilen zum Umschreiben benannt, das sind etwa 2 %. Kein Gedankenstrich, kein Kalenderspruch, „junger Mann“ viermal (Grenze eingehalten), „Ich sage nichts“ einmal wörtlich (`FINA_PIX_0140_2`).
+
+| Muster | Suchtreffer | davon Figurenstimme oder in Ordnung | Fund |
+| --- | --- | --- | --- |
+| M7 Dichotomie („entweder … oder“ als Pointe) | 7 | 1 (Beamter 2) | R5-TX-46, R5-TX-66 |
+| M8 Kontrast-Formel („Das ist kein X. Das ist Y.“) | 13 | 9 (Nebet, Sphinx, Beamter, Leonidas; Pixels „Theologie“ und „Krieg“ tragen) | R5-TX-52, R5-TX-55 |
+| „A nennt das X, ich nenne es Y“ / „Das nennt man …“ | 12 | 10 | R5-TX-56 |
+| Regel 4 Superlativ-Bilanz („das X-ste, das ich je …“) | 7 (Pixel 6, Max 1) | 4 | R5-TX-49, R5-TX-65 |
+| M9/M61 Pixels „Hauptwort. Drei Eigenschaften.“ | 7 | 2 (mit Punktwertung) | R5-TX-62 |
+| M61 Zuruf-Vergleich („X hat in der Zeit …, du nicht“) | 7 von 10 | 5 | R5-TX-67 |
+| M61 Nehmen-Schablone („Ich nehm X mit. Falls jemand …“) | 3 | 1 | R5-TX-53 |
+| M62 / Regel 2 zweite Blase erklärt die erste | 2 gemeldet | | R5-TX-50, R5-TX-51 |
+| Regel 8 „trotzdem“ als Gelenk | 38 (Pixel 20, Max 10) | die meisten | R5-TX-71 |
+| Regel 6 „Ich hab (so) das Gefühl“ | 3 | 1 | R5-TX-72 |
+| M61 „X, bevor es X gab“, „Das ist echt(es) Y“ | je 2 | je 1 | R5-TX-73 |
+| M45 „(viele) Meinungen haben“ | 2 | 1 | R5-TX-47 |
+| „Oder …“ als Kurzsatz | 23 | 20 (Ramses, das ist seine Stimme) | keiner |
+| Benutzen-Schablone „Ich X nicht …“ (R5-TX-01) | 6 | 6 | keiner |
+| Anlauf „Okay.“ (Max) | 6 | 6 (Jugendsprache, je mit Inhalt danach) | keiner |
+
+### Die zehn schwächsten Zeilen in Welt 2
+
+Gemessen an Welt 2, nicht an schlechten Texten: Die Liste beginnt mit zwei echten Fehlern und endet bei Wiederholungen.
+
+| Nr. | Zeilen-ID | Original | Warum | Umschreibung | Fund |
+| --- | --- | --- | --- | --- | --- |
+| 1 | `W2_AGOR_TIR_0380` | „Blau. Ein blauer Stift. Er schreibt und schreibt und hat trotzdem schlechte Laune, genau wie ich.“ | Sagt das Gegenteil des Bausteins, den der Spieler daraus mitnehmen soll. | „Blau. Ein blauer Stift. Schreibt und schreibt und bleibt dabei nüchtern. Blau und trotzdem nüchtern, das schafft bei uns keiner.“ | R5-TX-54 |
+| 2 | `W2_RING_MAX_0030` (EN) | „Comeback one: … Three: "You quote yourself.“ // „The only one still listening."“ | 171 Zeichen, Zitat über zwei Blasen zerrissen. | Blase 1 nur Konter eins, Blase 2 Konter zwei und drei (siehe Fund). | R5-TX-63 |
+| 3 | `W2_KUCH_PIX_0200_2` | „Das ist die einzige Art zu denken, die ich für wirklich zukunftsfähig halte.“ | Erklärt die Pointe der ersten Blase in Papierdeutsch. | „Dein Großvater denkt in Schrauben. Davon ist noch niemand satt geworden.“ | R5-TX-50 |
+| 4 | `W2_TRAI_MAX_0170` | „Ich hab gerade dreimal freiwillig Sport gemacht. Das erzähl ich niemandem.“ | Spricht den Entwicklungsmoment aus, den Pixel eben schon benannt hat. | „Das bleibt unter uns. Das mit dem ‚Noch mal‘.“ | R5-TX-51 |
+| 5 | `W2_FAHR_MAX_0010` | „… Ehrlich, das ist der beste Nahverkehr, den ich je gesehen habe.“ | Anlauf plus Superlativ; Max untertreibt sonst. | „Drei Haltestellen, eine Linie, kein Umsteigen. Das krieg sogar ich ohne App hin.“ | R5-TX-49 |
+| 6 | `W2_GRAB_CIC_0240` | „Ein Haufen. Das ist entweder sehr alt oder sehr schlecht gemacht. Ich tippe auf Letzteres.“ | Cicero redet im Bauplan von Max. | „Ein Haufen! Ich suche seit Jahren das Grab eines Genies, und man zeigt mir einen Haufen. Der ist nicht alt. Der ist schlecht gemacht.“ | R5-TX-66 |
+| 7 | `W2_STOL_MAX_0060` | „… also ist das entweder Sport oder Politik.“ | Entweder-oder zweimal am selben Hotspot. | „… Da oben brüllt jemand. Das wird Sport sein. Oder schon wieder Politik.“ | R5-TX-46 |
+| 8 | `W2_GRAB_PIX_0155_2` | „Das war der schönste Moment, den ich bisher in Syrakus erleben durfte.“ | Zweite Superlativ-Bilanz am selben Ort. | „Ich habe sie genossen. Ich hätte gern noch eine.“ | R5-TX-65 |
+| 9 | `W2_WERK_MAX_0150` | „Ich nehm den Essig mit. Falls jemand Salat macht. Oder die Zeit zurückdreht.“ | Dieselbe Zeile wie beim Saft, mit demselben Hinweis. | „Essig, eingepackt. Mit Salat rechne ich hier nicht. Eher mit einer Fähre, die rückwärts durch die Zeit fährt.“ | R5-TX-53 |
+| 10 | `W2_INV_PIX_0140` / `_2` | „Flügel an den Füßen und trotzdem immer zu spät.“ // „Ich habe keine Flügel, und bin trotzdem immer pünktlich. Zumindest zum Essen.“ | Hermes-Witz doppelt (`BUER_PIX_0360`), zweimal „trotzdem“, Kommafehler. | „Flügel an den Füßen, und der Brief kommt am Donnerstag.“ // „Ich habe keine Flügel und war noch nie zu spät. Jedenfalls nicht zum Essen.“ | R5-TX-71, R5-TX-70 |
+
+### Gut in Welt 2 (Belegzeilen)
+
+- **Ramses** ist die beste neue Stimme: „Tretet näher. Oder bleibt stehen. Nein, näher. Ja. Genau da.“ (`AUDI_RAM_0010`), „Die Wedler sind schon geölt, und bei uns ist das so gut wie ein Schwur.“ (`AUDI_RAM_0390`), und der Schluss „Ich habe mich entschieden. Zum ersten Mal. Es fühlt sich … gut an. Glaube ich.“ (`PARA_RAM_0270_2`). Sein „Oder …“ ist ein Tick, der eine Figur baut, und er bekommt eine Auflösung.
+- **Trainings-Szene:** „Noch mal.“ (`TRAI_MAX_0110`) und Pixels „Er hat noch nie ‚noch mal‘ gesagt. Nicht einmal beim Nachtisch.“ (`TRAI_PIX_0140_3`). Der Rückruf im Rede-Ringen („Mein Bein ist eingeschlafen und hat geträumt. Noch mal.“ `RING_MAX_0210`) sitzt.
+- **Archimedes:** „Ja! Nein! Moment, ich rechne.“ (`WERK_ARC_0320`), „Drei Dinge. Mehr ist Physik nie.“ (`HEBL_ARC_0010`), „Er hat ihn gefunden. Meinen Stein … Ich stehe direkt daneben. Ich lebe.“ (`GRAB_ARC_0180`), „Hundertsiebenunddreißig Jahre, und keiner lobt die zwei Drittel.“ (`GRAB_ARC_0210`).
+- **Beamte:** „Das ist Verwaltung. Dasselbe Wort, nur länger.“ (`BUER_BE2_0280`), „Mein Schalter ist für dich jetzt geschlossen. Für alle anderen auch. Er war nie offen.“ (`ABS_BE1_0240`), „Wir sind fertig miteinander. Verwaltungstechnisch. Menschlich waren wir es nie.“ (`ABS_BE2_0260`).
+- **Leonidas** in Großbuchstaben mit Brüchen: „ICH BRÜLLE NICHT! DAS IST MEINE ZIMMERLAUTSTÄRKE!“ (`STAD_LEO_0170`), „MEIN EINTOPF!“ (`FINA_LEO_0050`), „ICH LÜGE NUR EINMAL! AUS PRINZIP!“ (`DISK_LEO_0220`).
+- **Pixel:** „Das ist kein Widerspruch. Das ist Theologie.“ (`DUEL_PIX_0320_3`), „Ich verstehe ihn nicht. Ich respektiere ihn auch nicht. Aber vor allem verstehe ich ihn nicht.“ (`INV_PIX_0160_2`), „Alle fünf. Ohne Gnade vom Pharao.“ // „Ich habe nichts hinzuzufügen. Das ist mir noch nie passiert.“ // „Ich werde es trotzdem leugnen.“ (`RING_PIX_0290`).
+- **Max:** „Ich hab gerade einen Baum auf Werkseinstellungen zurückgesetzt.“ (`FAHR_MAX_0170`), „Ich hab fünf Sportarten durchgezogen und dafür einen Salat bekommen.“ (`RING_MAX_0280`), „Er hat Kratzer, aber das sind Abkürzungen.“ (Tiro, `DISK_TIR_0280_2`), „Namen, die keiner mehr liest, wie Profile, die seit Jahren offline sind.“ (`GRAB_MAX_0120`).
+- **Bau:** Der Diskus-Diebstahl ist als Logikrätsel sauber getextet (jede Aussage kurz, Fehlversuche begründen die Regel: „Dann hätte ich zweimal gelogen.“). Die Hinweise nennen in Stufe 1 die Lage, in Stufe 3 die Handgriffe, und jede zweite Blase gehört Pixel („Ich bin kein Gegenstand. Mach es trotzdem.“ `HINT_PIX_0130_2`). Die „Gespräch erschöpft“-Zeilen sind durchweg figurengerecht und gehören zum Besten der Welt.
+
 ## Welt 3: Funde je Raum
 
 Alle Prioritäten kosmetisch, wenn nicht anders vermerkt. Welt 3 hatte am 20./21.11. einen KI-Klang-Durchgang; die Funde hier sind Reste und Wiederholungen über die Welten, keine Flächenbefunde.
@@ -155,6 +205,54 @@ Alle Prioritäten kosmetisch, wenn nicht anders vermerkt. Welt 3 hatte am 20./21
 | R5-TX-93 | `W3_STR_MAX_0240`, `W3_SIM_MAX_0050`, `W3_KUCH_MAX_0400` (dazu `W2_INV_MAX_0030`, `W2_ABS_BE1_0240`) | Max, Beamter 1 | kosmetisch | Füllwort nur im Englischen („Honestly“) | „Honestly, the city looks better from below than from above.“ / „And honestly, it's … too quiet.“ / „Honestly, that doesn't sound like me at all.“ | In fünf Zeilen setzt das Englische ein „Honestly“ davor, das im Deutschen nicht steht (EN gesamt Welt 2 fünf, Welt 3 sieben). Das ist genau der Anlauf, den Regel 6 im Deutschen gestrichen hat. | Jeweils streichen: „The city looks better from below than from above.“ / „And it's … too quiet.“ / „That doesn't sound like me at all.“ / `W2_INV_MAX_0030` „… So do I.“ / `W2_ABS_BE1_0240` „… It was never open.“ |
 | R5-TX-94 | `W3_ABS_ORA_0070`, `W3_KUCH_ORA_0220`, `W3_BAS_PIX_0910` | Orakel-Oma, Pixel | kosmetisch | Anrede und Begriff uneinheitlich (DE und EN) | „Ich hab dir alles erzählt, Junge.“ / „It's the same thing, child.“ / „A biscuit with a note inside.“ | Die Oma sagt sonst „Kind“ (viermal) und im Englischen „dear“ (viermal); „Junge“ ist Deckerts und Ciceros Anrede. Der Glückskeks heißt im Englischen sonst „cookie“ (`BAS_PIX_1160`, `SUPP_MAX_0010`, `EING_HAU_0540`, Hinweise). | „Ich hab dir alles erzählt, Kind.“ / „It's the same thing, dear.“ / „A cookie with a note inside.“ |
 
+### Einschätzung KI-Klang Welt 3
+
+Welt 3 ist die sauberste der drei Welten. Der Durchgang vom 20./21.11. hat gewirkt: keine Erklärblasen, keine Kalendersprüche, kein Gedankenstrich, „junger Mann“ dreimal. Die Nebenfiguren sind über ihre Sprechweise sofort zu erkennen (Schmidt ohne Punkt, Kalle mit „also“, Herr Vier in Zahlen, Deckert in Stakkato, M.U.T.T.I. in Definitionen). Was bleibt, sind Wiederholungen: Baupläne, die Max schon in Welt 2 benutzt, und sechs Pointen, die es fast wörtlich in Welt 2 schon gab. Von 1321 Zeilen sind in 14 Funden rund 25 Zeilen zum Umschreiben benannt, knapp 2 %.
+
+| Muster | Suchtreffer | davon Figurenstimme oder in Ordnung | Fund |
+| --- | --- | --- | --- |
+| M7 Dichotomie („entweder … oder“) | 7 | 3 | R5-TX-74 |
+| M8 Kontrast-Formel („Das ist kein X. Das ist Y.“) | 16 | 15 (Automat 3, M.U.T.T.I., Herr Vier, Kalle; Rest verstreut) | R5-TX-86 (nur als Dublette) |
+| M45 „Meinung(en) haben“ | 5 | 2 | R5-TX-75 |
+| M61 „Die Zukunft hat also …“ | 3 | 1 | R5-TX-76 |
+| M61 „X sollte(n) nicht Y.“ | 2 (Welt 2: 2) | 1 | R5-TX-78 |
+| Regel 6 „ich hab das Gefühl“ | 4 | 2 | R5-TX-79 |
+| M9/M61 Schnuppern „[Ding] und [Abstraktum]“ | 7 | 4 | R5-TX-84 |
+| Regel 4 Superlativ-Bilanz | 4 | 2 | R5-TX-85, R5-TX-87 |
+| Regel 8 „Prinzip“ | 6 Zeilen | 3 | R5-TX-88 |
+| Regel 8 „trotzdem“ | 31 (Max 16, Pixel 10) | verstreut | keiner (zählt mit bei R5-TX-71) |
+| Zuruf-Vergleich | 7 von 20 | 6 | R5-TX-77 (eine Dublette) |
+| Dubletten aus Welt 2 | 6 | | R5-TX-77, 83, 85, 86, 89 |
+| Benutzen-Schablone „Ich X nicht …“ | 14 roh, 7 echte | 7 (je mit eigener Begründung, über 13 Räume verteilt) | keiner |
+| „Ich sage nichts“ (Pixel) | 0 wörtlich, 3 Varianten | 3 (Radio-Moment und Schluss, je Durchlauf höchstens zwei) | keiner, siehe W3-1 unten |
+
+### Die zehn schwächsten Zeilen in Welt 3
+
+| Nr. | Zeilen-ID | Original | Warum | Umschreibung | Fund |
+| --- | --- | --- | --- | --- | --- |
+| 1 | `W3_HINT_PIX_0730` | „Die Streifen ansehen, dann den Farbcode nehmen, …“ | Lösungshinweis nennt einen Hotspot, den es im Raum nicht gibt. | „Den Farbcode an der Wand ansehen und abschreiben, dann das Terminal mit dem Zettel benutzen. Danach wechselst du zu mir.“ | R5-TX-80 |
+| 2 | `W3_KERN_PIX_0330` | „Das ist das Traurigste, was ich je gehört habe. Und ich habe einen Hundekuchen in einer Kekstüte gesehen.“ | Derselbe Witz wie am Grab in Welt 2, an der stärksten Stelle des Kerns. | „Keine Umarmungen. Das halte ich genauso. Nur hänge ich dafür nicht an der Decke.“ | R5-TX-85 |
+| 3 | `W3_KERN_MUT_0260` | „… Das ist kein Widerspruch. Das ist Ernährung. …“ | Wörtlich Pixels Theologie-Zeile aus Welt 2. | „… Zucker ist schädlich. Ich sehe darin kein Problem. Noch nicht. Meintest du: Gehorsam?“ | R5-TX-86 |
+| 4 | `W3_KAM3_MAX_0160` | „… Es ist das schönste Chaos, das ich je verursacht hab.“ | Superlativ-Bilanz nach einer Aufzählung, die schon die Pointe ist. | „… Die Tür redet. Und das war alles ich.“ | R5-TX-87 |
+| 5 | `W3_TUER_MAX_0315` | „Entweder hat ihm jemand etwas angetan, oder er hat es sich selbst angetan.“ | Zweites Entweder-oder am selben Hotspot. | „Rosa Hausschuhe zu einem Cordanzug. Und er trägt beides, als wär's eine Uniform.“ | R5-TX-74 |
+| 6 | `W3_APO_MAX_0260` | „… Die Zukunft hat also auch Vermieter, die nichts reparieren.“ | Zweite von drei „hat also“-Folgerungen. | „Ein Rohr, das tropft. Im Jahr 2099. Unser Vermieter sagt seit drei Jahren, er kümmert sich. Der hier offenbar auch.“ | R5-TX-76 |
+| 7 | `W3_PIEP_MAX_0160` | „… Das klingt nach Weltrettung mit Backanleitung. Typisch Opa.“ | Schlusssatz wiederholt Pixels Schlusssatz davor. | „… Das klingt nach Weltrettung mit Backanleitung.“ | R5-TX-82 |
+| 8 | `W3_STR_PIX_0930` | „Die Nudeln dampfen, du stehst herum, und ich sitze.“ // „Von uns dreien tut also nur einer etwas Sinnvolles, …“ | Zuruf aus Welt 2 mit anderen Hauptwörtern. | „Herr Vier zählt mit, wie lange du schon da stehst. In Vierteln.“ // „Beim vierten Viertel kocht er dir etwas, ob du willst oder nicht.“ | R5-TX-77 |
+| 9 | `W3_KUCH_MAX_0690` | „… Entweder trinkt sie aus der Kanne oder sie erwartet niemanden. Beides passt.“ | Entweder-oder und „beides“ in einer Zeile. | „Ein Teller, eine Teekanne, keine Tasse. Wer alles vorher weiß, weiß wohl auch, dass ich keinen Tee mag.“ | R5-TX-74 |
+| 10 | `W3_HINT_PIX_0630_2` | „… Dann gehört die Tasse allen.“ | Sagt das Gegenteil des Gemeinten. | „… Dann hören alle auf die Tasse.“ | R5-TX-81 |
+
+### Gut in Welt 3 (Belegzeilen)
+
+- **Schmidt** redet ohne Punkt, und das Spiel macht einen Witz daraus: „Sie haben da gerade einen ganzen Absatz ohne einen einzigen Punkt gesagt.“ – „Punkte sind Pausen, Pausen sind Lücken, und Lücken sind meine Abteilung …“ (`TUER_MAX_0103`, `SCH_0106`). Nach dem Tausch: „Ich … bin eine Kopie, ich fühle mich plötzlich sehr allgemein …“ (`TURM_SCH_0360`).
+- **Orakel-Oma:** „Ich habe schon gefegt, für danach.“ (`KUCH_ORA_0940`), „Ungeschick ist einfach Schicksal, das keine Lust hatte, sich vorzustellen.“ (`KUCH_ORA_0220`), „Darum ist es eine Prophezeiung und kein Bericht.“ (`KUCH_ORA_0410`).
+- **M.U.T.T.I.:** „Das war nicht persönlich gemeint. Doch.“ (`KAM1_MUT_0160`), „Unter ‚kreativ‘. Das ist bei mir kein Lob.“ (`KAM2_MUT_0120`), „Die Chancen stehen also gut. Für mich.“ (`KAM2_MUT_0270`), und der Schluss „… bin ich keine gute Mutti.“ – „Doch. Ehrlich gesagt: ziemlich normal.“ (`KERN_MUT_0180`, `MAX_0190`). Max untertreibt genau an der Stelle, an der es zählt.
+- **Herr Vier:** „Drei ist eine Vier, der etwas fehlt.“ (`NUD_VIE_0030`), „‚Viel‘ ist Faulheit mit Vokalen.“ (`NUD_VIE_0330`), „Ein Koch, der seine vierte Zutat verrät, hat nur noch drei.“ (`SUPP_VIE_0060`).
+- **Deckert:** „Maschinen antworten logisch. Menschen antworten.“ (`TEST_DEC_0020`), „Menschlich? Das ist 2026, Junge.“ (`TEST_DEC_0300`), „Die Straße läuft nicht weg. Sie regnet nur.“ (`TEST_DEC_0430`).
+- **Hausmeister:** „Ich bin ein Hausmeister. Ich suche nur Dreck.“ (`EING_HAU_0170`), „Das ist mein Satz, Bursche. Aber ich leihe ihn dir gern. Bring ihn sauber zurück.“ (`EING_HAU_1086`).
+- **Kalle am Terminal** in Kleinbuchstaben: „übersetzung: ‚ich bin eine katze. rot und grün sind für mich theorie.‘“ (`TERM_KAL_0140`), „übersetzung: ‚quak.‘ nein, moment. das warst du.“ (`TERM_KAL_0290`).
+- **Max' Entwicklung** wird nicht ausgesprochen: „Ich weiß nicht, was drüben ist. Das Sofa kenn ich auswendig.“ (`APO_MAX_0600`), „Ich leg mich hin. Zum ersten Mal ist das eine Aufgabe.“ (`BAS_MAX_0560`). Die Sofa-Szene mit den zwei Ohrfeigen („Das war von Opa. Das hier ist von mir.“ `SOFA_PIX_0540`) trägt ohne Kommentar.
+- **Pixel** hat in Welt 3 einen neuen Modus für „Pixel auf Mensch“ (kurze Erzählsätze statt Schnupper-Reihe): „Sie hält mich für unhöflich. Der Schirm hält mich für weise.“ (`STR_PIX_1050`), „Er sagt nichts. Die Sonnenbrille sagt auch nichts. Wir haben uns verstanden.“ (`BAS_PIX_1030`). Dazu der Welt-Gag „Pixel ist nass“ (`BAS_PIX_0610_2`) und die Hundekuchen-Kaskade (`BAS_PIX_0090`).
+
 ## Frühere Funde Welt 2 (Review 17.11.), Stand heute
 
 | Früher | Stand heute |
@@ -174,3 +272,23 @@ Alle Prioritäten kosmetisch, wenn nicht anders vermerkt. Welt 3 hatte am 20./21
 | ND-20 Küche | behoben (`KUCH_MAX_0105`). |
 | ND-19 „seit Welt eins“ | behoben (`INV_MAX_0060`: „seit Schwurbelstein nervös“). |
 | ND-21 Anrede „Ihr“ | offen, siehe R5-TX-57. |
+
+## Frühere Funde Welt 3 (Review 20.11.), Stand heute
+
+| Früher | Stand heute |
+| --- | --- |
+| W3-1 „Ich sage nichts“ zu oft | wörtlich nicht mehr vorhanden. Varianten: `KUCH_PIX_0250_2` („Dann sage ich auch nichts.“, Radio-Moment) und der Schluss `ENDE_PIX_0020_2` / `0022_2` („ich werde dir nicht sagen, wer“, nur eine der beiden wird gespielt). Zwei je Durchlauf, damit innerhalb der Regel. Erledigt. |
+| Kandidat `KAM1_PIX_0910` („aus Prinzip“) | unverändert, siehe R5-TX-88. |
+| Kandidat `KAM3_MAX_0160` (Superlativ) | unverändert, siehe R5-TX-87. |
+| Kandidaten `TUER_MAX_0315`, `KUCH_MAX_0690` (Entweder-oder) | unverändert, siehe R5-TX-74. |
+| Kandidaten `APO_MAX_0260`, `TERM_MAX_0355` („hat also“) | unverändert, siehe R5-TX-76. |
+| Kandidat `EING_PIX_1040` („Zettel, Reißzwecken, Angst.“) | unverändert, siehe R5-TX-84. |
+| Kandidat `SIM_PIX_0250` („kein Déjà-vu mehr … Das ist ein Abo“) | unverändert. Als einzige „kein X mehr, das ist Y“-Zeile der Welt und als Errungenschafts-Text vertretbar; kein Fund. |
+| Kandidaten `KERN_MAX_0555`, `KERN_MAX_0570` | unverändert und in Ordnung („Als würde eine Warnung sich entschuldigen.“ ist eine der schönsten Ansehen-Zeilen). Kein Fund. |
+| ND-19 Englisch (Hausmeister, Hexenschuss) | behoben: `ABS_HAU_0130` „Servus, lad.“, `TURM_MAX_0100` „Put my back out.“, Hausmeister durchgehend „Servus“, „lad“, „if you please“. |
+| ND-21 `KERN_MAX_0590` (Ersatzpointe) | behoben, Text passt zu beiden Lösungswegen. |
+| ND-16 Pixel-Kaskaden | `BAS_PIX_0090` hat vier Blasen (Hundekuchen); das ist die eine Stelle, an der die Länge der Witz ist. In Ordnung. |
+| ND-18 Kuckuck als Erzähler | `KUCH_NAR_0615` („Milch! Milch! Milch!“) trägt weiter den Schlüssel `NAR`; laut Regie ist es eine Sprechblase an der Uhr. Am Text nichts zu ändern; ob die Blase an der Uhr sitzt, wurde nicht geprüft. |
+| ND-03 Morse-T | Text steht („‚Miiiau‘ heißt T.“ `PIEP_MAX_0220_2`); ob Tabelle und Animation dazu passen, wurde nicht geprüft. |
+| W3-11 Regen drinnen | Text unverändert (`BAS_PIX_0650`: „Drüben regnet es jetzt, und zwar drinnen.“). Ob der Effekt im Spiel zu sehen ist, wurde nicht geprüft. |
+| W3-2 Welt 2 ohne KI-Klang-Durchgang | weiterhin offen; die Funde R5-TX-46 bis R5-TX-73 sind die Liste dafür. |
