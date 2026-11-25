@@ -209,8 +209,6 @@ klick 10 280
 warte
 klick 10 280
 warte
-klick @ausgang_trollbruecke
-warte
 klick @waldemar
 warte
 option 0290
