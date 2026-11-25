@@ -155,6 +155,7 @@ Weiterhin offen aus früheren Reviews: alle Figuren auf einer Bodenlinie (W1-17)
 | ID | Raum | Priorität | Kategorie | Beschreibung | Beleg | Vorschlag |
 | --- | --- | --- | --- | --- | --- | --- |
 | R5-W1-32 | dachboden (ZS1, Packen) | wichtig | Grafik | Der Dosenöffner hat im Pack-Fenster ein Platzhalterbild: grünes Feld mit „Dos“. | `belege/pr-w1/R5-W1_zs1_packen_dosenoeffner_platzhalter_reisetasche.png` | Inventarbild für den Dosenöffner. |
+| R5-W1-37 | thronsaal → dachboden (Welt-Ende) | kosmetisch | Animation / Timing | Der Werbeblock, der Max und Pixel zurückholt, ist nicht zu sehen. Nach der Kreisblende steht man schon auf dem Dachboden, und ein Erzählsatz beschreibt ihn nachträglich wie eine Regieanweisung: „Werbeblock: Milchglas, Kuh, leeres Preisschild, Blitz. Fünf Sekunden, dann Rauschen.“ Während dieser Szene zeigt der Zeiger (Sanduhr) den Namen „Zapp-O-Mat 3000“ an, obwohl nichts klickbar ist. Im Film in Tempo 1 gesehen. | `belege/pr-w1/R5-W1-37_weltende_blende_und_werbeblock_nur_text.png` (Film `filme/thron`, Bilder 866 und 884, 4 Bilder/s); Vorlage `docs/skript/welt-1.md` Z. 1422 (`W1_THRO_MAX_0600`) | Fünf Sekunden Vollbild-Werbung (ein Standbild Milchglas mit Blitz und Rauschen reicht) zwischen Blende und Dachboden; Namensanzeige in Szenen ausblenden. |
 | R5-W1-33 | dachboden (ZS1, Packen) | kosmetisch | Sonstiges (Oberfläche) | Unter „Daneben liegt“ steht „Opas Reisetasche“ selbst als packbarer Gegenstand (Pixel dazu: Ersatzzeile `SYS_ERS_PIX_0130`). Der Zeiger ist im Pack-Fenster eine Sanduhr. Opas Zettel und der Tarifvertrag stehen nicht in der Liste und verschwinden erst beim Drehen. | Bild wie oben; Verlauf 9272, 9389–9390 | Reisetasche aus der Liste nehmen, normalen Zeiger zeigen. |
 
 Gut hier: Pixels Pack-Kommentare zu Socke, Zeugnis, Eimer, Fell und Dosenöffner geben klare Hinweise; ein drittes Stück wird mit eigener Zeile abgelehnt; die Pfote sagt „Tasche packen, Knopf drehen“.
@@ -210,6 +211,8 @@ Grundlage: (a) Filme in Tempo 1 mit `textmodus lesen` aus dem laufenden Spiel (`
 | Abstellkammer 1 | keine Besen | W1-20 weiterhin offen |
 | Klassenzimmer | Alwin `ruehren` mit eigenem Kessel im Figurenbild, der Max' Beine überdeckt | R5-W1-21 |
 | Abstellkammern nach R12 | Smaugi `staubwedel`, Raum aufgeräumt | gut |
+| R13, Thronsaal-Finale (Socke, Kochlöffel, Passwort) | Moderwort hebt beim Niesen den Arm; sonst stehen Max, Zeldina und Pixel die ganze Szene still, Max in Moderwort; Toadi spricht ohne im Raum zu sein; kein Stab zu sehen | Schlussszene ohne Bewegung (R5-W1-36) |
+| Welt-Ende, Übergang zum Dachboden | Kreisblende zu, Einblendung „Errungenschaft: Ohne Pfote: Welt 1“, dann Dachboden; der Werbeblock ist nur ein Erzählsatz über dem Dachboden („Werbeblock: Milchglas, Kuh, leeres Preisschild, Blitz. Fünf Sekunden, dann Rauschen.“) | Blende gut; der Werbeblock selbst hat kein Bild (R5-W1-37) |
 
 (Thronsaal, Melken, Pilz-Verwandlung, Fußbad, Lieferszene: siehe Nachtrag unten, soweit gefilmt.)
 
