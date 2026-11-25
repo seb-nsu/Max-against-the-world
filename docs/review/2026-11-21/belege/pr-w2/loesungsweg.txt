@@ -240,3 +240,35 @@ warte
 klick @startlinie
 warte 5
 warte
+# Hebel (von Hand gespielt; Zahl der "weiter" schwankt, weil jeder Klick erst die stehende Zeile weiterschaltet):
+klick 5 280
+warte
+klick 5 280
+warte
+klick @wurfhebel
+warte 3
+knopf "Pixel"
+weiter
+weiter
+weiter
+weiter
+knopf "Abspringen!"
+warte 6
+weiter
+weiter
+weiter
+weiter
+weiter
+weiter
+weiter
+
+#-- Ende des spielbaren Wegs (Stand 25.11.2026)
+# Nach Block 6 ist Welt 2 mit echten Klicks nicht zu beenden: Leonidas steht außerhalb des Stadions (R5-W2-24, R7 blockiert),
+# Archimedes außerhalb der Werkstatt (R5-W2-28, R10a blockiert). Blöcke 1 bis 6 sind in einem frischen Prozess von welt1_ende aus
+# zweimal fehlerfrei nachgespielt (einmal Textmodus klick, einmal lesen: 2784 Spielsekunden bis nach dem Lauf).
+# Von Hand weiter erreichbar (Lauf B, Stände w2b_09 bis w2b_12):
+#   Agora: portraet pixel, klick 630 320, klick @hohe_saeule_mit_adler, portraet max, klick inv:sandale (zweimal)   -> R6a
+#   Stadion: klick @hermes; Agora: klick @tiro; Sphinx: klick @sphinx_figur                                          -> drei von vier Befragungen
+#   Fähre nach Syrakus (Feigen werden gepflückt), Fähre ins Nil-Delta, Thronsaal: Feigen auf @faecherwedler          -> R6b
+#     (Feigen liegen unter der Pfote: maus 300 10, klick 636 24, klick @faecherwedler)
+#   Zwischenspiel 2 nur über "start zs 2": klick @drehknopf, zwei Wahlfächer, knopf "Fertig gepackt", klick @drehknopf -> Welt 3

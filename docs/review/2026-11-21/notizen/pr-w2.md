@@ -1,12 +1,12 @@
 # pr-w2: Welt 2 „Antikodonien“ bis zum Anfang von Welt 3 (Komplett-Review 21.11.2026, Fortsetzung in der Cloud ab 25.11.)
 
-**Stand: in Arbeit (25.11.). Gerader Durchlauf läuft; die Notiz wird nach jedem Block ergänzt und gesichert.**
+**Stand: FERTIG (25.11.2026).** Zahlen am Ende unter „Zählung“.
 
 - **Rolle:** Welt-Prüfer `pr-w2` (ein Durchgang aus fünf Blickwinkeln: Beleg-Sammler, Level-Designer, Game-Designer, Technical Artist, Gameplay-Scripter).
 - **Umfang:** Welt 2 vollständig, alle Räume in allen Zuständen, alle Rätselketten, vom ersten freien Moment im Nil-Delta bis zum ersten freien Moment in Welt 3 (einschließlich Welt-Ende, Übergang und Zwischenspiel 2 im Spielfluss).
 - **Geprüfter Stand:** `main` auf `04c5a79f` (Branch `claude/project-thread-me923s`), Godot 4.7.2, Linux-Container, Fernsteuerung `werkzeuge/cloud/fs` ohne Testmodus, echte Klicks. Standard Tempo 4 und Textmodus `klick`; Zeit, Bewegung und Hänger in Tempo 1.
 - **Anfangsstand:** `kontrollpunkte/welt-1/welt1_ende.json` (echter Endstand von Welt 1, erspielt von `pr-w1`; Wahlfächer Socke und Dosenöffner).
-- **Läufe:** `/home/user/lauf/pr-w2-*` (nicht im Repo; „Verlauf“ meint `verlauf.txt` des Laufs `pr-w2-haupt`). Kontrollpunkte: `kontrollpunkte/welt-2/` mit `liste.md`, Lösungsweg: `belege/pr-w2/loesungsweg.txt`.
+- **Läufe:** `/home/user/lauf/pr-w2-*` (nicht im Repo; „Verlauf“ meint `verlauf.txt` des Laufs `pr-w2-haupt`). Lauf A (`pr-w2-haupt`): alles eingesammelt, bis nach Tag 1. Lauf B (`pr-w2-b`): nur Pflicht-Gegenstände, Lösungsweg von `welt1_ende`, bis zum weitesten erreichbaren Stand; danach Zwischenspiel 2 über `start zs 2`. Lauf `pr-w2-zeit`: Lösungsweg im Lesetempo. Kontrollpunkte: `kontrollpunkte/welt-2/` mit `liste.md`, Lösungsweg: `belege/pr-w2/loesungsweg.txt`.
 - **Vorgänger:** `notizen/gd-w2.md` (12 Funde, Zwischenstand); Funde stehen hier mit alter ID und sind neu nachgestellt.
 - Alles in den Tabellen ist im laufenden Spiel beobachtet, außer wo „aus dem Code“ oder „aus dem Dokument“ dabeisteht.
 
@@ -18,7 +18,7 @@
 2. **R5-W2-28:** Archimedes steht nach dem Heureka außerhalb der Werkstatt (x 720). Ohne ihn kein Entwurf (R10a), kein Grabstein (R10b), kein Finaltag.
 3. **R5-W2-17:** Die Inventarleiste blättert nicht. Ab 16 Teilen ist der zuletzt erhaltene Gegenstand nicht mehr anklickbar; der echte Stand aus Welt 1 bringt neun Teile mit, und der Paraden-Plan (R11a) ist am Ende das 18. oder spätere Teil.
 
-Dazu kommen die zwei Speicher-Funde (R5-W2-06, R5-W1-34). Finaltag, Rede-Ringen, R11, Welt-Ende und der Übergang ins Zwischenspiel 2 **im Spielfluss** sind deshalb nicht geprüft; das Zwischenspiel 2 selbst prüfe ich über `start zs 2`.
+Dazu kommen die zwei Speicher-Funde (R5-W2-06, R5-W1-34). Finaltag, Rede-Ringen, R10, R11, Welt-Ende und der Übergang ins Zwischenspiel 2 **im Spielfluss** sind deshalb nicht geprüft. Das Zwischenspiel 2 selbst ist über `start zs 2` aus dem weitesten Stand geprüft (Ankunft, Packen, Abreise, Ankunft in Welt 3). `kontrollpunkte/welt-2/welt2_ende.json` ist darum kein voller Endstand (siehe `liste.md`): Inventar echt, Schalter von R7, R10, R11, R13 offen.
 
 ## Funde
 
@@ -106,7 +106,7 @@ Dazu kommen die zwei Speicher-Funde (R5-W2-06, R5-W1-34). Finaltag, Rede-Ringen,
 | ID | Raum | Priorität | Kategorie | Beschreibung | Beleg | Vorschlag |
 | --- | --- | --- | --- | --- | --- | --- |
 | R5-W2-19 | nil_delta | wichtig | Zustandswechsel, Text | **Die Hermes-Szene mit Opas Papyrus passt nicht mehr, wenn Max den Startpass schon hat.** Nach der ersten Rückfahrt bringt Hermes Opas Papyrus und sagt „Euer Startpass ist in einem anderen Büro“, Max antwortet „Ich hab doch noch gar keinen Startpass.“ Im geraden Weg (erst Olympia mit R3, dann zurück wegen Öl) hat Max den Startpass da schon in der Leiste. | Lauf nach `w2_22_nach_R3`, Fahrt nach Ägypten: `W2_NIL_HER_0970`, `W2_NIL_MAX_0980`; `inv`: startpass | Zeilen an `Z.besitzt("startpass")` knüpfen (zweite Fassung: „Euer Startpass ist übrigens schon ungültig. Scherz.“). |
-| R5-W2-20 | Fähre (Ägypten → Syrakus) | wichtig | Rätsel (Hinweise) | **Bei der Direktfahrt Ägypten → Syrakus nennt der Fährmann nur „Fünfundzwanzig Jahre bis Syrakus“.** Die 112 Jahre des ersten Abschnitts fehlen; das Getränk altert trotzdem um zwei Stufen. Die Regel „137 Jahre zwischen Ägypten und Syrakus“ lässt sich so aus den Ansagen nicht zusammenzählen. | Fahrt Nil-Delta → Hafen Syrakus: nur `W2_FAHR_FAE_0050`; `W2_FAHRTEN` steigt um zwei | Beide Ansagen nacheinander spielen („112 Jahre bis Olympia. Wir halten nicht. 25 Jahre bis Syrakus.“). |
+| R5-W2-20 | Fähre (Ägypten → Syrakus) | kosmetisch | Rätsel (Hinweise) | **Bei der Direktfahrt Ägypten → Syrakus nennt der Fährmann nur „Fünfundzwanzig Jahre bis Syrakus“.** Die 112 Jahre des ersten Abschnitts fehlen; das Getränk altert trotzdem um zwei Stufen. Die Regel „137 Jahre zwischen Ägypten und Syrakus“ lässt sich so aus den Ansagen nicht zusammenzählen; die Fährtafel nennt beide Strecken (112 und 25 Jahre), die Information geht also nicht verloren. | Fahrt Nil-Delta → Hafen Syrakus: nur `W2_FAHR_FAE_0050`; `W2_FAHRTEN` steigt um zwei | Beide Ansagen nacheinander spielen („112 Jahre bis Olympia. Wir halten nicht. 25 Jahre bis Syrakus.“). |
 | R5-W2-21 | alle | kosmetisch | Timing | **Zurufe stapeln sich.** Nach längerem Stillstand (mehrere `@id`-Klicks in Folge, also einige Minuten ohne Reaktion) spricht Pixel dieselben zwei Zuruf-Hälften bis zu neunmal im selben Augenblick (`W2_ZURU_PIX_0060_2` und `W2_ZURU_PIX_0100_2` abwechselnd, alle mit Zeitstempel 2463,9). Es sind die zweiten Hälften geteilter Zeilen; die ersten Hälften fehlen (vgl. R5-W1-39). | Werkstatt, Stand `w2_26_vor_R5_21_teile`: `klick inv:messbecher` → 18 Zeilen `W2_ZURU_PIX_0060_2`/`0100_2` | Je Pause höchstens einen Zuruf einreihen; geteilte Zeilen nur als Ganzes. |
 
 ### Hafen Syrakus und Werkstatt
@@ -136,9 +136,20 @@ Dazu kommen die zwei Speicher-Funde (R5-W2-06, R5-W1-34). Finaltag, Rede-Ringen,
 | R5-W2-32 | sphinx | wichtig | Figurenwechsel, Positionierung | **Im Sphinx-Raum steht Pixel außerhalb des Bildes.** Max betritt den Raum bei (50,300); Pixel steht bei Raum (1069,262), der Raum ist 640 breit. Wechselt man zu Pixel, ist keine Spielfigur zu sehen; zugleich springt Max vom linken Rand nach (632,262) an den rechten Bildrand. Erst nach einem Laufklick steht Pixel im Bild. Beim Verhör fragt Max die Sphinx vom linken Bildrand aus (Max (50,300), Sphinx (560,240)). | `belege/pr-w2/sphinx_pixel_ausserhalb_notizbuch_ziele_als_schluessel.png` (links: Pixel aktiv, nicht im Bild, Max halb am rechten Rand); `status`: „Pixel bei Raum (1069,262)“ | Begleiter beim Betreten immer neben die Spielfigur setzen und auf die Raumbreite begrenzen; zum Verhör erst zum Gesprächsplatz laufen. |
 | R5-W2-33 | nil_delta, thronsaal_ramses, alle | kosmetisch | Rätsel, Hinweise | (a) **Steinmetz ohne Entwurf:** Ein Klick bestellt sofort „irgendwas“ und gibt den „Haufen“ (ein weiterer Platz in der Leiste), ohne Rückfrage; Max nennt dabei „Einen Grabstein für Archimedes“, obwohl er den Auftrag in diesem Lauf nur von Cicero kennt. (b) Die Pfote nennt überall den ersten offenen Schritt (R7), auch am Grabhügel und in der Werkstatt, wo R10a hingehört; nach Stufe 3 von R7 kommt für R10a nie ein Hinweis. (c) Übergabe der Feigen ohne Hingehen (Max (940,330), Fächerwedler (1112,300)); „Zwei erwachsene Männer, bestochen mit Obst“, zu sehen ist ein Wedler. (d) Die Hand verliert den Gegenstand beim Raumwechsel ohne Zeile. | Lauf B ab `w2b_10_werkstatt_archimedes_weg`: `klick @steinmetz` → `W2_GRAB_MAX_0030`, `INVENTAR + haufen`; `pfote` am Grabhügel → `Schritt R7, Stufe 3, Wiederholung`; `klick @faecherwedler` → `W2_SAND_MAX_0330` | (a) Haufen erst nach einer Auswahl („Irgendwas“ / „Ich komm mit einem Plan wieder“); (b) Hinweis nach Raum wählen, sonst reihum; (c) hingehen; (d) Hand über den Raumwechsel behalten. |
 
-**Offene Verdachtsfälle (noch nachzustellen):** Woher der Spieler das Fladen-Rezept erfährt (Pixel verspricht es „später, unter vier Augen“; im Lauf nie gehört). Zurufe mehrfach gestapelt nach langer Pause (`W2_ZURU_PIX_0100_2`/`0040_2` je viermal im selben Augenblick). Leiste ab 16 Gegenständen. R5-W2-06 nach Programm-Neustart.
+### Zwischenspiel 2 (über `start zs 2` aus dem Stand `w2b_12…`)
 
-**Nächster Schritt (Stand 25.11., nach R5):** Stand `w2_27_nach_R5` (Nachspiel-Sitzung, sauber von `welt1_ende` aufgebaut). Weiter: Olympia, Tag 1 (Hebel), R6, R7, R10, Finaltag, R11, Zwischenspiel 2, Welt 3.
+| ID | Raum | Priorität | Kategorie | Beschreibung | Beleg | Vorschlag |
+| --- | --- | --- | --- | --- | --- | --- |
+| R5-W2-34 | dachboden (ZS 2) | wichtig | Animation, Timing | **Die Ankunftsszene ist 3 Minuten 15 Sekunden Standbild.** 30 Zeilen im Lesetempo, in denen Max vor dem Zapp-O-Mat steht (und ihn verdeckt), Pixel daneben sitzt und Opa rechts steht. Was der Erzähler beschreibt, ist nicht zu sehen: „Opa stellt den Sack neben den Eierkarton. Glitzer, Plopp. Der Sack wirkt kleiner, papierener“, „Eine Staubwolke steigt auf. Pixel niest“, „Opa sagt sehr lange nichts“. Der Witz mit dem Rückverwandlungsschwund hat kein Bild. | `belege/pr-w2/zs2_ankunft_drei_minuten_standbild.png` (Bilder 46, 114, 252 aus dem Film `zs2_ankunft2`, 2 Bilder je Sekunde); Zeitlauf: 1686 bis 2124 Spielsekunden abzüglich Pause | Sack als Prop (golden, dann papieren) mit Plopp; Staubwolke; Niesen als Geste von Pixel; Opa geht zum Eierkarton und zurück. Szene um ein Drittel kürzen oder in zwei Teile mit einem Klick dazwischen. |
+| R5-W2-35 | dachboden (ZS 2, Reisetasche) | wichtig | Grafik, Sonstiges (Oberfläche) | **Vier Platzhalterbilder im Pack-Fenster:** grüne Kacheln „Opa“, „Eim“, „Zie“, „Mod“ für Opas Reisetasche, Eimer, Ziegenfell-Vorleger und Moderworts Zeugnis (Fundkiste aus Welt 1). Dazu: (a) Nach jedem Einpacken rücken die Kacheln nach; der zweite Klick an dieselbe Stelle packt ein anderes Teil (bei mir die Wurfscheibe statt der Sandale). (b) „Fertig gepackt“ mit zwei leeren Wahlfächern geht ohne Rückfrage; Olivenöl und Sandale landen dann in der Fundkiste. (c) F5 im Pack-Fenster hat keine Wirkung und keine Meldung. (d) Die Reisetasche selbst ist wieder packbar (R5-P-20, R5-W1-33). | `belege/pr-w2/zs2_reisetasche_vier_platzhalterbilder.png`; Zeiger auf den Kacheln zeigt die vier Namen | Inventarbilder für die vier Teile (oder Fundkisten-Teile nicht mehr anbieten); Kacheln an ihrem Platz lassen; Rückfrage bei leeren Fächern („Wirklich nichts aus Antikodonien?“). |
+| R5-W2-36 | dachboden (ZS 2) | kosmetisch | Zustandswechsel | (a) Reste aus Welt 2 (Startpass, Messbecher, Brians Schild, Feigensetzling, Opas Papyrus, Haufen) liegen im Zwischenspiel noch in der Leiste, sind nicht packbar und verschwinden erst beim Drehen ohne ein Wort. (b) Esc überspringt die Ankunftsszene, aber die laufende Zeile bleibt stehen, bis man einmal klickt; danach laufen die restlichen 28 Zeilen in 2 s durch (Zustand danach richtig). (c) Der Drahtkleiderbügel aus dem Prolog hängt wieder am Schrank (R5-P-19). | `inv` nach „Fertig gepackt“; `INVENTAR - messbecher …` beim Drehknopf; `taste esc` bei `ZS2_DACH_PIX_0020` → `LAGE text`, nach `weiter` Zeilen 0180 bis 0250 in 2 s | (a) Welt-Reste beim Abgeben des Mitbringsels entfernen oder Opa kommentieren lassen; (b) Esc schließt auch die laufende Zeile. |
+
+### Hinweise, Nahansichten, Sprache
+
+| ID | Raum | Priorität | Kategorie | Beschreibung | Beleg | Vorschlag |
+| --- | --- | --- | --- | --- | --- | --- |
+| R5-W2-37 | alle (Pfote) | kosmetisch | Hinweise | Die 17 Schritte von Welt 2 haben je drei Stufen (aus `game/daten/hinweise/welt-2.json` gelesen; im Spiel abgerufen: R3a Stufe 1, R4 Stufen 1 bis 3, R5 Stufe 2, R7 Stufen 1 bis 3, R12 Stufe 1). Aufbau gut: Stufe 1 Richtung, Stufe 2 Mittel, Stufe 3 Lösung; zwischen den Stufen rund 60 s Wartezeit mit Wartezeile. Schwächen: (a) R4 Stufe 1 beginnt mit „Die Sandalen wollen weg, und Öl hält Riemen“, obwohl der Spieler in der Küche noch keine Sandalen kennt. (b) R5 Stufe 3 endet mit „Dann sag es ihm“; es gibt nichts zu sagen, die Szene startet von selbst. (c) R10a ist dem Raum Nil-Delta zugeordnet, der erste Schritt (Archimedes fragen) liegt in der Werkstatt. (d) Nach der Audienz ist kein Schritt offen, die Pfote sagt nur „irgendwohin, wo du noch nicht warst“ (R5-W1-02); R4 und R8 öffnen erst beim Betreten von Küche und Sphinx. (e) Stufe 3 von R11b verrät sauber die Falle („Wer bis Ägypten fährt, hat Saft“): gut. | `pfote` in der Küche: Stufe 1 bei 872,7 s, Stufe 2 bei 937,9 s, Stufe 3 bei 1022,7 s (dazwischen „Wartezeile“); Datei `welt-2.json` | (a) R4 Stufe 1 ohne Sandalen fassen, solange `sandalen` fehlt; (b) Satz streichen; (c) Raum Werkstatt; (d) nach der Audienz ein Ziel „Sieh dich im Palast und am Fluss um“. |
+| R5-W2-38 | nil_delta, startbuero (Nahansichten) | kosmetisch | Grafik (Schrift), Lokalisierung | Nahansichten DE und EN geprüft: Fährtafel, Aushang (beide übersetzt, Text passt in die Felder), Hieroglyphen-Grammatik (sprachfrei). Schrift wie R5-W1-06: „B“ sieht aus wie „6“ („6EKANNTMACHUNG“), „E“ in „Egypt“ wie „€“; dazu Lücken nach f, r und t („sof or t“, „Vorschrif ten“, „immedia tely“). Auf der Fährtafel liegt die dritte Zeile (Fahrzeiten) auf einer dunklen Fuge des Bretts und wirkt durchgestrichen. | `belege/pr-w2/buero_aushang_nah_de_en.png`, `belege/pr-w2/nil_thron_nahansichten_en.png`, `belege/pr-w2/nil_faehrtafel_nah_de_schrift_B_Z.png` | Schrift der Nahansichten tauschen oder Unterschneidung richten; dritte Tafelzeile ein paar Pixel höher. |
 
 ## Rätselübersicht des Klickwegs
 
@@ -174,27 +185,166 @@ Dazu kommen die zwei Speicher-Funde (R5-W2-06, R5-W1-34). Finaltag, Rede-Ringen,
 | GD-W1-03 (Pixel-Feld der Leiste unter dem Porträt) | bestätigt ab 12 Gegenständen | `belege/pr-w2/leiste_13_gegenstaende_pixelfeld_unter_portraet.png`; `inv`: PixelFeld bei (92,24), Porträt bei (80,28) |
 | R5-W1-06 (Schrift der Nahansichten: B, Z) | bestätigt | Fährtafel: „Bitte“ liest sich „6itte“, „Zeit“ „2eit“ (`belege/pr-w2/nil_faehrtafel_nah_de_schrift_B_Z.png`) |
 | R5-W1-34 (Gespräche hängen nach Neustart und Laden) | **bestätigt (kritisch)**, ein zweites Mal bei Hieron (Lauf B, Stand `w2b_10…`: `klick @hieron` → `LAGE beschaeftigt`, keine Optionen) | Frischer Prozess, `stand holen w2_22_nach_R3`, `klick @beamter_1` (mit ihm war vor dem Speichern geredet worden): `GESPRÄCH beginnt: Beamter1`, danach `STEHT seit 20 Spielsekunden ohne Fortschritt`, keine Optionen, Esc und Klick wirkungslos (`belege/pr-w2/buero_gespraech_haengt_nach_neustart_und_laden.png`). In Welt 2 trifft das nach jedem Weiterspielen am nächsten Tag: Fährmann, Schreiber, Nebet, Sphinx (Empfehlungsschreiben), Cicero, Brian, Leonidas, Beamte. |
+| R5-P-01 / GD-W2-03 (Laden in derselben Sitzung lässt genommene Dinge verschwinden) | in Welt 2 nicht eigens nachgestellt | Vorsorglich vor jedem Rücksprung die Fernsteuerung neu gestartet; verwandt und neu: R5-W2-06 |
+| R5-P-02 (Menü bleibt nach Sprachwechsel in der alten Sprache) | bestätigt | Pause → Optionen → Spiel → English → Back: Pausenmenü weiter „Weiterspielen, Speichern, Laden …“; erst nach Schließen und erneutem Öffnen „Resume, Save, Load“ |
+| R5-P-09 (erstes Gesprächsmenü der Sitzung in Tempo 4 außerhalb des Bildes) | bestätigt, bleibt für die ganze Sitzung | Sphinx, erste Unterhaltung nach Programmstart in Tempo 4: `OPTION [0250] … angeklickt bei (316,-4) nach 40 Rollschritten`, im Bild kein Menü (`belege/pr-w2/sphinx_menue_ausserhalb_des_bildes_tempo4.png`); auch nach `tempo 1` und erneutem Ansprechen unsichtbar. Ob das ohne Zeitraffer auftritt, ist nicht geklärt |
+| R5-P-19 (verbrauchte Dinge liegen nach Neustart und Laden wieder da) | bestätigt | Startbüro, Stand `b_04` nach Neustart: `@leeres_formular Prop „Blank form“ x 570–600` wieder anklickbar, obwohl das Formular zum Rundschreiben verbraucht ist; Dachboden im Zwischenspiel 2: Drahtkleiderbügel |
+| R5-P-20 / R5-W1-33 (Reisetasche ist selbst packbar) | bestätigt in Zwischenspiel 2 | siehe R5-W2-35 |
+| R5-W1-39 (Zuruf-Hälften aus der falschen Welt) | bestätigt | Dachboden nach `start zs 2` aus Welt 3: `W3_STR_PIX_0910_2`; in Welt 2 mehrfach nur die zweite Hälfte eines Zurufs (`W2_ZURU_PIX_0060_2`, siehe R5-W2-21) |
+| R5-P-08 / GD-W2-02 (Pfoten-Klick schaltet nur den Zuruf weiter) | bestätigt | wie oben; im Blocklauf schluckte ein Zuruf den ersten Klick von Block 5 |
 | GD-P-02 / R5-W1-35 („Use Messbecher with UI_OBJ_BADEWANNE“) | bestätigt | Werkstatt, Film `r5_heureka` Bilder 24–100: englischer Satz mit Textschlüssel unter dem Zeiger, bleibt während der ganzen Heureka-Szene stehen (= R5-P-29); zu sehen in `belege/pr-w2/werk_heureka_und_training_ohne_archimedes_max_fliegt_neben_der_wanne.png` |
 | R5-W1-02 (Pfote: „geh irgendwohin, wo du noch nicht warst“) | bestätigt | nach der Audienz: `pfote` → `W2_HINT_PIX_0010`; `status`: „Offene Rätselschritte: -“ (W2-01 damit nur zum Teil behoben: eigene Zeile für Welt 2, aber kein Ziel) |
 
 ## Frühere Funde, Stand heute
 
-(wird ergänzt)
+Funde vom 17.11. (`docs/review/2026-11-17/bericht.md`), soweit im heutigen Spiel gesehen. Nicht einzeln nachgestellt: W2-02, -03, -05, -06, -08, -09, -13, -19, -20, -24, -27, -30, -36, -40, -42, -44, -45 und die A-Funde.
+
+| Fund | Stand heute | Woran gesehen |
+| --- | --- | --- |
+| W2-01 (Pfote ohne Ziel nach der Audienz) | teils behoben | eigene Zeile für Welt 2, aber kein Ziel (R5-W1-02) |
+| W2-04 (Erzähler statt Bild) | weiter offen | Blase, Verbeugungen, Stempeln, Tonne, Stadionlauf, Training, Säule (R5-W2-22, -25, -29) |
+| W2-07 (lange Laufwege) | weiter offen | Steg → Palastküche rund 78 Spielsekunden; Agora von rechts bis zum Stadion-Bogen 28 s |
+| W2-10 (Fährmann vor der Tafel) | gebessert | GD-W2-05: jetzt steht Max beim Reden im Fährmann |
+| W2-11 (Bauplan als Blatt im Feld) | weiter offen | Nil-Delta, Steinmetz |
+| W2-12 | halb behoben | R5-W2-04 |
+| W2-14, W2-16, W2-17, W2-18, W2-21, W2-23, W2-26, W2-29, W2-31, W2-41, W2-43 | behoben | Topf in der Küche da; Sphinx anklickbar (x 424–630); Sandale auf der Säule erst nach Tag 1; Hermes hängt nicht; Mann mit Bart da; Hieron steht links; Modell auf dem Regal |
+| W2-22 (Sphinx-Rätsel ohne Rückmeldung) | im Kern behoben | falsche Bausteine werden einzeln kommentiert (Rest: R5-W2-11) |
+| W2-25 (Tür zum Startbüro) | weiter offen | klein und halb hinter der Tonne (`belege/pr-w2/agora_tuer_startbuero_klein_hinter_tonne.png`) |
+| W2-28 (Figuren auf einer Linie in der Agora) | weiter offen | Brian, Philosoph, Musiker, Touristen auf derselben Bodenlinie |
+| W2-32 (Bank vor der Tür im Büro) | weiter offen | `belege/pr-w2/buero_beamte_groesser_als_max_bank_vor_tuer.png` |
+| W2-33 (Startlinie) | teils behoben | Klickfläche klein (20 × 40 px), der Laufbahn-Streifen quer durchs Bild bleibt |
+| W2-34 (Aussagen nachlesen) | behoben | Aussagen stehen im Notizbuch (laufen aber über den Rand, R5-W2-31) |
+| W2-35 (Aufgeben erst nach falscher Anklage) | nicht prüfbar | R7 blockiert |
+| W2-37 (Wurfhebel im Stadion vor dem Training) | behoben | Hotspot vor R5 unsichtbar |
+| W2-38 (Bewegungen an Tag 1 nie aufgerufen) | behoben, **mit Folgefehler** | Leonidas rennt, Schildkröte kriecht; Leonidas kommt nicht zurück (R5-W2-24) |
+| W2-39 | gebessert | Hebel-Minispiel bedienbar, Nachsicht kommt (Rest: R5-W2-26) |
+| W2-15 (Bonus „alle drei“) | nicht geprüft | Kaugummi und Kugelschreiber sind im geraden Weg verbraucht |
+| X-08 (Rechtsklick auf Pixel) | weiter offen | Ersatzzeile |
 
 ## Nicht bestätigt
 
+- **Fladen-Rezept fehlt:** Verdacht aus dem ersten Lauf. Laut Code gibt Pixel das Rezept, wenn man ihn in der Küche nach Nebets Option 0230 anklickt (`W2_KUCH_PIX_0320`); im Spiel nicht nachgestellt, der Fund entfällt.
+- **Hermes' Aussagen fehlen im Notizbuch:** In der Zeitlinie des Fotos war Hermes nicht befragt (`W2_VERHOERT_HERMES` = false); kein Fund.
+- **Esc rettet Leonidas:** Überspringen der Tag-1-Szene mit Esc ändert nichts, Leonidas steht danach ebenfalls bei x −80.
+- **Direkte Bedienung der übergelaufenen Leiste:** Mausrad auf der Leiste wirkt nicht; es gibt keine Taste und keinen Pfeil.
+
 ## Gut gelöst
+
+- **Klare Rückmeldung bei falscher Reihenfolge in R5:** „Der Messbecher ist leer. Ich muss erst was eintauchen und dann messen.“ Die Reihenfolge Krone/Barren ist frei, der Zwischenstand („Ein Strich. Nur einer.“) bleibt erhalten.
+- **Die Sphinx kommentiert jeden falschen Baustein einzeln;** Ansehen eines Wunderdings gibt beide Bausteine auf einmal.
+- **Hebel-Minispiel:** eigene Taschen-Ansicht (unabhängig von der Leiste), jeder Gegenstand hat einen Satz von Archimedes, „Genau richtig“ beim Kater, Nachsicht nach zwei Fehlversuchen mit Wahl „Noch mal“.
+- **Die Fähre als Zeitmaschine ist durchgehend spürbar:** Saft, Wein, Essig je Fahrt in eigenen Zeilen, der Setzling wächst zum Baum und schrumpft zum Kern, gepflückte Feigen bleiben. Die Feigen werden bei der Ankunft von selbst gepflückt (spart einen Klick auf ein verdecktes Feld).
+- **Messias-Szene auf der Agora** („Er sagt Nein! So bescheiden ist nur der Echte!“) und der Streit Schuh gegen Sandale: die beste Humorstelle der Welt, verständlich ohne Vorlage.
+- **Diskus-Fall als Logikrätsel:** vier Verdächtige, je zwei Aussagen, Aussagen landen im Notizbuch; die drei Hinweisstufen führen sauber von der Methode zur Lösung.
+- **Reisetasche im Zwischenspiel 2:** Pixels Sätze zu Olivenöl, Sandale, Handy und Wurfscheibe sind zugleich Hinweise auf Welt 3; ein drittes Teil lehnt Max mit eigener Zeile ab.
+- **Speichern im Zwischenspiel:** F5 vor dem Packen und F9 danach stellen Leiste, Tasche und Fundkiste richtig wieder her.
+- **Pointen:** „… um Brot“ des Schreibers, „Rückverwandlungsschwund“, „Ich hab gerade einen Baum auf Werkseinstellungen zurückgesetzt“.
+- **Bewegte Stellen, die tragen:** Archimedes' Freudensprung und Lauf im Handtuch, Leonidas' Losrennen, der wedelnde Fächerwedler, Hermes' Dauerlauf.
 
 ## Nicht geprüft
 
+- **Blockiert (R5-W2-24, -28):** R7 bis zur Anklage, R10a, R10b, Finaltag (Speer, Diskus, Rede-Ringen), R11a, R11b, Welt-Ende, Bonus, Übergang ins Zwischenspiel 2 im Spielfluss; Stadion und Agora in den Zuständen nach R13; goldener Sack und Olivenkranz im Zwischenspiel.
+- **Aus Zeitgründen:** R3 über die Wege B (Papyrus und Tinte), C (Socke) und über das Empfehlungsschreiben der Sphinx; Götter-Duell mit dem Brennspiegel statt Kaugummi; Kaugummi bei Nebet; Tag 1 ohne Öl; falsche Antworten in R2a; R5-W2-06 nach Programm-Neustart; GD-W2-03 in Welt 2; F5/F9 mitten in den Ketten von Welt 2 (nur im Zwischenspiel 2 geprüft); Laden des Zwischenspiel-Stands nach Programm-Neustart.
+- **Pfote:** im Spiel nur R3a (Stufe 1), R4 (1 bis 3), R5 (2), R7 (1 bis 3), R12 (1); alle übrigen Stufen nur aus der Datei gelesen.
+- **Räume:** alle elf betreten und fotografiert; systematische Laufproben (Gitter über den Boden) und Klickflächen in jedem Zustand nur stichprobenweise. Englisch nur in den drei Nahansichten, den Objektnamen des Startbüros und drei gesprochenen Zeilen.
+- **Ton:** Der Lauf nutzt den Dummy-Treiber; Musik, Geräusche und Brabbel-Laute sind nicht geprüft.
+- **Zeit:** In Tempo 1 gemessen ist nur das Zwischenspiel 2; alle übrigen Zeiten stammen aus einem Lauf in Tempo 4 mit `textmodus lesen` (Spielsekunden, gleiche Lesezeit je Zeile).
+
 ## Animationen
+
+**Bestand (aus `docs/grafik/gesten-regie.md`, Abschnitt Welt 2):** rund 95 Animationen für 27 Figuren, überwiegend kurze Warte-Gesten (2 bis 5 Bilder), dazu Schleifen (Hermes `joggen`, Fächerwedler `faecheln`, Nebet `ruehren`, Steinmetz `meisseln`) und wenige Szenen-Bewegungen (Archimedes `heureka_posen` und `heureka`, Leonidas `losrennen`, Schildkröte `laufen`/`rennen`, Max `katapult`, `barfuss`, `speer`, `diskus`).
+
+**Ablauf, im Spiel gesehen (Filme in Tempo 1):**
+- Archimedes, Heureka (Film `r5_heureka`, 548 Bilder): Arme hoch, Sprung, Lauf nach rechts aus dem Bild. Lesbar, passt zur Zeile. Danach fehlt die Rückkehr (R5-W2-22, -28).
+- Max, `katapult` in der Trainings-Szene: Sitz-Pose auf einer Kiste, dann eine Flug-Pose an derselben Stelle, dreimal. Ohne Ortswechsel und ohne Hebel liest es sich nicht als Flug.
+- Leonidas, `losrennen` (Film `tag1_lauf`): klarer Laufzyklus, er verlässt das Bild nach links. Gut; danach fehlt er (R5-W2-24).
+- Schildkröte: kriecht während des Laufs rund 260 px nach links. Unauffällig, stimmt.
+- Fächerwedler: wedelt in Schleife (Thronsaal, Stadion). Gut. Ramses steht im Stadion still.
+- Hermes: Dauerlauf auf der Stelle in Büro, Nil-Delta und Stadion. Trägt die Figur, steht im Stadion aber mitten in Pixel.
+- Steinmetz: meißelt in Schleife in die Luft (R5-W2-03).
+- Hebel-Minispiel: Flug in 8 Bildern als graues Rechteck (R5-W2-26).
+
+**Einbau:** Die Warte-Gesten laufen als Kulisse; Szenen-Bewegungen sind an Zeilen gehängt. Wo das Skript `laufen_zu` aus dem Bild benutzt (Archimedes, Leonidas), bleibt die Figur draußen: Das ist die Ursache der zwei Blocker.
+
+**Sinn:** Die großen Momente der Welt sind fast alle Standbilder mit Erzähler: Stadionlauf, Training, Pixels Kletterpartie, Hebelflug, Sack-Übergabe im Zwischenspiel. Bewegt sind die Nebenfiguren. Für den Spieler steht Max in seinen drei Sportszenen still.
+
+### Kandidaten für bessere Animationen
+
+| Figur | Animation | Wo | Was stört | Beleg | Was gebraucht wird |
+| --- | --- | --- | --- | --- | --- |
+| Max | Stadionlauf (fehlt; `barfuss` gibt es nur für den Lauf ohne Öl) | Stadion, Tag 1 | Max steht 100 s an der Startlinie, der Erzähler läuft für ihn. | `belege/pr-w2/stadion_tag1_lauf_max_steht_leonidas_rennt_hinaus.png` | Lauf über die Bahn mit dem vorhandenen 8-Bilder-Lauf (Meshy-Clip plus Teile-Rig), geflügelte Sandalen als Zusatz am Fuß, zwei wegfliegende Sandalen als Effekt, Kamerafahrt. |
+| Max | `katapult` (2 Bilder) | Werkstatt (Training), Hebel-Minispiel | Flug ohne Ortswechsel neben der Badewanne; im Minispiel ein graues Rechteck. | `belege/pr-w2/werk_heureka_und_training_ohne_archimedes_max_fliegt_neben_der_wanne.png`, `belege/pr-w2/hebel_minispiel_platzhalter_auswahl_verdeckt_korb.png` | 5 bis 6 Bilder (Hocken, Abheben, Streckung, Scheitel, Landung in der Hocke), als Bogen über dem Hebel bewegt; drei Weiten. |
+| Pixel | Klettern und Sprung (fehlt) | Agora, R6a | „Klettert, springt, hängt kurz am Adler“ ist nur Text; Pixel sitzt. | `belege/pr-w2/agora_r6a_pixel_klettert_nur_im_text.png` | Sprung-Zyklus (Katzen-Sprung, 6 Bilder) an drei Stationen der Säule, Hänge-Pose, Fall; Sandale als Prop. |
+| Archimedes | Rückkehr nach `heureka` (fehlt) | Werkstatt | Er bleibt draußen und spricht elf Zeilen von außerhalb. | wie oben | Normaler Gang zurück durch die Tür, eine Pose „zieht den Gürtel zu“. |
+| Leonidas | Rückkehr nach `losrennen` (fehlt) | Stadion | „Zurück, außer Atem“ hat kein Bild; die Figur fehlt danach. | `belege/pr-w2/stadion_nach_tag1_leonidas_fehlt_hermes_joggt_auf_pixel.png` | Rücklauf mit demselben Zyklus gespiegelt, Keuch-Pose (2 Bilder). |
+| Steinmetz | `meisseln` (2 Bilder, Schleife) | Nil-Delta | meißelt in die Luft, kein Werkstück. | `belege/pr-w2/nil_steinmetz_meisselt_in_die_luft.png` | Steinblock als Prop vor der Figur; drittes Bild (Ausholen). |
+| Sobek | Verbeugen im Wasser, Kriechen an Land | Nil-Delta | Verbeugung gibt es nur für das Land-Bild; im Wasser nichts, nach dem Duell liegt er im Sand. | `belege/pr-w2/nil_sobek_nach_duell_im_sand_unter_faehrmann.png` | Kopf-Nicken im Wasser (3 Bilder), Aus-dem-Wasser-Kriechen (4 Bilder). |
+| Opa, Sack | Übergabe, Verwandlung, Staubwolke; Pixel niest | Dachboden, Zwischenspiel 2 | 3 Minuten ohne Bewegung. | `belege/pr-w2/zs2_ankunft_drei_minuten_standbild.png` | Sack als Prop in zwei Fassungen mit Glitzer-Effekt, Staubwolke (4 Bilder), Nies-Geste für Pixel (3 Bilder). |
+| Fährmann, Sobek | `staken`, `faehre_ziehen` | alle drei Stege | Die Fahrt hat kein Bild; der Raum wechselt hart. | – | Zwei Sekunden Abfahrt: Fähre als Prop gleitet aus dem Bild, Sobek zieht. |
+| Hermes | `joggen` (Schleife) | Stadion, Büro | Dauerlauf ohne Pause wirkt nach Minuten mechanisch; steht in Pixel. | `belege/pr-w2/stadion_nach_tag1_leonidas_fehlt_hermes_joggt_auf_pixel.png` | Zwei Pausen-Gesten (auf die Sonnenuhr sehen, Beutel prüfen). |
+| Ramses, Fächerwedler | Auftritt im Stadion (fehlt) | Stadion, Tag 1 | stehen plötzlich links im Sand. | `belege/pr-w2/stadion_tag1_lauf_max_steht_leonidas_rennt_hinaus.png` (Bild 60) | Einblenden reicht; besser Sänfte oder Loge im Hintergrund. |
 
 ## Zeitmessungen
 
+Lauf `pr-w2-zeit`: Lösungsweg Blöcke 1 bis 6 in einem frischen Prozess von `welt1_ende`, `textmodus lesen` (Tippzeit plus 55 ms je Zeichen, mindestens 1,2 s), **Tempo 4**; Angaben in Spielsekunden. Das Zwischenspiel 2 ist in **Tempo 1** gemessen. Der Lösungsweg kennt jede Antwort; ein Erstspieler braucht ein Vielfaches.
+
+| Abschnitt | Dauer | Bemerkung |
+| --- | --- | --- |
+| Gerader Weg vom ersten freien Moment bis nach dem Stadionlauf (R1, R2a, R2b, R4, R8, R9, R3, R5, Tag 1) | 2784 s (46 min) | reine Lösung ohne Umsehen |
+| Nil-Delta gesamt (drei Besuche) | 348 s | davon R1 (Wechsel zu Pixel bis Flusskarte) 71 s |
+| Thronsaal gesamt | 609 s | R2a 122 s; Götter-Duell vom Herausfordern bis gelöst 235 s; Audienz 100 s ohne Eingabe |
+| Palastküche | 274 s | Übergabe des Fladens 33 s |
+| Sphinx | 124 s | Rätsel stellen bis gelöst 54 s |
+| Agora (erster Besuch) | 292 s | |
+| Startbüro | 227 s | Übergabe Rundschreiben bis Startpass 26 s |
+| Fähre Nil-Delta → Olympia | 54 s | von „Abfahrt“ bis zum neuen Raum |
+| Fähre Olympia → Syrakus | 39 s | |
+| Fähre Syrakus → Olympia | 25 s | |
+| Werkstatt | 544 s | Gespräch mit Hieron 127 s |
+| **Heureka und Training nach dem letzten Klick von R5** | **119 s + 136 s = 4 min 15 s** | ohne Eingabe; das Training (21 Zeilen) ist ein Standbild (R5-W2-22) |
+| Stadionlauf (Startlinie bis zur ersten Hebel-Zeile) | 97 s | ohne Eingabe, Standbild (R5-W2-25) |
+| Laufweg Agora rechter Rand → Bogen zum Stadion | 28 s | drei Klicks, Tempo 4 gemessen |
+| Laufweg Fährsteg Nil-Delta → Palastküche | rund 78 s | grob, aus Lauf A |
+| **Zwischenspiel 2, Ankunftsszene** (Tempo 1, `textmodus lesen`) | **rund 195 s** | 30 Zeilen; mit Esc und einem Klick unter 5 s |
+| Zwischenspiel 2, Packen bis Ankunft in Welt 3 (Tempo 4, Textmodus `klick`) | rund 90 s | ohne Lesezeit |
+| Hinweisstufen (Pfote) | 65 s und 85 s | Abstand Stufe 1 → 2 → 3 in der Küche, mit Wartezeile dazwischen |
+
 ## Vorschläge für die Lessons Learned
+
+1. **Nach jeder Szene prüfen, ob alle Figuren im Raum stehen.** Zwei der drei Blocker sind Figuren, die mit `laufen_zu` aus dem Bild gelaufen und nie zurückgekommen sind. Ein Prüflauf sollte nach jeder Szene und jedem Raumwechsel melden, wenn eine anklickbare Figur außerhalb der Raumgrenzen steht.
+2. **Durchlauf-Tests mit dem echten Endstand der Vorwelt fahren, nicht mit dem Schnellstart.** `start welt-2` gibt vier Teile, der echte Stand neun. Der Überlauf der Leiste (ab 15 Teilen) fällt im Schnellstart nie auf. Umgekehrt fehlt dem Schnellstart die Thunfischdose, ohne die R2b nicht geht.
+3. **Eine Behebung aus einem Review braucht einen Folgetest der ganzen Kette.** Die Bewegung für W2-38 (Leonidas rennt) wurde eingebaut; niemand hat danach R7 gespielt.
+4. **Jede Text-ID, die die Oberfläche anzeigt, automatisch gegen die Texttabelle prüfen** (`UI_ZIEL_W2_R7`, `UI_OPT_W2_AGOR_GRI_0420`, „Use … with UI_OBJ_…“).
+5. **Erzählerzeilen, die Bewegung beschreiben, je Welt zählen und entscheiden: Bild oder streichen.** In Welt 2 sind es mindestens neun Stellen (Lauf, drei Flüge, Säule, Sack, Staubwolke, Stempeln, Verbeugung).
+6. **Oberflächen-Elemente nie übereinanderlegen lassen.** Leiste, Porträts und Pfote teilen sich eine Zeile ohne feste Grenzen; ein Klick auf ein verdecktes Teil löst eine andere Funktion aus (Hinweis verbraucht, Figur gewechselt).
+7. **Kontrollpunkte je Zeitlinie benennen.** Wegen R5-W1-34 und R5-W2-06 taugt ein Stand nur in der Sitzung, in der er entstand, oder wenn seither kein Gespräch geöffnet war; in `liste.md` steht deshalb zu jedem Stand der Lauf (A oder B).
 
 ## Werkzeug
 
-- Zurufe: In Tempo 4 dauert ein `@id`-Klick rund 30 Spielsekunden (36 Probestellen); nach 45 s ohne Klick kommt Pixels Zuruf und schluckt den nächsten Befehl. Vor wichtigen Klicks `warte`.
+- Zurufe: In Tempo 4 dauert ein `@id`-Klick rund 30 Spielsekunden (36 Probestellen); nach 45 s ohne Klick kommt Pixels Zuruf und schluckt den nächsten Befehl. Vor wichtigen Klicks `warte`, auch als erste Zeile jedes Blocks.
 - `option 2` wählt die zweite Zeile, nicht die Kennung [2]; Auswahllisten besser mit dem Text wählen (`option "Doch nicht"`).
 - `stand sichern` klappt auch bei offenem Auswahlmenü (Flusskarte); ein solcher Stand wurde verworfen und neu angelegt.
+- `klick @id` spielt eine ganze Szene bis zur nächsten freien Eingabe durch. Für Esc mitten in einer Szene vorher `textmodus nie`, dann kehrt der Klick bei der ersten Zeile zurück.
+- `weiter` klickt an der Stelle, an der der Zeiger steht. Liegt dort ein Hotspot (Drehknopf, Steinmetz), löst das letzte `weiter` ihn aus. Vor einer `weiter`-Folge den Zeiger auf eine leere Stelle legen.
+- `textmodus lesen` in Tempo 4 liefert dieselben Spielsekunden wie in Tempo 1; ein Befehl bricht nach 180 Spielsekunden mit `ZEITÜBERSCHREITUNG` ab, die Szene läuft beim nächsten `warte` weiter (Audienz).
+- Das erste Gesprächsmenü einer Sitzung in Tempo 4 kann außerhalb des Bildes liegen und bleibt es dann (R5-P-09): erstes Gespräch nach jedem Start in `tempo 1`.
+- Leiste: Lage des k-ten Teils (ab 0) bei x = 326 − 19,5 · (M − 1) + 39 · k, M = größte Zahl an Teilen seit dem Laden (mindestens 12); anklickbar zwischen x 104 und 588 und im Streifen 636 bis 639. Damit lässt sich vorab sagen, ob ein `klick inv:` die Pfote oder ein Porträt trifft.
+- Eigene Hilfen (nicht im Repo): `w2block.sh N LAUF` spielt Block N des Lösungswegs, `bis.sh LAUF MUSTER` klickt Text weiter, bis die Lage passt.
+- `start welt-2` gibt nur Handy, Kaugummi, Kugelschreiber und Pixel-Feld; ohne Thunfischdose ist R2b nicht lösbar. Für Welt 2 immer von `welt1_ende` starten.
+
+## Zählung
+
+**49 Funde in den Tabellen: 4 kritisch, 23 wichtig, 22 kosmetisch.** Davon 38 neu (`R5-W2-01` bis `R5-W2-38`) und 11 aus früheren Reviews, heute noch offen und mit alter ID geführt (`GD-W2-01`, `-04` bis `-12`, `GD-W1-03`). Die weltübergreifenden Funde anderer Prüfer (Tabelle „Weltübergreifende Funde“) sind nicht mitgezählt.
+
+Kritisch, alle im laufenden Spiel gesehen:
+
+- **R5-W2-06**: Einmal-Optionen eines Gesprächs sind nach Laden in derselben Sitzung weg; R9 wird damit unlösbar.
+- **R5-W2-17**: Die Inventarleiste blättert nicht. Ab 16 Teilen liegt das neueste Teil unter der Pfote, ab 19 außerhalb des Bildes. Dass der Paraden-Plan am Ende nicht anklickbar ist, ist aus Lagemodell und Code geschlossen, nicht erspielt.
+- **R5-W2-24**: Leonidas steht nach dem Stadionlauf von Tag 1 außerhalb des Raums (x −80) und kommt nicht zurück; die vierte Befragung und damit R7 sind blockiert. Nach Neustart und Laden unverändert.
+- **R5-W2-28**: Archimedes steht nach der Heureka-Szene außerhalb der Werkstatt (x 720); R10a ist blockiert. Nach Neustart und Laden unverändert.
+
+Dazu in Welt 2 zweimal bestätigt, bei pr-w1 gezählt: **R5-W1-34** (Gespräche hängen nach Neustart und Laden, wenn vorher eines offen war).
+
+Wegen R5-W2-24 und R5-W2-28 nicht erreicht und deshalb nicht geprüft: R7-Anklage, R10a/b, Finaltag, Rede-Ringen, R11a/b, Welt-Ende und Übergang im Spielfluss. `welt2_ende.json` ist kein voller Endstand: Inventar echt, Schalter R7, R10, R11, R13 offen, erreicht über `start zs 2`.
+
+FERTIG
