@@ -85,6 +85,7 @@ Spielzeit des geraden Durchlaufs mit allen Nebenproben: rund 10 000 Spielsekunde
 | GD-W1-02 | taverne | kosmetisch | Humor / Zustandswechsel | (b) bestätigt und erweitert: Nach R1 bietet Humbert weiter die Schicksalsberg-Option 0570 an und wiederholt 0580–0582, obwohl er eben gesagt hat, den Wein habe es nie gegeben. (a) Zuruf 1620 nach R1a nicht eigens geprüft. | Verlauf: Humbert nach `w06_nach_R1`, `option 0570` | wie gd-w1; Option 0570 nach R1b ausblenden. |
 | GD-W1-09 | taverne | kosmetisch | Hinweise | Bestätigt: Fondue-Topf nach R1a und R1b → Ersatzzeile „Nein.“ (`SYS_ERS_MAX_0010`). | Verlauf ab `w05_vor_R1c`: `klick @fondue_topf` | wie gd-w1 |
 | R5-W1-13 | taverne | kosmetisch | Zustandswechsel | Ansehen des Eis, solange Berta noch im Korb sitzt: „Berta zetert vom Dachbalken. Ich hab's verdient.“ (`W1_TAV_MAX_1430`) und Pixel „… nicht mit Kesseln“ (`_1450`). Die Zeile gehört zum Zustand nach der Laute. | Verlauf: `rklick @ei` vor `W1_BERTA_WEG` | Ansehen-Zeile an `W1_BERTA_WEG` binden; vorher: „Ein Ei. Mit Huhn drauf. Das Huhn sieht mich an.“ |
+| R5-W1-38 | taverne | kosmetisch | Klickflächen | Der Hotspot „Dachbalken“ (x 0–640, y 0–40) liegt fast ganz unter der Zone, in der die Inventarleiste aufklappt: Von 36 Probestellen trifft die Fernsteuerung ihn an 10, an 22 klappt die Leiste auf, 4 liegen unter Porträts und Pfote. Für die Lösung wird er nicht gebraucht (nur Ansehen `W1_TAV_MAX_0260`). Gleiche Art wie X-07 vom 17.11. (Dachfenster im Prolog). | Verlauf 1311 (`rklick @dachbalken`, Stand `w06_nach_R1`) | Klickfläche auf y 25–60 legen (unter die Leistenzone) oder die Leiste nur am obersten Rand (wenige Pixel) aufklappen lassen. |
 
 ## Funde: Schmiede
 
@@ -172,14 +173,20 @@ Gut hier: Pixels Pack-Kommentare zu Socke, Zeugnis, Eimer, Fell und Dosenöffner
 | 14.11. Fund 21 (Leuchtpilze nehmen) | behoben: Klick nimmt einen Pilz | Stand `w23_wald_pilz` |
 | 14.11. Fund 23 (Ankunft überspringen) | behoben: Esc überspringt, Zustand danach richtig, Nachtrag kommt später | Verlauf Weltbeginn |
 | 17.11. W1-02 (Ring-Laden) | **weiterhin offen** → R5-W1-07 | Ersatzzeile |
+| 17.11. W1-03 (Bestellzettel nur aus einer Richtung) | behoben: gewinnt an 36 von 36 Probestellen | Verlauf 620 (`rklick @bestellzettel`) |
+| 17.11. W1-04 (Humbert nur an 9 % anklickbar, Fischsuppe) | behoben: Humbert 32 und 36 von 36 Probestellen (zwei Standorte), Fischsuppe 36 von 36 | `ZIEL`-Zeilen im Verlauf der Taverne |
+| 17.11. W1-07 (Regale, Zollstock) | Zollstock behoben (36 von 36); Regale nicht gemessen | `ZIEL @zollstock` im Verlauf |
 | 17.11. W1-08 (Toadi in der Tür) | behoben: Toadi steht bei (470, 262) | `status` Klassenzimmer |
 | 17.11. W1-12 (Alter Baum) | **weiterhin offen** → R5-W1-07 | Ersatzzeile |
 | 17.11. W1-10 (Zeldina steckt in der XXL-Ziege) | behoben: an der Brücke Zeldina (158, 196), XXL-Ziege (338, 178); Zeldina steht jetzt aber vor dem Schild (R5-W1-12) | `status` Brücke, Spielzeit 8265 |
+| 17.11. W1-14 (Blatt vor Max' Gesicht im Luftschloss) | behoben: beim Betreten steht Max rechts neben dem Blatt, Gesicht frei | Foto `w49_luftschloss` im Lauf-Ordner |
 | 17.11. W1-17 (Bergwerk, eine Bodenlinie) | **weiterhin offen** | `status` Bergwerk: Goblins y 285–292 |
+| 17.11. W1-18 (Goblin 1 hinter der Kaffeemaschine) | behoben: Der Goblin gewinnt jetzt gegen die Kaffeemaschine (die verliert 9 von 36 an ihn). Goblin 1 selbst 22 von 36, die übrigen 14 gehen an Pixel, der davor sitzt | `ZIEL @goblin_1`, `ZIEL @kaffeemaschine` im Verlauf |
 | 17.11. W1-19 (Pixel legt keine Haare) | behoben: Pixel läuft zur Kreuzung, Bewegung `haare`, Büschel am Boden | Film `filme/besen`, Bilder 385–470 |
 | 17.11. W1-20 (Besen-Hotspot auf leerem Boden) | **weiterhin offen**, siehe Tabelle Turm | `belege/pr-w1/R5-W1_kammer1_keine_besen_sichtbar.png` |
 | 17.11. W1-21 (Rundbogen neben der Geheimtür ohne Klickfläche) | **weiterhin offen**: `objekte` in den Abstellkammern kennt rechts nur „Geheimtür“ (x 508–570) | `objekte`, Spielzeit 8948 |
 | 17.11. W1-23 (Waldemar neben der Brücke) | behoben: Waldemar bei (395, 168) auf der Brücke | `status` Brücke |
+| 17.11. X-07 (Klickflächen unter der Leistenzone) | **weiterhin offen** in Welt 1: Dachbalken der Taverne → R5-W1-38 | Verlauf 1311 |
 | 17.11. X-08 (Pixel anklicken) | **weiterhin offen** → R5-W1-07 | Ersatzzeile |
 
 Noch nicht nachgeprüft: 14.11. übrige Nummern; 17.11. W1-01, -03 bis -07, -09 bis -11, -13 bis -16, -18 bis -22, X-01 bis X-07, A-01 bis A-08; GD-W1-05, -06, -15.
