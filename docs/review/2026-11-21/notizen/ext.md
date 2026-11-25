@@ -313,3 +313,126 @@ Rhubarbs Mundformen (https://github.com/DanielSWolf/rhubarb-lip-sync): A geschlo
 | **3 (nein)** | Audio2Face, Montreal Forced Aligner, Papagayo-NG | – | – | – | kein Nutzen für 2D-Profil-Sprites; Audio2Face läuft auf der Radeon nicht |
 
 Reihenfolge: Stufe 0 sofort (ist ein Fehler), Stufe 1 zusammen mit dem Blindtest der Stimmen (20 Zeilen von Max, Pixel, Opa), Stufe 2 erst entscheiden, wenn Stufe 1 im Spiel zu sehen ist.
+
+## 4. Musik: ACE-Step 1.5
+
+**Kurzantwort:** ACE-Step 1.5 ist für dieses Spiel einen ernsthaften Versuch wert: MIT-Lizenz für Code und Gewichte, die Modellkarte erlaubt kommerzielle Nutzung der Musik ausdrücklich, es läuft lokal auf der Radeon 7900 XT (20 GB) und kostet nichts je Stück. Es ist aber kein Selbstläufer: Die Hersteller ordnen es selbst zwischen Suno v4.5 und v5 ein, es gibt keine Schleifen-Funktion, Tempo und Tonart sind nur Richtwerte, und ein Referenz-Audio überträgt **keine Melodie** (der Leitmotiv-Plan in `docs/04-audio.md` geht so nicht auf). Empfehlung: Versuch mit zwei Stücken, blind gegen ElevenLabs Music; danach entscheiden. Suno und Udio weiterhin meiden.
+
+### 4.1 Was es ist (abgerufen 25.11.2026)
+
+| Punkt | Befund | Quelle |
+| --- | --- | --- |
+| Herausgeber | ACE Studio und StepFun, GitHub-Organisation `ace-step` | https://github.com/ACE-Step/ACE-Step-1.5 |
+| Veröffentlichung | Bericht arXiv 2602.00744 (31.01.2026; Modell laut einem Test seit 28.01.2026 öffentlich); **XL** (4 Mrd. Parameter) am 02.04.2026, in ComfyUI seit 17.04.2026 | https://arxiv.org/html/2602.00744, https://blog.comfy.org/p/ace-step-15-xl-commercial-grade-music |
+| Aufbau | Sprachmodell als „Composer Agent“ (plant BPM, Tonart, Dauer, Aufbau) plus Diffusions-Transformer; 48 kHz Stereo | arXiv |
+| Modelle | DiT 2B: `base`, `sft`, `turbo`; DiT XL 4B: `xl-base`, `xl-sft`, `xl-turbo`; Sprachmodell 0,6B / 1,7B / 4B | GitHub |
+| Lizenz Code | „This project is licensed under MIT“ | GitHub |
+| Lizenz Gewichte | Modellkarte: „License: mit“; XL laut Comfy-Blog „commercially licensed under the MIT license“ | https://huggingface.co/ACE-Step/Ace-Step1.5, Comfy-Blog |
+| Erzeugte Musik | „You can strictly use the generated music for commercial purposes.“ Das GitHub-README bittet zugleich, „verify the originality of generated works, clearly disclose AI involvement“ | Modellkarte, GitHub |
+| Trainingsdaten | Modellkarte: „Licensed Data: Professionally licensed music tracks“, lizenzfreie und gemeinfreie Musik, synthetische MIDI-Aufnahmen. Bericht: Korpus mit 27 Mio. Stücken, beschriftet mit Gemini 2.5 Pro und eigenen Modellen; die Herkunft im Einzelnen legt der Bericht nicht offen. AMD gibt die Angabe nur als Behauptung wieder: „The project also claims it was trained entirely on royalty-free non copyrighted material.“ | Modellkarte, arXiv, AMD-Blog |
+| Korrektur am Repo | `docs/04-audio.md` nennt „Apache-2.0-Lizenz“. Für 1.5 ist es **MIT** (Code und Gewichte). In die Credits gehört MIT mit Copyright-Vermerk | – |
+
+Zur Trainingsdaten-Frage nüchtern: Die Lizenz (MIT) räumt Rechte am Modell ein und die Modellkarte verspricht kommerzielle Nutzbarkeit der Ausgaben. Eine Freistellung von Ansprüchen Dritter (wie sie Stability und ElevenLabs für Unternehmenskunden anbieten) gibt es nicht; ob die „lizenzierte Musik“ wirklich für KI-Training lizenziert war, lässt sich von außen **nicht bestätigen**. Das Risiko ist kleiner als bei Suno (laufende Klagen, Urteil gegen Suno in München), aber nicht null. Rechnungen gibt es bei einem lokalen Modell nicht; als Nachweis taugen Protokoll (Prompt, Seed, Modell-Datei mit Prüfsumme, Datum) und eine Kopie von Lizenz und Modellkarte vom Tag der Erzeugung.
+
+### 4.2 Hardware und Wege
+
+| Punkt | Befund | Quelle |
+| --- | --- | --- |
+| Grafikspeicher | ≤ 6 GB: 2B-Turbo ohne Sprachmodell; 8–16 GB: 2B Turbo/sft mit LM 0,6B/1,7B; **16–20 GB: 2B sft oder XL-Turbo mit LM 1,7B**; 20–24 GB: XL Turbo/sft; ≥ 24 GB: XL sft mit LM 4B. XL braucht mindestens 12 GB mit Auslagerung, 20 GB ohne. Der Bericht nennt „less than 4GB of VRAM“ für das Grundmodell, ohne Messung | GitHub, arXiv |
+| Tempo | unter 2 s je Stück auf einer A100, unter 10 s auf einer RTX 3090 (Herstellerangaben, im Bericht nicht einheitlich); AMD: Radeon AI PRO R9700 etwa 4-fache Echtzeit, also ein 90-s-Stück in gut 20 s | GitHub, AMD-Blog |
+| AMD unter Windows | ComfyUI Desktop mit eingebautem ROCm, aktuelle Adrenalin-Treiber, Vorlage „ACE Step 1.5 Turbo AIO“ (Kategorie Audio); XL-Vorlagen `audio_ace_step1_5_xl_base.json`, `…_xl_sft.json`, `…_xl_turbo.json`. Eigene Oberfläche des Projekts: ROCm unter Windows mit Python 3.12, portables Paket als 7z | AMD-Blog (04.02.2026), Comfy-Blog, GitHub |
+| Sebastians PC | Radeon 7900 XT, 20 GB (`docs/offene-punkte.md` P7): reicht für 2B sft und XL-Turbo. Ob XL auf genau dieser Karte unter ROCm stabil läuft, ist **nicht bestätigt** (AMD nennt nur die R9700) | – |
+| Cloud | Comfy Cloud bietet dieselben Vorlagen; Preis **nicht geprüft**. Für ein paar Dutzend Stücke unnötig, wenn es lokal läuft | Comfy-Blog |
+
+### 4.3 Fähigkeiten und Schwächen
+
+| Thema | Befund | Quelle |
+| --- | --- | --- |
+| Instrumental | `[Instrumental]` ins Textfeld; Abschnitte mit Marken wie `[Intro - ambient]` steuerbar. Ein Test-Artikel merkt an, das Modell sei überwiegend auf Stücke mit Gesang trainiert | Tutorial, https://okmiku.com/blog/ace-step-v1-5-review (ohne eigenen Hörtest) |
+| Länge | 10 s bis 10 min; stabil laut Tutorial 30–60 s und 2–4 min, „very long outputs may repeat or lose structure“ | GitHub, Tutorial |
+| Tempo, Tonart, Takt | eigene Eingabefelder, **nicht** in den Prompt schreiben; BPM 60–180 verlässlich, aber nur als Anker („120 might yield 118 or 122“); gängige Tonarten stabil, seltene werden ignoriert; 4/4 am sichersten | Tutorial |
+| Schleifen | **keine Schleifen-Funktion.** Möglich: Stück auf Taktgrenzen schneiden und überblenden, oder Ende und Anfang aneinanderlegen und die Naht mit „Repaint“ (3–90 s) neu erzeugen lassen | Tutorial; arXiv („loop padding“ ist nur Datenaufbereitung) |
+| Variationen | Arbeitsweise „Gacha“: 2, 4 oder 8 Fassungen je Lauf, beste auswählen; fester Seed zum Vergleichen | Tutorial |
+| Referenz-Audio | steuert Klangfarbe, Mischung, Spielweise, Stimmung; „removes specific melody and rhythm information“. **Eine Melodie überträgt es nicht** | Tutorial |
+| Cover | folgt Aufbau und Melodie einer Vorlage, Stärke 0–1 (`audio_cover_strength`); damit ließe sich eine eingespielte Tonfolge in einen anderen Stil setzen | Tutorial |
+| Stems, Mehrspur | Track-Trennung, „Lego“ (Spur dazu), „Complete“: nur mit `base`/`xl-base` | GitHub, Tutorial |
+| LoRA | eigenes Stiltraining, laut README 8 Stücke in etwa 1 h auf einer RTX 3090; im Bericht nicht belegt | GitHub, arXiv |
+| Gesang | Texte in über 50 Sprachen laut README; deutsche Qualität **nicht bestätigt**; Dehnungen von Vokalen laut Tutorial instabil | GitHub, Tutorial |
+| Qualität laut Hersteller | zwischen Suno v4.5 und v5; in der eigenen Tabelle liegt Suno v5 bei Stil- und Texttreue vorn (46,8/34,2 gegen 39,1/26,3), ACE-Step bei SongEval. Messung mit eigenen Bewertungsmodellen | arXiv |
+| Stimmen von außen | Kommentare unter dem Comfy-Beitrag: Gesang „muffled“, Instrumente weniger stimmig als bei Suno. Decrypt (11.11.2026) testet das geschlossene Nachfolgemodell „ACE Music v1“ und nennt ACE-Step 1.5 das schwächere, lokal lauffähige Modell; bei Nischen-Genres liege ACE daneben | Comfy-Blog, https://decrypt.co/383070/new-ai-music-model-already-better-than-suno-ace-review |
+
+Einen unabhängigen Hörtest für **instrumentale Spielmusik** habe ich nicht gefunden (**nicht bestätigt**): Alle gefundenen Berichte geben Herstellerzahlen wieder oder testen Gesang. Genau das muss der Versuch klären.
+
+### 4.4 Was das Spiel braucht (aus `docs/04-audio.md`, Fassung auf `origin/claude/project-thread-hfwol7`)
+
+Rund 48 Minuten Musik: 30 Raum-Schleifen zu 90 s, 3 Lieder, Stings und Jingles. Prompt-Baustein: `instrumental, no vocals, seamless loop, retro game soundtrack, warm and clean mix, 90 seconds`. Ein Leitmotiv aus fünf Tönen (g′–c″–e″–d″–c″) soll in jedem Welt-Stück vorkommen.
+
+| Gruppe | Stücke (ID) | Einschätzung für ACE-Step |
+| --- | --- | --- |
+| Rahmen | `titel`, `gegenwart`, `zappomat` (4 s), `werbeblock` (5 s), `abspann`, `finale_maschine`, `finale_geburtstag` | Lo-Fi (`gegenwart`) leicht; die drei Stücke, die „das Titelthema“ variieren, sind per Text nicht erreichbar: nur über Cover einer eingespielten Vorlage oder Nachbearbeitung. Stings von 4–5 s liegen unter der empfohlenen Mindestlänge; länger erzeugen und schneiden |
+| Welt 1 | `w1_dorf`, `w1_schule`, `w1_taverne`, `w1_turm`, `w1_wald`, `w1_luftschloss`, `w1_bergwerk` | akustische Mittelalter-Besetzung (Laute, Blockflöte, Fiedel) ist der härtere Test: Modelle setzen gern Schlagzeug und Flächen dazu |
+| Welt 2 | `w2_aegypten`, `w2_olympia`, `w2_syrakus`, `w2_fuenfkampf` | seltene Instrumente (Oud, Ney, Aulos, Lyra): Stiltreue unsicher |
+| Welt 3 | `w3_unterstadt`, `w3_basis`, `w3_simulation`, `w3_labor`, `w3_kern` | Synthwave, Muzak, Minimal-Elektronik: erfahrungsgemäß die leichteste Gruppe für solche Modelle; `w3_basis` soll „same key as the rain theme“ haben, das geht über das Tonart-Feld |
+| Welt 4 | `w4_testbild`, `w4_gluecksrad`, `w4_sitcom`, `w4_savanne`, `w4_mitternacht`, `w4_comic`, `w4_spukhaus`, `w4_zentrale`, `w4_zappmann` | Genre-Parodien (Gameshow, Sitcom, Big Band) liegen nah an Trainingsmaterial mit Gesang; `[Instrumental]` prüfen. `w4_mitternacht` trägt ein Rhythmus-Minispiel: Tempo nachmessen, Taktmarken von Hand (steht schon im Plan) |
+| Lieder | `lied_goblin` (Passwort muss verständlich sein), `lied_waldemar`, `lied_werbepause`, deutsch gesungen | größtes Risiko; früh testen, sonst ElevenLabs Music oder echte Stimmen |
+| Jingles | `aufgehoben`, `geloest`, `welt_geschafft`, `falsch`, `lachkonserve`, `gluecksrad` (2–5 s) | besser aus einer Klangbibliothek oder selbst gebaut; für Musikmodelle zu kurz |
+
+**Drei Stellen, an denen der Plan angepasst werden muss:**
+1. Leitmotiv „bei ACE-Step die Aufnahme als Referenz-Audio mitgeben“ funktioniert laut Tutorial nicht (Referenz überträgt keine Melodie). Ersatz: Motiv als kurze Aufnahme einspielen und über **Cover** in den Stil der Welt setzen, oder wie schon vorgesehen in Audacity darüberlegen.
+2. BPM und Tonart („in C major“) nicht in den Prompt, sondern in die Felder; Erwartung ±2 BPM.
+3. „seamless loop“ im Prompt bewirkt bei ACE-Step keine Schleife; die Naht ist Handarbeit (Schnitt auf Takt, Überblendung oder Repaint).
+
+### 4.5 Alternativen (Lizenz und Preis, abgerufen 25.11.2026)
+
+| Weg | Lizenz, kommerzielle Nutzung | Preis | Für Couch Quest |
+| --- | --- | --- | --- |
+| **ACE-Step 1.5 / XL** lokal | MIT, Ausgaben kommerziell nutzbar laut Modellkarte | 0 € | Versuch, siehe 4.6 |
+| **ElevenLabs Music** (im Plan als Cloud-Weg) | Musik-Bedingungen vom 09.10.2026: „All online and offline commercial use permitted, except film, TV, radio, and Studio Games“ auf allen Tarifen unter Enterprise Music. Ein **„Indie Game“** ist ausgenommen von „Studio Game“: Spiel mit weniger als 500.000 $ Umsatz seit Erscheinen, Entwickler mit weniger als 1 Mio. $ aus allen Spielen. Wird die Grenze überschritten, bleiben 60 Tage für einen passenden Tarif. Tarife Free bis Pro „For Individual Use Only“. Keine Künstler-, Titel- oder Labelnamen im Prompt; „you retain any and all rights in and to your Input and Output“ (https://elevenlabs.io/eleven-music-model-specific-terms) | laut `04-audio.md` etwa 0,14 $ je Minute; für 48 min mit drei Versuchen rund 20 $ (Preis heute **nicht nachgeprüft**) | deckt das Spiel als Indie-Titel ab. Die Aussage im Plan „Spiele ausdrücklich erlaubt“ stimmt nur mit dieser Umsatzgrenze; so in die Doku schreiben |
+| **Stable Audio 3** (Small, Medium offen; 20.05.2026) | Stability AI Community License: Ausgaben dürfen verbreitet und vermarktet werden; über 1 Mio. $ Jahresumsatz Enterprise-Lizenz; „fully licensed data“ (https://stability.ai/news-updates/meet-stable-audio-3-the-model-family-built-for-artistic-experimentation-with-open-weight-models). Laut Übersicht vorher registrieren (https://www.creativeainews.com/articles/best-open-source-ai-music-models-2026/) | 0 € lokal | Small bis 2 min, Medium bis 6:20, nur instrumental, Bearbeiten von Abschnitten und Fortsetzen, LoRA. **Stärkster zweiter Kandidat für Raum-Schleifen**, weil rein instrumental und mit der klarsten Trainingsdaten-Aussage. Hardwarebedarf von Medium und AMD-Tauglichkeit **nicht bestätigt**. Im Werkzeug ist bisher nur Stable Audio Open 1.0 (bis 47 s) für Geräusche eingetragen |
+| Stable Audio Open 1.0 | wie oben | 0 € | zu kurz für 90-s-Schleifen; bleibt für Geräusche |
+| **Suno** | Warner hat sich im November 2025 geeinigt, BMG am 12.08.2026; **UMG und Sony klagen weiter** (Antrag auf 61.026 Werke); **LG München, 31.07.2026: Suno hat Urheberrecht verletzt** (GEMA, nicht rechtskräftig). Seit 03.09.2026: Pro 20, Premier 60 Downloads im Monat; ein Stück darf erst nach einem Download veröffentlicht oder lizenziert werden; Wasserzeichen angekündigt; heutige Modelle sollen abgelöst werden (https://musicbusinessworldwide.com/5-things-to-know-about-sunos-bmg-licensing-deal-download-caps-watermarks-and-more, https://www.musicbusinessworldwide.com/suno-limits-pro-subscribers-to-20-song-downloads-per-month) | Pro 8–10 $, Premier 24–30 $ im Monat | **nein**: Rechtslage für einen deutschen Entwickler am schlechtesten, dazu Download-Grenzen |
+| **Udio** | nach der Einigung mit UMG auf ein geschlossenes Angebot umgestellt; `04-audio.md`: „erlaubt keine Downloads mehr“. Heute nicht eigens nachgeprüft (**nicht bestätigt**) | – | nein |
+| MusicGen / AudioCraft | Gewichte CC BY-NC 4.0, **nicht kommerziell** (Übersicht vom 14.10.2026) | 0 € | nein |
+| YuE (v1) / YuE2 | v1 Apache 2.0 (kommerziell, Nennung erbeten); **YuE2 CC BY-NC 4.0**, 24 GB empfohlen | 0 € | v1 ohne neue Entwicklung, auf Gesang ausgelegt; nein |
+| DiffRhythm, HeartMuLa | Apache 2.0 (Übersicht); bei DiffRhythm gibt es auf Hugging Face eine Diskussion „Incorrect license“ (**nicht geklärt**) | 0 € | auf Lieder ausgelegt; nein |
+| MiniMax Music 3 | eigene Community-Lizenz: kommerziell, aber öffentliche Uploads als maschinell erzeugt kennzeichnen; ab 20 Mio. $ Umsatz Zustimmung nötig (Übersicht) | 0 € lokal, unter 24 GB | Kennzeichnung ohnehin vorgesehen; Qualität für Instrumentalmusik **nicht geprüft** |
+| Magenta RealTime 2 | Gewichte CC BY 4.0, nur instrumental, Echtzeit (Übersicht) | 0 € | Spielerei für Übergänge; nicht geprüft |
+| **Fertige Musikpakete** (klassischer Weg) | Beispiel alkakrab-Bundle: 609 Stücke plus 120 Geräusche, „you are able to use every track in this bundle in any commercial or non-commercial games / projects“, „no AI was used in the creation process“; volle Lizenz als PDF im Paket (nicht gelesen) (https://alkakrab.itch.io/270bundle) | 14,99 € (statt 49,99 €) | Fantasy, Mittelalter, Sci-Fi, Piano vorhanden, zum Teil mit Loop-Fassungen; **keine** Synthwave-, Gameshow-, Sitcom-Stücke. Als Füllung für Welt 1/2 und als Rückfall brauchbar; kein Leitmotiv, andere Spiele nutzen dieselben Stücke. Weitergabe im öffentlichen Repo wie bei den Grafik-Paketen klären |
+| OpenGameArt-Musik | je Stück CC0, CC-BY, CC-BY-SA; heute **nicht durchsucht** | 0 € | einzelne Stücke möglich, Stil uneinheitlich |
+| Selbst bauen (Tracker, DAW, Chiptune) | eigenes Werk, keine Offenlegung nötig | 0 € Software, viel Zeit | sinnvoll für das Leitmotiv, die Jingles und Stings (wenige Sekunden, wenige Töne); für 30 Schleifen unrealistisch |
+| Komponist beauftragen | Vertrag | **nicht recherchiert** | einziger Weg zu einem durchgehend geführten Leitmotiv ohne KI-Kennzeichnung |
+
+**Plattform-Pflichten:** Steam verlangt in der Inhaltsumfrage die Angabe von „Pre-Generated“-Inhalten, die mit KI-Hilfe entstanden und im Spiel ausgeliefert werden, genannt sind „artwork, sound, narrative, localization, etc.“, mit Beschreibung der Umsetzung; dazu gilt die Zusage aus dem Vertriebsvertrag, „that your game will not include illegal or infringing content“ (https://partner.steamgames.com/doc/gettingstarted/contentsurvey). Musik steht nicht wörtlich in der Liste, fällt aber unter „sound … etc.“. Für Couch Quest ändert die Wahl des Musikmodells nichts an der Pflicht: Grafik und Stimmen sind ohnehin anzugeben. Wie die Angabe auf der Shopseite erscheint, steht auf dieser Seite nicht (**nicht bestätigt**). Auf itch.io tragen Seiten Kennzeichen wie „No generative AI was used“ oder „AI Assisted“ (bei den Paketen in Kapitel 1 gesehen); die Regel dazu habe ich nicht nachgelesen (**nicht bestätigt**).
+
+### 4.6 Empfehlung und kleiner Versuch
+
+**Empfehlung:** ACE-Step 1.5 als ersten lokalen Weg testen, Stable Audio 3 Medium als zweiten, ElevenLabs Music als bezahlte Messlatte und Rückfall. Leitmotiv, Jingles und Stings von Hand oder aus Klangbibliotheken. Die drei gesungenen Stücke getrennt entscheiden (Risiko Verständlichkeit).
+
+**Versuch (ein Abend, 0 € lokal, höchstens 2 $ für die Vergleichsstücke):**
+
+| Schritt | Inhalt |
+| --- | --- |
+| Stücke | **`w1_dorf`** (Laute, Blockflöte, Tamburin, 100 BPM, C-Dur): der schwere Fall, akustisch und sparsam besetzt. **`w3_unterstadt`** (Synthwave, 80 BPM, a-Moll): der leichte Fall. Zusammen zeigen sie die Spanne |
+| Einrichtung | ComfyUI Desktop, Adrenalin-Treiber aktuell, Vorlage „ACE Step 1.5 Turbo AIO“; danach dieselben Prompts mit `audio_ace_step1_5_xl_turbo.json` (20 GB sollten reichen) |
+| Einstellungen | Textfeld `[Instrumental]`; Prompt aus `04-audio.md` **ohne** BPM und Tonart; BPM, Tonart, 4/4 und Dauer in den Feldern; Dauer 120 s (im stabilen Bereich, lässt Platz für den Schnitt auf 90 s); 8 Fassungen je Modell, Seeds notieren; Turbo 8 Schritte, zum Vergleich einmal `sft` mit 50 Schritten |
+| Schleife | je Stück die beste Fassung: Tempo messen, auf 32 oder 48 Takte schneiden, 1 Takt überblenden; zweite Methode: Ende und Anfang aneinanderlegen, 6–8 s über der Naht mit Repaint neu erzeugen. Dreimal hintereinander abspielen |
+| Leitmotiv | die fünf Töne als 8-s-Aufnahme (Pfeifen oder MIDI) über **Cover** mit Stärke 0,5–0,7 in den Stil von `w1_dorf` setzen: bleibt die Tonfolge erkennbar? |
+| Vergleich | dieselben zwei Prompts je dreimal mit ElevenLabs Music (rund 9 min, etwa 1,30 $ nach dem Preis im Plan) und, wenn es auf der Radeon läuft, mit Stable Audio 3 Medium |
+| Protokoll | Modell-Datei mit Prüfsumme, Vorlage, Prompt, Felder, Seed, Datum, Rechenzeit; Kopie von Lizenz und Modellkarte |
+
+**Woran man Erfolg misst:**
+1. **Trefferquote:** mindestens 2 von 8 Fassungen je Stück hält Sebastian ohne Nachbearbeitung für spielbar.
+2. **Besetzung:** `w1_dorf` ohne Schlagzeug-Set, Synthesizer-Flächen oder Gesangsreste; `w3_unterstadt` ohne Gesang.
+3. **Schleife:** Naht bei dreifacher Wiederholung im Blindtest nicht benennbar; Tempo am Anfang und Ende höchstens 2 BPM auseinander.
+4. **Klang:** auf Kopfhörern kein Rauschen, kein metallisches Schwirren in den Höhen, kein Pumpen; Lautheit nach Angleichung wie die Vergleichsstücke.
+5. **Blindvergleich:** In mindestens einem der beiden Stücke liegt ACE-Step für Sebastian gleichauf mit ElevenLabs Music.
+6. **Leitmotiv:** nach dem Cover in 2 von 4 Fassungen erkennbar.
+7. **Aufwand:** Einrichtung unter 1 h, Rechenzeit je Fassung unter 1 min.
+
+Ausgang: Sind 1 bis 4 erfüllt, entstehen die 30 Schleifen lokal (geschätzt 30 × 20 min Auswahl und Schnitt = 10 h, 0 €). Fällt nur `w1_dorf` durch, akustische Welten (1, 2) über ElevenLabs oder ein Musikpaket, Welt 3 und 4 lokal. Fallen beide durch, bleibt der Plan aus `04-audio.md` (ElevenLabs Music, etwa 20 $ für alles).
+
+| Empfehlung zu Frage 4 | Aufwand | Kosten | Nutzen |
+| --- | --- | --- | --- |
+| Versuch wie oben | 3–4 h | 0–2 € | klärt die Frage mit den eigenen Ohren statt mit Herstellerzahlen |
+| `docs/04-audio.md` berichtigen (MIT statt Apache-2.0; Referenz-Audio trägt keine Melodie; BPM/Tonart in Felder; Indie-Grenze bei ElevenLabs Music; Stable Audio 3 aufnehmen) | 0,5 h | 0 € | verhindert falsche Credits und einen Plan, der technisch nicht aufgeht |
+| Leitmotiv und Jingles von Hand (MIDI, ein Instrument je Welt) | 3–5 h | 0 € | das Einzige, was das Spiel musikalisch zusammenhält; kein Modell liefert das |
