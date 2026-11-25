@@ -27,3 +27,8 @@ Alle Stände stammen aus dem Lauf `pr-w2-haupt`: Anfang ist `kontrollpunkte/welt
 | `w2_20_buero_formular` | startbuero | Beamte befragt, Hermes im Büro, leeres Formular | + leeres_formular | Klickweg |
 | `w2_21_rundschreiben` | startbuero | + R3a (Weg A) | – kugelschreiber, leeres_formular; + rundschreiben | Kugelschreiber auf Formular |
 | `w2_22_nach_R3` | startbuero | + R3b, Sandalen | – rundschreiben; + startpass, sandalen | Rundschreiben auf Beamter 1 |
+| `w2_23_oel_sandalen_aegypten` | palastkueche | **Nachspiel-Sitzung** (frischer Prozess, Lösungsweg von `welt1_ende`): R1, R2a, R2b, R3a, R3b, R4, R8, R9; Sandalen geölt; Opas Papyrus. Weniger Bausteine (stirbt, klingelt, leuchtet, sonne, schreibt), Konter 1–7. Nie angesprochen: Steinmetz, Brian, Leonidas, Hieron, Archimedes | 15 Teile | Lösungsweg Blöcke 1–4 |
+| `w2_24_hafen_anfang` | hafen_syrakus | erste Ankunft in Syrakus (`W2_FAHRTEN = 3`) | wie oben | Flusskarte „Hafen Syrakus“ |
+| `w2_25_werkstatt_anfang` | werkstatt | Werkstatt erstmals betreten, vor dem Gespräch mit Hieron | wie oben | Klickweg |
+| `w2_26_vor_R5_21_teile` | werkstatt | Krone und Goldbarren von Hieron; Waage, Messbecher, Brennspiegel, Essigkrug genommen. **21 Teile: Messbecher, Brennspiegel, Essigkrug liegen rechts außerhalb des Bildes (R5-W2-17)** | + krone, goldbarren, waage, messbecher, brennspiegel, essigkrug | Hieron Option 0470 |
+| `w2_27_nach_R5` | werkstatt | + R5, Trainings-Szene gelaufen | – krone, goldbarren (19 Teile) | Krone, Messbecher, Barren, Messbecher auf die Badewanne |

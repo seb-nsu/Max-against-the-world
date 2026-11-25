@@ -94,12 +94,15 @@ klick @traubensaft
 warte
 klick inv:datteln
 klick inv:brot
+warte 4
 warte
 klick inv:zwiebel
 klick inv:fladen
+warte 4
 warte
 klick inv:fladen
 klick @lehmoefen
+warte 4
 warte
 klick inv:fladen
 klick @nebet
@@ -166,6 +169,7 @@ klick @leeres_formular
 warte
 klick inv:kugelschreiber
 klick inv:leeres_formular
+warte 4
 warte
 klick inv:rundschreiben
 klick @beamter_1
