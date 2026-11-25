@@ -1,0 +1,408 @@
+#### Protokoll p1
+> stand holen w02_vor_R1
+LAGE frei | Raum taverne | Max (203,299) Skala 0.92 | Kamera x=0 | Hand: - | Dauer 0.0 s
+Offene Rätselschritte (laut Spiel): R1a, R1b
+> pfote
+[  371.5] HINWEIS Schritt R1a, Stufe 2 (pfote)
+[  371.5] SAGT W1_HINT_PIX_0121 | PIX: Ich könnte mit Minka reden, unter Katzen sozusagen. Wechsel zu mir, falls du dich traust.
+> pfote
+[  414.1] HINWEIS Schritt R1a, Stufe 2, Wiederholung, Wartezeile (pfote)
+[  414.1] SAGT W1_HINT_PIX_9995 | PIX: Ich überlege noch. Hier hat sogar das Nachdenken eine Satzung. Paragraf eins: nicht drängeln.
+[  417.3] SAGT W1_HINT_PIX_0121 | PIX: Ich könnte mit Minka reden, unter Katzen sozusagen. Wechsel zu mir, falls du dich traust.
+> pfote
+[  494.9] HINWEIS Schritt R1a, Stufe 3 (pfote)
+[  494.9] SAGT W1_HINT_PIX_0131 | PIX: Wechsel zu mir und sprich mit Minka. Ich locke sie raus. Mein Charme ist eine Naturgewalt.
+> stand holen w04_vor_R1b
+LAGE frei | Raum taverne | Max (247,264) Skala 0.87 | Kamera x=0 | Hand: - | Dauer 0.0 s
+Offene Rätselschritte (laut Spiel): R1b
+> pfote
+[  517.4] HINWEIS Schritt R1b, Stufe 2 (pfote)
+[  517.4] SAGT W1_HINT_PIX_0122 | PIX: Wirf einen Blick auf die Weinkarte. Da steht etwas, das ganz hinten im Keller liegt.
+> pfote
+[  559.1] HINWEIS Schritt R1b, Stufe 2, Wiederholung, Wartezeile (pfote)
+[  559.1] SAGT W1_HINT_PIX_9995 | PIX: Ich überlege noch. Hier hat sogar das Nachdenken eine Satzung. Paragraf eins: nicht drängeln.
+[  561.9] SAGT W1_HINT_PIX_0122 | PIX: Wirf einen Blick auf die Weinkarte. Da steht etwas, das ganz hinten im Keller liegt.
+> pfote
+[  638.4] HINWEIS Schritt R1b, Stufe 3 (pfote)
+[  638.4] SAGT W1_HINT_PIX_0132 | PIX: Bestell den Jahrgang Schicksalsberg. Den holt er aus dem Keller, und das dauert.
+> stand holen w05_vor_R1c
+LAGE frei | Raum taverne | Max (203,299) Skala 0.92 | Kamera x=0 | Hand: - | Dauer 0.0 s
+Offene Rätselschritte (laut Spiel): R1c
+> pfote
+[  661.5] HINWEIS Schritt R1c, Stufe 1 (pfote)
+[  661.5] SAGT W1_HINT_PIX_0113 | PIX: Gollo traut sich nicht. Er will vorher spielen. Rätselspiele, was sonst.
+[  664.2] SAGT W1_HINT_PIX_0113_2 | PIX: Wer ihm seinen Ring abnehmen will, muss ihn erst einmal besiegen.
+> pfote
+[  706.7] HINWEIS Schritt R1c, Stufe 2 (pfote)
+[  706.7] SAGT W1_HINT_PIX_0123 | PIX: Er verliert nur bei einer Frage, deren Antwort nur du kennen kannst. Etwas, das du bei dir trägst, zum Beispiel.
+> pfote
+[  784.5] HINWEIS Schritt R1c, Stufe 3 (pfote)
+[  784.5] SAGT W1_HINT_PIX_0133 | PIX: Zieh die Thunfischdose auf Gollo. Dann fragst du ihn, was in deiner Tasche ist. Da kommt er nie drauf.
+> stand holen w08_vor_R2
+LAGE frei | Raum zauberstabladen | Max (350,244) Skala 0.84 | Kamera x=0 | Hand: - | Dauer 0.0 s
+Offene Rätselschritte (laut Spiel): R2, R5
+> pfote
+[  804.7] HINWEIS Schritt R2, Stufe 2 (pfote)
+[  804.7] SAGT W1_HINT_PIX_0220 | PIX: In der Taverne gibt es etwas Klebriges. Es blubbert, und ich träume nachts davon.
+> pfote
+[  845.2] HINWEIS Schritt R2, Stufe 2, Wiederholung, Wartezeile (pfote)
+[  845.2] SAGT W1_HINT_PIX_9995 | PIX: Ich überlege noch. Hier hat sogar das Nachdenken eine Satzung. Paragraf eins: nicht drängeln.
+[  847.5] SAGT W1_HINT_PIX_0220 | PIX: In der Taverne gibt es etwas Klebriges. Es blubbert, und ich träume nachts davon.
+> pfote
+[  922.4] HINWEIS Schritt R2, Stufe 3 (pfote)
+[  922.4] SAGT W1_HINT_PIX_0230 | PIX: Schmier Käse auf den Löffel. Ich bin ein Kater, kein Lösungsbuch.
+> stand holen w09_nach_R2
+LAGE frei | Raum zauberstabladen | Max (300,245) Skala 0.84 | Kamera x=0 | Hand: - | Dauer 0.0 s
+Offene Rätselschritte (laut Spiel): R5
+> pfote
+[  942.4] HINWEIS Schritt R5, Stufe 1 (pfote)
+[  942.4] SAGT W1_HINT_PIX_0510 | PIX: Der Brunnen will Gold. Toadi hat nur Pilzgeld, und du?
+[  944.7] SAGT W1_HINT_PIX_0510_2 | PIX: Was hast du eigentlich in deinen Taschen, außer Krümeln und einem Handy ohne Netz?
+> pfote
+[  985.0] HINWEIS Schritt R5, Stufe 2 (pfote)
+[  985.0] SAGT W1_HINT_PIX_0520 | PIX: Gollos Münze gehört in den Brunnen. Und dann wünsch dir nichts, was ich bereuen würde.
+> pfote
+[ 1059.1] HINWEIS Schritt R5, Stufe 3 (pfote)
+[ 1059.1] SAGT W1_HINT_PIX_0530 | PIX: Münze rein, „etwas, das hoch hinaus will“ wünschen. Nicht Pizza. Ich sage das unter Schmerzen.
+> stand holen w10_nach_R5
+LAGE frei | Raum dorfplatz | Max (869,279) Skala 0.46 | Kamera x=550 | Hand: - | Dauer 0.0 s
+Offene Rätselschritte (laut Spiel): R8
+> pfote
+[ 1078.3] HINWEIS Schritt R8, Stufe 1 (pfote)
+[ 1078.3] SAGT W1_HINT_PIX_0810 | PIX: Eine Bohne wächst nicht in der Tasche. Sie braucht Erde. Da ist ein Fleck Erde neben dem Brunnen. Zufall? Nein.
+> pfote
+[ 1119.9] HINWEIS Schritt R8, Stufe 2 (pfote)
+[ 1119.9] SAGT W1_HINT_PIX_0820 | PIX: Pflanzen und gießen. Zum Gießen braucht es den Eimer vom Brunnen. Mit Wasser drin, wenn man ihn hineinhält.
+> pfote
+[ 1194.5] HINWEIS Schritt R8, Stufe 3 (pfote)
+[ 1194.5] SAGT W1_HINT_PIX_0830 | PIX: Bohne in den Erdfleck, Eimer am Brunnen füllen, Wasser auf die Bohne. Dann klettern. Du. Ich werde getragen.
+> stand holen w13_vor_bestellung
+LAGE frei | Raum dorfplatz | Max (1075,258) Skala 0.38 | Kamera x=640 | Hand: - | Dauer 0.0 s
+Offene Rätselschritte (laut Spiel): -
+> pfote
+[ 1215.5] HINWEIS Schritt , Stufe 0, Wiederholung (pfote)
+[ 1215.5] SAGT W1_HINT_PIX_0010 | PIX: Gerade ist nichts offen. Geh irgendwohin, wo du noch nicht warst,
+[ 1217.8] SAGT W1_HINT_PIX_0010_2 | PIX: oder dorthin, wo es etwas zu essen gibt. Beides zählt, aber das Zweite zählt mehr.
+> pfote
+[ 1258.9] HINWEIS Schritt , Stufe 0, Wiederholung (pfote)
+[ 1258.9] SAGT W1_HINT_PIX_0010 | PIX: Gerade ist nichts offen. Geh irgendwohin, wo du noch nicht warst,
+[ 1260.8] SAGT W1_HINT_PIX_0010_2 | PIX: oder dorthin, wo es etwas zu essen gibt. Beides zählt, aber das Zweite zählt mehr.
+> pfote
+[ 1332.7] HINWEIS Schritt , Stufe 0, Wiederholung (pfote)
+[ 1332.7] SAGT W1_HINT_PIX_0010 | PIX: Gerade ist nichts offen. Geh irgendwohin, wo du noch nicht warst,
+[ 1335.4] SAGT W1_HINT_PIX_0010_2 | PIX: oder dorthin, wo es etwas zu essen gibt. Beides zählt, aber das Zweite zählt mehr.
+#### Protokoll p2
+> stand holen w16_vor_R3_fell
+LAGE frei | Raum trollbruecke | Max (355,172) Skala 0.41 | Kamera x=0 | Hand: - | Dauer 0.0 s
+Offene Rätselschritte (laut Spiel): R3
+> pfote
+[ 1357.1] HINWEIS Schritt R3, Stufe 2 (pfote)
+[ 1357.1] SAGT W1_HINT_PIX_0320 | PIX: Eine Ziege frisst gerade beim Schmied, eine zweite kann man am Dorfbrett bestellen. Die dritte … bitte nicht.
+> pfote
+[ 1397.6] HINWEIS Schritt R3, Stufe 2, Wiederholung, Wartezeile (pfote)
+[ 1397.6] SAGT W1_HINT_PIX_9995 | PIX: Ich überlege noch. Hier hat sogar das Nachdenken eine Satzung. Paragraf eins: nicht drängeln.
+[ 1400.3] SAGT W1_HINT_PIX_0320 | PIX: Eine Ziege frisst gerade beim Schmied, eine zweite kann man am Dorfbrett bestellen. Die dritte … bitte nicht.
+> pfote
+[ 1476.1] HINWEIS Schritt R3, Stufe 3 (pfote)
+[ 1476.1] SAGT W1_HINT_PIX_0330 | PIX: Hol die Schmiede-Ziege.
+[ 1477.6] SAGT W1_HINT_PIX_0330_2 | PIX: Bestell die zweite mit dem Zettel am Dorfbrett und gib mir den Ziegenfell-Vorleger aus der Taverne. Ich hasse alles daran.
+> stand holen w17_nach_R3
+LAGE frei | Raum trollbruecke | Max (285,172) Skala 0.41 | Kamera x=0 | Hand: - | Dauer 0.0 s
+Offene Rätselschritte (laut Spiel): R4a, R4b
+> pfote
+[ 1499.1] HINWEIS Schritt R4a, Stufe 1 (pfote)
+[ 1499.1] SAGT W1_HINT_PIX_0411 | PIX: Der Troll ist ein Paragrafenreiter. Lies das Brückenschild. Ganz.
+> pfote
+[ 1539.8] HINWEIS Schritt R4a, Stufe 2 (pfote)
+[ 1539.8] SAGT W1_HINT_PIX_0421 | PIX: Im Märchen läuft immer erst die Kleine, dann die Mittlere, dann die Große.
+> pfote
+[ 1614.2] HINWEIS Schritt R4a, Stufe 3 (pfote)
+[ 1614.2] SAGT W1_HINT_PIX_0431 | PIX: Schick die Ziegen klein, mittel, groß über die Brücke. Ich bin die Kleine. Sag's niemandem.
+> stand holen w18_nach_R4a
+LAGE frei | Raum trollbruecke | Max (285,172) Skala 0.41 | Kamera x=0 | Hand: - | Dauer 0.0 s
+Offene Rätselschritte (laut Spiel): R4b
+> pfote
+[ 1634.5] HINWEIS Schritt R4b, Stufe 1 (pfote)
+[ 1634.5] SAGT W1_HINT_PIX_0412 | PIX: Die Ziegen müssen ihren Text sagen. Sie sprechen nur Ziegisch. Ich übrigens fließend.
+> pfote
+[ 1674.8] HINWEIS Schritt R4b, Stufe 2 (pfote)
+[ 1674.8] SAGT W1_HINT_PIX_0422 | PIX: Lies den Text aus der Satzung vor, ich übersetze. Meistens richtig.
+> pfote
+[ 1749.2] HINWEIS Schritt R4b, Stufe 3 (pfote)
+[ 1749.2] SAGT W1_HINT_PIX_0432 | PIX: Lies die Satzung vor, dann wechsel zu mir und rede mit den Ziegen. Beim zweiten Mal übersetze ich ordentlich.
+> stand holen w20_vor_R4c
+LAGE frei | Raum trollbruecke | Max (20,192) Skala 0.48 | Kamera x=0 | Hand: - | Dauer 0.0 s
+Offene Rätselschritte (laut Spiel): R4c
+> pfote
+[ 1768.6] HINWEIS Schritt R4c, Stufe 2 (pfote)
+[ 1768.6] SAGT W1_HINT_PIX_0423 | PIX: Da steht „Wasser“, nicht „Fluss“. Wasser gibt es auch woanders.
+> pfote
+[ 1808.9] HINWEIS Schritt R4c, Stufe 2, Wiederholung, Wartezeile (pfote)
+[ 1808.9] SAGT W1_HINT_PIX_9995 | PIX: Ich überlege noch. Hier hat sogar das Nachdenken eine Satzung. Paragraf eins: nicht drängeln.
+[ 1811.8] SAGT W1_HINT_PIX_0423 | PIX: Da steht „Wasser“, nicht „Fluss“. Wasser gibt es auch woanders.
+> pfote
+[ 1887.1] HINWEIS Schritt R4c, Stufe 3 (pfote)
+[ 1887.1] SAGT W1_HINT_PIX_0433 | PIX: Hol mit dem Eimer Wasser aus dem Brunnen und stell es dem Troll hin. Fußbad. Regel erfüllt.
+> stand holen w22_wald_erstmals
+LAGE frei | Raum zauberwald | Max (20,268) Skala 0.67 | Kamera x=0 | Hand: - | Dauer 0.0 s
+Offene Rätselschritte (laut Spiel): R7
+> pfote
+[ 1907.5] HINWEIS Schritt R7, Stufe 1 (pfote)
+[ 1907.5] SAGT W1_HINT_PIX_0710 | PIX: Die Rosen öffnen sich nur bei Gesang. Du singst nicht, und ich singe nicht öffentlich.
+[ 1909.9] SAGT W1_HINT_PIX_0710_2 | PIX: Wer singt hier also heimlich?
+> pfote
+[ 1950.7] HINWEIS Schritt R7, Stufe 2 (pfote)
+[ 1950.7] SAGT W1_HINT_PIX_0720 | PIX: Unter der Brücke läuft Musik. Der Troll hört sie nicht nur. Frag ihn. Mit der Socke in der Hand.
+> pfote
+[ 2027.7] HINWEIS Schritt R7, Stufe 3 (pfote)
+[ 2027.7] SAGT W1_HINT_PIX_0730 | PIX: Rede mit Waldemar übers Singen, folg ihm in den Wald, halt die Socke in die Pollen. Und versprich ihm den Abspann, das kostet dich nichts.
+> stand holen w26_klasse_anfang
+LAGE frei | Raum klassenzimmer | Max (80,250) Skala 0.76 | Kamera x=0 | Hand: - | Dauer 0.0 s
+Offene Rätselschritte (laut Spiel): R6a
+> pfote
+[ 2048.0] HINWEIS Schritt R6a, Stufe 1 (pfote)
+[ 2048.0] SAGT W1_HINT_PIX_0611 | PIX: Alwin will Ei, Milch und einen Leuchtpilz, also einen Pfannkuchen, der leuchtet.
+[ 2050.5] SAGT W1_HINT_PIX_0611_2 | PIX: Zutaten muss man sammeln. Sie kommen nicht von allein, das weiß ich vom Thunfisch.
+> pfote
+[ 2091.3] HINWEIS Schritt R6a, Stufe 2 (pfote)
+[ 2091.3] SAGT W1_HINT_PIX_0621 | PIX: Das Ei hat Berta in der Taverne, und die gibt es nicht her. Frag mich, was sie sagt. Pilz im Zauberwald, Milch bei Tieren mit Glöckchen.
+> pfote
+[ 2167.0] HINWEIS Schritt R6a, Stufe 3 (pfote)
+[ 2167.0] SAGT W1_HINT_PIX_0631 | PIX: Berta flieht vor schlechter Musik, also spiel ihr auf der Laute vor. Dann Krug aus der Schmiede, Ziege melken, alles in den Kessel.
+> stand holen w29_nach_R6a
+LAGE frei | Raum klassenzimmer | Max (195,249) Skala 0.76 | Kamera x=0 | Hand: - | Dauer 0.0 s
+Offene Rätselschritte (laut Spiel): R6b
+> pfote
+[ 2187.5] HINWEIS Schritt R6b, Stufe 1 (pfote)
+[ 2187.5] SAGT W1_HINT_PIX_0612 | PIX: Sechs Flaschen, ein Zettel. Lies den Zettel. Zweimal.
+[ 2190.1] SAGT W1_HINT_PIX_0612_2 | PIX: Er reimt sich, aber er lügt nicht. Im Gegensatz zu gewissen Nasen, die ich nicht näher bezeichnen möchte.
+> pfote
+[ 2231.6] HINWEIS Schritt R6b, Stufe 2 (pfote)
+[ 2231.6] SAGT W1_HINT_PIX_0622 | PIX: Nicht am Rand. Nicht die Großen, die sind Zwillinge. Und das Fischöl steht rechts neben dem Trank. Rechts von dir aus.
+> pfote
+[ 2307.4] HINWEIS Schritt R6b, Stufe 3 (pfote)
+[ 2307.4] SAGT W1_HINT_PIX_0632 | PIX: Flasche drei. Die dritte von links. Ich hätte vier gesagt, und ich hätte gelogen. Nimm drei.
+> stand holen w30_nach_R6b
+LAGE frei | Raum klassenzimmer | Max (195,249) Skala 0.76 | Kamera x=0 | Hand: - | Dauer 0.0 s
+Offene Rätselschritte (laut Spiel): R10a
+> pfote
+[ 2328.3] HINWEIS Schritt R10, Stufe 1 (pfote)
+[ 2328.3] SAGT W1_HINT_PIX_1010 | PIX: Die Goblins wollen Licht und eine Unterschrift. Oder eine Karriere. Grimmzahn ist käuflich, nur nicht mit Geld.
+> pfote
+[ 2368.6] HINWEIS Schritt R10, Stufe 2 (pfote)
+[ 2368.6] SAGT W1_HINT_PIX_1020 | PIX: Weg eins: Der Leuchttrank aus Hoggelwarz ist eine Fackel, und Ketchup sieht aus wie Blut. Weg zwei: Zeldina braucht einen Hausmeister.
+> pfote
+[ 2443.9] HINWEIS Schritt R10, Stufe 3 (pfote)
+[ 2443.9] SAGT W1_HINT_PIX_1030 | PIX: Gib Grimmzahn den Leuchttrank und unterschreib den Vertrag mit Ketchup. Oder biete ihm mit Zeldina den Hausmeisterposten an. Eins reicht.
+#### Protokoll p3
+> stand holen w31_luft_maklerin_frei
+LAGE frei | Raum luftschloss | Max (967,267) Skala 0.77 | Kamera x=640 | Hand: - | Dauer 0.0 s
+Offene Rätselschritte (laut Spiel): R9, R10a
+> pfote
+[ 2466.0] HINWEIS Schritt R9, Stufe 1 (pfote)
+[ 2466.0] SAGT W1_HINT_PIX_0910 | PIX: Die Maklerin will Provision. Feilschen bringt nichts, Haustiere bringen Zuschläge. Sie will etwas verkaufen. Gib ihr etwas zu verkaufen.
+> pfote
+[ 2507.2] HINWEIS Schritt R9, Stufe 2 (pfote)
+[ 2507.2] SAGT W1_HINT_PIX_0920 | PIX: Du hast einen Steckbrief in der Tasche. Eine Maklerin liest so etwas als Exposé.
+> pfote
+[ 2581.1] HINWEIS Schritt R9, Stufe 3 (pfote)
+[ 2581.1] SAGT W1_HINT_PIX_0930 | PIX: Zeig der Maklerin Moderworts Steckbrief und preis ihr den Turm an. Sieben Stockwerke, Turmlage. Ich sage so etwas nie wieder.
+> stand holen w33_bergwerk_vor_R10
+LAGE frei | Raum bergwerk | Max (940,330) Skala 0.92 | Kamera x=620 | Hand: - | Dauer 0.0 s
+Offene Rätselschritte (laut Spiel): R10a, R10b
+> pfote
+[ 2603.3] HINWEIS Schritt R10, Stufe 1 (pfote)
+[ 2603.3] SAGT W1_HINT_PIX_1010 | PIX: Die Goblins wollen Licht und eine Unterschrift. Oder eine Karriere. Grimmzahn ist käuflich, nur nicht mit Geld.
+> pfote
+[ 2645.4] HINWEIS Schritt R10, Stufe 2 (pfote)
+[ 2645.4] SAGT W1_HINT_PIX_1020 | PIX: Weg eins: Der Leuchttrank aus Hoggelwarz ist eine Fackel, und Ketchup sieht aus wie Blut. Weg zwei: Zeldina braucht einen Hausmeister.
+> pfote
+[ 2721.5] HINWEIS Schritt R10, Stufe 3 (pfote)
+[ 2721.5] SAGT W1_HINT_PIX_1030 | PIX: Gib Grimmzahn den Leuchttrank und unterschreib den Vertrag mit Ketchup. Oder biete ihm mit Zeldina den Hausmeisterposten an. Eins reicht.
+> stand holen w34_nach_R10b
+LAGE frei | Raum bergwerk | Max (915,290) Skala 0.81 | Kamera x=596 | Hand: - | Dauer 0.0 s
+Offene Rätselschritte (laut Spiel): R10a
+> pfote
+[ 2741.9] HINWEIS Schritt R10, Stufe 1, Wiederholung, Wartezeile (pfote)
+[ 2741.9] SAGT W1_HINT_PIX_9995 | PIX: Ich überlege noch. Hier hat sogar das Nachdenken eine Satzung. Paragraf eins: nicht drängeln.
+[ 2744.6] SAGT W1_HINT_PIX_1010 | PIX: Die Goblins wollen Licht und eine Unterschrift. Oder eine Karriere. Grimmzahn ist käuflich, nur nicht mit Geld.
+> pfote
+[ 2789.4] HINWEIS Schritt R10, Stufe 2 (pfote)
+[ 2789.4] SAGT W1_HINT_PIX_1020 | PIX: Weg eins: Der Leuchttrank aus Hoggelwarz ist eine Fackel, und Ketchup sieht aus wie Blut. Weg zwei: Zeldina braucht einen Hausmeister.
+> pfote
+[ 2865.4] HINWEIS Schritt R10, Stufe 3 (pfote)
+[ 2865.4] SAGT W1_HINT_PIX_1030 | PIX: Gib Grimmzahn den Leuchttrank und unterschreib den Vertrag mit Ketchup. Oder biete ihm mit Zeldina den Hausmeisterposten an. Eins reicht.
+> stand holen w35_nach_R11b
+LAGE frei | Raum turmkeller | Max (555,239) Skala 0.74 | Kamera x=0 | Hand: - | Dauer 0.0 s
+Offene Rätselschritte (laut Spiel): R10a
+> pfote
+[ 2886.2] HINWEIS Schritt R10, Stufe 3 (pfote)
+[ 2886.2] SAGT W1_HINT_PIX_1030 | PIX: Gib Grimmzahn den Leuchttrank und unterschreib den Vertrag mit Ketchup. Oder biete ihm mit Zeldina den Hausmeisterposten an. Eins reicht.
+> pfote
+[ 2927.9] HINWEIS Schritt R10, Stufe 3, Wiederholung (pfote)
+[ 2927.9] SAGT W1_HINT_PIX_1030 | PIX: Gib Grimmzahn den Leuchttrank und unterschreib den Vertrag mit Ketchup. Oder biete ihm mit Zeldina den Hausmeisterposten an. Eins reicht.
+> pfote
+[ 3003.3] HINWEIS Schritt R10, Stufe 3, Wiederholung (pfote)
+[ 3003.3] SAGT W1_HINT_PIX_1030 | PIX: Gib Grimmzahn den Leuchttrank und unterschreib den Vertrag mit Ketchup. Oder biete ihm mit Zeldina den Hausmeisterposten an. Eins reicht.
+> stand holen w36_kammern_anfang
+LAGE frei | Raum abstellkammern | Max (130,300) Skala 0.89 | Kamera x=0 | Hand: - | Dauer 0.0 s
+Offene Rätselschritte (laut Spiel): R10a, R11a, R12
+> pfote
+[ 3025.6] HINWEIS Schritt R10, Stufe 3 (pfote)
+[ 3025.6] SAGT W1_HINT_PIX_1030 | PIX: Gib Grimmzahn den Leuchttrank und unterschreib den Vertrag mit Ketchup. Oder biete ihm mit Zeldina den Hausmeisterposten an. Eins reicht.
+> pfote
+[ 3069.3] HINWEIS Schritt R10, Stufe 3, Wiederholung (pfote)
+[ 3069.3] SAGT W1_HINT_PIX_1030 | PIX: Gib Grimmzahn den Leuchttrank und unterschreib den Vertrag mit Ketchup. Oder biete ihm mit Zeldina den Hausmeisterposten an. Eins reicht.
+> pfote
+[ 3146.9] HINWEIS Schritt R10, Stufe 3, Wiederholung (pfote)
+[ 3146.9] SAGT W1_HINT_PIX_1030 | PIX: Gib Grimmzahn den Leuchttrank und unterschreib den Vertrag mit Ketchup. Oder biete ihm mit Zeldina den Hausmeisterposten an. Eins reicht.
+> stand holen w38_nach_R12
+LAGE frei | Raum abstellkammern | Max (332,324) Skala 0.93 | Kamera x=0 | Hand: - | Dauer 0.0 s
+Offene Rätselschritte (laut Spiel): R10a, R11a
+> pfote
+[ 3171.1] HINWEIS Schritt R10, Stufe 3 (pfote)
+[ 3171.1] SAGT W1_HINT_PIX_1030 | PIX: Gib Grimmzahn den Leuchttrank und unterschreib den Vertrag mit Ketchup. Oder biete ihm mit Zeldina den Hausmeisterposten an. Eins reicht.
+> pfote
+[ 3215.5] HINWEIS Schritt R10, Stufe 3, Wiederholung (pfote)
+[ 3215.5] SAGT W1_HINT_PIX_1030 | PIX: Gib Grimmzahn den Leuchttrank und unterschreib den Vertrag mit Ketchup. Oder biete ihm mit Zeldina den Hausmeisterposten an. Eins reicht.
+> pfote
+[ 3292.8] HINWEIS Schritt R10, Stufe 3, Wiederholung (pfote)
+[ 3292.8] SAGT W1_HINT_PIX_1030 | PIX: Gib Grimmzahn den Leuchttrank und unterschreib den Vertrag mit Ketchup. Oder biete ihm mit Zeldina den Hausmeisterposten an. Eins reicht.
+> stand holen w39_nach_R11a
+LAGE frei | Raum abstellkammern | Max (540,240) Skala 0.77 | Kamera x=0 | Hand: - | Dauer 0.0 s
+Offene Rätselschritte (laut Spiel): R10a
+> pfote
+[ 3316.4] HINWEIS Schritt R10, Stufe 3 (pfote)
+[ 3316.4] SAGT W1_HINT_PIX_1030 | PIX: Gib Grimmzahn den Leuchttrank und unterschreib den Vertrag mit Ketchup. Oder biete ihm mit Zeldina den Hausmeisterposten an. Eins reicht.
+> pfote
+[ 3358.5] HINWEIS Schritt R10, Stufe 3, Wiederholung (pfote)
+[ 3358.5] SAGT W1_HINT_PIX_1030 | PIX: Gib Grimmzahn den Leuchttrank und unterschreib den Vertrag mit Ketchup. Oder biete ihm mit Zeldina den Hausmeisterposten an. Eins reicht.
+> pfote
+[ 3435.8] HINWEIS Schritt R10, Stufe 3, Wiederholung (pfote)
+[ 3435.8] SAGT W1_HINT_PIX_1030 | PIX: Gib Grimmzahn den Leuchttrank und unterschreib den Vertrag mit Ketchup. Oder biete ihm mit Zeldina den Hausmeisterposten an. Eins reicht.
+> stand holen w40_thronsaal_anfang
+LAGE frei | Raum thronsaal | Max (120,290) Skala 0.87 | Kamera x=0 | Hand: - | Dauer 0.0 s
+Offene Rätselschritte (laut Spiel): R10a, R13
+> pfote
+[ 3460.6] HINWEIS Schritt R10, Stufe 3 (pfote)
+[ 3460.6] SAGT W1_HINT_PIX_1030 | PIX: Gib Grimmzahn den Leuchttrank und unterschreib den Vertrag mit Ketchup. Oder biete ihm mit Zeldina den Hausmeisterposten an. Eins reicht.
+> pfote
+[ 3502.8] HINWEIS Schritt R10, Stufe 3, Wiederholung (pfote)
+[ 3502.8] SAGT W1_HINT_PIX_1030 | PIX: Gib Grimmzahn den Leuchttrank und unterschreib den Vertrag mit Ketchup. Oder biete ihm mit Zeldina den Hausmeisterposten an. Eins reicht.
+> pfote
+[ 3579.2] HINWEIS Schritt R10, Stufe 3, Wiederholung (pfote)
+[ 3579.2] SAGT W1_HINT_PIX_1030 | PIX: Gib Grimmzahn den Leuchttrank und unterschreib den Vertrag mit Ketchup. Oder biete ihm mit Zeldina den Hausmeisterposten an. Eins reicht.
+> stand holen w41_R13_geniest
+LAGE frei | Raum thronsaal | Max (351,296) Skala 0.88 | Kamera x=0 | Hand: - | Dauer 0.0 s
+Offene Rätselschritte (laut Spiel): R10a, R13
+> pfote
+[ 3601.1] HINWEIS Schritt R10, Stufe 3, Wiederholung (pfote)
+[ 3601.1] SAGT W1_HINT_PIX_1030 | PIX: Gib Grimmzahn den Leuchttrank und unterschreib den Vertrag mit Ketchup. Oder biete ihm mit Zeldina den Hausmeisterposten an. Eins reicht.
+> pfote
+[ 3642.5] HINWEIS Schritt R10, Stufe 3, Wiederholung (pfote)
+[ 3642.5] SAGT W1_HINT_PIX_1030 | PIX: Gib Grimmzahn den Leuchttrank und unterschreib den Vertrag mit Ketchup. Oder biete ihm mit Zeldina den Hausmeisterposten an. Eins reicht.
+> pfote
+[ 3720.7] HINWEIS Schritt R10, Stufe 3, Wiederholung (pfote)
+[ 3720.7] SAGT W1_HINT_PIX_1030 | PIX: Gib Grimmzahn den Leuchttrank und unterschreib den Vertrag mit Ketchup. Oder biete ihm mit Zeldina den Hausmeisterposten an. Eins reicht.
+> stand holen w42_R13_kaese
+LAGE frei | Raum thronsaal | Max (351,296) Skala 0.88 | Kamera x=0 | Hand: - | Dauer 0.0 s
+Offene Rätselschritte (laut Spiel): R10a, R13
+> pfote
+[ 3743.7] HINWEIS Schritt R10, Stufe 3, Wiederholung (pfote)
+[ 3743.7] SAGT W1_HINT_PIX_1030 | PIX: Gib Grimmzahn den Leuchttrank und unterschreib den Vertrag mit Ketchup. Oder biete ihm mit Zeldina den Hausmeisterposten an. Eins reicht.
+> pfote
+[ 3785.1] HINWEIS Schritt R10, Stufe 3, Wiederholung (pfote)
+[ 3785.1] SAGT W1_HINT_PIX_1030 | PIX: Gib Grimmzahn den Leuchttrank und unterschreib den Vertrag mit Ketchup. Oder biete ihm mit Zeldina den Hausmeisterposten an. Eins reicht.
+> pfote
+[ 3862.2] HINWEIS Schritt R10, Stufe 3, Wiederholung (pfote)
+[ 3862.2] SAGT W1_HINT_PIX_1030 | PIX: Gib Grimmzahn den Leuchttrank und unterschreib den Vertrag mit Ketchup. Oder biete ihm mit Zeldina den Hausmeisterposten an. Eins reicht.
+> stand holen w43_zs1_dachboden
+LAGE frei | Raum dachboden | Max (365,256) Skala 0.86 | Kamera x=0 | Hand: - | Dauer 0.0 s
+Offene Rätselschritte (laut Spiel): -
+> pfote
+[ 3885.8] HINWEIS Schritt , Stufe 0, Wiederholung (pfote)
+[ 3885.8] SAGT ZS1_HINT_PIX_0010 | PIX: Tasche packen, Knopf drehen. Mehr gibt es hier nicht zu tun, so leid es mir tut.
+[ 3888.9] SAGT ZS1_HINT_PIX_0010_2 | PIX: Ich hätte es gern komplizierter. Dann wäre ich wenigstens unentbehrlich.
+> pfote
+[ 3932.6] HINWEIS Schritt , Stufe 0, Wiederholung (pfote)
+[ 3932.6] SAGT ZS1_HINT_PIX_0010 | PIX: Tasche packen, Knopf drehen. Mehr gibt es hier nicht zu tun, so leid es mir tut.
+[ 3935.1] SAGT ZS1_HINT_PIX_0010_2 | PIX: Ich hätte es gern komplizierter. Dann wäre ich wenigstens unentbehrlich.
+> pfote
+[ 4012.5] HINWEIS Schritt , Stufe 0, Wiederholung (pfote)
+[ 4012.5] SAGT ZS1_HINT_PIX_0010 | PIX: Tasche packen, Knopf drehen. Mehr gibt es hier nicht zu tun, so leid es mir tut.
+[ 4014.9] SAGT ZS1_HINT_PIX_0010_2 | PIX: Ich hätte es gern komplizierter. Dann wäre ich wenigstens unentbehrlich.
+#### Protokoll p4
+> stand holen w34_nach_R10b
+LAGE frei | Raum bergwerk | Max (915,290) Skala 0.81 | Kamera x=596 | Hand: - | Dauer 0.0 s
+> klick @rune_tuer
+Offene Rätselschritte (laut Spiel): R10a, R11b
+> pfote
+[ 4331.5] HINWEIS Schritt R10, Stufe 2 (pfote)
+[ 4331.5] SAGT W1_HINT_PIX_1020 | PIX: Weg eins: Der Leuchttrank aus Hoggelwarz ist eine Fackel, und Ketchup sieht aus wie Blut. Weg zwei: Zeldina braucht einen Hausmeister.
+> klick @kreuzung_2
+> pfote
+[ 4371.5] HINWEIS Schritt R10, Stufe 2, Wiederholung, Wartezeile (pfote)
+[ 4371.5] SAGT W1_HINT_PIX_9995 | PIX: Ich überlege noch. Hier hat sogar das Nachdenken eine Satzung. Paragraf eins: nicht drängeln.
+[ 4374.6] SAGT W1_HINT_PIX_1020 | PIX: Weg eins: Der Leuchttrank aus Hoggelwarz ist eine Fackel, und Ketchup sieht aus wie Blut. Weg zwei: Zeldina braucht einen Hausmeister.
+#### Protokoll p6
+> knopf "Die Besen loswerden"
+LAGE ueberlagerung:notizbuch | Raum turmkeller | Max (415,269) Skala 0.81 | Kamera x=0 | Hand: - | Dauer 4.8 s
+> knopf UI_SCHLIESSEN
+> lies Z.notizbuch_ziel
+= R11b
+> pfote
+[ 4463.2] HINWEIS Schritt R11b, Stufe 1 (pfote)
+[ 4463.2] SAGT W1_HINT_PIX_1112 | PIX: Drei Besen, drei Routen. Sie fegen, was sich bewegt. Am liebsten Haare. Ich habe Haare. Ich sehe, worauf das hinausläuft.
+> pfote
+[ 4508.4] HINWEIS Schritt R11b, Stufe 2 (pfote)
+[ 4508.4] SAGT W1_HINT_PIX_1122 | PIX: Wechsel zu mir und such die Stellen, wo sich die Fliesenwege kreuzen. Eine pro Route. Dort schüttle ich mich. Unter Protest.
+> pfote
+[ 4586.8] HINWEIS Schritt R11b, Stufe 3 (pfote)
+[ 4586.8] SAGT W1_HINT_PIX_1132 | PIX: Wechsel zu mir und klick die drei Kreuzungen an. Die Besen rennen in die Kammer, du machst die Tür zu. Und du kaufst mir eine Bürste.
+#### Protokoll p5
+> stand holen w36_kammern_anfang
+LAGE frei | Raum abstellkammern | Max (130,300) Skala 0.89 | Kamera x=0 | Hand: - | Dauer 0.0 s
+Offene Rätselschritte (laut Spiel): R10a, R11a, R12
+> rklick inv:zeugnis
+> knopf X
+> lies Z.letzter_schritt
+= R11a
+> pfote
+[ 4701.9] HINWEIS Schritt R11a, Stufe 1 (pfote)
+[ 4701.9] SAGT W1_HINT_PIX_1111 | PIX: Vier Teile, eine Reihenfolge. Jeder Fundort verrät, was an was hängt. Schau ins Notizbuch, nicht in die Luft.
+> pfote
+[ 4749.3] HINWEIS Schritt R11a, Stufe 2 (pfote)
+[ 4749.3] SAGT W1_HINT_PIX_1121 | PIX: Mo ist der Anfang, sagt Zeldina. Jeder Fundort hängt ein Stück an ein anderes.
+[ 4752.7] SAGT W1_HINT_PIX_1121_2 | PIX: Das Zeugnis und das Lied verbinden die Mitte, und die Wand verrät, was am Ende steht.
+> pfote
+[ 4836.2] HINWEIS Schritt R11a, Stufe 3 (pfote)
+[ 4836.2] SAGT W1_HINT_PIX_1131 | PIX: Mo-Knuddel-Puddi-Bärchen. Sag es der Tür. Sag es nie mir.
+> rklick @schwerter_buendel
+> lies Z.letzter_schritt
+= R12
+> pfote
+[ 4868.4] HINWEIS Schritt R12, Stufe 1 (pfote)
+[ 4868.4] SAGT W1_HINT_PIX_1210 | PIX: Smaugi gibt nichts her, außer jemand braucht es wirklich.
+[ 4871.2] SAGT W1_HINT_PIX_1210_2 | PIX: Und hier stehen drei Leute herum, die ziemlich dringend etwas brauchen. Mich ausgenommen, ich brauche nur Fisch.
+> pfote
+[ 4917.0] HINWEIS Schritt R12, Stufe 2 (pfote)
+[ 4917.0] SAGT W1_HINT_PIX_1220 | PIX: Humbert sammelt Schwerter, Grimmzahn braucht Fackeln, Zeldina will einen Kronleuchter. Smaugis Haufen hat alle drei.
+> pfote
+[ 4993.4] HINWEIS Schritt R12, Stufe 3 (pfote)
+[ 4993.4] SAGT W1_HINT_PIX_1230 | PIX: Schwerter zu Humbert, Fackeln zu Grimmzahn, Kronleuchter zu Zeldina. Dann gibt er das Ei. Und ich will es weich.
+> stand holen w40_thronsaal_anfang
+LAGE frei | Raum thronsaal | Max (120,290) Skala 0.87 | Kamera x=0 | Hand: - | Dauer 0.0 s
+Offene Rätselschritte (laut Spiel): R10a, R13
+> rklick inv:socke
+> lies Z.letzter_schritt
+= R13
+> pfote
+[ 5016.1] HINWEIS Schritt R13, Stufe 1 (pfote)
+[ 5016.1] SAGT W1_HINT_PIX_1310 | PIX: Er hat keine Nase, aber Heuschnupfen. Und du hast eine Socke voller Pollen.
+[ 5017.6] SAGT W1_HINT_PIX_1310_2 | PIX: Ich bin kein Mathematiker, aber das kann sogar ich ausrechnen.
+> pfote
+[ 5055.9] HINWEIS Schritt R13, Stufe 2 (pfote)
+[ 5055.9] SAGT W1_HINT_PIX_1320 | PIX: Socke auf, er niest, der Stab fliegt. Dann braucht er Ersatz. Du hast einen Löffel, der mal Käse war.
+> pfote
+[ 5127.2] HINWEIS Schritt R13, Stufe 3 (pfote)
+[ 5127.2] SAGT W1_HINT_PIX_1330 | PIX: Socke auf Moderwort, Kochlöffel auf Moderwort, dann sprich ihn mit dem Spitznamen an. Und sieh dabei nicht mich an.
