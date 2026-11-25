@@ -10,15 +10,9 @@
 - Vorgänger: `gd-w1.md` (Zwischenstand nach R1, R2, R3, R4, R5, R8). Dessen Funde stehen hier mit alter ID und sind neu nachgestellt.
 - Alles in den Tabellen ist im laufenden Spiel beobachtet, außer wo „aus dem Code“ dabeisteht. „Verlauf“ meint `/home/user/lauf/pr-w1-haupt/verlauf.txt` (liegt nicht im Repo; die Befehlsfolge steht jeweils dabei).
 
-## Was noch aussteht (Plan, wird abgearbeitet)
+## Stand der Arbeit
 
-1. Sackgassen-Suche von den Kontrollpunkten: andere Reihenfolge, andere Figur, falsche Gegenstände, R1c über Option 0785, R7 ohne Socke in der Hand, Weg B ohne vorher abgegebenen Leuchttrank (bleibt die Pfote dann auch auf R10 stehen?), Geheimtür mit fehlenden Teilen, Thronsaal ohne Pollen, F5/F9 und Menü-Speichern mitten in Ketten, Laden in derselben Sitzung (GD-W2-03 / R5-P-01) an zwei Stellen.
-2. Pfote: alle drei Stufen an Stichproben.
-3. Filme in Tempo 1: R7-Gesangsszene (ab `w24`), Fußbad R4c (ab `w20`), Lieferszene (ab `w13`), Melken (ab `w27`), Pilz-Verwandlung (ab `w29`), Kreuzungen und Besen (ab `w34`), Thronsaal (ab `w40`).
-4. Zeitmessung Tempo 1 mit `textmodus lesen`.
-5. Frühere Funde 14.11. und 17.11. vollständig durchgehen (bisher nur ein Teil), GD-W1-05, -06, -15 nachstellen.
-6. Englische Nahansichten.
-7. Lösungsweg als Befehlsdatei (`belege/pr-w1/loesungsweg.txt`) und Wiederholung vom Prolog-Endstand.
+Erledigt: gerader Durchlauf, Lösungsweg als Befehlsdatei, Wiederholung vom echten Prolog-Endstand (siehe „Zeitmessungen“), Filme R7, Besen, Thronsaal und Welt-Ende, Pfote an Stichproben, Bestand der Animationen. Was offen geblieben ist, steht unter „Nicht geprüft“.
 
 ## Rätselübersicht des Klickwegs (so gespielt, alles echte Klicks)
 
@@ -253,7 +247,38 @@ Grundlage: (a) Filme in Tempo 1 mit `textmodus lesen` aus dem laufenden Spiel (`
 
 ## Zeitmessungen
 
-(folgen)
+### Wiederholung des Lösungswegs vom echten Prolog-Endstand
+
+Lauf `pr-w1-weg`: frischer Prozess, `stand holen prolog_ende`, dann `belege/pr-w1/loesungsweg.txt` Block 1 bis 9 am Stück, ohne Neuladen, alles echte Klicks. **Ergebnis: Die Welt ist vom Prolog-Endstand bis zum ersten freien Moment in Welt 2 durchspielbar**, R10 nur über Weg B (GD-W1-K1). Endinventar: Thunfischdose, Pixel, Notizbuch, Socke, Kochlöffel, Dosenöffner, Handy, Kaugummi, Kugelschreiber.
+
+Die Spielzeit steht im Protokoll (Tempo 4, Text sofort weitergeklickt, kürzester Weg ohne Umsehen; `@id`-Klicks der Fernsteuerung kosten je etwa 8 s zusätzlich). Das ist eine **untere Grenze**, keine Lesezeit.
+
+| Abschnitt | Spielzeit am Ende (s) | Dauer (s) |
+| --- | --- | --- |
+| Start Dorfplatz | 8 | |
+| R1 (Taverne, a bis c) | 457 | 449 |
+| R2, R5, R8 (Laden, Brunnen, Bohne) | 1274 | 817 |
+| R3, R4 (Lieferung, Brücke) | 1891 | 617 |
+| R7 (Zauberwald, mit Bergwerk-Besuch) | 2199 | 308 |
+| R6 (Hoggelwarz, mit Melken) | 2637 | 438 |
+| R9 (Luftschloss) | 3000 | 363 |
+| R10 Weg B (Bergwerk) | 3225 | 225 |
+| R11b (Turmkeller) | 3350 | 125 |
+| R12, R11a (Abstellkammern) | 3659 | 309 |
+| R13 (Thronsaal) | 3768 | 109 |
+| Zwischenspiel 1 bis Ankunft Welt 2 | 4014 | 246 |
+
+Zusammen rund 67 Minuten Spielzeit für den reinen Lösungsweg ohne Lesen. Mit Lesen und Suchen schätze ich 2,5 bis 3,5 Stunden für Welt 1 (Schätzung, nicht gemessen).
+
+### In Tempo 1 mit `textmodus lesen` gemessen
+
+| Szene | Dauer | Wie gemessen |
+| --- | --- | --- |
+| R7, Waldemars Lied (vom Betreten des Zauberwalds bis zur letzten Zeile) | etwa 80 s | Film `filme/r7`, 5 Bilder/s |
+| R11b, alle drei Kreuzungen und Tür (ohne Wege dazwischen) | etwa 150 s | Film `filme/besen`, 6 Bilder/s |
+| R13, vom Klick mit dem Passwort bis zur Kreisblende | etwa 95 s | Film `filme/thron`, Bilder 480–866, 4 Bilder/s |
+
+Nicht gemessen: Ankunftsszene (W1-01), Lieferszene, Gespräche mit Lesezeit je Raum.
 
 ## Nicht geprüft
 
