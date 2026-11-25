@@ -23,3 +23,10 @@ Alle Stände sind mit echten Klicks über die Fernsteuerung entstanden (`stand s
 | w3_16_nach_R8 | laboreingang | R8 (Hausmeister weg, ohne Öl) | Block 8 | ohne telefonbuchseite |
 | w3_17_panzertuer_offen | laboreingang | Karte im Leser, Panzertür offen | Block 8 | ohne zugangskarte |
 | w3_18_nach_R9a | laboreingang | R9a (Leitung gelegt) | Block 8 | PixelFeld, omas_kekse, morse_tabelle |
+| w3_19_vor_turm | stadtstrasse | wie w3_18; zurück in der Simulation (Terminal „Zurück in die Stadt“), vor dem Glaseingang | Block 9 | PixelFeld, omas_kekse, morse_tabelle |
+| w3_20_turm_anfang | buero_50 | Turm betreten (Hexenschuss), nichts genommen | Block 9 | wie w3_19 |
+| w3_21_nach_R6a | buero_50 | R6a (Original ↔ Kopie der Tasse) | Block 9 | dazu kaffeetasse |
+| w3_22_nach_R6b | buero_50 | R6b (Mittagspause), Akte noch ungelesen | Block 9 | dazu sonnenbrille, schmidts_akte |
+| w3_23_vor_R7a | buero_50 | Akte gelesen (Regel 1), Farbcode-Zettel | Block 10 | dazu farbcode_zettel |
+| w3_24_nach_R7a | buero_50 | R7a (Farbcode gesendet) | Block 10 | ohne farbcode_zettel |
+| w3_25_nach_R7b | widerstandsbasis | R7b (Kabel; einmal falsch gesteckt), Max wach in der Basis | Block 10 | PixelFeld, omas_kekse, morse_tabelle, kaffeetasse, sonnenbrille, schmidts_akte |

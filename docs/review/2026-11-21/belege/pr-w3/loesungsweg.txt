@@ -148,3 +148,68 @@ stand sichern w3_17_panzertuer_offen
 klick @datenanschluss
 warte
 stand sichern w3_18_nach_R9a
+#-- Block 9: zurück in die Simulation, Büroturm, R6a, R6b
+klick 300 335
+warte
+klick @ausgang_unterstadt_strasse
+warte
+klick 20 335
+warte
+klick @ausgang_widerstandsbasis
+warte
+klick 620 320
+warte
+klick @terminal
+warte
+option "Zurück in die Stadt"
+warte
+klick 600 320
+warte
+klick 600 320
+warte
+klick 600 320
+warte
+stand sichern w3_19_vor_turm
+klick @ausgang_buero_50
+warte
+stand sichern w3_20_turm_anfang
+klick 620 320
+warte
+klick 620 320
+warte
+klick @kaffeetasse
+warte
+klick @schmidt
+warte
+knopf Original
+klick 336 130
+warte
+stand sichern w3_21_nach_R6a
+klick inv:kaffeetasse
+klick inv:kaffeetasse
+warte
+stand sichern w3_22_nach_R6b
+#-- Block 10: Regel 1 (Akte), R7a Farbcode, R7b Kabel (als Pixel)
+rklick inv:schmidts_akte
+knopf X
+warte
+klick @farbcode_an_der_wand
+warte
+klick 300 330
+stand sichern w3_23_vor_R7a
+klick inv:farbcode_zettel
+klick @terminal
+warte
+stand sichern w3_24_nach_R7a
+portraet pixel
+warte
+klick @patch_panel
+warte
+option 1
+warte
+option 2
+warte
+option 3
+warte
+klick 300 335
+stand sichern w3_25_nach_R7b
