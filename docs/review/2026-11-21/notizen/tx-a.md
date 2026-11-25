@@ -25,7 +25,7 @@ Geprüft wird: Humor und Ton, eigene Stimme je Figur, KI-Klang jeder Dialogzeile
 - [x] Zwischenspiele 1–3
 - [x] Welt 1
 - [x] SYS, UI
-- [ ] Auswertung (Stimmen, Anspielungen, Running Gags, Lokalisierung, Top 10)
+- [x] Auswertung (Stimmen, Anspielungen, Running Gags, Lokalisierung, Top 10)
 
 Vorgänger `nd-a.md`: enthält nur Kopf und Arbeitsplan, keine Funde. Es gibt nichts zu übernehmen außer dem Auszugs-Werkzeug.
 
@@ -270,8 +270,8 @@ Die Inventarzeilen gehören zum Besten der Welt: „Er klebt an allem, was er li
 
 | ID | Zeilen-ID | Sprecher | Priorität | Muster | Original | Grund | Vorschlag |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| R5-TX-39 | `W1_DORF_PIX_0410`, `W1_TAV_PIX_0380`, `W1_TAV_PIX_0390`, `W1_STAB_PIX_0120`, `W1_HOGG_PIX_0220`, `W1_HOGG_PIX_0660`, `W1_BRUE_PIX_0080`, `W1_BRUE_PIX_0160`, `W1_WALD_PIX_0105`, `W1_WALD_PIX_0180`, `W1_LUFT_PIX_0170`, `W1_BERG_PIX_0130`, `W1_SMAU_PIX_0190`, `W1_THRO_PIX_0180` | Pixel | wichtig | Dreierreihe als Öffner, drittes Glied abstrakt (M9 Trikolon, M61 gleicher Bauplan; in Welt 3 als „Schnupper-Dreier“ schon bereinigt) | „Staub, Samt und Hoffnung.“ / „Holz, Farbe und Pedanterie.“ / „Moos, Regelbuch und Lampenfieber. Dieser Troll riecht nach einer zweiten Karriere.“ / „Karton, Kronenpolitur und Entschlossenheit. Diese Frau riecht nach einem Plan.“ / „Schlaf, Kaffee und Schweinsleder. Dieser Goblin hat sein Leben im Griff.“ / „Tomate, Zucker und Lüge.“ / „Pollenstaub, Taschentücher und Selbstmitleid.“ | Pixels Antwort auf „Schnuppern“ hat in 11 von 14 Räumen denselben Bau: drei Hauptwörter, das dritte ein Gefühl oder eine Eigenschaft, danach eine Deutung, viermal mit „Diese(r) X …“. Wer Pixel in jedem Raum schnuppern lässt (und das Spiel lädt dazu ein), hört die Schablone spätestens im dritten Raum. Einzeln ist fast jede Zeile gut; die Menge macht den Maschinenklang. | Fünf behalten, die mehr tun als aufzählen: `DORF_0410` (Stabreim), `STAB_0120` (wird in `_2` weitergeführt), `HOGG_0220` („frittierte Geschichte“), `BRUE_0160`, `SMAU_0190`. Die übrigen anders anfangen: `TAV_0380`: „Da unten ist es kalt, und es riecht nach Rüben. Ganz hinten hängt ein Etikett, an dem keine Flasche mehr ist.“ · `TAV_0390`: „Rost. Aber liebevoll gepflegter Rost. Humbert poliert mit Gefühl, das rieche ich deutlich.“ · `HOGG_0660`: „Zitrone und Honig. Dahinter kommt noch etwas, das mir nicht gefällt. Das könnte alles Mögliche sein.“ · `BRUE_0080`: „Frische Farbe auf altem Holz. Jemand hat jeden Paragrafen einzeln poliert.“ · `WALD_0105`: „Ich habe noch einmal geschnuppert. Tomate mit sehr viel Zucker, und sie tut trotzdem so, als wäre sie Blut.“ · `WALD_0180`: „Dieser Karren riecht nach nasser Pappe und nach Omas Küche. Er hat mehr erlebt als ich,“ · `LUFT_0170`: „Karton und Kronenpolitur. Diese Frau hat einen Plan, das rieche ich bis hierher.“ · `BERG_0130`: „Er riecht nach Kaffee und schläft trotzdem. Dieser Goblin hat sein Leben im Griff.“ · `THRO_0180`/`_2`: „Nasse Taschentücher. Und er tut sich leid, das rieche ich bis hierher. // Ein Dunkler Schnupfen mit Thron.“ (im Original steht außerdem ein Komma zu viel: „weniger ein Dunkler Lord, als …“) |
-| R5-TX-40 | `W1_HOGG_PIX_0910`, `W1_BRUE_PIX_1130`, `W1_WALD_PIX_0710` (im Verbund mit `W1_TAV_PIX_1620`, `W1_SCHM_PIX_0610`, `W1_TURM_PIX_0280`, `W1_WASS_PIX_0170`, `W1_BERG_PIX_0810`, `W1_THRO_PIX_0720`, `W1_TURM_PIX_0290`) | Pixel | kosmetisch | Aufzählung als Öffner im Zuruf (M9, M61) | „Der Kessel blubbert, die Flaschen schweigen, und Alwin summt ein Rezept.“ / „Die Ziegen warten, ich warte, und der Troll wartet auch.“ / „Die Pilze leuchten, die Rosen schmollen, und der ganze Wald hat Stimmung.“ | 10 der 29 Zurufe beginnen mit einer Reihe, sechs davon nach dem Muster „A tut dies, B tut das, und C …“, gefolgt von „du stehst“. Die Taverne hat die beste Fassung („Humbert poliert, Gollo zittert, Minka starrt, und du stehst.“); danach wiederholt sie sich. Die Hauptwort-Reihen in Wasserschloss, Bergwerk und Thronsaal fassen jeweils den Raum zusammen oder geben einen Hinweis und bleiben. | `HOGG_0910`: „Alwin summt ein Rezept, und der Kessel blubbert im Takt.“ (`_2` bleibt) · `BRUE_1130`: „Jetzt warten sogar die Ziegen.“ (`_2` nach R5-TX-27: „Für ein Wartezimmer fehlen nur noch die Zeitschriften.“) · `WALD_0710`: „Der ganze Wald hat Stimmung. Sogar die Rosen, und die schmollen.“ (`_2` bleibt) |
+| R5-TX-39 | `W1_DORF_PIX_0410`, `W1_TAV_PIX_0380`, `W1_TAV_PIX_0390`, `W1_STAB_PIX_0120`, `W1_HOGG_PIX_0220`, `W1_HOGG_PIX_0660`, `W1_BRUE_PIX_0080`, `W1_BRUE_PIX_0160`, `W1_WALD_PIX_0105`, `W1_WALD_PIX_0180`, `W1_LUFT_PIX_0170`, `W1_BERG_PIX_0130`, `W1_SMAU_PIX_0190`, `W1_THRO_PIX_0180` | Pixel | wichtig | Dreierreihe als Öffner, drittes Glied abstrakt (M9 Trikolon, M61 gleicher Bauplan; in Welt 3 als „Schnupper-Dreier“ schon bereinigt) | „Staub, Samt und Hoffnung.“ / „Holz, Farbe und Pedanterie.“ / „Moos, Regelbuch und Lampenfieber. Dieser Troll riecht nach einer zweiten Karriere.“ / „Karton, Kronenpolitur und Entschlossenheit. Diese Frau riecht nach einem Plan.“ / „Schlaf, Kaffee und Schweinsleder. Dieser Goblin hat sein Leben im Griff.“ / „Tomate, Zucker und Lüge.“ / „Pollenstaub, Taschentücher und Selbstmitleid.“ | Pixels Antwort auf „Schnuppern“ hat in 10 von 14 Räumen denselben Bau: drei Hauptwörter, das dritte ein Gefühl oder eine Eigenschaft, danach eine Deutung, viermal mit „Diese(r) X …“. Wer Pixel in jedem Raum schnuppern lässt (und das Spiel lädt dazu ein), hört die Schablone spätestens im dritten Raum. Einzeln ist fast jede Zeile gut; die Menge macht den Maschinenklang. | Fünf behalten, die mehr tun als aufzählen: `DORF_0410` (Stabreim), `STAB_0120` (wird in `_2` weitergeführt), `HOGG_0220` („frittierte Geschichte“), `BRUE_0160`, `SMAU_0190`. Die übrigen anders anfangen: `TAV_0380`: „Da unten ist es kalt, und es riecht nach Rüben. Ganz hinten hängt ein Etikett, an dem keine Flasche mehr ist.“ · `TAV_0390`: „Rost. Aber liebevoll gepflegter Rost. Humbert poliert mit Gefühl, das rieche ich deutlich.“ · `HOGG_0660`: „Zitrone und Honig. Dahinter kommt noch etwas, das mir nicht gefällt. Das könnte alles Mögliche sein.“ · `BRUE_0080`: „Frische Farbe auf altem Holz. Jemand hat jeden Paragrafen einzeln poliert.“ · `WALD_0105`: „Ich habe noch einmal geschnuppert. Tomate mit sehr viel Zucker, und sie tut trotzdem so, als wäre sie Blut.“ · `WALD_0180`: „Dieser Karren riecht nach nasser Pappe und nach Omas Küche. Er hat mehr erlebt als ich,“ · `LUFT_0170`: „Karton und Kronenpolitur. Diese Frau hat einen Plan, das rieche ich bis hierher.“ · `BERG_0130`: „Er riecht nach Kaffee und schläft trotzdem. Dieser Goblin hat sein Leben im Griff.“ · `THRO_0180`/`_2`: „Nasse Taschentücher. Und er tut sich leid, das rieche ich bis hierher. // Ein Dunkler Schnupfen mit Thron.“ (im Original steht außerdem ein Komma zu viel: „weniger ein Dunkler Lord, als …“) |
+| R5-TX-40 | `W1_HOGG_PIX_0910`, `W1_BRUE_PIX_1130`, `W1_WALD_PIX_0710` (im Verbund mit `W1_TAV_PIX_1620`, `W1_SCHM_PIX_0610`, `W1_TURM_PIX_0280`, `W1_WASS_PIX_0170`, `W1_BERG_PIX_0810`, `W1_THRO_PIX_0720`, `W1_TURM_PIX_0290`) | Pixel | kosmetisch | Aufzählung als Öffner im Zuruf (M9, M61) | „Der Kessel blubbert, die Flaschen schweigen, und Alwin summt ein Rezept.“ / „Die Ziegen warten, ich warte, und der Troll wartet auch.“ / „Die Pilze leuchten, die Rosen schmollen, und der ganze Wald hat Stimmung.“ | 10 von Pixels 28 Zurufen beginnen mit einer Reihe, sechs davon nach dem Muster „A tut dies, B tut das, und C …“, gefolgt von „du stehst“. Die Taverne hat die beste Fassung („Humbert poliert, Gollo zittert, Minka starrt, und du stehst.“); danach wiederholt sie sich. Die Hauptwort-Reihen in Wasserschloss, Bergwerk und Thronsaal fassen jeweils den Raum zusammen oder geben einen Hinweis und bleiben. | `HOGG_0910`: „Alwin summt ein Rezept, und der Kessel blubbert im Takt.“ (`_2` bleibt) · `BRUE_1130`: „Jetzt warten sogar die Ziegen.“ (`_2` nach R5-TX-27: „Für ein Wartezimmer fehlen nur noch die Zeitschriften.“) · `WALD_0710`: „Der ganze Wald hat Stimmung. Sogar die Rosen, und die schmollen.“ (`_2` bleibt) |
 | R5-TX-41 | `W1_DORF_MAX_0290` (mit `W1_DORF_PIX_0140`), `W1_STAB_PIX_0570_2`, `W1_TURM_PIX_0200_2`, `W1_WALD_MAX_0095`, `W1_SCHM_PIX_0065_2` | Max, Pixel | kosmetisch | Wort-Ticks über Figuren hinweg (M64, Regel 7) | „Endlich ein Denkmal, das die Verhältnisse realistisch darstellt.“ (Pixel) und im selben Raum „Endlich mal eine Schule mit realistischen Zielen.“ (Max) · „Endlich jemand in diesem Königreich, der …“ · „nackt und gleichzeitig sehr produktiv“ · „sehr praktisch und gleichzeitig sehr beunruhigend“ · „und zwar aus Prinzip“ | „Endlich (mal) ein/jemand …“ steht siebenmal bei vier Figuren (dazu `W1_TAV_PIX_0080`, `W1_HOGG_ALW_0070`, `W1_LUFT_MAX_0110`, `W1_LUFT_PIX_0130`; das Paar vor dem Spiegel ist gewollt und bleibt). „Gleichzeitig X und Y“ steht fünfmal (auch `W1_HOGG_PIX_0920_2`, `W1_WASS_MAX_0075`, `W1_TURM_PIX_0100_2`), „aus Prinzip“ dreimal in zwei Nachbarräumen (`W1_TAV_PIX_0130_2`, `W1_TAV_HUM_0540`). | `DORF_MAX_0290`: „Ein Wegweiser: ‚Hoggelwarz für Durchgefallene‘. Da könnte ich mich sogar bewerben.“ · `STAB_PIX_0570_2`: „Ich mag sie. In diesem Königreich hat sonst niemand einen Blick für Qualität.“ · `TURM_PIX_0200_2`: „Das war ein Pfund Fell. Ich fühle mich nackt, aber sehr produktiv.“ · `WALD_MAX_0095`: „… Das ist sehr praktisch. Und ziemlich beunruhigend.“ · `SCHM_PIX_0065_2`: „Worum wir konkurrieren, weiß ich nicht genau. Aber ich werde gewinnen, schon aus Gewohnheit.“ |
 
 Zu R5-TX-15: Wird `W1_DORF_PIX_1320_2` wie vorgeschlagen geändert, bleibt `W1_HINT_PIX_0010_2` („Beides zählt, aber das Zweite zählt mehr.“) die einzige Zeile dieser Bauart; sonst sind die beiden eine Dublette.
@@ -282,8 +282,8 @@ Zu R5-TX-15: Wird `W1_DORF_PIX_1320_2` wie vorgeschlagen geändert, bleibt `W1_H
 
 | Muster | Vorkommen in Welt 1 | davon als Fund mit Umschreibung |
 | --- | --- | --- |
-| Dreierreihe als Öffner bei Pixel (Schnuppern, Ansehen) | 15 Zeilen in 11 von 14 Räumen, dazu 2 Zweierreihen | 9 (R5-TX-39), 1 (R5-TX-23 bei Max) |
-| Aufzählung als Öffner im Zuruf | 10 von 29 Zurufen | 3 (R5-TX-40) |
+| Dreierreihe als Öffner bei Pixel (Schnuppern, Ansehen) | 13 Zeilen in 10 von 14 Räumen, dazu 2 Zweierreihen | 9 (R5-TX-39), 1 (R5-TX-23 bei Max) |
+| Aufzählung als Öffner im Zuruf | 10 von 28 Zurufen | 3 (R5-TX-40) |
 | Kontrast („kein X, sondern/das ist Y“, „X, kein Y“) | rund 40 (30 per Suche, 10 von Hand), gehäuft an der Brücke (9), im Bergwerk (8), im Stab-Laden (5) | 9 (R5-TX-22, 27, 30, 31) |
 | Entweder-oder-Schluss | 10 „entweder“, 5 Schlüsse auf „beides“ | 5 (R5-TX-15, 26, 34) |
 | „Oder …“-Nachklapp | 14, davon 4 im Zauberwald | 2 (R5-TX-28) |
@@ -311,7 +311,7 @@ Zu R5-TX-15: Wird `W1_DORF_PIX_1320_2` wie vorgeschlagen geändert, bleibt `W1_H
 
 `SYS_` (Ersatz-, Wiederholungs- und Plauderzeilen) habe ich wie Dialog gelesen, `UI_` auf Lokalisierung, Länge und einheitliche Benennung. In keiner Zeile des Umfangs fehlt das Englische oder ist leer.
 
-**KI-Klang `SYS_`: gering.** 108 Zeilen, kein Fund im Deutschen. Die Pools sind abwechslungsreich gebaut und halten die Stimmen: Max kurz und mit Medienwort (16 von 46 Max-Zeilen, was bei einem Pool gewollt ist), Pixel in zwei Blasen mit Nachsatz. Stark: „Ich kannte einmal eine Katze, die genau das versucht hat. // Sie spricht bis heute nicht darüber, und wir respektieren das alle.“ (`SYS_ERS_PIX_0190`), „Lädt. Lädt immer noch. Ich nehm das als Nein.“ (`SYS_ERS_MAX_0140`), „Nichts Neues. Wenn sich etwas ändert, sage ich Bescheid. // Das ist gelogen, ich sage nie Bescheid. Aber es klingt nett.“ (`SYS_WDH_PIX_0080`).
+**KI-Klang `SYS_`: gering.** 108 Zeilen, kein Fund im Deutschen. Die Pools sind abwechslungsreich gebaut und halten die Stimmen: Max kurz und mit Medien- oder Spielwort (20 von 51 Max-Zeilen, was bei einem Pool gewollt ist), Pixel in zwei Blasen mit Nachsatz. Stark: „Ich kannte einmal eine Katze, die genau das versucht hat. // Sie spricht bis heute nicht darüber, und wir respektieren das alle.“ (`SYS_ERS_PIX_0190`), „Lädt. Lädt immer noch. Ich nehm das als Nein.“ (`SYS_ERS_MAX_0140`), „Nichts Neues. Wenn sich etwas ändert, sage ich Bescheid. // Das ist gelogen, ich sage nie Bescheid. Aber es klingt nett.“ (`SYS_WDH_PIX_0080`).
 
 | ID | Zeilen-ID | Sprecher | Priorität | Muster | Original | Grund | Vorschlag |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -381,7 +381,7 @@ Kurz: Die Nebenfiguren sind die Stärke des Textes; man erkennt jede an einem Sa
 | `UI_W4_ZS_TIERTORT` („Tiertort Savanne“ / „Paw and Order: Savannah“) | Tatort / Law & Order | passt | Gut lokalisiert, jede Sprache hat ihre eigene Krimireihe. |
 | `UI_ERR_FREUND_0815`, `UI_OBJ_MODELL_0815` („Modell 08/15“) | deutsche Redewendung | im Englischen ohne Witz | Als Name tragbar; „Model 08/15“ sagt englischen Spielern nichts. Kein Fund, weil Welt 3 nicht in meinem Umfang liegt. |
 
-Ergebnis: 31 Anspielungen im Umfang, 29 passen. Keine einzige nennt Titel oder Figur der Vorlage beim Namen; das ist die Stärke. Zwei Stellen fallen ab (`W1_TURM_MAX_0095`, `W1_ABS_ALW_0080`).
+Ergebnis: 31 Anspielungen im Umfang, 28 passen. Keine nennt den Titel der Vorlage; das ist die Stärke. Zwei Stellen fallen ab (`W1_TURM_MAX_0095`, `W1_ABS_ALW_0080`), eine trägt nur im Deutschen („Modell 08/15“).
 
 ## Running Gags
 
@@ -407,7 +407,7 @@ Ergebnis: 31 Anspielungen im Umfang, 29 passen. Keine einzige nennt Titel oder F
 | „junger Mann“ | Prolog 2, ZS1 1, Welt 1 4 (`W1_ANK_PIX_0020_2`, `W1_TAV_PIX_0150_2`, `W1_STAB_PIX_0490`, `W1_TURM_PIX_0170`) | Eingehalten (Grenze vier je Abschnitt). |
 | „Ich sage nichts“ / „Ich nenne keine Namen“ | Welt 1 einmal (`W1_HINT_PIX_0111_2`), ZS1 einmal, ZS3 dreimal | In ZS3 einmal zu viel (R5-TX-12, W3-1). |
 | „freiwillig“ | Prolog 2, Welt 1 4, ZS2 1 | Trägt; die Auszahlung in ZS2 („Haushalt … Freiwillig.“) sitzt. |
-| Pixels Schnupper-Dreier | 15 in Welt 1 | **Abgenutzt ab dem dritten Raum** (R5-TX-39). Als Gag war er nie gemeint; er ist ein Bauplan. |
+| Pixels Schnupper-Dreier | 13 in Welt 1, dazu 2 im Zuruf | **Abgenutzt ab dem dritten Raum** (R5-TX-39). Als Gag war er nie gemeint; er ist ein Bauplan. |
 | „beides“ / „das Zweite mehr“ | 5 in Welt 1, je einmal in Prolog und ZS1 | Abgenutzt ab dem zweiten Mal (R5-TX-15). |
 
 ## Lokalisierung, Zusammenfassung
@@ -444,3 +444,52 @@ Ergebnis: 31 Anspielungen im Umfang, 29 passen. Keine einzige nennt Titel oder F
 | ID | Zeilen-ID | Sprecher | Priorität | Muster | Original | Grund | Vorschlag |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | R5-TX-45 | `W1_HOGG_PIX_0150` (gegen `W1_HOGG_MAX_0140`, `W1_HOGG_ALW_0380`, `W1_HOGG_MAX_0930`) | Pixel | kosmetisch | Widerspruch im Rätseltext; **weiterhin offen (Fund 25 vom 14.11., Teil Etiketten)** | Pixel: „Sechs Flaschen, kein Etikett.“ – Max am selben Hotspot: „Sechs braune Flaschen mit vertauschten Etiketten“, Alwin: „Die Etiketten hat jemand vertauscht.“, Max: „Eine Flasche, deren Etikett lügt.“ | Am selben Regal sagt eine Figur „vertauscht“, die andere „keins“. Für das Flaschenrätsel ist das die Frage, ob Lesen hilft. Welche Fassung zum Bild passt, habe ich nicht geprüft. | Wenn die Flaschen im Bild Etiketten tragen: „Sechs Flaschen, und kein Etikett stimmt. Ich rieche sie von hier aus, alle sechs.“ Wenn nicht: `0140` „Sechs braune Flaschen ohne Etikett, und zwei davon sind deutlich größer.“, `0930` „Eine Flasche ohne Etikett.“, Alwin „Die Etiketten hat jemand abgemacht. Vermutlich ich.“ |
+
+## Gut gelöst
+
+- **Die Nebenfiguren.** Jede hat nach zwei Sätzen eine eigene Stimme, und keine klingt nach der anderen: Waldemar („Die Versammlung bin ich. Ich bin nie beschlussfähig.“ `W1_BRUE_WAL_1270`), der Schmied („Wie Schulden.“ `W1_SCHM_SCH_0240`), Gollo („Ich habe verloren. Endlich.“ `W1_TAV_GOL_1210_2`), Rotkäppchen („Mittel war leider aus, ich hab dir XXL mitgebracht. Da wächst du schon noch rein.“ `W1_DORF_ROT_0930`), Smaugi („Doch, nimm. Nein. Ach.“ `W1_SMAU_SMA_0400`).
+- **Max' Entwicklung steht in kleinen Reaktionen.** „Ja. … Trotzdem.“ (`W1_LUFT_MAX_0310`), „Ich könnte jetzt gehen. // … Zeldina hat immer noch keine Wohnung.“ (`W1_SMAU_MAX_0645`), „Haushalt … Freiwillig.“ (`ZS2_DACH_MAX_0160` bis `0200`). Nirgends wird ein Gefühl ausgesprochen oder eine Lehre gezogen.
+- **Anspielungen ohne Erklärung.** „Was hab ich in meiner Tasche?“ ist zugleich Zitat und Rätsellösung; die Okarina („irgendwie kenn ich sie trotzdem“) und die Kokosnusshälften kommen ohne Titel aus.
+- **Rückrufe über Räume hinweg.** „Interpretiert.“ (`W1_HOGG_PIX_0780`), „Fünf Körbe, Waldemar.“ (`W1_WALD_MAX_0560`), „Ich auch. Aber ich hab Übung.“ (`W1_THRO_MAX_0420`), Grimmzahns Daumen, Smaugis dreihundert Teekannen als Provision.
+- **Rätselauskunft zuerst und wörtlich.** Die 72 Hinweiszeilen sagen auf Stufe 3 immer den Handgriff und bleiben trotzdem Pixel („Sag es der Tür. Sag es nie mir.“ `W1_HINT_PIX_1131`).
+- **Das Schloss-Motiv** (sechs Stellen, jede anders, am Ende umgedreht) und die Passwort-Versuche über vier Abschnitte sind sauber gesteigert.
+- **Kaum klassische Maschinenmerkmale.** In 3148 Zeilen zwei Gedankenstriche, eine Stockphrase, kein Signposting, keine Meta-Sprache, keine Schlussmoral. Was bleibt, sind wiederholte Baupläne, und die lassen sich mit einigen Dutzend geänderten Zeilen lösen.
+
+## Nicht geprüft
+
+- Nicht gespielt. Keine Blase und kein Feld im laufenden Spiel gesehen: Abschneiden, Umbruch, Einblenddauer und die Länge englischer Namen in der Oberfläche sind nur gezählt.
+- Keine Bilder geprüft. Aussagen zu Text gegen Bild (Etiketten in Hoggelwarz, Minka am Topf, Toadis Hut) betreffen nur den Text.
+- Welche Zeilen im Spiel wirklich hintereinander fallen, kenne ich nur aus den Regie-Anmerkungen im Auszug; die Skripte unter `docs/skript/` habe ich nicht gesondert durchgelesen, das Rätsel-Dokument nur nachgeschlagen.
+- Die Prüfskripte von humanizer-de habe ich nicht ausgeführt; der Katalog diente nur zur Benennung.
+- Keine Vertonung, keine Sprachausgabe; „laut gelesen“ heißt hier: auf Sprechbarkeit gelesen.
+- Englisch als Nicht-Muttersprachler geprüft. Die Vorschläge sollte jemand mit britischem Ohr gegenlesen.
+- Dialoge von Welt 2 bis 4 und Finale liegen nicht in meinem Umfang; von dort habe ich nur die `UI_`-Zeilen gelesen.
+- Das Timing der Ankunftsszenen (ND-22, ND-23) habe ich nicht neu gemessen.
+
+## Vorschläge für die Lessons Learned
+
+1. **KI-Klang sitzt hier im Bauplan, nicht im Satz.** Die Zeilen sind einzeln gut; auffällig werden sie, wenn derselbe Zeilentyp in jedem Raum gleich gebaut ist. Deshalb Texte nicht nur raumweise gegenlesen, sondern je Zeilentyp quer über alle Räume: alle Schnupper-Zeilen untereinander, alle Zurufe, alle zweiten Blicke. `tx-a_auszug.py` liefert die Regie-Angabe je Zeile, damit geht das in Minuten.
+2. **Formeln je Welt zählen, nicht nur je Raum.** „Höchstens einmal pro Raum“ hat bei Pixels Dreierreihe nicht gegriffen, weil sie in jedem Raum genau einmal steht. Ergänzung für die Dialogregeln: Ein Öffner-Bau (Reihe aus drei Hauptwörtern, „Entweder … oder … beides“, „kein X mehr, das ist Y“) höchstens dreimal je Welt und nur bei einer Figur.
+3. **Nachgetragene Zeilen brauchen dieselbe Englisch-Prüfung wie der Rest.** Die Fehler in R5-TX-33 stehen alle in später ergänzten Zeilen. Vier Prüfungen lassen sich in `tools/pruefen.py` einbauen: deutscher Eigenname in der englischen Spalte (Liste Moderwort, Schwurbelstein, Grimmzahn, Zapp-O-Mat …), Kurzform in englischen Pixel-Zeilen, englische Blase über 140 Zeichen, Blasen in Deutsch und Englisch stark ungleich geteilt.
+4. **Wortspiele beim Schreiben markieren.** „Aufgehen“, „hoch hinaus“, „trägt“ sind im Englischen wörtlich übersetzt worden und haben Pointe oder Hinweis verloren. Eine Anmerkung im Skript („Doppelsinn: Teig und Plan“) reicht.
+5. **Zitate in der Fassung nachschlagen, die das Publikum kennt.** „You shall not pass“ heißt im deutschen Film „Du kannst nicht vorbei!“.
+6. **Englische Objektnamen als Glossar führen.** `UI_OBJ_` ist die Quelle; Dialog und Hinweise benutzen dasselbe Wort (R5-TX-42).
+
+## Werkzeug
+
+- `docs/review/2026-11-21/werkzeuge/tx-a_auszug.py ZIELORDNER`: schreibt je Präfix und Raum eine Lesedatei mit Schlüssel, Sprecher, Regie, Deutsch und Englisch; markiert Zeilen, die in früheren Notizen vorkommen.
+- `docs/review/2026-11-21/werkzeuge/tx-a_zaehlen.py [muster|laenge|sprecher|en] [--ids] PRÄFIXE`: Rohzählung der Muster, Zeichenlängen, Satzlängen je Sprecher, Auffälligkeiten im Englischen. Die Zahlen in dieser Notiz stammen daraus oder aus Einzelsuchen in `texte.csv`; jede gemeldete Zeile habe ich gelesen.
+
+## Zusammenfassung in Zahlen
+
+| Abschnitt | Zeilen | kritisch | wichtig | kosmetisch | KI-Klang |
+| --- | --- | --- | --- | --- | --- |
+| Prolog | 333 | 0 | 1 (R5-TX-01) | 8 | gering; auffällig nur die Benutzen-Schablone |
+| Zwischenspiele 1–3 | 309 | 0 | 1 (R5-TX-13) | 4 | gering, ZS1 gering bis mittel (Kontrast-Häufung) |
+| Welt 1 | 1433 | 0 | 3 (R5-TX-18, 33, 39) | 25 | gering bis mittel; wiederholte Baupläne bei Pixel |
+| System, Oberfläche | 1073 | 0 | 0 | 3 | gering; nur Lokalisierung |
+| **Summe** | **3148** | **0** | **5** | **40** | |
+
+45 Funde, R5-TX-01 bis R5-TX-45. R5-TX-45 steht unter „Frühere Funde, Stand heute“ und zählt zu Welt 1.
+
+FERTIG
