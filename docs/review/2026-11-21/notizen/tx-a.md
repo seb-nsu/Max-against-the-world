@@ -14,7 +14,7 @@ Geprüft wird: Humor und Ton, eigene Stimme je Figur, KI-Klang jeder Dialogzeile
 | ZS1_ | 110 | 110 |
 | ZS2_ | 87 | 87 |
 | ZS3_ | 112 | 112 |
-| W1_ | 1049 | 1433 |
+| W1_ | 1433 | 1433 |
 | SYS_ | 0 | 108 |
 | UI_ | 0 | 965 |
 
@@ -23,7 +23,7 @@ Geprüft wird: Humor und Ton, eigene Stimme je Figur, KI-Klang jeder Dialogzeile
 - [x] Auftrag, humanizer-de, Rolle, Konzept, Skripte, Rätsel, frühere Reviews gelesen
 - [x] Prolog
 - [x] Zwischenspiele 1–3
-- [ ] Welt 1
+- [x] Welt 1
 - [ ] SYS, UI
 - [ ] Auswertung (Stimmen, Anspielungen, Running Gags, Lokalisierung, Top 10)
 
@@ -230,3 +230,79 @@ Das Luftschloss ist der stärkste Raum der Welt: „Vier. Feilschen kostet extra
 | R5-TX-31 | `W1_BERG_PIX_0060`, `W1_BERG_PIX_0810_2` (dazu `W1_BERG_MAX_0670`, `W1_BRUE_PIX_1130_2`, `ZS1_DACH_PIX_0454_2`) | Pixel | kosmetisch | Kontrast-Schablone „Das ist kein X mehr, das ist Y“ | „Das ist kein Streik mehr, das ist Resignation mit Filter.“ / „Das ist weniger ein Streik als ein Keller mit Meinung …“ – später Max: „Das ist kein Passwort mehr. Das ist eine ganze Kindheit.“ | Pixel stuft im selben Raum zweimal den Streik um, und Max' beste Zeile des Raums (`0670`) kommt danach im selben Bau und verliert dadurch. Dieselbe Schablone steht in `W1_BRUE_PIX_1130_2` und `ZS1_DACH_PIX_0454_2`. `0670` soll sie allein haben. | `0060`: „Kaffee von vorgestern. So riecht Resignation, und zwar mit Filter.“ (`0060_2` „Ich erkenne sie am Geruch …“ schließt an) · `0810_2`: „Ein Keller mit Meinung. Solche Keller kenne ich, ich habe in einem gewohnt.“ |
 
 „Wir sind Goblins, keine Maschinen“ (Streikschild, `W1_BERG_MAX_0025`), „Wir sind Goblins, keine Möwen.“ (`GRI_0600`), „Ich bin Gewerkschafter, keine Mauer.“ (`GRI_0380`), „Ich hab Spitzhacke, keine Bürste.“ (`GO1_0200`): Hier ist die Formel Parole und gehört der Gruppe; das bleibt. Stark: Grimmzahns Daumen („Ich habe keinen mehr!“ `0320_2`, „Ich habe doch noch einen!“ `0520`), „Hell!“ – „Zu hell.“ (`GO1_0530`/`GO2_0540`), „Goblins, die nichts tun. Aber organisiert.“ (`MAX_0020`), „Jetzt nicht mehr.“ (`MAX_0690`).
+
+### Dunkler Turm, Keller (`W1_TURM`, 60 Zeilen)
+
+| ID | Zeilen-ID | Sprecher | Priorität | Muster | Original | Grund | Vorschlag |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| R5-TX-32 | `W1_TURM_MAX_0095` | Max | kosmetisch | Anspielung erklärt sich selbst; **weiterhin offen (Durchgang 14.11., Abschnitt 4: „erklärt die Vorlage“)** | „Die Besen sind verzaubert. Ich bräuchte jetzt einen alten Meister mit Hut, der ‚Halt‘ ruft, aber so einer kommt nur in Filmen.“ | Laut Konzept erklärt Max nie die Vorlage. „Kommt nur in Filmen“ zeigt mit dem Finger auf den Zauberlehrling. | „Die Besen sind verzaubert. Jetzt müsste ein alter Meister mit Hut reinkommen und ‚Halt‘ rufen. Kommt aber keiner.“ |
+
+Sonst trägt der Raum: Pixels lange Sätze über zwei Blasen sind hier am besten („Ich habe Haare, ich habe Würde, // und für diese Aufgabe opfere ich genau eines von beiden.“ `W1_TURM_PIX_0150`; „Wenn dein Großvater fragt, warum ich kahl bin, // dann sagst du ihm: Weltrettung. Und dass er mir dafür einen Lachs schuldet.“ `0220`).
+
+### Smaugis Abstellkammern (`W1_SMAU`, 103 Zeilen)
+
+| ID | Zeilen-ID | Sprecher | Priorität | Muster | Original | Grund | Vorschlag |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| R5-TX-33 | `W1_SMAU_PIX_0722`, `W1_SMAU_ZEL_0825`; dazu `W1_SMAU_PIX_0721`, `0723`, `0724`, `0826`, `W1_HINT_PIX_0621` | Pixel, Zeldina | wichtig | Lokalisierung: Name nicht übersetzt; Pixel mit Kurzformen | EN: „Moderwort's old school report should give it away.“ / „Hold on. Moderwort is up there …“ / „We're missing the beginning.“ / „There's a whole bush of them …“ / „she won't give it up“ | Der Lord heißt im Englischen überall „Mouldword“; in diesen zwei Zeilen steht der deutsche Name. Dieselbe Gruppe nachgetragener Zeilen bricht auch Pixels englische Stimme: In 693 von 699 Pixel-Zeilen des Umfangs spricht er ohne Kurzformen, nur in diesen sechs nicht (`P0_DACH_PIX_0955_2` ist ein Zitat und zählt nicht). | „Mouldword's old school report …“ / „Hold on. Mouldword is up there …“ / „We are missing the beginning.“ (ebenso `0722`–`0724`) / „There is a whole bush of them in the enchanted forest.“ / „… and she will not give it up.“ |
+
+Stark: „… Kicher. Richtig. Mama?“ (`W1_SMAU_TUE_0770`), Max' zweiter Entwicklungsmoment „Ich hab das Ei. Ich könnte jetzt gehen. // … Zeldina hat immer noch keine Wohnung.“ (`W1_SMAU_MAX_0645`), Smaugis „Noch nicht. Aber wenn ich anfange, bin ich vorbereitet.“ (`SMA_0840`) und Grimmzahns „Nein. Aber zufrieden. Für einen Goblin ist das dasselbe.“ (`GRI_0570`).
+
+### Thronsaal (`W1_THRO`, 70 Zeilen)
+
+| ID | Zeilen-ID | Sprecher | Priorität | Muster | Original | Grund | Vorschlag |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| R5-TX-34 | `W1_THRO_MAX_0120` (dazu `W1_THRO_MAX_0130`) | Max | kosmetisch | Entweder-oder-Schluss an zwei Nachbar-Hotspots | „Taschentücher, stapelweise. Entweder hat hier jemand Heuschnupfen, oder sehr viele Gefühle.“ / „Das ist entweder Mut, oder es war die Maklerin.“ | Wie in Hoggelwarz (R5-TX-26) stehen zwei Entweder-oder direkt nebeneinander. `0130` hat die bessere Pointe (die Maklerin war schon da) und bleibt. | „Taschentücher, stapelweise. Hier hat jemand Heuschnupfen und dazu noch Gefühle.“ |
+
+`W1_THRO_MAX_0310` wiederholte am 14.11. `W1_STAB_MAX_0550` wörtlich; das ist behoben („Fondue-Rückstände. Der Löffel hat eben Geschmack.“). Stark: „DIE MAKLERIN! … Sie hat Fotos gemacht! Vom Schlafzimmer!“ (`MOD_0050`), „Damit kann ich nur Käse.“ – „Ich auch. Aber ich hab Übung.“ (`MOD_0410`/`MAX_0420`), „Die kriegt Smaugis Teekannen. Alle dreihundert.“ (`ZEL_0530`), „Auf der letzten Seite steht ganz klein ‚Morgen.‘ Und auf der davor auch. Das Gefühl kenne ich.“ (`MAX_0155`).
+
+### Figurenwechsel, Inventar, erschöpfte Gespräche, Hinweise (`W1_WECH`, `W1_INV`, `W1_ABS`, `W1_HINT`, 151 Zeilen)
+
+| ID | Zeilen-ID | Sprecher | Priorität | Muster | Original | Grund | Vorschlag |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| R5-TX-35 | `W1_ABS_ALW_0080` | Alwin | kosmetisch | Anspielung im Deutschen nicht erkennbar | „Du wirst nicht vorbeikommen. An mir. Ich meine: an weiteren Antworten.“ (EN: „You shall not pass.“) | Das Englische zitiert Gandalf wörtlich. In der deutschen Filmfassung heißt der Satz „Du kannst nicht vorbei!“; „Du wirst nicht vorbeikommen“ erkennt niemand. | „Du kannst nicht vorbei! An mir. Ich meine: an weiteren Antworten.“ |
+| R5-TX-36 | `W1_HINT_PIX_1320` | Pixel | kosmetisch | Sinnfehler in einer Rätselauskunft (Regel 10: Auskunft wörtlich) | „Du hast einen Löffel, der mal Käse war.“ (EN: „a spoon that used to be cheese“) | Der Löffel war nie Käse; an ihm klebt Fondue („Fondue-Rückstände“, `W1_THRO_MAX_0310`). In einem Stufe-2-Hinweis stört das Rätseln. | „Socke auf, er niest, der Stab fliegt. Dann braucht er Ersatz. Du hast einen Löffel, an dem noch Käse klebt.“ / „… You have a spoon with cheese still stuck to it.“ |
+| R5-TX-37 | `W1_HINT_PIX_0330`, `W1_HINT_PIX_0330_2` | Pixel | kosmetisch | Lokalisierung: Blasen im Englischen anders geteilt | DE 23 + 122 Zeichen („Hol die Schmiede-Ziege.“ // „Bestell die zweite …“), EN 121 + 29 („Fetch the forge goat. Order the second …“ // „I hate everything about this.“) | Die Blasen tragen in beiden Sprachen verschiedenen Inhalt. Bei einer Vertonung je Schlüssel passen Aufnahme und Text nicht mehr zusammen. | EN wie DE teilen: „Fetch the forge goat.“ // „Order the second with the form from the village board and give me the goatskin rug from the tavern. I hate everything about this.“ |
+| R5-TX-38 | `W1_HOGG_ALW_0342` (154), `W1_HOGG_ALW_0610` (163), `W1_HINT_PIX_0621` (144), `W1_HINT_PIX_0730` (145), `W1_HINT_PIX_0910` (143), `W1_HINT_PIX_0930` (145) | Alwin, Pixel | kosmetisch | Lokalisierung: englische Blase länger als 140 Zeichen | siehe Zeichenzahlen; deutsch 121 bis 138 | Im Deutschen gilt für Sprechblasen die Grenze 140 (`tools/pruefen.py`); im Englischen liegen sechs Zeilen darüber. Ob die Blase umbricht oder überläuft, habe ich nicht im Spiel gesehen. | `0342`: „The mushroom. Without it, it's breakfast. With it, it's education. Glow mushrooms grow in the enchanted forest, past the troll bridge.“ (134) · `0610`: „Six bottles on my shelf, count them and see: one potion, one oil, two poisons, two juices there be. My shelf held no more, take it from me.“ (140) · `0621`: „Berta in the tavern has the egg and will not give it up. Ask me what she says. Mushroom: enchanted forest. Milk: animals with bells.“ (132) · `0730`: „Talk to Waldemar about singing, follow him into the forest, hold the sock in the pollen. And promise him the credits, it costs nothing.“ (135) · `0910`: „The estate agent wants commission. Haggling fails, pets cost extra. She wants to sell something. Give her something to sell.“ (124) · `0930`: „Show the estate agent Mouldword's wanted poster and pitch her the tower. Seven floors, tower location. I shall never say that again.“ (132) |
+
+Die Inventarzeilen gehören zum Besten der Welt: „Er klebt an allem, was er liebt.“ (`W1_INV_PIX_0015`), „Ein Kästchen für ‚Oma‘, eins für ‚Wolf‘ und eins für ‚Sonstiges‘. Ich bin Sonstiges.“ (`W1_INV_MAX_0040`), „Das ging schneller als bei mir. Und ohne Stimmbruch.“ (`W1_INV_MAX_0140`), „Der hat mehr Echo als meine Klasse, wenn der Lehrer was fragt.“ (`W1_INV_MAX_0060`). Die Hinweise halten die Regel „Auskunft zuerst und wörtlich“ durchgehend ein; Stufe 3 nennt immer den Handgriff.
+
+### Raumübergreifende Funde in Welt 1
+
+| ID | Zeilen-ID | Sprecher | Priorität | Muster | Original | Grund | Vorschlag |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| R5-TX-39 | `W1_DORF_PIX_0410`, `W1_TAV_PIX_0380`, `W1_TAV_PIX_0390`, `W1_STAB_PIX_0120`, `W1_HOGG_PIX_0220`, `W1_HOGG_PIX_0660`, `W1_BRUE_PIX_0080`, `W1_BRUE_PIX_0160`, `W1_WALD_PIX_0105`, `W1_WALD_PIX_0180`, `W1_LUFT_PIX_0170`, `W1_BERG_PIX_0130`, `W1_SMAU_PIX_0190`, `W1_THRO_PIX_0180` | Pixel | wichtig | Dreierreihe als Öffner, drittes Glied abstrakt (M9 Trikolon, M61 gleicher Bauplan; in Welt 3 als „Schnupper-Dreier“ schon bereinigt) | „Staub, Samt und Hoffnung.“ / „Holz, Farbe und Pedanterie.“ / „Moos, Regelbuch und Lampenfieber. Dieser Troll riecht nach einer zweiten Karriere.“ / „Karton, Kronenpolitur und Entschlossenheit. Diese Frau riecht nach einem Plan.“ / „Schlaf, Kaffee und Schweinsleder. Dieser Goblin hat sein Leben im Griff.“ / „Tomate, Zucker und Lüge.“ / „Pollenstaub, Taschentücher und Selbstmitleid.“ | Pixels Antwort auf „Schnuppern“ hat in 11 von 14 Räumen denselben Bau: drei Hauptwörter, das dritte ein Gefühl oder eine Eigenschaft, danach eine Deutung, viermal mit „Diese(r) X …“. Wer Pixel in jedem Raum schnuppern lässt (und das Spiel lädt dazu ein), hört die Schablone spätestens im dritten Raum. Einzeln ist fast jede Zeile gut; die Menge macht den Maschinenklang. | Fünf behalten, die mehr tun als aufzählen: `DORF_0410` (Stabreim), `STAB_0120` (wird in `_2` weitergeführt), `HOGG_0220` („frittierte Geschichte“), `BRUE_0160`, `SMAU_0190`. Die übrigen anders anfangen: `TAV_0380`: „Da unten ist es kalt, und es riecht nach Rüben. Ganz hinten hängt ein Etikett, an dem keine Flasche mehr ist.“ · `TAV_0390`: „Rost. Aber liebevoll gepflegter Rost. Humbert poliert mit Gefühl, das rieche ich deutlich.“ · `HOGG_0660`: „Zitrone und Honig. Dahinter kommt noch etwas, das mir nicht gefällt. Das könnte alles Mögliche sein.“ · `BRUE_0080`: „Frische Farbe auf altem Holz. Jemand hat jeden Paragrafen einzeln poliert.“ · `WALD_0105`: „Ich habe noch einmal geschnuppert. Tomate mit sehr viel Zucker, und sie tut trotzdem so, als wäre sie Blut.“ · `WALD_0180`: „Dieser Karren riecht nach nasser Pappe und nach Omas Küche. Er hat mehr erlebt als ich,“ · `LUFT_0170`: „Karton und Kronenpolitur. Diese Frau hat einen Plan, das rieche ich bis hierher.“ · `BERG_0130`: „Er riecht nach Kaffee und schläft trotzdem. Dieser Goblin hat sein Leben im Griff.“ · `THRO_0180`/`_2`: „Nasse Taschentücher. Und er tut sich leid, das rieche ich bis hierher. // Ein Dunkler Schnupfen mit Thron.“ (im Original steht außerdem ein Komma zu viel: „weniger ein Dunkler Lord, als …“) |
+| R5-TX-40 | `W1_HOGG_PIX_0910`, `W1_BRUE_PIX_1130`, `W1_WALD_PIX_0710` (im Verbund mit `W1_TAV_PIX_1620`, `W1_SCHM_PIX_0610`, `W1_TURM_PIX_0280`, `W1_WASS_PIX_0170`, `W1_BERG_PIX_0810`, `W1_THRO_PIX_0720`, `W1_TURM_PIX_0290`) | Pixel | kosmetisch | Aufzählung als Öffner im Zuruf (M9, M61) | „Der Kessel blubbert, die Flaschen schweigen, und Alwin summt ein Rezept.“ / „Die Ziegen warten, ich warte, und der Troll wartet auch.“ / „Die Pilze leuchten, die Rosen schmollen, und der ganze Wald hat Stimmung.“ | 10 der 29 Zurufe beginnen mit einer Reihe, sechs davon nach dem Muster „A tut dies, B tut das, und C …“, gefolgt von „du stehst“. Die Taverne hat die beste Fassung („Humbert poliert, Gollo zittert, Minka starrt, und du stehst.“); danach wiederholt sie sich. Die Hauptwort-Reihen in Wasserschloss, Bergwerk und Thronsaal fassen jeweils den Raum zusammen oder geben einen Hinweis und bleiben. | `HOGG_0910`: „Alwin summt ein Rezept, und der Kessel blubbert im Takt.“ (`_2` bleibt) · `BRUE_1130`: „Jetzt warten sogar die Ziegen.“ (`_2` nach R5-TX-27: „Für ein Wartezimmer fehlen nur noch die Zeitschriften.“) · `WALD_0710`: „Der ganze Wald hat Stimmung. Sogar die Rosen, und die schmollen.“ (`_2` bleibt) |
+| R5-TX-41 | `W1_DORF_MAX_0290` (mit `W1_DORF_PIX_0140`), `W1_STAB_PIX_0570_2`, `W1_TURM_PIX_0200_2`, `W1_WALD_MAX_0095`, `W1_SCHM_PIX_0065_2` | Max, Pixel | kosmetisch | Wort-Ticks über Figuren hinweg (M64, Regel 7) | „Endlich ein Denkmal, das die Verhältnisse realistisch darstellt.“ (Pixel) und im selben Raum „Endlich mal eine Schule mit realistischen Zielen.“ (Max) · „Endlich jemand in diesem Königreich, der …“ · „nackt und gleichzeitig sehr produktiv“ · „sehr praktisch und gleichzeitig sehr beunruhigend“ · „und zwar aus Prinzip“ | „Endlich (mal) ein/jemand …“ steht siebenmal bei vier Figuren (dazu `W1_TAV_PIX_0080`, `W1_HOGG_ALW_0070`, `W1_LUFT_MAX_0110`, `W1_LUFT_PIX_0130`; das Paar vor dem Spiegel ist gewollt und bleibt). „Gleichzeitig X und Y“ steht fünfmal (auch `W1_HOGG_PIX_0920_2`, `W1_WASS_MAX_0075`, `W1_TURM_PIX_0100_2`), „aus Prinzip“ dreimal in zwei Nachbarräumen (`W1_TAV_PIX_0130_2`, `W1_TAV_HUM_0540`). | `DORF_MAX_0290`: „Ein Wegweiser: ‚Hoggelwarz für Durchgefallene‘. Da könnte ich mich sogar bewerben.“ · `STAB_PIX_0570_2`: „Ich mag sie. In diesem Königreich hat sonst niemand einen Blick für Qualität.“ · `TURM_PIX_0200_2`: „Das war ein Pfund Fell. Ich fühle mich nackt, aber sehr produktiv.“ · `WALD_MAX_0095`: „… Das ist sehr praktisch. Und ziemlich beunruhigend.“ · `SCHM_PIX_0065_2`: „Worum wir konkurrieren, weiß ich nicht genau. Aber ich werde gewinnen, schon aus Gewohnheit.“ |
+
+Zu R5-TX-15: Wird `W1_DORF_PIX_1320_2` wie vorgeschlagen geändert, bleibt `W1_HINT_PIX_0010_2` („Beides zählt, aber das Zweite zählt mehr.“) die einzige Zeile dieser Bauart; sonst sind die beiden eine Dublette.
+
+### Einschätzung KI-Klang Welt 1
+
+**Gering bis mittel.** Geprüft 1433 Zeilen (Max 575, Pixel 472, 26 weitere Sprecher 386). Einzeln gelesen klingt fast jede Zeile gesprochen; Stockphrasen, Signposting, Gedankenstriche und „Gefühl ausgesprochen“ fehlen praktisch (ein Gedankenstrich, eine Stockphrase). Der Maschinenklang entsteht durch Baupläne, die sich von Raum zu Raum wiederholen, und er liegt fast ganz bei Pixel. Die Nebenfiguren sind davon frei.
+
+| Muster | Vorkommen in Welt 1 | davon als Fund mit Umschreibung |
+| --- | --- | --- |
+| Dreierreihe als Öffner bei Pixel (Schnuppern, Ansehen) | 15 Zeilen in 11 von 14 Räumen, dazu 2 Zweierreihen | 9 (R5-TX-39), 1 (R5-TX-23 bei Max) |
+| Aufzählung als Öffner im Zuruf | 10 von 29 Zurufen | 3 (R5-TX-40) |
+| Kontrast („kein X, sondern/das ist Y“, „X, kein Y“) | rund 40 (30 per Suche, 10 von Hand), gehäuft an der Brücke (9), im Bergwerk (8), im Stab-Laden (5) | 9 (R5-TX-22, 27, 30, 31) |
+| Entweder-oder-Schluss | 10 „entweder“, 5 Schlüsse auf „beides“ | 5 (R5-TX-15, 26, 34) |
+| „Oder …“-Nachklapp | 14, davon 4 im Zauberwald | 2 (R5-TX-28) |
+| „A nennt das X. Ich nenne das Y.“ / „Das nennt man …“ | 6 | 2 (R5-TX-21, 25) |
+| Wort-Ticks („Endlich ein …“, „gleichzeitig“, „aus Prinzip“) | 7 / 5 / 3 | 5 (R5-TX-41) |
+| Stockphrase, Lehnübersetzung, Gedankenstrich, schiefe Wendung | je 1 | 4 (R5-TX-16, 17, 20, 29) |
+| „und zwar“ | 19 (12 bei Pixel) | keiner; bei Pixel Figur |
+
+### Die zehn schwächsten Zeilen in Welt 1
+
+| # | Zeile | Original | Umschreibung |
+| --- | --- | --- | --- |
+| 1 | `W1_HOGG_MAX_0130` | Ein Kessel, in dem schon etwas Grünes blubbert. Alwin nennt das Grundlage. Ich nenne das verdächtig. | Ein Kessel, in dem schon etwas Grünes blubbert. Alwin sagt, das ist die Grundlage. Wovon, sagt er nicht. |
+| 2 | `W1_TAV_MAX_0120` | Ein Topf voll blubberndem Käse. Gollo nennt das Vulkan. Ich nenne das Abendessen. | Ein Topf voll blubberndem Käse. Gollo sagt Vulkan dazu. Für mich sieht das nach Abendessen aus. |
+| 3 | `W1_LUFT_PIX_0170` | Karton, Kronenpolitur und Entschlossenheit. Diese Frau riecht nach einem Plan. | Karton und Kronenpolitur. Diese Frau hat einen Plan, das rieche ich bis hierher. |
+| 4 | `W1_THRO_PIX_0180`/`_2` | Pollenstaub, Taschentücher und Selbstmitleid. // Das ist weniger ein Dunkler Lord, als ein Dunkler Schnupfen. Mit Thron. | Nasse Taschentücher. Und er tut sich leid, das rieche ich bis hierher. // Ein Dunkler Schnupfen mit Thron. |
+| 5 | `W1_BERG_PIX_0060` | Kaffee von vorgestern. Das ist kein Streik mehr, das ist Resignation mit Filter. | Kaffee von vorgestern. So riecht Resignation, und zwar mit Filter. |
+| 6 | `W1_BRUE_PIX_1130`/`_2` | Die Ziegen warten, ich warte, und der Troll wartet auch. // Das ist kein Abenteuer mehr, das ist ein Wartezimmer. Es fehlen nur noch die Zeitschriften. | Jetzt warten sogar die Ziegen. // Für ein Wartezimmer fehlen nur noch die Zeitschriften. |
+| 7 | `W1_LUFT_MAX_0165` | Sie trägt das Schwert über dem Karton. Das ist keine Prinzessin, die gerettet werden will, das ist eine, die umzieht. | Sie trägt das Schwert über dem Karton, griffbereit. So packt jemand, der schon oft umgezogen ist. |
+| 8 | `W1_TAV_PIX_1610_2` | Es ist eine Gabe. Eine schwere Gabe, wenn man sie nicht nutzen darf. | Er wird langsam ungeduldig. Ich übrigens auch. |
+| 9 | `W1_STAB_MAX_0555` | Mein Zauberstab, gemacht aus Holz, Käse und Hoffnung. Zwei davon sind haltbar. | Mein Zauberstab. Ein Kochlöffel mit Käse dran. Haltbar ist davon nur der Löffel. |
+| 10 | `W1_DORF_PIX_1320`/`_2` | Das Schloss da oben bewegt sich nicht. Entweder ist es gut festgemacht oder sehr faul. // Ich respektiere beides, das Zweite allerdings ein wenig mehr. | Das Schloss da oben bewegt sich nicht. Es ist gut festgemacht oder sehr faul. // Ich hoffe auf faul. Mit so einem Schloss könnte ich mich anfreunden. |
