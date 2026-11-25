@@ -1,6 +1,6 @@
 # pr-w1: Welt-Prüfer Welt 1 „Schwurbelstein“ (Fortsetzung in der Cloud, ab 25.11.2026)
 
-**Stand: in Arbeit (25.11., gerader Durchlauf fertig, Sackgassen-Suche, Filme und Zeitmessung stehen aus). Wird nach jedem Block ergänzt und gesichert.**
+**Stand: fertig (25.11.2026).**
 
 - Rolle: Welt-Prüfer (Durchspieler, Level-, Game-Designer, Technical Artist, Gameplay-Scripter in einem Durchgang). Kürzel `pr-w1`.
 - Umfang: Welt 1 vollständig, vom ersten freien Moment auf dem Dorfplatz bis zum ersten freien Moment in Welt 2 (einschließlich Welt-Ende, Übergang, Zwischenspiel 1).
@@ -12,7 +12,9 @@
 
 ## Stand der Arbeit
 
-Erledigt: gerader Durchlauf, Lösungsweg als Befehlsdatei, Wiederholung vom echten Prolog-Endstand (siehe „Zeitmessungen“), Filme R7, Besen, Thronsaal und Welt-Ende, Pfote an Stichproben, Bestand der Animationen. Was offen geblieben ist, steht unter „Nicht geprüft“.
+Erledigt: gerader Durchlauf, Lösungsweg als Befehlsdatei (`belege/pr-w1/loesungsweg.txt`), Wiederholung vom echten Prolog-Endstand (siehe „Zeitmessungen“), Filme in Tempo 1 (R7, Besen, Thronsaal, Welt-Ende, Melken, Fußbad, Lieferung, Pilz), Rücksprung-Probe an zwei Stellen, Pfote an Stichproben, Bestand der Animationen. Was offen geblieben ist, steht unter „Nicht geprüft“.
+
+Zweiter Lauf `/home/user/lauf/pr-w1-weg` (Wiederholung, Sackgassen-Proben). Die Filme liegen als Einzelbilder in den Lauf-Ordnern (`filme/<name>/b_####.png`), nicht im Repo; im Repo liegen Ausschnitte daraus.
 
 ## Rätselübersicht des Klickwegs (so gespielt, alles echte Klicks)
 
@@ -50,6 +52,7 @@ Spielzeit des geraden Durchlaufs mit allen Nebenproben: rund 10 000 Spielsekunde
 | R5-W1-34 | alle (Speichern und Laden) | kritisch | Durchspielbarkeit / Technik | **Nach Beenden und Laden hängt jedes Gespräch, das vor dem Speichern schon einmal geöffnet war.** Echter Rundlauf: Stand `w00_anfang`, mit Toadi reden (5 Optionen, „Ich muss weiter.“), F5, Spiel beenden, neu starten, Hauptmenü → Laden → Schnellspeicher, Toadi anklicken: „GESPRÄCH beginnt: Toadi“, dann kein Menü, Zeiger bleibt Sanduhr, `G.blocked=true`, Esc und Klicks wirkungslos. Dasselbe mit Platz 12 (Bergwerk, Stand `w33`): Grimmzahn und Zeldina hängen, R10 ist damit nach einem Neustart nicht mehr lösbar. Im selben Programmlauf geladen tritt es nicht auf, deshalb fiel es bisher nicht auf. Aus dem Code und dem Speicherstand: Der Spielstand speichert je Gespräch `_has_done_init: true` (z. B. `popochiu.dialogs.Grimmzahn`), weil `PopochiuResources.store_properties` alle Skript-Variablen sichert (`addons/popochiu/popochiu_resources.gd` Z. 497–518). Beim Laden setzt `_load_state` (`popochiu_save_load.gd` Z. 213–224) den Wert auf die frische Ressource, deren `options` noch leer sind; `build_options()` (`popochiu_dialog.gd` Z. 204–212) kehrt dann sofort zurück, das Menü bekommt eine leere Liste (`lies D.current_dialog.options` = `[]`). Auch die gespeicherten „schon gewählt“-Marken gehen so verloren (`_load_dialog_options` läuft über die leere Liste). | `belege/pr-w1/R5-W1-K2_dorf_toadi_gespraech_haengt_nach_f5_neustart_laden.png`, `belege/pr-w1/R5-W1-K2_bergwerk_gespraech_ohne_optionen_nach_laden.png`; Befehlsfolge: `stand holen w00_anfang`, `klick @toadi`, `option 0610`, `taste f5`, `fs stop`, `fs start`, `knopf "3   Laden"`, `klick 119 285`, `klick @toadi` → `STEHT seit 20 Spielsekunden … G.blocked=true dialog=Toadi`; `lies D.current_dialog._has_done_init` = true, `…options.size()` = 0; Speicherstand `kontrollpunkte/welt-1/w33_bergwerk_vor_R10.json` (Schlüssel `popochiu.dialogs.*._has_done_init`) | `_has_done_init` nicht speichern (in `_load_state` für Gespräche überspringen wie `options`) und beim Laden `build_options()` vor `_load_dialog_options` erzwingen; zusätzlich das Sicherheitsnetz aus `cq_dialog.gd` (leeres Menü beendet das Gespräch) schon beim ersten Anzeigen anwenden. Test: speichern, Prozess neu starten, laden, jedes Gespräch öffnen. |
 | GD-W2-03 (bei `pr-p`: R5-P-01) | dorfplatz, abstellkammern (gilt für alle Räume mit aufhebbaren Props) | kritisch | Speichern/Laden | **Für Welt 1 an zwei Stellen bestätigt: Wer in derselben Sitzung einen älteren Stand lädt, findet die inzwischen aufgehobenen Gegenstände nicht mehr.** Im Wiederholungslauf (ein Prozess, ganze Welt durchgespielt) danach (1) `prolog_ende` geladen: Auf dem Dorfplatz sind Eimer, Bestellzettel und Steckbrief unsichtbar und nicht im Inventar (Besitz: Dose, Pixel, Reisetasche, Notizbuch, Opas Zettel). Ohne Eimer und Bestellzettel sind R3, R4c und R5 nicht lösbar. (2) `l08_nach_R11b` geladen und die Wendeltreppe hochgegangen: Schwerter-Bündel und Fackel-Bündel sind unsichtbar und nicht im Inventar, R12 ist nicht lösbar. Geladen wurde mit `stand holen` (nutzt `Spielstand.speichern`/Laden auf Platz 12, also den Lader des Spiels); den Weg über das Lade-Menü hat `pr-p` als R5-P-01 belegt. **Kürzeste Nachstellung (zweiter Prozess, Lauf `pr-w1-haupt`):** `stand holen w36_kammern_anfang` (Bündel da), Klick aufs Schwerter-Bündel (im Inventar), `stand holen w36_kammern_anfang`: Bündel unsichtbar und nicht im Inventar, der Klick trifft den „Stapel“ dahinter. Im selben Prozess war danach in `w00_anfang` der Eimer unsichtbar, obwohl er in diesem Prozess nie aufgehoben wurde; vorher waren nur spätere Stände geladen, in denen Max ihn schon trägt. Es reicht also, erst einen späteren und dann einen früheren Stand zu laden. Ob ein Programmneustart vor dem Laden den Fehler vermeidet, habe ich nur für `w36` gesehen (Bündel beim ersten Laden im neuen Prozess sichtbar). | `belege/pr-w1/GD-W2-03_welt1_ruecksprung_dorf_ohne_eimer_kammern_ohne_buendel.png` (links Dorfplatz ohne Eimer am Brunnen, rechts Abstellkammern ohne Bündel); `belege/pr-w1/GD-W2-03_welt1_ruecksprung_protokoll_kurz_kammern.txt` (kürzeste Nachstellung), `belege/pr-w1/GD-W2-03_welt1_ruecksprung_protokoll.txt` (`objekte`: „(unsichtbar)“, `klick @eimer` → „Objekt eimer ist unsichtbar“); Befehle: Lösungsweg Block 1–9, dann `stand holen prolog_ende`, `objekte`, `klick @eimer`; `stand holen l08_nach_R11b`, `klick @treppe_nach_oben`, `objekte` | Beim Laden die Sichtbarkeit aller Props aus dem Stand neu setzen (auch für Räume, die in dieser Sitzung schon geladen waren), nicht nur für den aktuellen Raum. Test in die CI: Gegenstand nehmen, älteren Stand laden, Gegenstand muss wieder da sein. |
 | GD-W1-05 | alle | kosmetisch | Hinweise | Bestätigt: Rechtsklick auf das Notizbuch in der Leiste gibt eine Ersatzzeile („Das wäre eine Folge, die sich niemand zweimal anguckt.“, `SYS_ERS_MAX_0220`). | Lauf `pr-w1-haupt`, Protokoll `h1`, Spielzeit 1197 (`rklick inv:notizbuch`) | wie gd-w1: eigene Ansehen-Zeile oder Rechtsklick öffnet das Buch. |
+| GD-W1-06 | alle (Notizbuch) | wichtig | Hinweise | Bestätigt (Stand `w31`, Luftschloss): Seite „Regeln und Passwort-Teile“ führt nur drei Überschriften („- Märchen-Satzung“, „- Alwins Hinweiszettel“, „- Moderworts Zeugnis“), weder die Paragrafen noch die gefundenen Passwort-Teile („Knuddel“ steht nirgends). Seite „Ziele“ nennt nur die gerade offenen Schritte („Zeldina die Wohnung retten“, „Den Goblins Licht und Unterschrift bringen“), kein Weltziel; das zweite Ziel beschreibt Weg A, der wegen GD-W1-K1 nicht geht. Seite 3: „Pixels Einkaufsliste: Gerade ist nichts offen.“ | `belege/pr-w1/GD-W1-06_notizbuch_ziele_und_regeln_nur_ueberschriften.png`; Befehle: `stand holen w31_luft_maklerin_frei`, `klick inv:notizbuch`, `knopf UI_SEITE_WEITER` | wie gd-w1; dazu die gefundenen Passwort-Teile als eigene Zeilen („Teil 2: Knuddel“). |
 | GD-W1-01 | alle Gespräche und Auswahlmenüs | wichtig | Sonstiges (Oberfläche) | **Weiterhin offen, in Tempo 1 nachgestellt.** 5 Optionen: 4 ganz, eine halb (Toadi). 4 Optionen: die vierte halb (Geheimtür: „Bärchen“). 3 Optionen: die dritte halb (Toadi, Maklerin, Grimmzahn). 1 Option (Schmied „Bis dann.“, Maklerin 0470): Feld bleibt so hoch wie vorher, die Zeile ist „erst nach Rollen sichtbar“ (einmal 40 Rollschritte). Am Brunnen braucht die **richtige** Antwort zwei Rollschritte. Das Menü verdeckt außerdem die Füße der Sprecher. Aus dem Code: `dialog_menu.gd` setzt die Höhe 0,1 s nach dem Aufbau auf `min(Summe der Zeilenhöhen, max_height = 112)`, ohne die Ränder (4 + 4 px) mitzuzählen, und `remove_options` setzt die alte Höhe erst ein Bild später zurück. | `belege/pr-w1/GD-W1-01_toadi_5optionen_tempo1.png`, `…_toadi_3optionen_tempo1.png`, `…_schmied_1option_feld_zu_hoch.png`, `…_grimmzahn_3optionen.png`, `belege/pr-w1/R5-W1_geheimtuer_optionen_in_loesungsreihenfolge.png`; `optionen` meldet „(erst nach Rollen sichtbar)“ bei Humbert, Gollo, Grimmzahn, Waldemar, Zeldina, Maklerin | Höhe = Zeilen + Ränder, bis sechs Zeilen ohne Rollen; nach jedem Neuaufbau zuerst zurücksetzen. |
 | GD-W1-03 | alle | wichtig (vorher kosmetisch) | Sonstiges (Oberfläche) | **Bestätigt und schwerer als gemeldet.** Ab 12 Gegenständen liegt das Pixel-Feld der Leiste bei (72–92, 24) unter dem Pixel-Porträt. `klick inv:PixelFeld` mit dem Fell in der Hand traf das Porträt: „FIGUR jetzt Pixel“ statt „Fell auf Pixel“. R3 ließ sich so nur über die Figur im Raum lösen. Bei 13 Gegenständen ist das Feld ganz verdeckt. | `belege/pr-w1/GD-W1-03_leiste_13_gegenstaende_pixelfeld_verdeckt.png`; Verlauf: `klick inv:ziegenfell_vorleger`, `klick inv:PixelFeld` → „Oberfläche @TextureButton@16“, „FIGUR jetzt Pixel“; `inv`: „inv:PixelFeld bei (72,24)“ | Leiste rechts neben den Porträts beginnen, bei vielen Gegenständen blättern. |
 | GD-W1-04 | alle | kosmetisch (tritt oft auf) | Sonstiges (Bedienung) | **Bestätigt, im Durchlauf über zwanzigmal.** Pixels Zuruf nach 45 Spielsekunden ohne Eingabe ist stehender Text; der nächste Klick (Ausgang, Gegenstand in der Leiste, Pfote, Porträt) schaltet nur weiter und geht verloren. Folgefehler: Der Klick auf den Krug in der Leiste ging verloren, der nächste Klick auf den Kessel lief ohne Gegenstand (Ersatzzeile). | Verlauf Spielzeit 6381–6385: `klick inv:krug` → nur `W1_HOGG_PIX_0920_2`, `klick 196 200` → `SYS_ERS_MAX_0240`; ebenso 8323 (`klick` Schwerter-Bündel → nur `W1_SMAU_PIX_0800_2`) | Zuruf nicht blockierend zeigen (Sprechblase läuft aus) oder Klick zugleich als Aktion werten. |
@@ -73,6 +76,7 @@ Spielzeit des geraden Durchlaufs mit allen Nebenproben: rund 10 000 Spielsekunde
 | R5-W1-10 | dorfplatz | kosmetisch | Zustandswechsel | Die Bestellung der XXL-Ziege geht, bevor Max je an der Brücke war; Max sagt trotzdem „Der Troll will aber drei“ (`W1_DORF_MAX_1010`). Die Nehmen-Zeile des Eimers ist dieselbe wie die Ansehen-Zeile (`W1_DORF_MAX_0350`). | Verlauf: Stand `w13_vor_bestellung`, Bestellzettel aufs Dorfbrett vor dem ersten Brückenbesuch | Zeile an „Brücke besucht“ binden, sonst neutral („Eine Ziege hab ich. Schaden kann eine zweite nicht.“). |
 | R5-W1-11 | zauberstab_laden | wichtig | Positionierung / Technik | Beim zweiten Betreten des Zauberstab-Ladens stand Pixel bei (769, 267), der Raum ist 640 px breit: Der Kater ist nicht zu sehen und bleibt dort. Erst nach Wechsel zu Pixel bringt ihn ein Bodenklick herein. Ursache noch nicht untersucht (Verdacht: Pixel wird relativ zu Max' Ankunftspunkt gesetzt, ohne Raumgrenze). Wird noch einmal nachgestellt. | Verlauf: Raumwechsel in den Laden, `status`: „Pixel bei Raum (769,267)“, `objekte`: „(außerhalb des Bildes)“ | Pixels Ankunftsplatz auf die begehbare Fläche klemmen. |
 | R5-W1-12 | dorfplatz, trollbruecke, bergwerk | kosmetisch | Zustandswechsel | Zeldina „folgt“ nach R9 als feste Figur je Raum. Auf dem Dorfplatz: Ansehen → Ersatzzeile; Ansprechen → „Wir haben alles besprochen. Ich muss packen.“ (`W1_ABS_ZEL_0010`), obwohl sie eben „Du vorne. Ich trage.“ gesagt hat. An der Brücke steht sie vor dem Schild. Toadi steht zugleich weiter auf dem Dorfplatz und im Klassenzimmer, auch nachdem er Zeldina im Luftschloss „gefunden“ hat. | Verlauf 7515–7527; `belege/pr-w1/` folgt (Foto `w54`, `w55`) | Zeile für unterwegs („Geh ruhig vor. Der Karton wird nicht leichter.“); Toadi nach R9 neben Zeldina oder weg. |
+| R5-W1-40 | dorfplatz | wichtig | Positionierung / Animation | **Lieferszene (R3) in Tempo 1 gefilmt:** Der Erzähler sagt „Rotkäppchen rollt mit dem Lieferkarren heran, hinter ihr trottet etwas Großes“. Zu sehen ist: Die XXL-Ziege steht von einem Bild aufs nächste vor der Schmiede (kein Gang), ein Karren kommt nicht, und Rotkäppchen steht fast ganz hinter den Vorderbeinen der Ziege; man sieht von ihr nur einen roten Fleck. Sie spricht fünf Zeilen aus dieser Deckung. Max steht währenddessen winzig (Skala 0,38) am Dorfbrett. Hängt mit GD-W1-K1 zusammen (Rotkäppchen wird hier auf (1270, 290) gesetzt). Auch hier die Zeile „Use Bestellzettel with UI_OBJ_DORFBRETT“ (R5-W1-35). | `belege/pr-w1/R5-W1-40_lieferszene_rotkaeppchen_hinter_xxl_ziege_kein_karren.png` (Film `filme/lieferung`, Bilder 76 und 121, 6 Bilder/s); Befehle: `stand holen w13_vor_bestellung`, `klick inv:bestellzettel`, `klick @dorfbrett` | Rotkäppchen mit Karren links neben die Ziege stellen (frei sichtbar), Ziege vom Bildrand hereinlaufen lassen (`gehen` ist vorhanden). |
 
 ## Funde: Taverne
 
@@ -126,6 +130,7 @@ Gut hier: falsche Flasche (Pilz, „Familie?“), Flasche zurückstellen und tau
 | R5-W1-23 | luftschloss | wichtig | Technik / Humor | Am Ende der R9-Szene sagt Pixel seinen Hinweis auf die Kritzelei zweimal hintereinander (`W1_LUFT_PIX_0485` und `_0485_2` bei 7258 und noch einmal bei 7261). | Verlauf 7258.4–7262.7 | Doppelten Aufruf entfernen (einmal in der Szene, einmal im Gesprächsende). |
 | R5-W1-24 | luftschloss | kosmetisch | Nahansicht | Pixel sagt „Wo die Maklerin stand, hat jemand an die Wand gekritzelt“. Die Kritzelei ist von Anfang an links neben der Maklerin zu sehen und hat ihre Klickfläche (Raum-x 866–928, Maklerin 946–983). In der Nahansicht liegt der Torbogen rechts von der Kritzelei, im Raum links. | `belege/pr-w1/R5-W1_kritzelei_nahansicht_bogen_rechts.png`; `objekte` im Luftschloss vor R9 | Maklerin vor die Kritzelei stellen oder die Zeile ändern; Nahansicht spiegeln. |
 | R5-W1-25 | luftschloss | kosmetisch | Rätsel | Eine falsche Antwort bei der Maklerin beendet das Gespräch; für jeden Versuch muss man sie neu anklicken. Vor der Freischaltung durch Zeldina sagt die Maklerin bei jedem Klick nur „Besichtigung läuft!“ (kein Hinweis, dass Zeldina der Weg ist; den gibt nur Max' Ansehen-Zeile nicht). | Verlauf 6991, 7178–7181 | Nach einer falschen Antwort im Menü bleiben. |
+| W1-13 | luftschloss | wichtig | Laufwege | **Weiterhin offen (W1-13 vom 17.11.).** Ein Klick auf den Springbrunnen (395, 232) lässt Max zu (395, 262) laufen: Er steht mit den Füßen im vorderen Teil des Beckens, der Brunnen ragt durch seine Beine. | `belege/pr-w1/W1-13_luftschloss_max_steht_im_brunnen.png`; Befehle: `stand holen w31_luft_maklerin_frei`, dreimal `klick 10 290`, `klick 395 232` | Becken aus dem Laufbereich schneiden oder Brunnen als Prop mit Grundlinie am vorderen Beckenrand. |
 
 ## Funde: Bergwerk
 
@@ -158,7 +163,7 @@ Weiterhin offen aus früheren Reviews: alle Figuren auf einer Bodenlinie (W1-17)
 
 Gut hier: Pixels Pack-Kommentare zu Socke, Zeugnis, Eimer, Fell und Dosenöffner geben klare Hinweise; ein drittes Stück wird mit eigener Zeile abgelehnt; die Pfote sagt „Tasche packen, Knopf drehen“.
 
-## Frühere Funde, Stand heute (bisher geprüfter Teil)
+## Frühere Funde, Stand heute
 
 | Alte ID | Stand | Nachweis |
 | --- | --- | --- |
@@ -178,7 +183,10 @@ Gut hier: Pixels Pack-Kommentare zu Socke, Zeugnis, Eimer, Fell und Dosenöffner
 | 17.11. W1-11 (Hotspot „Brücke“ auf dem Laufweg) | behoben: Nach R4 läuft Max bei einem Klick auf die Brücke zum Zeiger (`LÄUFT zum Zeiger, Raumpunkt (315,182)`), keine Ersatzzeile | Lauf `pr-w1-haupt`, Protokoll `h1`, Stand `w21_nach_R4`, `klick 315 182` |
 | 17.11. W1-12 (Alter Baum) | **weiterhin offen** → R5-W1-07 | Ersatzzeile |
 | 17.11. W1-10 (Zeldina steckt in der XXL-Ziege) | behoben: an der Brücke Zeldina (158, 196), XXL-Ziege (338, 178); Zeldina steht jetzt aber vor dem Schild (R5-W1-12) | `status` Brücke, Spielzeit 8265 |
+| 17.11. W1-13 (Max läuft durch den Springbrunnen) | **weiterhin offen**, siehe Tabelle Luftschloss | `belege/pr-w1/W1-13_luftschloss_max_steht_im_brunnen.png` |
 | 17.11. W1-14 (Blatt vor Max' Gesicht im Luftschloss) | behoben: beim Betreten steht Max rechts neben dem Blatt, Gesicht frei | Foto `w49_luftschloss` im Lauf-Ordner |
+| 17.11. W1-09 (Pilz-Gang) | nach den Dateien behoben (eigener Gang `max_pilz walk`); im Spiel kommt er nicht vor, weil Max als Pilz nicht läuft | Film `filme/pilz` |
+| 17.11. W1-05, W1-16 (Sprech-Bilder größer als der Stand) | nach den Messwerten behoben (Gollo 144 gegen 143–144 px, Grimmzahn 134–136 gegen 134–135 px) | `belege/pr-w1/animationen_welt1_messwerte_animationen.csv` |
 | 17.11. W1-17 (Bergwerk, eine Bodenlinie) | **weiterhin offen** | `status` Bergwerk: Goblins y 285–292 |
 | 17.11. W1-18 (Goblin 1 hinter der Kaffeemaschine) | behoben: Der Goblin gewinnt jetzt gegen die Kaffeemaschine (die verliert 9 von 36 an ihn). Goblin 1 selbst 22 von 36, die übrigen 14 gehen an Pixel, der davor sitzt | `ZIEL @goblin_1`, `ZIEL @kaffeemaschine` im Verlauf |
 | 17.11. W1-19 (Pixel legt keine Haare) | behoben: Pixel läuft zur Kreuzung, Bewegung `haare`, Büschel am Boden | Film `filme/besen`, Bilder 385–470 |
@@ -186,19 +194,25 @@ Gut hier: Pixels Pack-Kommentare zu Socke, Zeugnis, Eimer, Fell und Dosenöffner
 | 17.11. W1-21 (Rundbogen neben der Geheimtür ohne Klickfläche) | **weiterhin offen**: `objekte` in den Abstellkammern kennt rechts nur „Geheimtür“ (x 508–570) | `objekte`, Spielzeit 8948 |
 | 17.11. W1-23 (Waldemar neben der Brücke) | behoben: Waldemar bei (395, 168) auf der Brücke | `status` Brücke |
 | 17.11. X-07 (Klickflächen unter der Leistenzone) | **weiterhin offen** in Welt 1: Dachbalken der Taverne → R5-W1-38 | Verlauf 1311 |
+| 17.11. A-06 (`walk` aus Standbildern), A-07 (Altfassungen `talk_alt` im Sheet) | **weiterhin offen** (aus den Dateien), siehe „Animationen“ | `belege/pr-w1/animationen_welt1_inventar.csv` |
 | 17.11. X-08 (Pixel anklicken) | **weiterhin offen** → R5-W1-07 | Ersatzzeile |
 
 Noch nicht nachgeprüft: siehe „Nicht geprüft“.
 
 ## Nicht bestätigt
 
-(noch leer)
+- Verdacht „Zeldina lässt sich in den Abstellkammern nicht ansprechen, Sackgasse ohne ‚Mo‘“: nicht bestätigt. Zwei Klicks waren von Pixels Zurufen geschluckt worden (`W1_SMAU_PIX_0800`, `0810`); beim dritten Versuch öffnet sich ihr Gespräch mit Option 0710.
+- Verdacht „‚Smalltalk aufgebraucht‘ (`SYS_PLA_MAX_0030`) vor Gollo ist falsch, weil Option 0785 noch offen ist“: nicht bestätigt. Laut `cq_figur.gd` Z. 421–427 kommt die Zeile absichtlich einmal, wenn nur die Plauder-Optionen verbraucht sind.
+- Verdacht „Zeile bleibt im Zwischenspiel hängen“ (Film `thron` ab Bild 1121): Werkzeug-Wirkung, `warte N` klickt Text nicht weiter.
 
 ## Gut gelöst
 
 - Falsche Wünsche am Brunnen geben die Münze mit Gag zurück; kein Verlust möglich.
 - Eigene Zeilen für viele falsche Versuche: Bach mit leerem Eimer, Zahnstocher und Fondue, Dose auf Gollo zu früh, zweites Melken, falsche Abnehmer bei Smaugi (`W1_SMAU_GRI_0650`, `W1_SMAU_ZEL_0660`), Kochlöffel auf Moderwort vor dem Niesen (`W1_THRO_MOD_0210`).
 - Waldemar korrigiert eine falsche Ziegen-Reihenfolge (`W1_BRUE_WAL_0480`).
+- Geheimtür mit fehlendem Passwort-Teil (ohne „Mo“ bis in die Abstellkammern gespielt): Die Tür sagt „Unvollständig. Such weiter.“, Pixel nennt den fehlenden Teil und die Quelle (`W1_SMAU_PIX_0721`), und Zeldina lässt sich im Turmkeller und in den Abstellkammern noch danach fragen. Keine Sackgasse.
+- R1c ist auf zwei Wegen lösbar (Dose auf Gollo, Gesprächsoption 0785).
+- Max melkt jetzt sichtbar (W1-06 behoben); Pixel verteilt die Haare sichtbar (W1-19 behoben).
 - Weg B bleibt offen, auch wenn der Leuchttrank schon abgegeben ist: keine Sackgasse durch GD-W1-K1.
 - Abstellkammern nach R12: Raum ist aufgeräumt, Kronleuchter weg, Smaugi mit Staubwedel.
 - Automatisches Speichern bei jedem Raumwechsel (`GESPEICHERT Platz 14/15/16`).
@@ -219,6 +233,8 @@ Grundlage: (a) Filme in Tempo 1 mit `textmodus lesen` aus dem laufenden Spiel (`
 | Abstellkammern nach R12 | Smaugi `staubwedel`, Raum aufgeräumt | gut |
 | R6, Melken (Schmiede) | Max geht zur Ziege, hockt sich hin, verzieht das Gesicht (`melken`, etwa 1 s), steht auf; der Schmied hämmert dabei weiter mit Funken | gut, W1-06 behoben; die Bewegung ist kurz |
 | R4c, Fußbad (Brücke) | Szene spielt hinter der XXL-Ziege; `fussbad` nicht zu sehen | GD-W1-10 |
+| R3, Lieferszene (Dorfplatz) | XXL-Ziege erscheint ohne Gang, Rotkäppchen hinter der Ziege, kein Karren | R5-W1-40 |
+| R6b, falsche Flasche (Klassenzimmer) | Max bekommt für etwa 25 s einen blauen, gestreiften Spitzhut („Ich bin ein Pilz“), steht dabei im Kessel (R5-W1-21); danach wieder normal. Der Hut liest sich eher als Zauberhut (wie Toadis) denn als Pilzkappe. Der Pilz-Gang kommt nicht vor, weil die Verwandlung innerhalb der Szene endet | brauchbar; W1-09 im Spiel nicht zu sehen |
 | R13, Thronsaal-Finale (Socke, Kochlöffel, Passwort) | Moderwort hebt beim Niesen den Arm; sonst stehen Max, Zeldina und Pixel die ganze Szene still, Max in Moderwort; Toadi spricht ohne im Raum zu sein; kein Stab zu sehen | Schlussszene ohne Bewegung (R5-W1-36) |
 | Welt-Ende, Übergang zum Dachboden | Kreisblende zu, Einblendung „Errungenschaft: Ohne Pfote: Welt 1“, dann Dachboden; der Werbeblock ist nur ein Erzählsatz über dem Dachboden („Werbeblock: Milchglas, Kuh, leeres Preisschild, Blitz. Fünf Sekunden, dann Rauschen.“) | Blende gut; der Werbeblock selbst hat kein Bild (R5-W1-37) |
 
@@ -285,13 +301,25 @@ Zusammen rund 67 Minuten Spielzeit für den reinen Lösungsweg ohne Lesen. Mit L
 | R13, Socke auf Moderwort (Niesen) | etwa 24 s | `zeit` im Protokoll des Thronsaal-Films (Klick 478, frei bei 503) |
 | R13, Kochlöffel auf Moderwort (Käse) | etwa 36 s | wie oben (Klick 528, frei bei 564) |
 | R13, Klick auf Moderwort mit Passwort bis Raumwechsel zum Dachboden | 110 s | wie oben (Klick 603,7; `W1_R13_GELOEST` 634,0; Raum `dachboden` 713,5) |
+| R6, Melken (Klick bis frei) | etwa 44 s | `zeit` im Protokoll `h2` (49,6 s abzüglich 6 s Wartebefehl) |
+| R4c, Fußbad (Klick bis frei) | etwa 62 s | wie oben (72,3 s abzüglich 10 s) |
+| R3, Lieferszene (Klick bis frei) | etwa 77 s | wie oben (87,1 s abzüglich 10 s) |
+| R6b, falsche Flasche mit Pilz-Verwandlung | etwa 33 s | wie oben |
 | Zwischenspiel 1, Ankunft bis Ei abgegeben | 66 s, Szene läuft danach weiter | wie oben (713,5 bis 779,1; danach hat die Fernsteuerung nicht weitergeklickt) |
 
-Nicht gemessen: Ankunftsszene (W1-01), Lieferszene, Gespräche mit Lesezeit je Raum.
+Nicht gemessen: Ankunftsszene (W1-01), Gespräche mit Lesezeit je Raum.
 
 ## Nicht geprüft
 
-(wird am Ende ausgefüllt; Stand jetzt: siehe „Was noch aussteht“)
+- **Englische Fassung:** keine Nahansicht und kein Gespräch auf Englisch angesehen.
+- **Pfote:** Stufe 1 für R1a bis R8 je einmal gehört, Stufe 2 nur für R4b, R7, R8 und R10, Stufe 3 nur für R10. Für R6b, R9 und R11 bis R13 kein Hinweis gehört. Ab dem Turm gibt die Pfote ohnehin nur R10-Hinweise (R5-W1-01), R11 bis R13 sind deshalb gar nicht prüfbar.
+- **Sackgassen:** nicht systematisch jede Reihenfolge. Geprüft: R1c auf zwei Wegen, Weg B mit und ohne abgegebenen Leuchttrank, Geheimtür ohne „Mo“, Rücksprünge (GD-W2-03). Nicht geprüft: Thronsaal ohne Pollen/Socke, R7 ohne Socke, Bohne vor Brunnen, Taverne in anderer Reihenfolge, Speichern mitten in einer Rätselkette über F5/F9 (außer dem einen Fall in R5-W1-34).
+- **R5-W1-34 nach Neustart:** an drei Gesprächen gezeigt (Toadi, Grimmzahn, Zeldina), nicht an allen Figuren. Die Ursache (`_has_done_init` im Spielstand) ist aus Code und Speicherdatei geschlossen, nicht durch einen Gegenversuch belegt.
+- **GD-W2-03:** Ob ein Programmneustart den Fehler immer vermeidet, nur an einem Stand gesehen.
+- **Raum für Raum in jedem Zustand:** Fotos und `objekte` je Raum im Zustand des Durchlaufs; nicht jeder Raum in jedem Zwischenzustand. Wasserschloss und Zauberstab-Laden nur einmal besucht. Regale im Laden (W1-07) nicht gemessen.
+- **Frühere Funde ohne Nachprüfung:** 17.11. W1-01 (Länge der Ankunft), W1-15 (Naht im Luftschloss bei x 640), W1-22 (Schwerter-Bündel aus einer Richtung; per Koordinate beim ersten Klick getroffen, nicht gemessen), X-01 bis X-06, A-01 bis A-05, A-08; vom 14.11. alle Nummern außer 6, 7, 11, 13, 19, 21, 23.
+- **Filme:** Ankunftsszene, R9 mit Toadi, R1 (Berta, Laute) nicht in Tempo 1 gefilmt. Fell auf die XXL-Ziege (GD-W1-15, zweiter Teil) nicht nachgestellt.
+- **Ton:** nicht geprüft (Lauf mit stummem Audio-Treiber).
 
 ## Vorschläge für die Lessons Learned
 
