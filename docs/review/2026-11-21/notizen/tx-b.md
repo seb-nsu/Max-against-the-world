@@ -22,9 +22,7 @@ Gelesen in Welt 3 (DE und EN, jede Zeile): ANK 14, STR 76, NUD 75, TEST 47, APO 
 - [x] Auftrag, humanizer-de, Rolle, Konzept, Skripte, Rätsel, frühere Reviews gelesen
 - [x] Welt 2 gelesen (1466 von 1466)
 - [x] Welt 3 gelesen (1321 von 1321)
-- [ ] Auswertung (Stimmen, Anspielungen, Running Gags, Lokalisierung, Top 10): Einschätzung und Top 10 stehen, Rest folgt
-
-(Notiz in Arbeit; Abschnitte folgen blockweise. Was unten steht, ist gesichert.)
+- [x] Auswertung (Stimmen, Anspielungen, Running Gags, Lokalisierung, Top 10)
 
 ## Arbeitsweise
 
@@ -152,7 +150,8 @@ Gemessen an Welt 2, nicht an schlechten Texten: Die Liste beginnt mit zwei echte
 - **Beamte:** „Das ist Verwaltung. Dasselbe Wort, nur länger.“ (`BUER_BE2_0280`), „Mein Schalter ist für dich jetzt geschlossen. Für alle anderen auch. Er war nie offen.“ (`ABS_BE1_0240`), „Wir sind fertig miteinander. Verwaltungstechnisch. Menschlich waren wir es nie.“ (`ABS_BE2_0260`).
 - **Leonidas** in Großbuchstaben mit Brüchen: „ICH BRÜLLE NICHT! DAS IST MEINE ZIMMERLAUTSTÄRKE!“ (`STAD_LEO_0170`), „MEIN EINTOPF!“ (`FINA_LEO_0050`), „ICH LÜGE NUR EINMAL! AUS PRINZIP!“ (`DISK_LEO_0220`).
 - **Pixel:** „Das ist kein Widerspruch. Das ist Theologie.“ (`DUEL_PIX_0320_3`), „Ich verstehe ihn nicht. Ich respektiere ihn auch nicht. Aber vor allem verstehe ich ihn nicht.“ (`INV_PIX_0160_2`), „Alle fünf. Ohne Gnade vom Pharao.“ // „Ich habe nichts hinzuzufügen. Das ist mir noch nie passiert.“ // „Ich werde es trotzdem leugnen.“ (`RING_PIX_0290`).
-- **Max:** „Ich hab gerade einen Baum auf Werkseinstellungen zurückgesetzt.“ (`FAHR_MAX_0170`), „Ich hab fünf Sportarten durchgezogen und dafür einen Salat bekommen.“ (`RING_MAX_0280`), „Er hat Kratzer, aber das sind Abkürzungen.“ (Tiro, `DISK_TIR_0280_2`), „Namen, die keiner mehr liest, wie Profile, die seit Jahren offline sind.“ (`GRAB_MAX_0120`).
+- **Max:** „Ich hab gerade einen Baum auf Werkseinstellungen zurückgesetzt.“ (`FAHR_MAX_0170`), „Ich hab fünf Sportarten durchgezogen und dafür einen Salat bekommen.“ (`RING_MAX_0280`), „Namen, die keiner mehr liest, wie Profile, die seit Jahren offline sind.“ (`GRAB_MAX_0120`).
+- **Tiro** in einer Zeile: „Hier, nimm ihn. Er hat Kratzer, aber das sind Abkürzungen.“ (`DISK_TIR_0280_2`).
 - **Bau:** Der Diskus-Diebstahl ist als Logikrätsel sauber getextet (jede Aussage kurz, Fehlversuche begründen die Regel: „Dann hätte ich zweimal gelogen.“). Die Hinweise nennen in Stufe 1 die Lage, in Stufe 3 die Handgriffe, und jede zweite Blase gehört Pixel („Ich bin kein Gegenstand. Mach es trotzdem.“ `HINT_PIX_0130_2`). Die „Gespräch erschöpft“-Zeilen sind durchweg figurengerecht und gehören zum Besten der Welt.
 
 ## Welt 3: Funde je Raum
@@ -253,6 +252,143 @@ Welt 3 ist die sauberste der drei Welten. Der Durchgang vom 20./21.11. hat gewir
 - **Max' Entwicklung** wird nicht ausgesprochen: „Ich weiß nicht, was drüben ist. Das Sofa kenn ich auswendig.“ (`APO_MAX_0600`), „Ich leg mich hin. Zum ersten Mal ist das eine Aufgabe.“ (`BAS_MAX_0560`). Die Sofa-Szene mit den zwei Ohrfeigen („Das war von Opa. Das hier ist von mir.“ `SOFA_PIX_0540`) trägt ohne Kommentar.
 - **Pixel** hat in Welt 3 einen neuen Modus für „Pixel auf Mensch“ (kurze Erzählsätze statt Schnupper-Reihe): „Sie hält mich für unhöflich. Der Schirm hält mich für weise.“ (`STR_PIX_1050`), „Er sagt nichts. Die Sonnenbrille sagt auch nichts. Wir haben uns verstanden.“ (`BAS_PIX_1030`). Dazu der Welt-Gag „Pixel ist nass“ (`BAS_PIX_0610_2`) und die Hundekuchen-Kaskade (`BAS_PIX_0090`).
 
+## Stimmen der Figuren
+
+Messwerte aus `tx-b_zaehlen.py sprecher` (Wörter je Satz, Anteil Sätze mit höchstens drei Wörtern). Vergleichswerte für Max, Pixel und Opa aus `tx-a.md`.
+
+| Figur | Woran man sie erkennt | Belegzeilen | Wo sie aus der Rolle fällt |
+| --- | --- | --- | --- |
+| **Max** (Welt 2: 6,4 Wörter je Satz, 20 % Kurzsätze; Welt 3: 5,6 und 30 %; bei tx-a Prolog 6,8, Welt 1 6,1) | Wie in `tx-a.md`: trocken, untertreibt, Vergleiche aus Schule, Handy, Spielen, nennt nie die Vorlage. In Welt 3 wird er knapper (Aufzählung, dann ein kurzer Satz); das passt zur Welt und zu seiner Entwicklung, die weiter nur in Reaktionen steht. | „Ich winke mit zweien zurück und verliere.“ (`W2_HAFS_MAX_0035`) · „Mitten im Kranz. Mit Beilage.“ (`W2_FINA_MAX_0060`) · „Dieser Turm ist ein Bildschirmschoner, in dem man wohnen muss.“ (`W3_TURM_MAX_0250`) · „Bitte. Ich schreibe einem Kater bitte.“ (`W3_TERM_MAX_0120`) · „Doch. Ehrlich gesagt: ziemlich normal.“ (`W3_KERN_MAX_0190`) | Die Zweizeiler aus Welt 1 („A nennt das X, ich nenne das Y“) sind fast weg. Dafür je Welt sieben „entweder … oder“-Pointen (R5-TX-46, R5-TX-74), die Vorausdeutung „ich hab das Gefühl“ (R5-TX-72, R5-TX-79), zwei Superlativ-Bilanzen (R5-TX-49, R5-TX-87) und „hat also“ (R5-TX-76). Medienvergleiche: 19 Suchtreffer in Welt 2, 16 in Welt 3, nie mehr als drei je Raum; Figur, kein Fund. |
+| **Pixel** (Welt 2: 7,0 und 19 %; Welt 3: 6,4 und 26 %; bei tx-a Welt 1 6,7) | Unverändert hochnäsig und ausführlich, zwei Blasen mit „und zwar“ (Welt 2 neunmal, Welt 3 fünfmal), alles führt zu Essen, Wärme, Würde. In Welt 2 kommt der Gott dazu, in Welt 3 die Nässe. Englisch ohne Kurzformen. Der Abstand zu Max im Satzbau ist größer als in Welt 1. | „Götter liegen nicht durch. Sie liegen ein.“ (`W2_DUEL_PIX_0300_3`) · „Ich habe nämlich zwei Ohren, und er hat nur eine einzige Lautstärke.“ (`W2_INV_PIX_0130_2`) · „Ich werde mich nicht beschweren, junger Mann. Ich werde mich äußern.“ (`W3_NUD_PIX_0570`) · „Ich habe für weniger Freundschaften beendet.“ (`W3_BAS_PIX_0090_4`) · „Ich bin das Wetter. Das wollte ich schon immer sein.“ (`W3_BAS_PIX_0600_2`) | Weiter die Figur mit den meisten Bauplänen: „Hauptwort. Drei Eigenschaften.“ (R5-TX-62), Zuruf-Vergleich (R5-TX-67, R5-TX-77), Schnuppern mit Abstraktum (R5-TX-84), Superlativ-Bilanz (R5-TX-65, R5-TX-85), „trotzdem“ (R5-TX-71). Vier englische Zeilen mit Kurzformen in 856 (R5-TX-60, R5-TX-90). |
+| **Opa** (nur Botschaften: Papyrus, Hologramm, Portal) | Wie im Prolog: feierlicher Auftrag, der in den Haushalt kippt. | „Fein muss es sein. Fein wie Staub. …“ (`W2_NIL_OPA_0940`) · „Der Kern muss weich bleiben. Außen hart, innen weich. Sonst ist alles verloren.“ // „Und wenn du schon unterwegs bist …“ (`W3_PIEP_OPA_0120`, `0130`) · „Hast du an die Milch gedacht?“ (`W3_KAM1_OPA_0100`) | nirgends |
+| **Ramses** (3,2; 68 % Kurzsätze) | Entscheidet sich im Satz um; jede Aussage bekommt ein „Oder“. Am Ende entscheidet er einmal. | „Der Große. Oder der Weise. Siehst du? Jetzt geht es schon wieder los.“ (`W2_AUDI_RAM_0370`) · „Das Finale! Speer, Diskus, Ringen! In dieser Reihenfolge! Oder in einer anderen! In dieser!“ (`W2_FINA_RAM_0010`) · „Ich habe Angst. Für dich. Und vor Worten.“ (`W2_FINA_RAM_0190`) | nirgends |
+| **Hofkater** | Pixels Spiegel: dieselbe Würde, nur mit Amt. | „Ein Gott hat eine Opfergabe, ein Gefolge und ein Wunder …“ (`W2_DUEL_HOF_0070`) | nirgends |
+| **Schreiber** (5,6) | Müde, sagt die Wahrheit und nimmt sie zurück. | „… also kann er nicht, also will er nicht.“ // „Das hab ich jetzt nicht gesagt.“ (`W2_THRO_SCH_0050`) · „Falsch, aber mutig.“ (`W2_HIER_SCH_0140`) · „… ich hab Feierabend. Seit zehn Jahren.“ (`W2_ABS_SCH_0100`) | nirgends |
+| **Fährmann, Steinmetz** | Zwei Handwerker, knapp und geschäftlich. | „Ich weiß nur, wohin der Fluss fließt. Und wann. Und wer zahlt.“ (`W2_ABS_FAE_0010`) · „Komm in einer Stunde wieder. Also: jetzt. Wir sind schnell.“ (`W2_GRAB_STM_0020`) · „Pläne sind gut. Außer verkehrt herum.“ (`W2_GRAB_STM_0070`) | nirgends |
+| **Hermes** (4,4; 49 %) | Ausrufe im Laufen, immer zu spät, weiß es. | „Einladungen? Ich! Das kann ich! Zu spät, aber das kann ich!“ (`W2_PARA_HER_0060`) · „Das ist sogar für mich zu spät.“ (`W2_PARA_HER_0070`) · „Der war nur in einem anderen Beutel.“ (`W2_PARA_HER_0340`) | nirgends |
+| **Nebet** (6,5) | Köchin, alles wird Topf und Ofen, duldet niemanden im Weg. | „Wedler warten nie, Wedler wedeln.“ (`W2_KUCH_NEB_0520`) · „Jetzt raus aus meiner Küche, bevor du anbrennst.“ (`W2_ABS_NEB_0110`) | nirgends |
+| **Sphinx** (5,3) | Schreibblockade, spricht in halben Rätseln, bricht ab. | „Stein weint schlecht.“ (`W2_SPHX_SPH_0480`) · „Ein Käfer? Ein Beamter? Ich … nein. Nein.“ (`W2_SPHX_SPH_0470`) · „In Rätselform wäre es länger. Sei froh.“ (`W2_ABS_SPH_0140`) | Nur im Inhalt: Baustein „blau“ (R5-TX-54). |
+| **Archimedes** (4,3; 50 %) | Ausrufe, rechnet mitten im Satz, eitel bei den zwei Dritteln. | „Ja! Nein! Moment, ich rechne.“ (`W2_WERK_ARC_0320`) · „Niemand verbrennt! Fast niemand!“ (`W2_PARA_ARC_0080`) · „Ich bin Erfinder, kein Packesel.“ (`W2_PARA_ARC_0085`) | nirgends |
+| **Hieron** (5,4) | König, der wartet und Beweise will. | „Mir reicht ein Beweis.“ (`W2_WERK_HIE_0480_2`) · „Jetzt warte ich. Das kann ich königlich gut.“ (`W2_ABS_HIE_0170`) | Nur die Anrede an ihn (R5-TX-57). |
+| **Beamte 1 und 2** (4,2 und 4,4) | Einwortsätze am Schalter (1), Amtslogik mit Stolz (2). | „Nein. Stempel.“ (`W2_BUER_BE1_0550`) · „Niemand hat es je geschafft. Wir sind sehr stolz.“ (`W2_BUER_BE2_0260_2`) · „… steht auf einem Formular, das es nicht gibt.“ (`W2_ABS_BE2_0250`) | nirgends |
+| **Cicero** (5,4; 45 %) | Redner in Ausrufen und Wiederholungen, verspricht Kürze. | „Und das Wort gehört mir.“ (`W2_RING_CIC_0010`) · „Kurz. Ich verspreche es: kurz. Also, kürzer.“ (`W2_PARA_CIC_0100`) · „Nicht einmal ich. Besonders nicht ich.“ (`W2_PARA_CIC_0120`) | `W2_GRAB_CIC_0240` klingt nach Max (R5-TX-66). |
+| **Tiro** | Räuspert sich, überarbeitet, bricht ab. | „Egal. Vergiss es.“ (`W2_AGOR_TIR_0370_2`) · „Er hat Kratzer, aber das sind Abkürzungen.“ (`W2_DISK_TIR_0280_2`) | Baustein-Zeile (R5-TX-54). |
+| **Leonidas** (3,1; 54 %) | Nur Großbuchstaben, bricht mittendrin ins Kleine. | „… ein bisschen. ABER LAUT!“ (`W2_STAD_LEO_0370`) · „MEIN EINTOPF!“ (`W2_FINA_LEO_0050`) | nirgends |
+| **Brian, Philosoph in der Tonne, Menge** | Brian will nur seine Ruhe; der Philosoph beleidigt; die Menge sieht überall Zeichen. | „Ich hab seit zwölf Jahren gepackt.“ (`W2_SAND_BRI_0100`) · „Das ist keine Botschaft, das ist nur eine Bitte. Schreib's nicht auf.“ (`W2_ABS_BRI_0220`) · „GEH MIR AUS DER SONNE!“ (`W2_AGOR_PHI_0460`) · „Brot! Und Spiele! Die Spiele hatten wir ja jetzt. Wo bleibt das Brot?“ (`W2_PARA_VOL_0020`) | nirgends |
+| **Zeremonienmeister** | Ordnung in Hauptsätzen. | „Und ein Gott kommt zuletzt, immer. Hier ist der Plan, vier Felder. Füll sie.“ (`W2_PARA_ZER_0040_2`) | nirgends |
+| **Deckert** (3,6; 53 %) | Noir-Stakkato, erzählt sich selbst, notiert alles. | „Es regnet seit neunundzwanzig Jahren. Ich zähle mit. Jemand muss es ja tun.“ (`W3_TEST_DEC_0010`) · „Nachtragend. Unfair. Gegenüber einem Reptil. Das ist ein Mensch. Weiter.“ (`W3_TEST_DEC_0140`) · „Fälle bleiben immer offen.“ (`W3_ABS_DEC_0040`) | nirgends |
+| **Herr Vier** (3,9; 51 %) | Alles ist eine Zahl, und die Zahl ist vier. | „Fünf ist eine Vier, die angibt.“ (`W3_NUD_VIE_0050`) · „Vier Pfoten und ein Schwanz. Das sind fünf. Nein.“ (`W3_NUD_VIE_0660`) · „Vier Sekunden. Drei. Zwei. Gut, du darfst bleiben. Aber schweigend.“ (`W3_ABS_VIE_0060`) | nirgends |
+| **Morphäus** (5,3) | Raunt Bedeutendes und nimmt es mit Alltag zurück. | „Ich biete Menschen eine Wahl an. Zurzeit mit eingeschränktem Sortiment.“ (`W3_NUD_MOR_0370`) · „Früher in Lederjacke. Die Strickjacke ist wärmer.“ (`W3_APO_MOR_0300`) · „Ich habe dir die Tür auch schon zweimal gezeigt.“ (`W3_ABS_MOR_0010`) | nirgends |
+| **Pastillenautomat** (3,1; 58 %) | Maschinenhöflich, lehnt mit Definitionen ab. Kontrast-Formel ist hier Stimme. | „Kopfschmerzen sind kein Symptom. Kopfschmerzen sind Dienstag. Abgelehnt.“ (`W3_APO_AUT_0060`) · „Man steht davor und ist enttäuscht.“ (`W3_APO_AUT_0150`) · „Nebenwirkungen: Wahrheit, Unbequemlichkeit, gelegentlich Ente.“ (`W3_APO_AUT_0630`) | nirgends |
+| **Schmidt, Klone, Türen** (Schmidt 14,1 Wörter je Satz, 9 % Kurzsätze) | Schmidt: ein Satz ohne Punkt, „zu Ihrem Schutz“ (sechsmal in der Welt). Klone: „Wir“. Türen: reden los, sobald sie dürfen. Der Messwert zeigt die Stimme: der einzige Sprecher mit zweistelliger Satzlänge. | „… ich spreche nicht darüber, ich spreche nur über alles andere, und zwar ausführlich“ (`W3_TUER_SCH_0340`) · „Sie wieder, wir wieder, alles wieder“ (`W3_TURM_SCH_0540`) · „Wir haben auch Hausschuhe. Sie waren im Angebot.“ (`W3_TURM_KLO_0120`) · „Niemand hört Türen zu!“ (`W3_KAM3_TUR_0110`) | nirgends; auch das Englische hält die Punktlosigkeit durch. |
+| **Orakel-Oma** (4,8) | Antwortet, bevor gefragt wird; kurze Sätze, „Kind“, Küche. | „Du willst dann einen Keks. Nein. Die sind noch heiß.“ (`W3_KUCH_ORA_0010`) · „Zum Nicht-Hergeben.“ (`W3_KUCH_ORA_0140`) · „Nimm einen Keks. Nein. Doch nicht.“ (`W3_ABS_ORA_0080`) | Einmal „Junge“ statt „Kind“ (R5-TX-94). |
+| **Kabel-Kalle** (5,0; 41 %) | Flüstert, korrigiert sich mit „also“, am Terminal in Kleinbuchstaben. | „Ungefähr. Nein, genau.“ (`W3_BAS_KAL_0110_2`) · „… Kabel ist nie, also wirklich nie einfach.“ (`W3_BAS_KAL_0370_2`) · „Einmal davon richtig. Rate, welches.“ (`W3_ABS_KAL_0110`) | Englisch verliert „Alles mit T.“ (R5-TX-91). |
+| **Hausmeister 08/15** (5,5) | Österreichisch höflich („Servus“, „Bursche“, „habe die Ehre“), Auftragszettel, „Ich komme wieder“. | „Den zweiten Punkt hätte ich erledigt, bitte sehr.“ (`W3_EING_HAU_0050_2`) · „Ich komme wieder. Also: Ich bleibe hier. Aber es klingt besser so.“ (`W3_EING_HAU_0150`) · „Die Richtige war keine. Aber bedankt haben s' sich alle …“ (`W3_ENDE_HAU_0060_2`) | nirgends |
+| **M.U.T.T.I.** (4,1; 47 %) | Kurze Aussagesätze, Fürsorge als Drohung, „Zu deinem Besten“ (fünfmal, einmal von Max zurückgegeben), am Ende Sprachassistent. | „Er wird dich nie verlassen. Es sei denn, du lässt ihn. Dann ist es deine Schuld.“ (`W3_KAM1_MUT_0180`) · „Seitdem mache ich die Türen zu. Alle.“ (`W3_KERN_MUT_0300`) · „Meintest du: Gehorsam?“ (`W3_KERN_MUT_0060`) | Nur die Dublette R5-TX-86. |
+| **Rebellen, Piepsi, Bernd, Straßenleute** | Je eine Zeile, die sitzt. | „Wir sind der Widerstand. Wir widerstehen. Zum Beispiel dem Drang, die Sonnenbrille abzunehmen.“ (`W3_BAS_REL_0850`) · „Und nennt mich nie wieder Eimer.“ (Piepsi über Pixel, `W3_PIEP_PIX_0180`) · „Ich war für Begleiten gebaut. Nicht für Schalten.“ (`W3_KAM3_BER_0230`) · „Lass stecken. Bleib einfach kurz stehen.“ (`W3_STR_MUS_0170`) | nirgends |
+
+Kurz: Auch in Welt 2 und 3 sind die Nebenfiguren die Stärke; jede ist an einem Satz zu erkennen, in Welt 3 sogar am Satzzeichen. Max redet wie ein Jugendlicher, Pixel wie Pixel, und der Abstand zwischen beiden ist größer als in Welt 1 (Welt 2: 6,4 gegen 7,0 Wörter je Satz, Welt 3: 5,6 gegen 6,4). Was die beiden Hauptfiguren schwächt, sind keine falschen Töne, sondern Baupläne, die über 2787 Zeilen zu oft wiederkommen.
+
+## Anspielungen und Filmzitate
+
+Keine Zeile nennt Titel oder Figur der Vorlage; die Regel aus dem Konzept ist überall eingehalten. „Passt“ heißt: Die Zeile ist auch ohne Kenntnis der Vorlage ein Witz oder eine Beschreibung.
+
+### Welt 2
+
+| Zeile | Vorlage | Passt? | Warum |
+| --- | --- | --- | --- |
+| `NIL_MAX_0610`, `0615` (Hand im Korn, Rüstung, Geigen) | Gladiator | ja | Max beschreibt nur, was er „mal gesehen“ hat; das Kornfeld ist ohnehin da. |
+| `NIL_MAX_0635` (Zeit zurückspulen, Salto) | Prince of Persia | ja | Bereitet die Zeit-Fähre vor. |
+| `NIL_MAX_0725` (Dicker mit Streifenhose trägt den Stein heim) | Obelix | ja | Steinmetz-Szene, ohne Namen. |
+| `NIL_PIX_0225`, `NIL_FAE_0260`, `ABS_FAE_0020` (Münze unter der Zunge, Obolus) | Charon | ja | Pixel erklärt den Brauch, der Fährmann rechnet damit ab. |
+| `THRO_MAX_0230` bis `PIX_0250` | Walk like an Egyptian | ja | Die Retro-Anspielung gehört Pixel, wie im Konzept. |
+| `HAFS_PIX_0020` (Sendeschluss, Testbild) | Fernsehen von früher | ja | Pixel; deutet auf Welt 4. |
+| `KUCH_MAX_0065` | Ali Baba | ja | |
+| `SPHX_MAX_0070`, `0075`, `0570` (Kugel, Hut, Peitsche) | Indiana Jones | ja | Drei Zeilen, verteilt. |
+| `SPHX_MAX_0190`, `SPH_0200` | Rätsel der Sphinx (Ödipus) | ja | Die Sphinx ist beleidigt, dass alle es kennen. |
+| `KRON_ARC_0130`, `TRAI_ARC_0030`, `WERK_ARC_0440`, `WERK_ARC_0080`, `WERK_ARC_0280`, `PARA_ARC_0350` | Heureka, fester Punkt, „Stör meine Kreise nicht“, Brennspiegel, Kugel und Zylinder, „ein Hebel für die Welt“ | ja | Jedes Zitat wird gebrochen („Also, ich hab gerade keine Kreise.“). |
+| `BUER` (Passierschein Vier-Strich-Ypsilon), `INV_MAX_0505` | Asterix erobert Rom | ja | Trägt das ganze Büro-Rätsel. |
+| `AUDI_MAX_0110` („Die spinnen, die Griechen.“) | Asterix | ja | Jetzt nur noch einmal. |
+| `NIL_HER_0970`, `BUER_HER_0330`, `ABS_HER_0060` | Super Mario („in einem anderen Schloss“) | ja | Weltübergreifender Gag, siehe unten. |
+| `AGOR_MAX_0030` bis `0040` (Adler, Heuhaufen) | Assassin's Creed | ja | „Tausendmal gesehen, auf dem Bildschirm“; Pixel landet später im Heu (`SAND_PIX_0150`). |
+| `AGOR_MAX_0115`, `AGOR_PHI_0460` | Diogenes („Geh mir aus der Sonne“) | ja | |
+| `AGOR_CIC_0350` | Cicero, erste Rede gegen Catilina | ja | |
+| `AGOR_GRI_0400` bis `0410`, `RING_MAX_0110`, `CIC_0120`; `SAND_TOU_0020` bis `0040`, `SAND_BRI_0060`, `SAND_GRI_0190` | Das Leben des Brian | ja | Die Römer-Liste wird im Rede-Ringen zum Konter; das ist die beste Verwertung einer Anspielung im ganzen Umfang. |
+| `STAD_LEO_0150`, `STAD_MAX_0125`, `STAD_LEO_0230` | 300 | ja | „HEUTE ABEND SPEISEN WIR … ZU HAUSE!“ bricht das Zitat. |
+| `TAG1_PIX_0070` | Zenon, Achilles und die Schildkröte | ja | Nur noch einmal. |
+| `AUDI_RAM_0310`, `PARA_VOL_0020` | Brot und Spiele | ja | Mit Auszahlung („Wo bleibt das Brot?“). |
+| `FINA_NAR_0120` (Sphinx-Nase, Venus von Milo, schiefer Turm) | Wahrzeichen | ja | Vorbereitet in `SPHX_MAX_0100`, `AGOR`, `STAD_MAX_0075`. |
+| `TAG1_LEO_0020` | Marathon | ja | |
+| `DISK_MAX_0020` („Am Ende war's bestimmt der Butler.“) | Krimi-Klischee | ja | |
+| `INV_MAX_0355` („jemand Großes, Grünes“) | Shrek | ja | |
+| `GRAB_CIC_0170`, `ARC_0180` | Cicero findet das Grab des Archimedes (historisch) | ja | Die Szene erklärt sich selbst; wer die Geschichte kennt, hat mehr davon. |
+
+### Welt 3
+
+| Zeile | Vorlage | Passt? | Warum |
+| --- | --- | --- | --- |
+| `ANK_MAX_0040`, Straße, Nudelbude; `NUD_MOR_0230` bis `VIE_0310` („Zwei mal zwei“ – „Vier!“) | Blade Runner | ja | Die Bestellung ist ein Rätsel, das auch ohne Vorlage aufgeht. |
+| `TEST_DEC_0100` (Schildkröte auf dem Rücken), ganzer Mensch-Test | Blade Runner, Empathie-Test | ja | Umgedreht: Menschlich ist die unvernünftige Antwort. |
+| `STR_MAX_0130` (Origami-Einhorn) | Blade Runner | ja | Reines Bild, niemand erklärt es. |
+| `NUD_MOR_0420` (rote und blaue Pastille), `ABS_MOR_0010` („Ich kann dir nur die Tür zeigen“) | Matrix | ja | „Beige vorrätig“ und „auch schon zweimal gezeigt“ brechen den Ernst. |
+| `APO_MAX_0110`, `SIM_MAX_0160` bis `0170`, `SIM_PIX_0190` (Katze zweimal) | Matrix, Déjà-vu | ja | Pixel spielt die Störung selbst; dann sieht Max die echte. Aufbau und Auszahlung. |
+| `TUER_SCH_0010` („Herr Max“), `TURM_SCH_0030` bis `KLO_0050` („Wir.“), `TURM_MAX_0325` („sagt einer sehr langsam meinen Nachnamen“) | Matrix, Agent Smith | ja | |
+| `TURM_NAR_0080`, `MAX_0090`, `0100` (Ausweichen in Zeitlupe, Hexenschuss) | Matrix | ja | Die Pointe gehört Max' Rücken; Rückruf in `INV_MAX_0065`. |
+| `KUCH_MAX_0580` bis `0590` (Gabel biegt sich nicht) | Matrix, Löffel | ja | „Ich bin wohl noch nicht so weit.“ |
+| `STR_MAX_0030`, `ENDE_NAR_0090` (Telefonzelle) | Matrix, Ausgang | ja | Hier ruft der Werbeblock an. |
+| `STR_MAX_0070`, `EING_HAU_0030_2`, `0150`, `0220`, `ENDE_HAU_0070` (Sahra Konner, „Ich komme wieder“) | Terminator | ja | Der Satz wird verliehen („Bring ihn sauber zurück.“) und am Ende wahr. |
+| `PIEP_OPA_0120` („Hilf mir, Max. Du bist meine einzige Hoffnung.“), Piepsi und Pixel als Übersetzer | Star Wars | ja | Opas Nachsatz („Und wenn du schon unterwegs bist …“) macht es zu seiner Zeile. |
+| `EING_MAX_0160`, `HAU_0170` („Das ist nicht der Junge, den du suchst.“) | Star Wars | ja | Die Antwort („Ich suche nur Dreck.“) funktioniert allein. |
+| `KAM1_MUT_0180` (Begleitwürfel), `KAM1_MAX_0070` (Portalgerät), `KAM2_MAX_0140` („DER KUCHEN EXISTIERT NICHT.“), `EING_MAX_0450` | Portal | ja | Eng an der Vorlage, aber mit eigenem Dreh: Regel 2 und 3 machen den Kuchen zum Rätsel. |
+| `KAM1_MUT_0510`, `KAM2_MUT_0170`, `0270`, `KAM3_MUT_0310`, `KERN_MUT_0240` | Super Mario („in einer anderen Testkammer“) | ja | Dritte Welt des Gags, siehe unten. |
+| `BAS_MAX_0750`, `0755` (Großrechner summt ein Kinderlied, immer langsamer) | 2001 | ja | Leise und ohne Erklärung. |
+| `BAS_MAX_0735` (Handtuch, „Keine Panik“) | Per Anhalter durch die Galaxis | ja | Pixel nimmt das Handtuch am Ende mit. |
+| `KAM2_MAX_0060`, `PIX_0070` (Gummihuhn mit Seilrolle) | Monkey Island | ja | Pixel rahmt es („Frag nicht. Es war eine andere Zeit.“). |
+| `SIM_MAX_0210` bis `0225` (Radiowecker 5:59, dasselbe Lied) | Und täglich grüßt das Murmeltier | ja | |
+| `KERN_MUT_0060` („Das habe ich leider nicht verstanden. Meintest du: Gehorsam?“) | Sprachassistenten | ja | |
+| `KERN` Logik-Duell (KI scheitert am Widerspruch) | Science-Fiction-Standard | ja | Die drei Regeln sind in der Welt verteilt und müssen gefunden werden. |
+
+Welt 3 ist dicht an Zitaten, aber keines steht nur als Zitat da: Jedes ist Rätselteil, Figur oder bekommt eine eigene zweite Zeile. Nichts zu streichen.
+
+## Running Gags
+
+Fortgeschrieben aus `tx-a.md`.
+
+| Gag | Vorkommen in Welt 2 und 3 | Urteil |
+| --- | --- | --- |
+| „… in einem anderen Schloss / Büro / einer anderen Testkammer“ | Welt 1: 6. Welt 2: 4 (`NIL_HER_0970`, `BUER_HER_0330`, `BUER_MAX_0340`, `ABS_HER_0060`), dazu „in einem anderen Beutel“ (`PARA_HER_0340`) und „ein anderes Amt“ (`ABS_BE2_0250`). Welt 3: 5 (`KAM1_MUT_0510`, `KAM2_MUT_0170`, `0270`, `KAM3_MUT_0310`, `KERN_MUT_0240`). | Trägt in allen drei Welten und wird jedes Mal anders bezahlt: Toadi löst auf, Hermes findet das Büro, M.U.T.T.I. verliert den Zettel. Max' „Natürlich ist er das.“ (`KAM1_MAX_0520`) zeigt, dass er den Gag kennt, ohne ihn zu nennen. |
+| Pixels Wunsch und Einkaufsliste | Welt 2: „Dinge mit Kruste“, „Kruste“ in 10 Zeilen (`NIL_PIX_0620`, `KUCH`, `INV_MAX_0375` bis `PIX_0385`, `ZURU_PIX_0040_2`); Bäckerei-Spur am Sack (`PARA_PIX_0290` bis `0320`). Welt 3: Batterien für den Dosenöffner (`KERN_PIX_0510`), vorbereitet in `W2_KUCH_PIX_0390_2` und `W2_ZURU_PIX_0100_2`. | Trägt. Der Wunsch in Welt 3 kommt spät und in einer Zeile; nach zehn Krusten ist das die richtige Dosis. |
+| Radio-Moment (Milch, vergessener Geburtstag) | Welt 2: `WERK_ARC_0200` mit `WERK_PIX_0220`. Welt 3: `KUCH_RAD_0230` („Welttag der vergessenen Geburtstage“), `KUCH_PIX_0250`; dazu Kuckuck (`KUCH_NAR_0615`), Opa im Portal (`KAM1_OPA_0100`), Werbeblock in der Telefonzelle (`ENDE_MAX_0120`). | Trägt und steigert sich: In Welt 3 fragt Pixel offen nach dem roten Kreis, und Max überhört es. „Milch“ in Welt 3 neunmal; das ist viel, aber jedes Mal eine andere Quelle. |
+| Opa-Botschaft je Welt | Welt 2: Papyrus „Fein wie Staub“ (`NIL_OPA_0940`), Rückrufe `HEBL_ARC_0150`, `BUER_MAX_0580`. Welt 3: Hologramm „Der Kern muss weich bleiben“ (`PIEP_OPA_0120`), vorbereitet durch die Oma (`KUCH_ORA_0350`). | Trägt. „Weltrettung mit Backanleitung“ sagt, was der Spieler denkt. |
+| „junger Mann“ | Welt 2: 4 (`NIL_PIX_0040_2`, `THRO_PIX_0140_2`, `HIER_PIX_0270`, `PARA_PIX_0330_2`). Welt 3: 3 (`NUD_PIX_0570`, `SIM_PIX_0250`, `PIEP_PIX_0010_2`). | Eingehalten. |
+| „Ich sage nichts“ | Welt 2: 1 wörtlich (`FINA_PIX_0140_2`), Varianten `HAFS_PIX_0065_2`, `ZURU_PIX_0090_2`. Welt 3: 0 wörtlich, Varianten `KUCH_PIX_0250_2`, `ENDE_PIX_0020_2` oder `0022_2`. | Eingehalten. |
+| „freiwillig“ | Welt 2: 4 mit Gewicht (`DUEL_MAX_0110`, `AUDI_MAX_0110`, `TRAI_PIX_0140`, `TRAI_MAX_0170`). Welt 3: 2 (`TEST_DEC_0210`, `APO_PIX_0590` „Du wählst freiwillig das Unbequeme.“). | Trägt; mit R5-TX-51 eine weniger in Welt 2. Die Zeile bei der roten Pastille ist die Auszahlung für Welt 3. |
+| „Noch mal.“ | Welt 2: `TRAI_MAX_0110`, `0130`, `HEBL_MAX_0290`, `RING_MAX_0210`. Welt 3: `SIM_PIX_0190` (Pixel zitiert Max). | Trägt; kleinster und bester roter Faden für Max' Entwicklung. |
+| „Meine Nase lügt (nie)“ | Welt 2: 5 (`DISK_PIX_0030_2`, `0150_2`, `DISK_MAX_0160`, `INV_PIX_0150_2`, `HINT_PIX_0720_2`); wird zum Rätselteil (Nase lügt bei Fisch). | Trägt; aus dem Gag von Welt 1 wird eine Spielregel. |
+| Drei Prozent Akku | Welt 2: 10 Zeilen, von `NIL_MAX_0270` bis `PARA_MAX_0240` („Und zum Schluss: drei Prozent Akku. Taschenlampe an.“). | Trägt; ist Baustein, Gag und Schlussbild. |
+| Wahrzeichen (Nase, Arme, Turm) | Aufbau `SPHX_MAX_0100` („Noch.“), `AGOR`, `STAD_MAX_0075`; Auszahlung `FINA_NAR_0120`; Nachklang `AGOR_MAX_0070`. | Trägt. |
+| Pixel ist nass | Welt 3: „nass“ in 23 Zeilen, vom ersten Satz bis „Nass rein, nass raus.“ (`ENDE_PIX_0130`); Motto in `BAS_PIX_0610_2`. | Trägt; der Welt-Gag für Pixel, mit dem Handtuch als Auszahlung. |
+| Siebenundvierzig | Welt 3: 10 (Sahra Konner, Omas Liste, Testperson 47). | Trägt; die Zahl verbindet drei Räume, ohne dass es jemand erklärt. |
+| „Zu deinem Besten“ / „Zu Ihrem Schutz“ / „Ich komme wieder“ / „Meintest du: Gehorsam?“ | je 6, 6, 4 (dazu Max einmal), 6 | Figurenformeln; jede gehört einer Figur und wird einmal gebrochen (Max: „Zu meinem Besten.“, „Zu seinem Schutz.“). |
+| Der Staubsauger, Pixel wird getragen | Welt 2 je 1 (`STAD_PIX_0320_2`, `GRAB_PIX_0150_2`), Welt 3 je 1 bis 2 (`STR_PIX_0230_2`; `APO_PIX_0620`, `BAS_KAL_0340`) | Trägt, sparsam. |
+| Pixels „Hauptwort. Drei Eigenschaften.“ und Schnuppern mit Abstraktum | Welt 2: 7 und 7. Welt 3: 2 und 7. | Kein Gag, ein Bauplan (R5-TX-62, R5-TX-84). In Welt 3 schon seltener. |
+| Zuruf-Vergleich | Welt 2: 7 von 10. Welt 3: 7 von 20. | Bauplan (R5-TX-67, R5-TX-77). |
+| „beides“ | Welt 2: 6 Zeilen, davon 3 als Schlusspointe. Welt 3: 8, davon 4. | Weiter an der Grenze (R5-TX-15); gemeldet nur in R5-TX-74 (`KUCH_MAX_0690`). |
+| „Endlich jemand / etwas, der / das …“ | Welt 2: 11 Zeilen mit „endlich“, 6 im Bauplan. Welt 3: 12, davon 5 (`STR_PIX_0090_2`, `TURM_MAX_0285`, `BAS_PIX_0170`, `APO_PIX_1010`, `EING_PIX_1010`). | Fortsetzung von R5-TX-41. Noch kein eigener Fund; beim nächsten Durchgang mitzählen. |
+
+## Lokalisierung, Zusammenfassung
+
+- **Fehlend oder leer:** keine Zeile. Englisch gleich Deutsch nur bei `W2_TAG1_LEO_0020` / `0040` („MARATHON!“) und `W3_KAM1_MAX_0190` („Hi, Bernd.“); beides richtig.
+- **Länge:** Deutsch nie über 140 Zeichen (Welt 2 im Schnitt 79, Welt 3 84). Englisch im Schnitt kürzer (74 und 79). Über 140: Welt 2 elf Zeilen (R5-TX-63, R5-TX-68), Welt 3 keine.
+- **Blasen ungleich geteilt:** `W2_RING_MAX_0030` (R5-TX-63, wichtig), `W2_GRAB_MAX_0090`, `W2_DISK_MAX_0310` (R5-TX-64), `W2_AGOR_GRI_0410` (R5-TX-58). In Welt 3 keine.
+- **Rätselhinweis im Englischen:** Der Baustein „blau“ stimmt in beiden Sprachen nicht mit der Quelle überein (R5-TX-54). `W3_HINT_PIX_0730` nennt in beiden Sprachen den falschen Hotspot (R5-TX-80). Sonst sind alle Hinweise der Stufe 3 im Englischen gleichwertig; `W3_HINT_PIX_0630_2` ist im Englischen sogar genauer als im Deutschen (R5-TX-81).
+- **Pointe verloren:** `W3_BAS_KAL_0040` (R5-TX-91). Kleiner: `W3_EING_PIX_0090` („In German“, R5-TX-92).
+- **Begriffe:** „starting pass“ gegen „entry pass“ (R5-TX-59); „boxes“, „audience“, „bath“, „she“ (R5-TX-69); „child“ gegen „dear“, „biscuit“ gegen „cookie“ (R5-TX-94).
+- **Stimme:** Pixel englisch ohne Kurzformen in 852 von 856 Zeilen (R5-TX-60, R5-TX-90). Füllwort „Honestly“ fünfmal ergänzt (R5-TX-93). Max einmal steif (`W2_BUER_MAX_0375`, R5-TX-59).
+- **Zeichen:** einmal „...“ statt „…“ (R5-TX-61).
+- **Lehrbuch-Englisch:** in beiden Welten nicht gefunden. Das Englische ist britisch und gesprochen („bum bag“, „nicks a car“, „Put my back out“, „knocked off“).
+- **Gut lokalisiert:** „M.O.T.H.E.R.“; „grave gravel“ für „Grabschotter“ (`W2_GRAB_MAX_0050`); „laziness with vowels“ (`W3_NUD_VIE_0330`); „It really does set.“ für „Er steht dann wirklich.“ (`W3_PIEP_KAL_0280`); „my memory goes back nineteen years“ für „ich denke seit neunzehn Jahren“ (`W3_EING_HAU_0130_2`); „Sounds like an oven setting.“ für die „Backzahl“ 405 (`W2_PARA_PIX_0290`); „In boxes.“ für „In Zellen.“ (`W3_HINT_PIX_0810`); der Hausmeister mit „Servus, lad“ und „if you please“; Schmidt auch englisch ohne Punkt.
+
 ## Frühere Funde Welt 2 (Review 17.11.), Stand heute
 
 | Früher | Stand heute |
@@ -292,3 +428,58 @@ Welt 3 ist die sauberste der drei Welten. Der Durchgang vom 20./21.11. hat gewir
 | ND-03 Morse-T | Text steht („‚Miiiau‘ heißt T.“ `PIEP_MAX_0220_2`); ob Tabelle und Animation dazu passen, wurde nicht geprüft. |
 | W3-11 Regen drinnen | Text unverändert (`BAS_PIX_0650`: „Drüben regnet es jetzt, und zwar drinnen.“). Ob der Effekt im Spiel zu sehen ist, wurde nicht geprüft. |
 | W3-2 Welt 2 ohne KI-Klang-Durchgang | weiterhin offen; die Funde R5-TX-46 bis R5-TX-73 sind die Liste dafür. |
+
+## Gut gelöst
+
+- **Die Texte tragen.** Auf 2787 Zeilen kommen 49 Funde, davon drei wichtige, kein kritischer. Kein Fund betrifft eine Szene als Ganzes.
+- **Entwicklung ohne Rede:** „Noch mal.“ in Welt 2 und die rote Pastille in Welt 3 („Das Sofa kenn ich auswendig.“) zeigen Max' Weg in je einem Satz. Die Oma sagt es voraus („Du wirst aufstehen und etwas holen, ohne dass dich jemand bittet.“ `W3_KUCH_ORA_0390`), Max wehrt ab; mehr braucht es nicht.
+- **Rätseltexte:** Diskus-Diebstahl, Hieroglyphen, Paraden-Plan, Mensch-Test und Logik-Duell sind so getextet, dass Fehlversuche die Regel erklären und selbst Pointen sind („Die Pflanze ist jetzt das Original. … Die Pflanze lässt sich Zeit.“ `W3_TURM_MAX_0520`). Die Fehltausch-Zeilen der Code-Sicht gehören zum Besten in Welt 3.
+- **Hinweise:** dreistufig, Lage vor Handgriff, mit Pixel-Stimme in der zweiten Blase. Zwei Ungenauigkeiten in 199 Hinweiszeilen (R5-TX-80, R5-TX-81).
+- **„Gespräch erschöpft“** in beiden Welten: 42 Zeilen, jede in der Stimme der Figur, keine Schablone.
+- **Rückrufe über die Welten:** Olivenöl aus Welt 2 ölt den Hausmeister (`W3_EING_MAX_0240`), Hermes' Sandale gibt einen dritten Tausch (`W3_KAM3_MAX_0270` „Du hast endlich mal was pünktlich geliefert.“), Deckerts Regenzählen kommt bei Pixel wieder (`W3_BAS_PIX_1330_2`).
+- **Frühere Funde** sind zum größten Teil sauber behoben (Tabellen oben); die Längenprüfung im Deutschen hält.
+
+## Nicht geprüft
+
+- Das Spiel wurde nicht gestartet. Ob Zeilen an der richtigen Stelle fallen, ob Blasen überlaufen und ob Animation und Regie zum Text passen, ist nicht geprüft.
+- Bilder, Ton und Vertonung: nicht geprüft. „Laut gelesen natürlich“ ist ein Urteil am Text.
+- `docs/skript/welt-2.md` und `welt-3.md` wurden nur für die Regiespalte im Auszug benutzt, nicht Zeile für Zeile mit der CSV verglichen.
+- Die Lint-Skripte von humanizer-de wurden nicht ausgeführt; der Katalog diente als Musterliste (Kurzreferenz und die dialogrelevanten Blöcke von `patterns.md`).
+- `UI_`- und `SYS_`-Zeilen gehören zu `tx-a`; nachgeschlagen wurden nur die Sphinx-Bausteine und der Hotspot-Name „Farbcode an der Wand“.
+- Englisch wurde von einem Nicht-Muttersprachler beurteilt. Die englischen Vorschläge sollten vor dem Einbau von jemandem mit britischem Englisch gegengelesen werden.
+- Historische und sachliche Richtigkeit (Jahreszahlen der Fähre, Kurzschrift des Tiro, Morse) wurde nicht geprüft.
+- Die Zählungen sind Suchtreffer mit regulären Ausdrücken. Sie können einzelne Formen verfehlen („Meinungen haben“ mit Einschub, gebeugte Formen).
+
+## Vorschläge für die Lessons Learned
+
+- **Pointen-Liste über die Welten führen.** Sechs Pointen aus Welt 2 stehen fast wörtlich in Welt 3 („Das ist das Traurigste …“, „Das ist kein Widerspruch. Das ist …“, „… der es zu etwas gebracht hat“, „Wir sind quitt.“, „erzähl ich niemandem / erzählt es allen“, der Drei-Dinge-Zuruf). Eine Liste der Schlusssätze je Figur, die beim Schreiben einer neuen Welt durchsucht wird, fängt das ab.
+- **Baupläne zählen, nicht nur Wörter.** Der KI-Klang-Durchgang für Welt 3 hat Formeln entfernt, aber „entweder … oder“ steht in Welt 2 und 3 je siebenmal bei Max. Die Suche in `tx-b_zaehlen.py muster` zeigt das in Sekunden; sie gehört vor jeden Textdurchgang.
+- **Die 140-Zeichen-Prüfung auch für Englisch.** Elf englische Zeilen in Welt 2 liegen darüber, im Deutschen keine. Dazu eine Prüfung, ob Folgeblasen (`_2`, `_3`) in beiden Sprachen etwa gleich lang sind; das hätte `W2_RING_MAX_0030` (69 gegen 171 Zeichen) gefunden.
+- **Rätselwörter gegen ihre Quelle prüfen.** Bausteine, Konter und Hotspot-Namen in Hinweisen der Stufe 3 sollten wörtlich in der Zeile vorkommen, aus der der Spieler sie kennt (R5-TX-54, R5-TX-80). Eine Tabelle „Baustein, Quellzeile, Notizbuchtext, Hinweiszeile“ je Rätsel reicht.
+- **Pixel englisch ohne Kurzformen als automatische Prüfung** (Apostroph in `_PIX_`-Zeilen außerhalb von Zitaten); vier Treffer in 856 Zeilen.
+- **Welt 2 braucht den KI-Klang-Durchgang noch** (W3-2). Er ist kleiner als der für Welt 3: R5-TX-46 bis R5-TX-73 nennen rund 30 Zeilen.
+
+## Werkzeug
+
+- `docs/review/2026-11-21/werkzeuge/tx-b_auszug.py`: schreibt je Raum eine Lesefassung (Schlüssel, Regie aus dem Skript, Deutsch, Englisch, Marken der früheren Reviews). Aufruf: `python3 tx-b_auszug.py ZIELORDNER`.
+- `docs/review/2026-11-21/werkzeuge/tx-b_zaehlen.py`: Zählungen je Präfix. Aufruf: `python3 tx-b_zaehlen.py [muster|laenge|sprecher|en] [--ids] W2 W3`. Beide sind Abwandlungen der Werkzeuge von `tx-a` für die Präfixe `W2_` und `W3_`.
+
+## Zusammenfassung in Zahlen
+
+| | Welt 2 | Welt 3 | zusammen |
+| --- | --- | --- | --- |
+| Zeilen gelesen (DE und EN) | 1466 | 1321 | 2787 |
+| Funde | 28 (R5-TX-46 bis 73) | 21 (R5-TX-74 bis 94) | 49 |
+| kritisch | 0 | 0 | 0 |
+| wichtig | 2 (R5-TX-54, R5-TX-63) | 1 (R5-TX-80) | 3 |
+| kosmetisch | 26 | 20 | 46 |
+| davon KI-Klang und Baupläne | 16 | 14 | 30 |
+| davon Lokalisierung | 8 | 5 | 13 |
+| davon Rätseltext, Anschluss, Anrede, Zeichen | 4 | 2 | 6 |
+| Zeilen zum Umschreiben (KI-Klang) | rund 30 (2 %) | rund 25 (2 %) | rund 55 |
+| EN über 140 Zeichen | 11 | 0 | 11 |
+| Anspielungen geprüft | 26 Einträge, alle passen | 20 Einträge, alle passen | 46 |
+
+Einige Funde in der Spalte Welt 3 nennen auch Zeilen aus Welt 2 (R5-TX-78, R5-TX-89, R5-TX-93); gezählt sind sie dort, wo die Änderung vorgeschlagen wird.
+
+FERTIG
