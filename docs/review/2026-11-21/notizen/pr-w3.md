@@ -109,7 +109,7 @@ Grundlage: jeder Raum in jedem Zustand im Spielfluss gesehen (gerader Durchlauf,
 | Küche der Orakel-Oma | Anfang, nach R4 (Schwein fort, Scherben), Eieruhr | Tisch auf Hüfthöhe (W3-R07-01 behoben), Scherben als Zustand, alles lesbar | Max stellt sich beim Reden dicht vor die Oma, ohne Überdeckung | ohne Befund; Eieruhr weckt | – |
 | Widerstandsbasis (1280 px) | Anfang, Schnee, nach R13, nach R7b, Welt-Ende | Stimmig; Rebell und Rebellin getrennt (W3-R03-02 behoben), Schnee auf der Kapsel | Max wacht in Pixel auf (326/322), in R13 steht Max in Kalle; Piepsi am Rand (R5-W3-24) | Ausgang Kühlung 14/36 gegen den Lüftungsschacht | R5-W3-04, -11, -13, -19, -22, -24 |
 | Kühlung | vereist, getaut (Eimer gekippt) | Stimmig; Pixel wirkt hier etwas größer als in der Basis (W3-NS-02-Nebensatz, nicht nachgemessen) | Eimer aus 300 px gekippt (R5-W3-12) | ohne Befund | R5-W3-12 |
-| Laboreingang | Hausmeister da, fort (Pfütze), Tür zu, Tür offen | Stimmig; Mopp richtig herum (W3-R05-02 behoben), offene Tür als Datenwand gut | Hausmeister rollt nach links ab, durch Max hindurch | ohne Befund | R5-W3-09 |
+| Laboreingang | Hausmeister da, fort (Pfütze), Tür zu, Tür offen | Stimmig; Mopp richtig herum (W3-R05-02 behoben), offene Tür als Datenwand gut | Hausmeister rollt nach links ab, dicht an Max vorbei | ohne Befund | R5-W3-09 |
 | Büro 50 (1280 px) | Anfang, Code-Sicht, nach R6a (Klone fort), nach R6b, Farbfelder | Flur mit Fluchtpunkt sauber, drei getrennte Farbfelder (W3-R08-05 behoben). Im Flur stehen nur Schmidt und ein Klon, der Text spricht von vielen (W3-R08-06 offen). | Code-Sicht und Tausch vom Terminal aus, 250 px von Schmidt | Brille und Akte vor R6 unsichtbar und nicht nehmbar (W3-R08-03 behoben) | R5-W3-06, -10 |
 | Testkammer 1 | Anfang, Portalgerät genommen, gelöst (Tür offen, Bernd fort) | Sauber. Die Halterung sieht vor und nach dem Nehmen gleich aus (R5-W3-20). | Max geht zur Halterung; den Bodenschalter betritt er nie (R5-W3-07) | Portalgerät 36/36 | R5-W3-07, -14, -20 |
 | Testkammer 2 | Anfang, Laser harmlos (rosa, wabbelig), Huhn fort | Sauber, Laser quer vor der Tür (W3-R10-01 behoben), Etiketten der Code-Sicht überdecken sich nicht mehr (W3-R10-02 behoben) | Max geht zum Laser | Ausgang Kammer 3 14/36 hinter dem Laser (R5-W3-08) | R5-W3-08, -16 |
@@ -277,6 +277,159 @@ Nebenbeobachtungen aus diesen 12 Minuten (für `w4`, nicht weiter untersucht):
 - **Das erste Umschalten wechselt den Sender nicht.** Erster Gebrauch der Fernbedienung (Flimmer erklärt die Regel, `W4_RAU_FLI_0050`), Sender gewählt, Erzähler: „Rauschen wischt übers Bild. Der neue Sender steht.“ (`W4_FERN_NAR_0060`), Max steht weiter im Glücksrad-Studio. Erst der zweite Gebrauch bringt ihn in den beim ersten Mal gewählten Sender. Zweimal gesehen (Sitcom-Küche in der ersten Sitzung, Kapitolis nach Neustart und `stand holen w4_nach_R2`).
 - Die Graubox-Räume von Welt 4 haben Hotspots als Raster oben im Bild (`objekte`: y 40–104 und 120–184), wie erwartet ohne Grafik.
 
+## Animationen
+
+Grundlage: 19 Bildfolgen im laufenden Spiel (`film an … 4`, Tempo 1, `textmodus lesen`, 4 Bilder je Sekunde, zusammen rund 7400 Bilder; Lauf `pr-w3-haupt`, `filme/01_ankunft` bis `19_r11_weltende`), als Kontaktbögen und Ausschnitte gesichtet, sechs davon als GIF unter `belege/pr-w3/anim_*.gif`. Mit 4 Bildern je Sekunde sieht man, **ob** etwas läuft und wann, aber nicht, wie flüssig; Fußrutschen und Mundbewegungen sind damit nicht beurteilbar (siehe „Nicht geprüft“).
+
+**Bestand.** `game/skripte/gesten_welt_3.gd` ordnet 90 Textzeilen eine Geste zu (38 Einträge „vor“, 47 „mit“; W3-18 sprach von 47 „vor“, das ist also umgestellt), dazu Ruhe-Schleifen für 6 Figuren und Warte-Schleifen für 10. 123 Bilddateien `w3_*` im Spiel. Offene Grafik laut `status-alle-shots.md`: Max in der Pfütze (F21), Locher und Konfetti (G06), schmollender Lautsprecher Kammer 3 (B36), Morphäus hält den Kater (P30), Pixels Handtuch.
+
+**Ablauf und Einbau, Szene für Szene.**
+
+| Film | Szene | Dauer | Läuft und sitzt | Fehlt oder sitzt falsch |
+| --- | --- | --- | --- | --- |
+| 01 | Ankunft Unterstadt | 107 s | Handy-Geste, Regen, Neon | Max steht von Anfang an da, keine Ankunft (F21 offen) |
+| 03 | blaue Pastille | 67 s | Sofa-Traumbild, Pixels Ohrfeige (Pointe aus W3-07 ist da) | – |
+| 04 | rote Pastille, Ankunft Simulation | 98 s | Passanten, Takt-Autos, Vogelschwarm | Schlucken und Auffangen nicht zu sehen: Morphäus bleibt stehen, harte Blende (P30 offen); drei gleiche Passanten sind Absicht |
+| 05 | erstes Aufwachen | 162 s | **Max kommt aus der Kapsel: Kopf, Sitzen, Aufstehen, etwa 2 s** (`anim_kapsel_aufstehen_4fps.gif`; W3-10 behoben); Kalle bewegt Hand und Headset | Erzähler: „Auf seiner Brust sitzt ein nasser Kater“, Pixel sitzt am Boden. Danach 150 s zwei stehende Figuren; „Max zieht die Tüte heraus“ ohne Geste |
+| 06 | R13, Piepsi, Opas Nachricht | 133 s | Kalle redet mit Geste | Tasse bleibt stehen, Pixel geht nicht zum Tisch, Piepsi am Bildrand, kein Hologramm (R5-W3-24) |
+| 07 | R12, Suppe | 103 s | Herr Vier löffelt | Max 200 px entfernt (R5-W3-03); „Er weint in die Suppe“ ohne Bild; Zeigertext mit Schlüssel im Bild |
+| 08 | R8, Hausmeister | 47 s | Hausmeister nimmt die Seite, **rollt nach links ab**, Pfütze bleibt (`anim_hausmeister_rollt_ab_4fps.gif`) | – |
+| 09 | R9a, Karte und Leitung | 55 s | Tür wird zur Datenwand | Kalle sagt „Bin da! Trommel dabei“ und ist nicht im Bild |
+| 10 | Eintritt in den Turm | 88 s | **Zeitlupen-Pose** (Max biegt sich nach hinten; `anim_zeitlupe_locher_4fps.gif`), Handy | Locher und Konfetti nicht zu sehen (G06 offen) |
+| 12 | R6a, R6b | 111 s | Code-Sicht als grünes Drahtbild, **ein Klon geht durchs Bild ab** (W3-17 für die Klone behoben) | Alles vom Terminal aus, Schmidt steht halb am linken Bildrand |
+| 13 | R7b, Ente | 128 s | **Einblendung oben rechts: erst eine Ente im Hoodie, dann Max am Terminal** (`anim_ente_einblendung_4fps.gif`) – die beste Bildlösung der Welt | – |
+| 14 | ins Labor | 68 s | Max geht zur Kapsel, Blende, Kammer 1 | Hinlegen nicht zu erkennen (Blende setzt ein, sobald er an der Kapsel steht) |
+| 15 | Kammer 1, Portal | ≥ 100 s | Schuss-Pose, rundes Portal mit Opas Wohnzimmer, Bernd rückt heran (W3-R09-02 behoben) | **Portal erscheint erst rund 8 s nach „Ein schimmerndes rundes Loch öffnet sich“**, nämlich bei Opas „Hast du an die Milch gedacht?“ (`anim_portal_kommt_8s_nach_dem_erzaehler_4fps.gif`) |
+| 16 | Kammer 2 | 94 s | Max geht zum Laser, Laser wird rosa und wabbelt, Lautsprecher leuchtet beim Sprechen (W3-08 für die Kammern behoben) | – |
+| 17 | Kammer 3 | 64 s | Lautsprecher leuchtet | **Tür und Bernd wechseln erst, nachdem der Text „Die Tür … springt auf“ und „Bernd steigt auf und schwebt aus dem Spalt“ durch ist**; bis dahin Schloss und Würfel unverändert (`anim_kammer3_bernd_und_tuer_erst_nach_dem_text_4fps.gif`); Huhn am Boden nicht zu sehen |
+| 18 | R10 | 89 s | Max hält die Akte vor, M.U.T.T.I.s Auge erlischt, Antennen sinken | – |
+| 19 | R11, Welt-Ende, Dachboden | 400 s | Max geht zur Zelle, Zelle fort | Dachboden 200 s Standbild (R5-W3-25) |
+
+**Sinn.** Wo die Geste die Pointe ist, ist sie jetzt da (Ohrfeige, Zeitlupe, Ente, Portal, Kapsel, Hausmeister). Was noch fehlt, sind die Stellen, an denen der Erzähler eine Handlung beschreibt und das Bild stillsteht oder nachhinkt; dort liest der Spieler einen Satz über etwas, das er gleichzeitig nicht sieht.
+
+### Kandidaten für bessere Animationen
+
+| Rang | Stelle | Heute | Vorschlag | Aufwand |
+| --- | --- | --- | --- | --- |
+| 1 | R13: Tasse, Piepsi, Opas Nachricht | nichts davon im Bild (R5-W3-24) | Pixel läuft zum Tisch, Tasse kippt (zwei Zustandsbilder), Piepsi ins Bild rücken, blaues Flackerbild für die Nachricht | mittel; Hologramm-Bilder gibt es laut W3-07 schon |
+| 2 | Kammer 3: Tür springt auf, Bernd schwebt weg | Zustand wechselt nach dem Text | Zustandswechsel an den Anfang der jeweiligen Erzählzeile ziehen | klein (Reihenfolge im Skript) |
+| 3 | Kammer 1: Portal | 8 s nach dem Erzähler | Portal mit der Zeile „Max drückt ab“ öffnen | klein |
+| 4 | Übergaben und Tausche aus der Ferne (R12, Büro, Kammer 1 und 3, Kern, Eimer) | Max bleibt 200 bis 300 px weg | Gehe-Punkt vor der Aktion | klein je Stelle |
+| 5 | Kammer 1: Bodenschalter | Max betritt ihn nie (R5-W3-07) | nach dem Tausch auf den Schalter laufen, Schalter-Zustand „gedrückt“ | klein bis mittel |
+| 6 | Dachboden-Ankunft | 200 s Standbild | Opa hebt die Zelle (eine Pose), Pixel springt in die Kiste (vorhandener Sprung), Zelle auf die Werkbank | mittel |
+| 7 | rote Pastille | harte Blende | Morphäus fängt den Kater (P30) oder wenigstens eine Schluck-Geste von Max | mittel (Grafik offen) |
+| 8 | Ankunft Unterstadt | Max steht einfach da | F21 (Max in der Pfütze) | Grafik offen |
+| 9 | erstes Aufwachen | Pixel sitzt am Boden statt auf Max' Brust; Tüte ohne Geste | Pixel springt von der Kapsel; vorhandene „gibt“-Geste für die Tüte | klein |
+| 10 | R9a | Kalle spricht aus dem Off | Kalle mit Trommel kurz ins Bild oder die Zeile als Funkspruch kennzeichnen | klein |
+| 11 | Turm: Locher, Konfetti | nur Text | G06 | Grafik offen |
+
+## Zeitmessungen (Tempo 1, `textmodus lesen`)
+
+Dauer ohne Eingriff des Spielers, aus `marke`/`zeit` oder aus der Bildzahl der Filme (4 Bilder je Sekunde).
+
+| Abschnitt | Dauer | Quelle |
+| --- | --- | --- |
+| Ankunft Unterstadt bis zum ersten Klick | 107 s | Film 01, 428 Bilder |
+| Déjà-vu-Zeile in der Gasse (Klick auf Pixel) | 49 s | Film 02, 197 Bilder |
+| blaue Pastille (Schleife zurück) | 67 s | Film 03 |
+| rote Pastille bis frei in der Simulation | 98 s | Film 04 |
+| erstes Aufwachen | 162 s | Film 05, 647 Bilder |
+| R13 (Tasse bis frei) | 133 s | Film 06 |
+| R12 (Rezeptkarte bis Zugangskarte) | 103 s | Film 07 |
+| R8 (Seite bis Hausmeister fort) | 47 s | Film 08 |
+| R9a (Karte, Tür, Leitung) | 55 s | Film 09 |
+| Eintritt in den Büroturm | 88 s | Film 10 |
+| R6a und R6b zusammen | 111 s | Film 12 |
+| R7b mit einem falschen Kabel | 128 s | Film 13 |
+| „Ins Labor“ bis frei in Kammer 1 | 68 s | Film 14 |
+| Kammer 1: Portalgerät und erster Blick auf Bernd | über 100 s (Aufnahme bei 400 Bildern abgebrochen) | Film 15 |
+| Kammer 2 (Tausch, Durchgang) | 94 s | `zeit` |
+| Kammer 3 (zwei Tausche) | 64 s | `zeit` |
+| R10 (drei Regeln in richtiger Reihenfolge) | 89 s | `zeit` |
+| R11 bis frei auf dem Dachboden | **400 s** (Kern 88, Basis 59, Straße 51, Dachboden 200) | `zeit`, Film 19 |
+| Summe dieser Szenen | rund 33 Minuten | – |
+| Gerader Durchlauf der ganzen Welt bis Welt 4 | 3640 Spielsekunden (61 min) mit `textmodus klick` und Nebenwegen | erster Lauf |
+| Wege | 1280 px breiter Raum in zwei Klicks, rund 9 s; Radiowecker ↔ Glaseingang 7 bis 8 s | Verlauf |
+| Radiowecker | klingelt 30 s nach dem Einschlafen, auch wenn man dazwischen in der Küche war (1,3 s nach dem Wiederbetreten; W3-R06-04 behoben). Die Uhr läuft in Echtzeit (`Time.get_ticks_msec`, aus dem Code), also auch im Pausemenü weiter. | Lauf `pr-w3-echt`, Tempo 1 |
+| Zurufe | alle 45 s Nichtstun | 200-s-Probe |
+
+Lesart: Welt 3 besteht in Lesetempo zu mehr als einer halben Stunde aus Szenen, in denen der Spieler nichts tun kann und nichts überspringen darf. Die fünf längsten (Welt-Ende mit Dachboden 400 s, erstes Aufwachen 162 s, R13 133 s, R7b 128 s, R6 111 s) sind die ersten Kandidaten zum Kürzen oder Teilen.
+
+## Frühere Funde, Stand heute (Kontrolltabelle vom 20.11., AP-01 bis AP-09)
+
+„Im Spiel“ heißt: heute mit echten Klicks gesehen. „Datei“ heißt: nur in `texte.csv` oder im Skript nachgelesen.
+
+| Paket | Fund | Stand heute | Woran gesehen |
+| --- | --- | --- | --- |
+| AP-01 | W3-01 (Pixel-Klicks), W3-R01-01 (Mensch-Test wiederholbar), W3-R08-02 (Kapsel im Turm gesperrt) | **behoben** | im Spiel: ganzer Lauf als Pixel und Max; Sackgassen-Suche Zeilen 1, 6, 9 |
+| AP-02 | W3-02, W3-03 (Code-Sicht zweistufig, Bild am Hintergrund) | **behoben** | im Spiel, alle fünf Räume mit Code-Sicht |
+| AP-02 | W3-R06-01 (Sprechanlage schaltet frei) | **behoben** | Abtast-Lauf: `rklick sprechanlage` |
+| AP-02 | W3-R08-01 (leeres Budget) | **behoben** | Sackgassen-Suche |
+| AP-02 | W3-R10-02 (Etiketten überdecken sich) | **behoben** in Kammer 2; im Büro hängen Etiketten am Bildrand (R5-W3-06) | im Spiel, `belege/pr-w3/en_codesicht_kammer2_woerter_uebersetzt.png` |
+| AP-03 | W3-04 (Pfote ortsbezogen) | **behoben mit einer Ausnahme** (R5-W3-10: Turm zuerst) | Pfoten-Lauf |
+| AP-03 | W3-05 („nichts offen“-Zeile) | **behoben**; zwischen den Kammern zu allgemein (R5-W3-18) | Pfoten-Lauf |
+| AP-03 | W3-R01-04 (Kekse an Herrn Vier) | **behoben** | im Spiel: `klick inv:omas_kekse`, `klick @herr_vier` → `W3_SUPP_MAX_0170` |
+| AP-03 | W3-R02-02, W3-R02-03 (Déjà-vu, blaue Pastille) | **behoben**; neue Schwächen GD-W3-04 bis -06 | im Spiel, Filme 02 und 03 |
+| AP-03 | W3-R03-06 (Lösung B) | **behoben** | Sackgassen-Suche |
+| AP-03 | W3-R06-04 (Wecker einmal je Traum) | **behoben** | im Spiel, Tempo 1 (siehe Zeitmessungen) |
+| AP-03 | W3-R12-02 (ungelesene Akte im Kern) | bewusst anders entschieden; **heute nicht geprüft** | – |
+| AP-03 | W3-N-01 (Morse-Tabelle als Nahansicht) | **behoben** | im Spiel, DE und EN |
+| AP-04 | W3-12 (orange Platzhalter) | **behoben** bis auf das Portalgerät in der Halterung (R5-W3-20) und die winzige Telefonbuchseite (R5-W3-23) | im Spiel, Raumaufnahmen |
+| AP-04 | W3-14 (Max kommt in Figuren an) | **weiterhin offen** | R5-P-12-Zeile oben, R5-W3-24 |
+| AP-04 | W3-19 (schmale Ausgänge, Flächen unter den Porträts) | **teilweise**: Ausgänge treffen; Sonne 0/36, Ausgang Kammer 3 14/36 | Abtast-Lauf |
+| AP-04 | W3-R02-01, W3-R03-01, W3-R05-01, W3-R05-03, W3-R06-05, W3-R09-01 | **behoben** | im Spiel (Gasse 1280 px, Ausgänge, Laboreingang von Anfang an offen mit eigenen Zeilen, Portalgerät 36/36) |
+| AP-04 | W3-R03-02 (Rebell fehlt), W3-R03-03 (Graubox-Streifen „Rebellen“) | **behoben** | `status`: Rebell (962) und Rebellin (414); Abtast-Lauf ohne Streifen |
+| AP-04 | W3-R03-04 (Ausgang Kühlung) | **weiterhin offen** | 14/36 gegen den Lüftungsschacht, Ansehen gibt Ersatzzeile |
+| AP-04 | W3-R12-04 (M.U.T.T.I.s Klickfläche) | **behoben** (25/36); Lauf durch den Sockel nicht geprüft | Abtast-Lauf |
+| AP-05 | W3-07 (Bild-Pointen) | **weitgehend behoben**: Sofa-Bild, Ohrfeige, Ente, Portal, Zeitlupe, Hausmeister; offen: Hologramm und Tasse (R5-W3-24), Locher, Morphäus fängt | Filme 03, 06, 10, 13, 15 |
+| AP-05 | W3-08 (Lautsprecher, Radio, Tür bewegen sich nicht) | **behoben für die Lautsprecher** (leuchten beim Sprechen); Küchenradio und Tür in Kammer 3 nicht geprüft | Filme 16, 17 |
+| AP-05 | W3-09 (Reden ohne Mund) | **nicht beurteilbar** bei 4 Bildern je Sekunde; Hausmeister hält beim Reden still und wischt nicht weiter | Film 08 |
+| AP-05 | W3-10 (Kapsel-Bewegungen) | **behoben** fürs Aufstehen; Hinlegen geht in der Blende unter | Filme 05, 14 |
+| AP-05 | W3-17 (keine Nebenfigur geht) | **teilweise**: Klon geht ab, Hausmeister rollt; Morphäus und Kalle kommen nicht | Filme 08, 09, 12 |
+| AP-05 | W3-18 (Gesten „vor“) | umgestellt (38 „vor“, 47 „mit“), Wirkung im Spiel nicht gemessen | Datei |
+| AP-05 | W3-R08-03 (Brille und Akte vor R6 nehmbar) | **behoben** | im Spiel, frischer Prozess, Stand `w3_20`: beide `(unsichtbar)`, Tasse sichtbar |
+| AP-05 | W3-R08-04 (hinkender Max gleitet) | **nicht beurteilbar** (Film 11 hat 28 Bilder bei 4 je Sekunde) | – |
+| AP-05 | W3-R09-02 (Bernd schwebt heran) | **behoben** (Bernd rückt rund 100 px) | Film 15 |
+| AP-05 | W3-R12-01 | **behoben** (M.U.T.T.I. fährt sichtbar herunter) | Film 18 |
+| AP-06 | W3-15, W3-16 (Sprünge zwischen Stand und Geste, 2 px Absacken) | **nicht geprüft** (Sheet-Ebene) | – |
+| AP-06 | W3-R05-02 (Mopp verkehrt) | **behoben** | Film 08, Ausschnitt |
+| AP-06 | W3-NS-01 bis -04 (Autos, Pixels Trab, Schmidt, Frau) | **nicht geprüft** (braucht 10 Bilder je Sekunde und Vergrößerung); in den Filmen 04 und 07 fiel nichts davon auf | – |
+| AP-07 | W3-11, W3-R01-02, W3-R03-05 (lange Texte, lange Szenen) | **weiterhin offen**, jetzt gemessen (R5-W3-25) | Zeitmessungen |
+| AP-07 | W3-13 (Ansehen-Zeilen) | **behoben fürs Ansehen** (eine Ausnahme); Benutzen und gesperrte Türen mit Ersatzzeilen (R5-W3-16, -23) | Abtast-Lauf |
+| AP-07 | W3-R07-02 (Kuckuck) | **weiterhin offen**: „Milch! Milch! Milch!“ ist weiter eine Erzählzeile (`W3_KUCH_NAR_0615`), jetzt nach „Die Tür der Uhr klappt auf.“ | Abtast-Lauf, Datei |
+| AP-07 | W3-R12-05 (`W3_KERN_MAX_0590`) | **behoben** (gekürzt) | Datei; im Spiel nicht gehört |
+| AP-07 | W3-N-04 (Englisch: „Servus“, „Hexenschuss“) | **behoben** („Servus, lad“, „Put my back out. At sixteen.“) | Datei |
+| AP-07 | W3-N-05 (Zelle kalt, dann „glüht“; Handtuch) | **Text behoben** („Sie war eiskalt. Im Fernseher ist sie wieder warm geworden.“), Handtuch offen | Film 19 |
+| AP-08 | W3-N-02, W3-N-03 (Morse-T, verzerrte Schrift, Akte magenta) | **behoben** | Nahansichten DE und EN |
+| AP-09 | W3-06 (Raumlicht) | **behoben in der Realität, offen in der Stadtstraße bei Nacht und auf dem Dachboden** | `belege/pr-w3/sim_nacht_figuren_in_tagesfarben.png` |
+| AP-09 | W3-R01-03 (Einhorn), W3-R06-02 (Autos, Nachttisch), W3-R07-01, W3-R08-05, W3-R10-01, W3-R11-01, W3-R12-03 | **behoben** | Raum-Tabelle |
+| AP-09 | W3-R03-07 (Plakat-Text, Fenster) | **nicht geprüft** | – |
+| AP-09 | W3-R06-03 (Max so groß wie die Häuser) | **unverändert** | Raumaufnahme Stadtstraße |
+| AP-09 | W3-R06-06 (Sonne/Mond unter den Porträts) | **weiterhin offen** | Abtast-Lauf 0/36 |
+| AP-09 | W3-R08-06 (viele Klone im Text, einer im Bild) | **weiterhin offen** | Raumaufnahme Büro |
+
+Restpunkte W3-1 bis W3-14 aus `docs/offene-punkte.md`: **weiterhin offen**; heute berührt und bestätigt offen sind W3-6 (Sonne), W3-7 (Nacht), W3-11 (Eimer-Regen ohne Wirkung drüben). Keiner davon hat sich im Spiel als erledigt gezeigt.
+
+## Nicht bestätigt
+
+- **Figuren außerhalb des Raums nach Abgängen** (Muster aus Welt 1 und 2): in Welt 3 nicht gefunden (siehe weltübergreifende Tabelle).
+- **Sackgasse durch Reihenfolge:** keine gefunden (17 Proben, siehe Sackgassen-Suche). Die einzige echte Sackgasse hängt am Speichern (R5-W3-22).
+- **„Ente unsichtbar“** (eigene Vermutung aus dem ersten Durchlauf bei Tempo 4): falsch, die Einblendung zeigt sie.
+- **Freier Moment auf der Straße mitten im Welt-Ende:** `stand sichern` wurde abgelehnt, das Spiel war beschäftigt; kein Fund.
+- **R5-P-09 in Tempo 1:** in keinem von sieben Sitzungsanfängen aufgetreten.
+
+## Nicht geprüft
+
+- **Voller Endstand der Welt 2.** `kontrollpunkte/welt-2/welt2_ende.json` kam am 25.11. um 14:06 und ist kein voller Endstand (Inventar echt, Schalter R7, R10, R11, R13 der Welt 2 offen); `welt2_ende_umgangen.json` lag bis zum Schluss nicht vor. Was vom echten Inventar aus gespielt wurde, steht unter „Lauf vom Stand `welt2_ende`“.
+- **Laufgitter:** kein systematisches Abklopfen der Böden; Laufwege nur aus dem Spielen.
+- **Feinheiten der Animation** (Fußrutschen, Münder, 2-px-Sprünge, Autos, W3-09, W3-15, W3-16, W3-R08-04, W3-NS-01 bis -04): die Filme haben 4 Bilder je Sekunde.
+- **Englisch:** nur Nahansichten, Code-Sicht-Wörter, Inventarnamen und rund zehn Zeilen; keine Gespräche, keine Rätselmenüs, keine Pfote.
+- **Pfote Stufe 3 bei R2, R4, R5** (nur bis Stufe 2 abgefragt).
+- **Unterstadt links** im Abtast-Lauf; **Küche** im Abtast-Lauf nur bis zur Eieruhr.
+- **Kern mit ungelesener Akte** (W3-R12-02), **Küchenradio und Tür in Kammer 3 beim Sprechen**, Plakat-Texte (W3-R03-07), Lauf durch den Sockel im Kern.
+- **Auswahlmenüs nach Neustart und Laden** (Patch-Panel, M.U.T.T.I.) auf den Fehler R5-W1-34; geprüft sind nur Gespräche (Deckert).
+- **Welt 4** über die Stichprobe hinaus.
+
 ## Gut gelöst
 
 - **Die Reihenfolge ist frei und trägt trotzdem.** Turm vor dem ersten Aufwachen, R13 vor oder nach R12, R8 gleich am Weltanfang, Kammer 3 in beiden Reihenfolgen, Regeln im Kern in falscher Reihenfolge: nichts davon führt in eine Sackgasse, und fast überall gibt es dafür eigene Zeilen. Das erste Aufwachen wird nach R7b nachgeholt, „Ins Labor“ erklärt, was noch fehlt.
@@ -288,7 +441,8 @@ Nebenbeobachtungen aus diesen 12 Minuten (für `w4`, nicht weiter untersucht):
 - **Pixel hat an fast jedem Hotspot der Basis eine eigene Zeile** (Steuerpult, Großrechner, Plakat, Terminal, Kalle, Rebellin), und seine drei Eingriffe (Fenster, Strom, Eimer) verändern sichtbar etwas.
 - **Die blaue Pastille** als Schleife statt Sackgasse, das Sparschwein („dann bring ich's hinter mich“), die falschen Bestellungen bei Herrn Vier, der Stempel am Kartenleser („Mensch, vorläufig.“ – Rot).
 - **Die neuen Hintergründe** tragen die Rätsel: Laser quer vor der Tür, Bernd im Spalt vor der Tür, drei getrennte Farbfelder im Büro, M.U.T.T.I. als hängende Küchenmaschine, Zelle glühend, vereist und fort; die Kühlung mit umgekipptem Eimer.
-- **M.U.T.T.I. fährt herunter und bleibt aus** (Auge dunkel, auch nach dem Laden).
+- **M.U.T.T.I. fährt sichtbar herunter** (Auge erlischt, Antennen sinken) und ist nach dem Laden des Stands weiter aus (Stand `w3_33_nach_R10`, Foto `sw_w3_33_nach_R10` im Lauf `pr-w3-echt`).
+- **Die Ente als Einblendung** oben rechts, während Pixel unten am Patch-Panel steckt: Ursache und Wirkung in einem Bild.
 - **Speichern und Laden mitten in den Ketten** (F5/F9 in Turm, Kammer, Code-Sicht, Zwischenspiel 3) hat in derselben Sitzung nach vorn nie etwas zerstört; die Reisetasche lässt kein Speichern zu.
 
 ## Vorschläge für die Lessons Learned
