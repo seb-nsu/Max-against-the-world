@@ -12,3 +12,7 @@ Alle Stände sind mit echten Klicks über die Fernsteuerung entstanden (`stand s
 | w3_05_gasse_anfang | apothekengasse | wie w3_04, Gasse erstmals betreten | Block 4 | wie w3_04 |
 | w3_06_pastillenwahl | apothekengasse | R3a (Déjà-vu), Kekse erhalten, vor der Wahl | Block 4 | PixelFeld, telefonbuchseite, rote_pastille, blaue_pastille, omas_kekse |
 | w3_07_sim_anfang | stadtstrasse | R3b; erster freier Moment in der Simulation (davor einmal die blaue Pastille genommen) | Block 4 | PixelFeld, telefonbuchseite, omas_kekse |
+| w3_08_kueche_anfang | kueche_orakel | bis R3b; Küche erstmals betreten, Oma noch nicht angesprochen; Wecker klingelt schon | Block 5 | PixelFeld, telefonbuchseite, omas_kekse |
+| w3_09_nach_R4 | kueche_orakel | R4 (Rezeptkarte), Kochbuch gelesen (Regel 2) | Block 5 | dazu rezeptkarte |
+| w3_10_nach_R5 | stadtstrasse | R5 (Code-Sicht, Glastür offen), Turm noch nicht betreten | Block 6 | wie w3_09 |
+| w3_11_basis_erstes_aufwachen | widerstandsbasis | erstes Aufwachen über den Radiowecker, Pixel auf der Leitung | Block 6 | wie w3_09 |

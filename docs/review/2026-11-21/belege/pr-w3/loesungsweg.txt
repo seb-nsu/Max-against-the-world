@@ -9,3 +9,94 @@ klick 20 335
 warte
 rklick @weinender_mann
 stand sichern w3_01_nach_R1a
+#-- Block 2: R2 Nudelbude (erstes Gespräch einer Sitzung in Tempo 1 öffnen, R5-P-09)
+tempo 1
+klick @herr_vier
+tempo 4
+option 0090
+option "Die Nummer vier."
+warte
+stand sichern w3_02_nach_R2
+#-- Block 3: R1b Mensch-Test
+klick 630 335
+warte
+klick 630 335
+warte
+klick @deckert
+option 0090
+option 2
+option 2
+option 2
+warte
+stand sichern w3_03_nach_R1b
+#-- Block 4: Telefonbuchseite, Morphäus (Symptom), Gasse, R3a, R3b
+klick 10 335
+warte
+klick 100 335
+warte
+klick @telefonbuchseite
+warte
+klick @morphaeus
+option 0450
+option 0480
+option 0600
+warte
+stand sichern w3_04_symptom_bekannt
+klick 630 335
+warte
+klick 630 335
+warte
+klick @ausgang_apothekengasse
+warte
+stand sichern w3_05_gasse_anfang
+klick @pixel
+warte
+klick @automat
+option 3
+warte
+stand sichern w3_06_pastillenwahl
+klick inv:rote_pastille
+klick inv:rote_pastille
+warte
+stand sichern w3_07_sim_anfang
+#-- Block 5: Küche, R4, Regel 2 (Kochbuch)
+klick 600 320
+warte
+klick 20 320
+warte
+klick @ausgang_kueche_orakel
+warte
+stand sichern w3_08_kueche_anfang
+klick @orakel_oma
+option 0130
+option 0110
+option 0150
+warte
+option 0420
+warte
+rklick @kochbuch
+knopf X
+warte
+stand sichern w3_09_nach_R4
+#-- Block 6: R5 Glastür (Code-Sicht), Wecker
+klick @ausgang_stadtstrasse
+warte
+klick 600 320
+warte
+rklick @tuer
+warte
+rklick @tuer
+warte
+knopf verschlossen
+knopf gesprächig
+warte
+stand sichern w3_10_nach_R5
+klick 20 320
+warte
+klick 20 320
+warte
+klick 20 320
+warte
+klick @klingelnder_radiowecker
+warte
+stand sichern w3_11_basis_erstes_aufwachen
