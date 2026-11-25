@@ -1,0 +1,11 @@
+# Lösungsweg Welt 3 (pr-w3), eine Fernsteuerungs-Zeile je Schritt.
+# Anfang: `start welt-3` im Hauptmenü (oder `stand holen welt2_ende`), erster freier Moment in der Unterstadt.
+# Aufruf: fs ORDNER -f loesungsweg.txt   (Tempo 4, Textmodus klick). Zeilen mit # sind Kommentare.
+#-- Block 1: R1a Beobachtungen
+stand sichern w3_00_anfang
+rklick @frau_regenschirm
+rklick @strassenmusiker_w3
+klick 20 335
+warte
+rklick @weinender_mann
+stand sichern w3_01_nach_R1a
