@@ -67,3 +67,143 @@ Alles hier ist am 25.11.2026 von der genannten Seite abgerufen.
 - Modelle: DiT 2B (`base`, `sft`, `turbo`), XL 4B (`xl-base`, `xl-sft`, `xl-turbo`), Sprachmodell 0,6B/1,7B/4B. Bedarf: ≤ 6 GB nur 2B-Turbo ohne LM; 16–20 GB 2B-sft oder XL-Turbo mit LM 1,7B; 20–24 GB XL; XL ab 12 GB mit Auslagerung, 20 GB ohne. Länge 10 s bis 10 min. Unter 10 s je Stück auf einer RTX 3090. Funktionen: Cover, Repaint/Edit, Stems (Track-Trennung), Mehrspur („Lego“), Referenz-Audio, LoRA-Training (8 Stücke in etwa 1 h auf einer 3090), BPM/Tonart/Takt als Vorgabe. AMD über ROCm (unter Windows Python 3.12), Intel, Mac, CPU.
 - AMD-Blog vom 04.02.2026: ComfyUI Desktop, Vorlage „ACE Step 1.5 Turbo AIO“, Radeon AI PRO R9700 etwa 4-fache Echtzeit (https://www.amd.com/en/blogs/2026/commercial-grade-ai-music-generation-on-amd-ryzen-ai-and-radeon-ace-step-1-5.html).
 - Steam: Inhaltsumfrage verlangt Angabe von „Pre-Generated“ KI-Inhalten, die mit dem Spiel ausgeliefert werden („artwork, sound, narrative, localization, etc.“), und die Zusage, dass das Spiel keine „illegal or infringing content“ enthält (https://partner.steamgames.com/doc/gettingstarted/contentsurvey).
+
+## 1. Animationen gegen externe Quellen
+
+**Kurzantwort:** Fertige Figuren-Animationen aus dem Netz passen nicht ins Spiel. Die Pakete sind für 20 bis 64 px hohe Figuren mit harter Pixel-Kontur gebaut; die Figuren des Spiels sind gemalt, pixeliert und 100 bis 290 px hoch. Brauchbar sind drei Dinge: (a) die **Vierbeiner-Bibliothek von Meshy** (neu, 127 Clips, auch Katze und Kuh) als Bewegungsvorlage für genau den Weg, der bei den Menschen schon funktioniert, (b) **Effekt-Schleifen** (Feuer, Rauch, Wasser, Funken), weil sie klein und stilneutral sind, am sichersten aus CC0-Quellen, (c) **Lernquellen** für Schrittfolge und Timing. Kaufen muss man dafür fast nichts.
+
+Nachtrag zur Bedarfsliste aus `pr-w2.md` (Stand 25.11., 18 Uhr; `pr-w3.md` hatte noch keine Kandidaten-Tabelle): B13 Pixel Klettern und Sprung an der Säule (Agora, fehlt), B14 Max `katapult` (2 Bilder, braucht 5–6 mit Flugbogen), B15 Staubwolke, Glitzer am Sack und Nies-Geste (Zwischenspiel 2), B16 Fähre gleitet aus dem Bild (Prop-Bewegung im Code), B17 Rücklauf Leonidas/Archimedes (vorhandene Zyklen gespiegelt, keine neuen Bilder). Das meiste davon ist wieder Einbau, nicht Bildmangel.
+
+### 1.1 Meshy-Animationsbibliothek (wichtigster Fund)
+
+| Punkt | Befund (Seite, abgerufen 25.11.2026) |
+| --- | --- |
+| Umfang | 779 Animationen: Walk & Run 160, Daily Actions 155, Fighting 149, Body Movements 155, Dancing 33, **Quadruped 127** (https://www.meshy.ai/animation-library) |
+| Vierbeiner | Dog, **Cat**, Horse, Wolf, Fox, Rabbit, Deer, Fawn, Leopard, **Cow**, **Sea Turtle**. Rig über `animation_type: quadruped`, kostet so viel wie ein Zweibeiner-Rig; jeder Vierbeiner-Clip läuft auf jedem Vierbeiner-Rig; Bewegung nach Text nur für Zweibeiner (https://docs.meshy.ai/api/rigging.md, https://docs.meshy.ai/en/api/animation) |
+| Preis | Seite nennt keine Dollarpreise; 149 Clips frei, Rest „Pro“. Im Projekt bisher gemessen: Clip 3 Credits, Rig etwa 20 (`docs/quellen.md`). Die API-Beispiele zeigen 3 (Animation) und 5 (Rig) Credits; verbindlich ist die Preisseite (**nicht bestätigt**, nicht abgerufen) |
+| Lizenz | „Animated characters rigged and animated on Meshy Pro and above include commercial-use rights“; Gratis-Stufe nur „personal and evaluation use“ |
+| Format | FBX, GLB; Bildrate 24/25/30/60 |
+| Passt es? | **Als Vorlage ja, als fertiges Bild nein** (wie bei den Menschen: Bewegung aus dem Clip, Aussehen aus dem gemalten Sprite) |
+
+**Was sich damit ändert:** `docs/quellen.md` („Keine Vierbeiner“) und `docs/lessons-learned.md` Abschnitt 1 („Meshy riggt keine Vierbeiner“) sind überholt. Für B1/B2 (Kater, Minka, Hofkater, Ziegen, Schildkröte) gibt es jetzt denselben Weg wie für Menschen: Winkel je Knochen aus einem Katzen- oder Kuh-Clip in Blender auslesen, Sprite in Teile zerlegen (Rumpf, Kopf, vier Beine in je zwei Gliedern, Schwanz in zwei bis drei Gliedern), 8 Bilder, automatische Prüfung (hier: genau vier Beine, eine Fußlinie, keine Löcher).
+
+Grenzen, ehrlich: (1) Pixels Beine sind im Sheet nur etwa 15 px lang; ein Teile-Rig mit zwei Gliedern je Bein dreht dort sehr wenige Pixel. Wahrscheinlich reicht es, aus dem Clip nur die **Schrittfolge, die Hoch-Tief-Bewegung von Schulter und Becken und den Schwanz** abzulesen und die acht Posen danach zu malen oder die vorhandenen acht Bilder umzusortieren und zu korrigieren. (2) Ein früherer Versuch mit eigenem Blender-Rig „sah nach anderer Katze aus“ (Lessons, Abschnitt 1); das lag am gerenderten 3D-Körper, nicht an der Bewegung. Nur die Winkel übernehmen. (3) Ob das automatische Vierbeiner-Rig aus einem gemalten Seitenbild einer dicken Katze ein brauchbares Skelett macht, ist **nicht geprüft**; man braucht es aber nicht zwingend, denn die Winkel lassen sich am Bibliotheks-Clip auf einem beliebigen Vierbeiner-Modell ablesen.
+
+Passende Zweibeiner-Clips für die Bedarfsliste (Namen laut https://docs.meshy.ai/api/animation-library):
+
+| Bedarf | Clip(s) | Bemerkung |
+| --- | --- | --- |
+| B3 Hinken (Hexenschuss, Welt 3) | `Injured_Walk`, `Unsteady_Walk` | Tempo im Spiel an die Schrittlänge anpassen (AN-08 vom 20.11.) |
+| B9 Treppe | `Climb_Stairs`, `Fast_Stair_Climb` | Gegenprobe zu `treppe_walk` (17 Bilder) |
+| B9 Hinknien, Aufheben | `Kneel_on_One_Knee_and_Stand`, `Male_Bend_Over_Pick_Up`, `Female_Crouch_Pick_Up_Place_Side` | für „Dose unter die Nase halten“, Servieren |
+| Aufstehen, Hinsetzen | `Stand_Up1`–`10`, `Sit_to_Stand_Transition_M`, `Stand_to_Sit_Transition_M`, `Sit_Lie_Bed` | Kapsel-Bewegungen Welt 3 sind schon gebaut, aber nicht eingebaut |
+| B4 Redegesten | `Talk_Passionately`, `Talk_with_Hands_Open`, `Talk_with_Left_Hand_Raised`, `Stand_Talking_Angry` | für Rede-Gesten in Standhöhe (Gollo, Grimmzahn) |
+| B12 Waldemar-Musical | 15 Tänze, u. a. `FunnyDancing_01`–`03` | als Timing-Vorlage für 8–12 Bilder |
+| nicht vorhanden | Gitarre/Laute, Singen, Zeigen, Überreichen | Laute über „Bewegung nach Text“ (im Projekt 13 Credits) oder malen |
+
+### 1.2 itch.io, kostenlos und kostenpflichtig
+
+Preise in US-Dollar wie auf der Seite; „ab“ heißt Mindestpreis bei „Name your own price“. Alle Seiten am 25.11.2026 abgerufen. Bildzahlen stehen nur dort, wo die Seite sie nennt.
+
+**Katzen (Bedarf B1, B10):**
+
+| Name, Urheber | URL | Preis | Lizenz im Wortlaut | Format, Größe, Sicht | Animationen | Bewertung für Couch Quest |
+| --- | --- | --- | --- | --- | --- | --- |
+| Catset, SeethingSwarm | https://seethingswarm.itch.io/catset | ab 19,99 $ | „Feel free to use for commercial projects and modify the character if needed.“ „Do not resell or give away the assets individually.“ „These assets are not to be openly distributed.“ Verbot von NFT/Blockchain. „No generative AI was used“ | PNG-Streifen und GIF je Animation, Zelle 40 × 40, Katze etwa 19 × 17 px, Seitenansicht, 5 Katzen | 23: Sit, Idle, Walk, Run, Jump, Fall, Land, Crouch, Sneak, Fright, Liedown, Sleep, Wallclimb, Ledgegrab u. a. | Als Asset **nein** (5-mal kleiner als Pixel, anderer Stil). Als **Vorlage gut**: vollständigster Satz an Katzenbewegungen in Seitenansicht (Sprung, Landen, Klettern, Hinlegen), genau die Lücken B10 und B13. Nachteil: 20 $ nur zum Ansehen; die GIFs auf der Seite zeigen das Timing schon |
+| Pet Cats Pack, LuizMelo | https://luizmelo.itch.io/pet-cat-pack | frei wählbar | „This package can be used freely and commercially - CC0 (Creative Commons Zero).“ „Credit is not required, but I would appreciate it.“ | ZIP, Katzen 20 × 14 bis 22 × 15 px, Seitenansicht (Tag „Side Scroller“), 6 Katzen | Idle 10, **Walk 8**, Run 8, Meow 4, Lying Down 8, Itch 2, Licking 5, **Stretching 13**, Sitting, Sleeping | Als Asset nein (winzig). **Beste Vorlage ohne Lizenzrisiko:** 8-Bilder-Gang und 13 Bilder Strecken (Aufwachen, B10) als Posenfolge zum Nachbauen; CC0 darf auch ins Repo |
+| 2D Pixel Art Cat Sprites, Elthen | https://elthen.itch.io/2d-pixel-art-cat-sprites | frei wählbar | „Feel free to use the sprites in commercial/non-commercial projects!“ (Verweis auf eigene Lizenzseite, **nicht gelesen**) | ein PNG-Bogen, laut Kommentar 32 × 32 | Idle ×2, Clean ×2, Movement ×2, Sleep, Paw, Jump, Scared | nur Vorlage; Erschrecken und Pfotenhieb passen zu `fauchen`/`ohrfeige` |
+| Cat Pixel Animations Pack, pixelbean | https://pixelbean.itch.io/cat-pixel-animations-pack | ab 1,60 $ (Teil frei) | „Use the assets on personal or commercial projects.“ „Edit or modify the assets to fit your game.“ „Credits to pixelbean.“ Kein Weiterverkauf | ZIP, 32 × 32, links und rechts | 11: Idle, Lick, Sleep, Jump, Run, Walk, Hurt u. a. | nur Vorlage, Namensnennung Pflicht; kein Mehrwert gegenüber LuizMelo |
+| Cat Pack, ToffeeCraft | https://toffeecraft.itch.io/cat-pack | frei / ab 1,80 $ | frei: „For personal use.“; bezahlt: „For commercial or personal use.“ „Not redistribute or resell this assets.“ | 32 × 32 | Idle, Fressen mit Napf, Lecken, Wanne; **kein Gehen** („Walking cat animation unfortunately not in this pack“) | nur für „Fressen“ (B10) als Vorlage |
+
+**Menschen (Bedarf B3, B9):**
+
+| Name, Urheber | URL | Preis | Lizenz im Wortlaut | Format, Größe, Sicht | Animationen | Bewertung |
+| --- | --- | --- | --- | --- | --- | --- |
+| Animated Point&Click Adventure Character, Magory | https://magory.itch.io/animated-pointclick-character | ab 3 $ | **keine Lizenzangabe auf der Seite** | PNG, 54 × 80, Vektor-Original (Inkscape), Palette Endesga 32, Gehen in 4 Richtungen | Walk 4 × 8, Aufheben ×3, Greifen, Idle ×2, Reden, Telefonieren ×2, dazu eine weiße Katze (Gehen, Putzen) | Als Asset nein (80 statt 190 px). Als Vorlage für **Greifen/Aufheben und Gehen nach vorn/hinten** brauchbar. Ohne Lizenztext nicht einbauen |
+| Point and Click Adventure Game Sprite Template, Danger Goose | https://danger-goose.itch.io/point-and-click-adventure-game-sprite-template | frei wählbar | **keine Lizenzangabe** | PNG und Aseprite, Proportionen nach King's Quest 5/6, Seite, vorn, hinten, 3/4 | Idle, Walk, Run, Push, Knopf drücken, Sitzen, Schulterzucken; Aufheben und Reden erst geplant | Aseprite-Datei als Anschauung, wie Tags und Richtungen angelegt sind; sonst nein |
+| Helix, Crosswired Studios | https://crosswiredstudios.itch.io/helix-8-directional-point-and-click-character | ab 20 $ | **keine Lizenzangabe**; „No generative AI was used“ | 64 px, 8 und 4 Richtungen | Idle, Walk, Run, **Talk** (je 8 Bilder), Kick, Pick Up, Porträts mit Reden 2–4 Bilder | nein: 64 px, für 8 Richtungen gebaut, die das Spiel nicht hat |
+
+Für den Menschen-Gang gibt es damit nichts Besseres als den vorhandenen Weg (Meshy-Clip plus Teile-Rig). Die itch-Pakete haben 8 Bilder je Zyklus wie das Spiel, aber ein Viertel bis ein Drittel der Höhe.
+
+**Reden, Mund (Bedarf B4):**
+
+| Name, Urheber | URL | Preis | Lizenz | Inhalt | Bewertung |
+| --- | --- | --- | --- | --- | --- |
+| Lip Sync Viseme Asset pack, Xanthius | https://xanthius.itch.io/lip-sync-asset-pack | frei wählbar | **keine Angabe**; als „AI Assisted“ gekennzeichnet | zwei Sätze Cartoon-Lippen mit je 15 Mundformen | Nur als Anschauung der Mundformen. Frontale Cartoon-Lippen passen nicht auf Profilköpfe mit 6 bis 10 px Mund |
+| Helix (oben) | – | – | – | `Talk` 8 Bilder, Porträt-Reden 2–4 Bilder | bestätigt den Befund: Adventure-Sprites reden mit einer Schleife, nicht mit Visemen |
+
+Mundbilder kauft man nicht; sie entstehen aus dem eigenen Kopf-Sprite (Kapitel 3).
+
+**Effekte (Bedarf B5–B8, B15):**
+
+| Name, Urheber | URL | Preis | Lizenz im Wortlaut | Format, Größe | Inhalt | Bewertung |
+| --- | --- | --- | --- | --- | --- | --- |
+| Elemental Bundle, Fellor | https://fellor.itch.io/elemental-bundle | ab 8,50 $ | „Use these assets in personal and commercial projects.“ Verboten: „Resell, redistribute, or reupload these assets in their original or modified form.“ „No AI Generated Content“ | PNG-Einzelbilder und Bögen, 64 × 64 | Feuer, Eis, Blitz, Erde; Wasser und Wind angekündigt | Größe passt zu Esse und Kessel (64 px). Stil: harte Pixel, kräftige Farben; nach Umfärben auf die Raum-Palette brauchbar. **Lizenzfalle Repo** (siehe 1.6) |
+| VFX Collection Vol. 1, kiddolink | https://kiddolink.itch.io/vfx-fx-collection-vol-1-pixel-art | ab 7,99 $ | „You CAN use this asset pack for commercial and/or personal projects;“ „You CAN edit and modify all content“; „You CANNOT resell and/or redistribute this asset pack;“ | **Aseprite-Dateien**, 4 PNG-Bögen, 80 GIF, Raster 96 × 96 | 40 Animationen: Rauch, Elektrizität, Feuer, Funken; Nachtrag 10 Rauch (10.12.2023) | Bester Kauf-Kandidat für Rauch (Smaugi), Funken (Schmied) und Blitz (Zapp-O-Mat), weil Aseprite-Quellen dabei sind und sich umfärben lassen. Repo-Falle wie oben |
+| +50 Pixel Art Effects Pack 1, pixel-zowie | https://pixel-zowie.itch.io/50-pixel-art-effects-pack-1 | **Preis auf der Seite nicht gefunden** | „Edit and use the asset in any commercial or non commercial project“; verboten „Resell or distribute the asset to others.“ | PNG, GIF, 8 bis 1024 px in acht Größen, 10 Farben | 50 Effekte: Explosion, Magie, Rauch, Wasser, Feuer, Blitz, Verwandlung | Verwandlungs- und Magie-Effekte (Moderwort, Sack). Hochskalierte Fassungen sind vergrößerte Pixel, kein Gewinn |
+| Fire VFX Spritesheets v2.0.0, Cartoon Coffee | https://cartooncoffee.itch.io/fire-spritesheets | ab 24,99 $ | „You are free to use these assets for any personal or commercial project.“ „Modifications are allowed to be made for the sole purpose of use in your projects only.“ „You may not redistribute, sell, or share these VFX even if modified without written permission by Cartoon Coffee.“ | „HD Sprite Sheets“, Größe nicht genannt | Feuer in vielen Formen | Gezeichnetes HD-Feuer läge dem **gemalten** Stil näher als Pixel-Feuer und ließe sich mit `pixelieren.py` in denselben Weg schicken wie die Figuren. Teuer für acht Fackeln; nur, wenn Feuer zum Blickfang werden soll |
+| Epic Hand-Drawn VFX Sprite Pack, sinbadstudios | https://sinbadstudios.itch.io/ultimate-vfx-pack-fire-lightning-water-smoke-animations | ab 0,50 $ | **keine Lizenzangabe**, keine Angabe zu KI | „over 600 unique sprites“: Blitz, Explosion, Feuer, Rauch, Wasser | – | Ohne Lizenztext und bei 0,50 $ für 600 Bilder nicht verwenden (Herkunft unklar) |
+
+### 1.3 OpenGameArt
+
+| Name, Urheber | URL | Lizenz | Inhalt | Bewertung |
+| --- | --- | --- | --- | --- |
+| Fire Smoke Animations, Reactorcore | https://opengameart.org/content/fire-smoke-animations | **CC0** | Pixel-Art-Feuer und -Rauch, „multiple variants, styles and sizes“, PNG transparent, Bögen und Einzelbilder (28.07.2025) | **Erste Wahl für B5/B6:** kostenlos, darf ins öffentliche Repo, darf umgefärbt werden. Größen vor dem Einsatz ansehen (nicht geladen) |
+| Cat sprites, Shepardskin | https://opengameart.org/content/cat-sprites | CC0 („No attribution necessary, unless you want to.“) | Gehen und Rennen als GIF, 2- und 4-fach (2014) | Vorlage für Schrittfolge und Rennen, sonst zu klein |
+| 2D cat sprite, Noob | https://opengameart.org/content/2d-cat-sprite | CC0 | Gang mit 4 Bildern (2017) | zu wenig Bilder; nein |
+| Animated particle effects 1 | https://opengameart.org/content/animated-particle-effects-1 | **nicht bestätigt** (Seite ließ sich nicht abrufen) | – | – |
+
+OpenGameArt hat für dieses Spiel denselben Größen- und Stilabstand wie itch.io. Der Vorteil sind die klaren Lizenzen (CC0, CC-BY) und dass CC0-Dateien im Repo liegen dürfen. Bei CC-BY-SA und GPL-Grafik aufpassen: Die Pflicht, Abwandlungen unter derselben Lizenz zu veröffentlichen, will man nicht im Spiel haben.
+
+### 1.4 Aseprite-Community: Lernquellen und Erweiterungen
+
+| Quelle | URL | Was man daraus nimmt |
+| --- | --- | --- |
+| Slynyrd, Pixelblog 25 „Motion Cycles“ (28.01.2020) | https://slynyrd.com/blog/2020/1/23/pixelblog-25-motion-cycles | **Vierbeiner-Gang (Hund) in 8 Bildern:** je Seite ein Beinpaar wie ein Zweibeiner behandeln; das Hinterbein folgt dem Vorderbein der Gegenseite einen Schritt später; Vorder- und Hinterbeine legen dieselbe Strecke zurück, sonst zieht sich der Körper wie eine Ziehharmonika; Reihenfolge Beine, Körper, Kopf, Schwanz; Becken und Schultern wippen gegenläufig. Dazu Flügelschlag in 8 Bildern (für Berta, B11) |
+| Game Developer, „Animating Four-Legged Beasts“, Cathy Feraday Miller (02.05.2012) | https://gamedeveloper.com/art/animating-four-legged-beasts | Fußfolge im Schritt: hinten links, vorn links, hinten rechts, vorn rechts; „two offset human walk cycles“; Hüfte, Brust und Kopf als drei versetzte hüpfende Bälle; vier Hauptposen (zwei Schritt-, zwei Durchschwungposen), symmetrisch, sonst hinkt das Tier |
+| Slynyrd, Pixelblog 50 „Human Walk Cycle“ (24.05.2024) | https://slynyrd.com/blog/2024/5/24/pixelblog-50-human-walk-cycle | neuere Fassung des schon genutzten Pixelblog 8 (**Inhalt nicht gelesen**, nur gefunden) |
+| Aseprite-Forum, „Aseprite Scripts Collection“ | https://community.aseprite.org/t/aseprite-scripts-collection/3599 | Sammelstelle der Skripte (**Inhalt nicht gelesen**) |
+| The Tween Machine, CarbsCode (v1.3.0) | https://carbscode.itch.io/the-tween-machine | Aseprite-Erweiterung, ab 5 $: Zwischenbilder für Position, Skalierung (auch ungleichmäßig: Squash und Stretch), Drehung, dazu Farbton/Alpha; Easing linear, In, Out, InOut. Lizenz: private und berufliche Nutzung erlaubt, kein Weitergeben, kein KI-Training. Braucht Aseprite ab 1.2.40 |
+| Tweencel, Devkidd (v2.2.2, 08.12.2025) | https://devkidd.itch.io/tweencel | Aseprite-Erweiterung, 5 $ (zurzeit 3,75 $): Zwischenbilder zwischen zwei Cels für Position, Größe, Drehung, Farbe; Bahnen (Bogen, Welle, Schütteln), Squash und Stretch. Grenze: noch nicht über mehrere Ebenen zugleich |
+| Powerhoof, Gang eines Vogelwesens für „The Drifter“ (2013) | https://www.powerhoof.com/?p=975 | Arbeitsweise eines Adventure-Studios: Becken, Brust, Schädel auf eigenen Ebenen, Glieder zuerst als Striche; erst 5 Bilder, am Ende 7 mit zwei Zwischenbildern an den langsamen Stellen |
+
+Zu den Erweiterungen: Sie tun dasselbe wie die Zwischenbild-Funktionen in den eigenen Python-Werkzeugen, aber von Hand in der Oberfläche. Für die Pipeline (Claude steuert Aseprite über Lua im Batch) bringen sie nichts; für Sebastian selbst wären 5 $ für Tweencel sinnvoll, wenn er Effekte (Sprungbogen, Einsaugen, Wackeln) in Aseprite ausprobieren will.
+
+### 1.5 Verfahren statt Assets
+
+| Verfahren | Was andere damit erreichen | Lässt es sich hier anschließen? | Aufwand | Nutzen |
+| --- | --- | --- | --- | --- |
+| **Vierbeiner-Clip aus Meshy als Winkelquelle** | echte Schrittfolge statt geratener Posen | ja, selber Weg wie bei den Menschen (Blender-MCP liest Winkel) | Versuch mit Pixel: 3–4 h, etwa 10–25 Credits | hoch: Pixel ist in jeder Szene zu sehen |
+| Schrittfolge nach Regel (Slynyrd 25, Feraday Miller) prüfen | Gang ohne „Ziehharmonika“ und ohne Hinken | ja, als automatische Prüfung: Fußkontakte je Bild zählen (unterste Pixel je Bein), Folge HL-VL-HR-VR, Fußlinie konstant, Rumpflänge ±2 px | 2–3 h für das Prüfskript | mittel: findet auch die 9 % Höhenschwankung der XXL-Ziege |
+| Zwischenbilder nur an den langsamen Stellen („auf Zweien“ mit Halten) | weniger Bilder, klareres Timing (Powerhoof: 5 → 7 Bilder) | ja, über das vorhandene `folge` in den JSON-Daten, ohne neue Bilder | 1 h je Geste | mittel: gegen „springt von Pose zu Pose“ |
+| Squash und Stretch per Code | Sprünge, Landen, Einsaugen wirken ohne neue Bilder | ja: `scale` und `skew` des `Sprite2D` in Godot über einen Tween (Sprung Pixel, Katapult Max, Abreise in den Zapp-O-Mat) | 2–4 h für eine wiederverwendbare Funktion | hoch bei B8/B10/B14, kostet keine Grafik |
+| Flugbahn als Kurve im Code | Sprung als ein Bogen statt zwei | ja (`cq_figur.gd` hat `springen` schon mit Tween) | 1–2 h | hoch für Pixels Sprung auf die Werkbank |
+| Sub-Pixel-Animation (Bewegung durch Farbwechsel statt Versatz) | Atmen und Blinzeln bei sehr kleinen Sprites | kaum nötig: Bei 100–290 px Höhe ist ein Versatz von 1 px schon fein genug. Sinnvoll höchstens für Fackeln mit 5 × 12 px | – | gering |
+| Smear-Frames (verwischtes Zwischenbild bei schnellen Bewegungen) | Ohrfeige, Wurf, Hammerschlag wirken schneller | ja, je Geste ein Bild von Hand in Aseprite; nicht aus Gemini („Bewegungswörter erzeugen Geisterfiguren“, Lessons) | 0,5 h je Geste | mittel für `ohrfeige`, `haemmern`, `werfen` |
+| Aseprite-Tags je Bewegung, Export mit `--list-tags` | eine Quelle je Figur, Timing je Bild in der Datei | teilweise: Das Projekt hält Timing schon in JSON; ein Umbau lohnt nicht | – | gering |
+| Skelett-Animation zur Laufzeit (Skeleton2D, Spine) | weiche Bewegungen aus wenigen Teilen | **nein** für dieses Spiel: gedrehte Teile zur Laufzeit erzeugen schräge Pixelkanten und passen nicht zur Bild-für-Bild-Optik; das Teile-Rig rechnet vorab und prüft die Bilder (Kapitel 2) | – | – |
+| Rotoskopie aus 3D (Dead-Cells-Weg, PixelOver) | komplette Figur aus dem 3D-Modell gerendert | schon verworfen („wirkt technisch“, Lessons Abschnitt 1) | – | – |
+| KI-Sprite-Dienste mit Animation (PixelLab, Retro Diffusion) | Gang und Gesten direkt als Pixel-Sprites | **nicht geprüft**; steht schon als offener Punkt P7. Stilbruch zu den gemalten Figuren wahrscheinlich | – | – |
+
+### 1.6 Lizenzfallen
+
+1. **Öffentliches GitHub-Repo.** Praktisch jedes itch.io-Paket verbietet die Weitergabe („You CANNOT resell and/or redistribute“, „not to be openly distributed“, „may not redistribute … even if modified“). Eine gekaufte PNG-Datei im öffentlichen Repo ist eine Weitergabe, auch umgefärbt. Folge: Gekaufte Bilder dürfen nur ins Spiel (gepackt in der exportierten `.pck`), nicht als lose Dateien ins Repo. Das Projekt baut aber aus dem Repo (CI, Web-Export über GitHub Pages). Entweder das Repo wird privat, oder die gekauften Dateien liegen außerhalb und werden beim Bauen dazugeholt, oder man nimmt nur **CC0**. Für ein paar Fackeln lohnt nur der dritte Weg.
+2. **Fehlender Lizenztext** (Magory, Danger Goose, Helix, Xanthius, sinbadstudios): Ohne Text gilt nicht „alles erlaubt“, sondern nur das, was der Kauf stillschweigend einräumt. Vor Einbau schriftlich nachfragen oder weglassen.
+3. **KI-Klauseln:** The Tween Machine verbietet KI-Training mit dem Skript; die Sprite-Pakete oben haben keine Klausel gegen KI-Nachbearbeitung, einige werben mit „No generative AI was used“. Wer fremde Sprites als Referenzbild in Gemini gibt, bewegt sich bei „modify“ in einer Grauzone; als reine Anschauung (ansehen, Schrittfolge abzählen, selbst malen) ist es unbedenklich.
+4. **Steam-Offenlegung** betrifft die eigenen KI-Grafiken ohnehin (Kapitel 4.5); zugekaufte handgemachte Effekte ändern daran nichts.
+5. **Stilmischung:** Harte Pixel-Effekte mit 2–4 Farben neben gemalten Figuren mit weichen Verläufen fallen auf. Jeder fremde Effekt muss durch dieselbe Umrechnung (Palette des Raums, `ambiente.py`) wie die eigenen.
+6. **Meshy:** kommerzielle Rechte nur für Ausgaben aus einem bezahlten Tarif; Abo-Zeitraum der Erzeugung belegen (Rechnung aufheben).
+
+### 1.7 Empfehlung zu Frage 1
+
+| Maßnahme | Kosten | Aufwand | Nutzen |
+| --- | --- | --- | --- |
+| **Tun:** Versuch „Pixel-Gang aus Meshy-Katzenclip“ (Clip ansehen, Winkel und Fußfolge auslesen, 8 Posen neu ordnen oder im Teile-Rig bauen, GIF alt/neu an Sebastian). Bei Erfolg Minka, Hofkater, Ziegen (Kuh- oder Hirsch-Clip), Schildkröte (Sea Turtle ist ein Schwimmclip, eher nicht) | 10–25 Credits aus dem Bestand (0 €) | 3–4 h Versuch, danach 1–2 h je Tier | hoch |
+| **Tun:** Prüfskript für Vierbeiner-Gänge (Fußfolge, Fußlinie, Rumpflänge) neben die Zwei-Beine-Prüfung | 0 € | 2–3 h | mittel |
+| **Tun:** Squash/Stretch und Flugkurve als Funktion in `cq_figur.gd` (Sprung, Katapult, Einsaugen) | 0 € | 2–4 h | hoch |
+| **Tun:** CC0-Feuer und -Rauch von OpenGameArt (Reactorcore) ansehen; passende Schleifen durch `ambiente.py` auf die Raum-Palette bringen | 0 € | 1–2 h | mittel (Fackeln „blass“) |
+| **Als Vorlage nutzen, nicht einbauen:** LuizMelo Pet Cats (CC0) für Strecken/Aufwachen, Catset-GIFs auf der Seite für Sprung/Klettern, Slynyrd 25 und Feraday Miller für die Schrittfolge | 0 € | – | mittel |
+| **Kann man kaufen, muss man nicht:** kiddolink VFX Vol. 1 (7,99 $, mit Aseprite-Quellen) für Rauch/Funken/Blitz, nur wenn die CC0-Schleifen nicht reichen und die Repo-Frage geklärt ist; Tweencel (3,75–5 $) für Sebastians eigenes Probieren in Aseprite | 0 bis etwa 13 $ (rund 12 €) | 1 h | gering bis mittel |
+| **Lassen:** fertige Figuren- und Katzen-Sprites (zu klein, anderer Stil), Mund-Pakete, Pakete ohne Lizenztext, Cartoon Coffee (25 $ für Fackeln), 3D-Rendern statt Malen | – | – | – |
+
+**Gesamtkosten der Empfehlung: 0 €** (plus Meshy-Credits aus dem Bestand), höchstens etwa 12 € für die beiden Kann-Käufe. Der größte Hebel für bessere Animationen liegt nicht in fremden Quellen, sondern im Einbau der schon gebauten Bewegungen und in den Fußlinien- und Größensprüngen (Funde der Welt-Prüfer).
