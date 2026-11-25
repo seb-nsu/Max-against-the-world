@@ -16,3 +16,10 @@ Alle Stände sind mit echten Klicks über die Fernsteuerung entstanden (`stand s
 | w3_09_nach_R4 | kueche_orakel | R4 (Rezeptkarte), Kochbuch gelesen (Regel 2) | Block 5 | dazu rezeptkarte |
 | w3_10_nach_R5 | stadtstrasse | R5 (Code-Sicht, Glastür offen), Turm noch nicht betreten | Block 6 | wie w3_09 |
 | w3_11_basis_erstes_aufwachen | widerstandsbasis | erstes Aufwachen über den Radiowecker, Pixel auf der Leitung | Block 6 | wie w3_09 |
+| w3_12_vor_R13 | widerstandsbasis | wie w3_11; Spielfigur Pixel vor Kalles Tisch | Block 7 | wie w3_09 |
+| w3_13_nach_R13 | widerstandsbasis | R13 (Morse-Tabelle, Opas Nachricht) | Block 7 | dazu morse_tabelle |
+| w3_14_nach_R12 | unterstadt_strasse | R12 (Suppe, Zugangskarte) | Block 8 | PixelFeld, telefonbuchseite, omas_kekse, morse_tabelle, zugangskarte |
+| w3_15_laboreingang_anfang | laboreingang | wie w3_14, Laboreingang erstmals betreten | Block 8 | wie w3_14 |
+| w3_16_nach_R8 | laboreingang | R8 (Hausmeister weg, ohne Öl) | Block 8 | ohne telefonbuchseite |
+| w3_17_panzertuer_offen | laboreingang | Karte im Leser, Panzertür offen | Block 8 | ohne zugangskarte |
+| w3_18_nach_R9a | laboreingang | R9a (Leitung gelegt) | Block 8 | PixelFeld, omas_kekse, morse_tabelle |

@@ -100,3 +100,51 @@ warte
 klick @klingelnder_radiowecker
 warte
 stand sichern w3_11_basis_erstes_aufwachen
+#-- Block 7: R13 Morse-Tabelle (als Pixel)
+portraet pixel
+klick 620 320
+warte
+klick 620 320
+warte
+stand sichern w3_12_vor_R13
+klick @kalles_tasse
+warte
+stand sichern w3_13_nach_R13
+#-- Block 8: R12 Suppe, R8 Hausmeister, R9a Leitung
+portraet max
+klick 20 320
+warte
+klick 20 320
+warte
+klick 20 320
+warte
+klick @ausgang_unterstadt_strasse
+warte
+klick 20 335
+warte
+klick 20 335
+warte
+klick inv:rezeptkarte
+klick @herr_vier
+warte
+stand sichern w3_14_nach_R12
+klick 630 335
+warte
+klick 630 335
+warte
+klick 630 335
+warte
+klick @ausgang_laboreingang
+warte
+stand sichern w3_15_laboreingang_anfang
+klick inv:telefonbuchseite
+klick @hausmeister
+warte
+stand sichern w3_16_nach_R8
+klick inv:zugangskarte
+klick @kartenleser
+warte
+stand sichern w3_17_panzertuer_offen
+klick @datenanschluss
+warte
+stand sichern w3_18_nach_R9a
