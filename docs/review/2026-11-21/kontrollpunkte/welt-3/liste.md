@@ -38,4 +38,6 @@ Alle Stände sind mit echten Klicks über die Fernsteuerung entstanden (`stand s
 | w3_31_nach_R9d | testkammer_3 | R9d (Kammer 3), Huhn bleibt am Boden | Block 11 | ohne gummihuhn |
 | w3_32_kern_anfang | kern | Kern betreten, M.U.T.T.I. noch an | Block 12 | wie w3_31 |
 | w3_33_nach_R10 | kern | R10 (Paradoxon), Zelle glüht | Block 12 | wie w3_31 |
-| w3_34_nach_R11 | widerstandsbasis | R11 (Lösung A, Kekse), Max mit der Zelle in der Basis | Block 12 | PixelFeld, omas_kekse, morse_tabelle, kaffeetasse, sonnenbrille, schmidts_akte, portalgeraet, energiezelle |
+| w3_34_zs3_dachboden_frei | dachboden (Zwischenspiel 3) | R11 (Lösung A, Kekse); danach laufen Welt-Ende (Basis, Telefonzelle) und Ankunftsszene des Zwischenspiels ohne freien Moment durch; erster freier Moment auf dem Dachboden, Zelle abgegeben | Block 12 (`knopf kalt`, `warte`) | PixelFeld, omas_kekse, morse_tabelle, kaffeetasse, sonnenbrille, schmidts_akte, portalgeraet |
+| w3_35_zs3_gepackt | dachboden (Zwischenspiel 3) | Opa befragt (zs3_0450), Tasche gepackt: Sonnenbrille, Omas Kekse; vor dem zweiten Dreh | Block 13 | PixelFeld, omas_kekse, sonnenbrille, notizbuch, thunfischdose, kochloeffel (die drei Pflichtfach-Teile kommen beim Packen dazu, auch im Schnellstart) |
+| welt3_ende | testbild (Welt 4) | erster freier Moment in Welt 4 nach der Ankunftsszene. **Entstanden aus `start welt-3`, nicht aus dem echten Endstand von Welt 2** (wird ersetzt, sobald `welt2_ende.json` da ist) | Block 13 | wie w3_35 |

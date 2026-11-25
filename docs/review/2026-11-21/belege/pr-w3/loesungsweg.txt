@@ -278,4 +278,26 @@ warte
 knopf heiß
 knopf kalt
 warte
-stand sichern w3_34_nach_R11
+# Nach R11 laufen Welt-Ende und Ankunft im Zwischenspiel 3 von selbst durch (kein freier Moment in der Basis)
+warte
+stand sichern w3_34_zs3_dachboden_frei
+#-- Block 13: Zwischenspiel 3 (Opa steht bei (520,332); er geht manchmal umher, dann Koordinate anpassen)
+klick 520 240
+warte
+option zs3_0450
+warte
+option zs3_0460
+warte
+klick @drehknopf
+warte
+# Reisetasche: Sonnenbrille und Omas Kekse in die Wahlfächer (Lage der Kacheln bei 7 Gegenständen)
+klick 340 165
+warte
+klick 168 165
+warte
+knopf "Fertig gepackt"
+warte
+stand sichern w3_35_zs3_gepackt
+klick @drehknopf
+warte
+stand sichern welt3_ende
