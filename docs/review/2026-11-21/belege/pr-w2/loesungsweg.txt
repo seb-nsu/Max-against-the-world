@@ -1,0 +1,106 @@
+# Lösungsweg Welt 2 (pr-w2), gerader Durchlauf mit echten Klicks, vom echten Endstand von Welt 1 bis zum ersten freien Moment in Welt 3.
+# Vorbereitung: kontrollpunkte/welt-1/welt1_ende.json nach ORDNER/staende/ kopieren.
+# Aufruf: fs start ORDNER tempo=1 ; fs ORDNER -f loesungsweg.txt
+# "warte" vor Klicks fängt Pixels Zurufe ab (GD-W1-04). Das erste Gespräch läuft in Tempo 1 (R5-P-09).
+#-- Block 1: Nil-Delta (R1)
+knopf Verstanden
+stand holen welt1_ende
+warte
+klick @faehrmann
+warte
+option 0360
+tempo 4
+warte
+portraet pixel
+warte
+klick @faehre
+warte
+option "Doch nicht"
+warte
+rklick inv:handy
+warte
+klick @papyrusblatt
+warte
+klick 620 320
+warte
+klick 620 320
+warte
+klick @sandweg
+warte
+#-- Block 2: Thronsaal (R2a, R2b, Audienz)
+klick @schreiber
+warte
+option 0100
+warte
+rklick @inschrift
+knopf X
+warte
+klick inv:bildtafel
+klick @schreiber
+option "Mann"
+option "Katze"
+option "Pharao"
+option "Ohr"
+warte
+klick 5 330
+warte
+klick @ausgang_nil_delta
+warte
+portraet pixel
+klick 20 320
+warte
+klick 20 320
+warte
+klick @sobek
+warte
+portraet max
+klick 630 320
+warte
+klick 630 320
+warte
+klick @sandweg
+warte
+portraet pixel
+klick 620 330
+warte
+klick 620 330
+warte
+klick @hofkater
+warte
+portraet max
+warte
+klick inv:thunfischdose
+klick @hofkater
+warte
+klick inv:kaugummi
+klick inv:kaugummi
+warte
+#-- Block 3: Palastküche (R4 über den Fladen)
+klick 630 330
+warte
+klick @tuer_zur_kueche
+warte
+klick @nebet
+warte
+option 0250
+warte
+klick @brot
+warte
+klick @datteln
+warte
+klick @zwiebel
+warte
+klick @traubensaft
+warte
+klick inv:datteln
+klick inv:brot
+warte
+klick inv:zwiebel
+klick inv:fladen
+warte
+klick inv:fladen
+klick @lehmoefen
+warte
+klick inv:fladen
+klick @nebet
+warte
