@@ -213,3 +213,69 @@ option 3
 warte
 klick 300 335
 stand sichern w3_25_nach_R7b
+#-- Block 11: Labor, R9b, R9c, R9d
+klick 620 320
+warte
+klick @terminal
+warte
+option "Ins Labor"
+warte
+stand sichern w3_26_kammer1_anfang
+klick @portalgeraet_in_der_halterung
+warte
+klick inv:portalgeraet
+klick inv:portalgeraet
+warte
+klick @bernd
+warte
+knopf schwer
+knopf leicht
+warte
+stand sichern w3_27_nach_R9b
+klick @ausgang_testkammer_2
+warte
+stand sichern w3_28_kammer2_anfang
+rklick @kritzelei
+knopf X
+warte
+klick @gummihuhn
+warte
+klick @laser
+warte
+knopf tödlich
+knopf harmlos
+warte
+stand sichern w3_29_nach_R9c
+klick @ausgang_testkammer_3
+warte
+stand sichern w3_30_kammer3_anfang
+klick @tuer
+warte
+knopf verschlossen
+knopf gesprächig
+warte
+klick @bernd
+warte
+knopf schwer
+knopf leicht
+warte
+stand sichern w3_31_nach_R9d
+#-- Block 12: Kern, R10, R11
+klick @ausgang_kern
+warte
+stand sichern w3_32_kern_anfang
+klick @mutti
+warte
+option "Regel 1 vorhalten"
+warte
+option "Regel 2 vorhalten"
+warte
+option "Regel 3 vorhalten"
+warte
+stand sichern w3_33_nach_R10
+klick @energiezelle
+warte
+knopf heiß
+knopf kalt
+warte
+stand sichern w3_34_nach_R11

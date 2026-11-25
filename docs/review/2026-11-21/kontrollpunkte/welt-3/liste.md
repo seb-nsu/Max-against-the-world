@@ -30,3 +30,12 @@ Alle Stände sind mit echten Klicks über die Fernsteuerung entstanden (`stand s
 | w3_23_vor_R7a | buero_50 | Akte gelesen (Regel 1), Farbcode-Zettel | Block 10 | dazu farbcode_zettel |
 | w3_24_nach_R7a | buero_50 | R7a (Farbcode gesendet) | Block 10 | ohne farbcode_zettel |
 | w3_25_nach_R7b | widerstandsbasis | R7b (Kabel; einmal falsch gesteckt), Max wach in der Basis | Block 10 | PixelFeld, omas_kekse, morse_tabelle, kaffeetasse, sonnenbrille, schmidts_akte |
+| w3_26_kammer1_anfang | testkammer_1 | Labor erstmals betreten (Terminal „Ins Labor“), Akte auch in der Realität angesehen | Block 11 | wie w3_25 |
+| w3_27_nach_R9b | testkammer_1 | R9b (Kammer 1), Portalgerät genommen und benutzt (Opa-Portal) | Block 11 | dazu portalgeraet |
+| w3_28_kammer2_anfang | testkammer_2 | Kammer 2 betreten | Block 11 | wie w3_27 |
+| w3_29_nach_R9c | testkammer_2 | R9c (Kammer 2), Kritzelei gelesen (Regel 3), Gummihuhn | Block 11 | dazu gummihuhn |
+| w3_30_kammer3_anfang | testkammer_3 | Kammer 3 betreten | Block 11 | wie w3_29 |
+| w3_31_nach_R9d | testkammer_3 | R9d (Kammer 3), Huhn bleibt am Boden | Block 11 | ohne gummihuhn |
+| w3_32_kern_anfang | kern | Kern betreten, M.U.T.T.I. noch an | Block 12 | wie w3_31 |
+| w3_33_nach_R10 | kern | R10 (Paradoxon), Zelle glüht | Block 12 | wie w3_31 |
+| w3_34_nach_R11 | widerstandsbasis | R11 (Lösung A, Kekse), Max mit der Zelle in der Basis | Block 12 | PixelFeld, omas_kekse, morse_tabelle, kaffeetasse, sonnenbrille, schmidts_akte, portalgeraet, energiezelle |
