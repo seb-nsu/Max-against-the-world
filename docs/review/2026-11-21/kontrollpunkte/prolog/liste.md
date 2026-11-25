@@ -19,3 +19,5 @@ Alle Stände sind **echte Spielstände vom Klickweg** (Lauf `pr-p-haupt`, 25.11.
 | **`prolog_ende`** | **Dorfplatz (Welt 1)** | **Prolog ganz gelöst (P1–P3), Reisetaschen-Szene, Ankunft und Toadi-Szene gespielt, Opas Zettel gelesen (`W1_ANK_NACHTRAG`), erster freier Moment in Welt 1** | **thunfischdose, PixelFeld, reisetasche, notizbuch, opas_zettel** (Dosenöffner bleibt laut Bauplan auf dem Dachboden) | **ganzer Lösungsweg; Abschnitt `welt-1`, Max bei Raum (430,320), Pixel (365,320), Toadi (720,300)** |
 
 Schalter in `prolog_ende`: `P0_DOSE_OFFEN`, `P0_P1_GELOEST`, `P0_P2_GELOEST`, `P0_P3_GELOEST`, `P0_PIXEL_GEWECKT`, `P0_TASSE_GEFUELLT`, `W1_ANK_NACHTRAG`, dazu `BESUCHT_*` und `NAHANSICHT_kalender`, `NAHANSICHT_opas_zettel`.
+
+**Achtung (R5-P-01):** Einen früheren Kontrollpunkt nur nach einem Neustart der Fernsteuerung holen (`fs stop`, `fs start` ohne `frisch`, dann `stand holen` im Hauptmenü). In laufender Sitzung fehlen sonst die seither genommenen Gegenstände. Einzelheiten: `kontrollpunkte/ACHTUNG-stand-holen.md`.
