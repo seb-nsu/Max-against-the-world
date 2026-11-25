@@ -2,13 +2,25 @@
 	"abschnitt": "welt-4",
 	"aufloesung_hoehe": 360.0,
 	"beschreibung": "r5 welt3_ende",
-	"datum": "2026-11-25 13:23:13",
+	"datum": "2026-11-25 18:41:27",
 	"platz": "manuell_12",
 	"popochiu": {
 		"character_inventories": {
 			"Max": [
 				{
+					"name": "Thunfischdose",
+					"qty": 1.0
+				},
+				{
 					"name": "PixelFeld",
+					"qty": 1.0
+				},
+				{
+					"name": "Notizbuch",
+					"qty": 1.0
+				},
+				{
+					"name": "Kochloeffel",
 					"qty": 1.0
 				},
 				{
@@ -18,25 +30,13 @@
 				{
 					"name": "Sonnenbrille",
 					"qty": 1.0
-				},
-				{
-					"name": "Notizbuch",
-					"qty": 1.0
-				},
-				{
-					"name": "Thunfischdose",
-					"qty": 1.0
-				},
-				{
-					"name": "Kochloeffel",
-					"qty": 1.0
 				}
 			]
 		},
 		"description": "r5 welt3_ende",
 		"dialogs": {
 			"Alwin": {
-				"_has_done_init": false,
+				"_has_done_init": true,
 				"options": {}
 			},
 			"Archimedes": {
@@ -56,48 +56,19 @@
 				"options": {}
 			},
 			"Cicero": {
-				"_has_done_init": false,
+				"_has_done_init": true,
 				"options": {}
 			},
 			"Deckert": {
 				"_has_done_init": true,
-				"options": {
-					"0040": {
-						"disabled": false,
-						"text": "W3_TEST_MAX_0040",
-						"used": false,
-						"used_times": 0.0,
-						"visible": true
-					},
-					"0060": {
-						"disabled": false,
-						"text": "W3_TEST_MAX_0060",
-						"used": false,
-						"used_times": 0.0,
-						"visible": true
-					},
-					"0090": {
-						"disabled": false,
-						"text": "W3_TEST_MAX_0090",
-						"used": true,
-						"used_times": 1.0,
-						"visible": true
-					},
-					"0420": {
-						"disabled": false,
-						"text": "W3_TEST_MAX_0420",
-						"used": false,
-						"used_times": 0.0,
-						"visible": true
-					}
-				}
+				"options": {}
 			},
 			"Empfangsdame": {
 				"_has_done_init": false,
 				"options": {}
 			},
 			"Faehrmann": {
-				"_has_done_init": false,
+				"_has_done_init": true,
 				"options": {}
 			},
 			"FbiAgent": {
@@ -113,15 +84,15 @@
 				"options": {}
 			},
 			"Gollo": {
-				"_has_done_init": false,
+				"_has_done_init": true,
 				"options": {}
 			},
 			"Grieche": {
-				"_has_done_init": false,
+				"_has_done_init": true,
 				"options": {}
 			},
 			"Grimmzahn": {
-				"_has_done_init": false,
+				"_has_done_init": true,
 				"options": {}
 			},
 			"Hausmeister": {
@@ -151,15 +122,15 @@
 					"0120": {
 						"disabled": false,
 						"text": "W3_EING_MAX_0120",
-						"used": false,
-						"used_times": 0.0,
+						"used": true,
+						"used_times": 1.0,
 						"visible": true
 					},
 					"0140": {
 						"disabled": false,
 						"text": "W3_EING_MAX_0140",
 						"used": true,
-						"used_times": 1.0,
+						"used_times": 3.0,
 						"visible": true
 					}
 				}
@@ -170,57 +141,14 @@
 			},
 			"HerrVier": {
 				"_has_done_init": true,
-				"options": {
-					"0020": {
-						"disabled": false,
-						"text": "W3_NUD_MAX_0020",
-						"used": false,
-						"used_times": 0.0,
-						"visible": true
-					},
-					"0040": {
-						"disabled": false,
-						"text": "W3_NUD_MAX_0040",
-						"used": false,
-						"used_times": 0.0,
-						"visible": true
-					},
-					"0070": {
-						"disabled": false,
-						"text": "W3_NUD_MAX_0070",
-						"used": false,
-						"used_times": 0.0,
-						"visible": true
-					},
-					"0090": {
-						"disabled": false,
-						"text": "W3_NUD_MAX_0090",
-						"used": true,
-						"used_times": 1.0,
-						"visible": true
-					},
-					"0110": {
-						"disabled": false,
-						"text": "W3_NUD_MAX_0110",
-						"used": false,
-						"used_times": 0.0,
-						"visible": true
-					},
-					"0130": {
-						"disabled": false,
-						"text": "W3_NUD_MAX_0130",
-						"used": false,
-						"used_times": 0.0,
-						"visible": true
-					}
-				}
+				"options": {}
 			},
 			"Hieron": {
-				"_has_done_init": false,
+				"_has_done_init": true,
 				"options": {}
 			},
 			"Humbert": {
-				"_has_done_init": false,
+				"_has_done_init": true,
 				"options": {}
 			},
 			"Kalle": {
@@ -236,65 +164,15 @@
 				"options": {}
 			},
 			"Maklerin": {
-				"_has_done_init": false,
+				"_has_done_init": true,
 				"options": {}
 			},
 			"Morphaeus": {
 				"_has_done_init": true,
-				"options": {
-					"0410": {
-						"disabled": false,
-						"text": "W3_NUD_MAX_0410",
-						"used": false,
-						"used_times": 0.0,
-						"visible": true
-					},
-					"0450": {
-						"disabled": false,
-						"text": "W3_NUD_MAX_0450",
-						"used": true,
-						"used_times": 1.0,
-						"visible": true
-					},
-					"0480": {
-						"disabled": false,
-						"text": "W3_NUD_MAX_0480",
-						"used": true,
-						"used_times": 1.0,
-						"visible": true
-					},
-					"0510": {
-						"disabled": false,
-						"text": "W3_NUD_MAX_0510",
-						"used": false,
-						"used_times": 0.0,
-						"visible": true
-					},
-					"0550": {
-						"disabled": false,
-						"text": "W3_NUD_MAX_0550",
-						"used": false,
-						"used_times": 0.0,
-						"visible": true
-					},
-					"0580": {
-						"disabled": false,
-						"text": "W3_NUD_MAX_0580",
-						"used": false,
-						"used_times": 0.0,
-						"visible": true
-					},
-					"0600": {
-						"disabled": false,
-						"text": "W3_NUD_MAX_0600",
-						"used": true,
-						"used_times": 1.0,
-						"visible": true
-					}
-				}
+				"options": {}
 			},
 			"Nebet": {
-				"_has_done_init": false,
+				"_has_done_init": true,
 				"options": {}
 			},
 			"Opa": {
@@ -394,11 +272,11 @@
 				"options": {}
 			},
 			"Schmied": {
-				"_has_done_init": false,
+				"_has_done_init": true,
 				"options": {}
 			},
 			"Schreiber": {
-				"_has_done_init": false,
+				"_has_done_init": true,
 				"options": {}
 			},
 			"SitcomMutter": {
@@ -418,15 +296,15 @@
 				"options": {}
 			},
 			"SphinxFigur": {
-				"_has_done_init": false,
+				"_has_done_init": true,
 				"options": {}
 			},
 			"Stabmacher": {
-				"_has_done_init": false,
+				"_has_done_init": true,
 				"options": {}
 			},
 			"Steinmetz": {
-				"_has_done_init": false,
+				"_has_done_init": true,
 				"options": {}
 			},
 			"SuperSiegfried": {
@@ -434,11 +312,11 @@
 				"options": {}
 			},
 			"Toadi": {
-				"_has_done_init": false,
+				"_has_done_init": true,
 				"options": {}
 			},
 			"Waldemar": {
-				"_has_done_init": false,
+				"_has_done_init": true,
 				"options": {}
 			},
 			"WonderWilma": {
@@ -446,7 +324,7 @@
 				"options": {}
 			},
 			"Zeldina": {
-				"_has_done_init": false,
+				"_has_done_init": true,
 				"options": {}
 			}
 		},
@@ -454,20 +332,139 @@
 			"custom_data": {
 				"abschnitt": "welt-4",
 				"angesehen": {
-					"Buero50/FarbcodeAnDerWand||W3_TERM_MAX_0010|MAX": 1.0,
+					"Abschied/Zeldina": 1.0,
+					"Abstellkammer1/Besen||W1_TURM_MAX_0310|MAX": 1.0,
+					"Abstellkammer1/Kram||W1_TURM_MAX_0330|MAX": 1.0,
+					"Abstellkammern/Geheimtuer||W1_SMAU_MAX_0200|MAX": 1.0,
+					"Bergwerk/Kaffeemaschine||W1_BERG_MAX_0050|MAX": 1.0,
+					"Bergwerk/RuneTuer||W1_BERG_MAX_0080|MAX": 1.0,
+					"Bergwerk/Streikposten||W1_BERG_MAX_0020|MAX": 1.0,
+					"Bergwerk/Streikschilder||W1_BERG_MAX_0030|MAX": 1.0,
+					"Dachboden/Kalender||P0_DACH_MAX_0620|MAX": 1.0,
+					"Dorfplatz/Bestellzettel||W1_DORF_MAX_0160|MAX": 1.0,
+					"Dorfplatz/Brunnen||W1_DORF_MAX_0110|MAX": 1.0,
+					"Dorfplatz/Dorfbrett||W1_DORF_MAX_0150|MAX": 1.0,
+					"Dorfplatz/Eimer||W1_DORF_MAX_0350|MAX": 1.0,
+					"Dorfplatz/SchmiedeVonAussen||W1_DORF_MAX_0270|MAX": 1.0,
+					"Dorfplatz/Statue||W1_DORF_MAX_0130|MAX": 1.0,
+					"Dorfplatz/Steckbrief||W1_DORF_MAX_0180|MAX": 1.0,
+					"Einstieg/Cicero": 1.0,
+					"Einstieg/Faehrmann": 1.0,
+					"Einstieg/Grieche": 1.0,
+					"Einstieg/Hieron": 1.0,
+					"Einstieg/Nebet": 1.0,
+					"Einstieg/Schreiber": 1.0,
+					"Einstieg/SphinxFigur": 1.0,
+					"Einstieg/Steinmetz": 1.0,
 					"Figur/FrauRegenschirm||W3_STR_MAX_0210|MAX": 1.0,
+					"Figur/Goblin1||W1_BERG_MAX_0110|MAX": 1.0,
+					"Figur/Goblin2||W1_BERG_MAX_0120|MAX": 1.0,
+					"Figur/Gollo||W1_TAV_MAX_0360|MAX": 1.0,
+					"Figur/Grimmzahn||W1_BERG_MAX_0100|MAX": 1.0,
+					"Figur/Huhn||W1_TAV_MAX_0180|MAX": 1.0,
+					"Figur/Humbert||W1_TAV_MAX_0350|MAX": 1.0,
+					"Figur/Maklerin||W1_LUFT_MAX_0150|MAX": 1.0,
+					"Figur/Minka||W1_TAV_MAX_0140|MAX": 1.0,
+					"Figur/Minka||W1_TAV_PIX_0150|PIX": 1.0,
+					"Figur/Moderwort||W1_THRO_MAX_0170|MAX": 1.0,
+					"Figur/SchmiedeZiege||W1_SCHM_MAX_0050|MAX": 1.0,
+					"Figur/Schmied||W1_SCHM_MAX_0070|MAX": 1.0,
+					"Figur/Schwan||W1_WASS_MAX_0120|MAX": 1.0,
+					"Figur/Stabmacher||W1_STAB_MAX_0090|MAX": 1.0,
 					"Figur/StrassenmusikerW3||W3_STR_MAX_0150|MAX": 1.0,
 					"Figur/Tuer||W3_TUER_MAX_0130|MAX": 1.0,
+					"Figur/Waldemar||W1_BRUE_MAX_0150|MAX": 1.0,
 					"Figur/WeinenderMann||W3_STR_MAX_0180|MAX": 1.0,
-					"Gegenstand/OmasKekse|hundekuchen|W3_BAS_MAX_0870|MAX": 1.0,
-					"Gegenstand/Rezeptkarte|glueckskeks|W3_SUPP_MAX_0200|MAX": 1.0,
-					"Gegenstand/RotePastille|normal|W3_INV_MAX_0020|MAX": 1.0,
-					"Gegenstand/SchmidtsAkte|ordner|W3_TERM_MAX_0350|MAX": 1.0,
+					"Figur/Zeldina||W1_LUFT_MAX_0160|MAX": 1.0,
+					"Gegenstand/Handy||W2_INV_MAX_0010|MAX": 1.0,
+					"Gegenstand/Krug|mit_ziegenmilch|W1_INV_MAX_0090|MAX": 1.0,
+					"Gegenstand/Socke|voller_pollen|W1_WALD_MAX_0600|MAX": 1.0,
+					"Gegenstand/Tarifvertrag|leer|W1_INV_MAX_0160|MAX": 1.0,
+					"Grabhuegel/AlteGrabsteine||W2_GRAB_MAX_0120|MAX": 1.0,
+					"Grabhuegel/Sockel||W2_GRAB_MAX_0130|MAX": 1.0,
+					"Klassenzimmer/BesenImSchrank||W1_HOGG_MAX_0200|MAX": 1.0,
+					"Klassenzimmer/DurchgeloecherteZweiteSocke||W1_HOGG_MAX_0180|MAX": 1.0,
+					"Klassenzimmer/Fenster||W1_HOGG_MAX_0160|MAX": 1.0,
+					"Klassenzimmer/Flaschenregal||W1_HOGG_MAX_0140|MAX": 1.0,
+					"Klassenzimmer/Kessel||W1_HOGG_MAX_0130|MAX": 1.0,
+					"Klassenzimmer/Schulbank||W1_HOGG_MAX_0110|MAX": 1.0,
+					"Klassenzimmer/Tafel||W1_HOGG_MAX_0120|MAX": 1.0,
 					"KuecheOrakel/Kochbuch||W3_KUCH_MAX_0550|MAX": 1.0,
-					"Testkammer2/Kritzelei||W3_KAM2_MAX_0140|MAX": 1.0
+					"Luftschloss/Kritzelei||W1_LUFT_MAX_0060|MAX": 1.0,
+					"Plauder/Humbert": 1.0,
+					"Plauder/Zeldina": 1.0,
+					"Schmiede/Amboss||W1_SCHM_MAX_0030|MAX": 1.0,
+					"Schmiede/Esse||W1_SCHM_MAX_0010|MAX": 1.0,
+					"Schmiede/Kochgeschirr||W1_SCHM_MAX_0040|MAX": 1.0,
+					"Schmiede/Krug||W1_SCHM_MAX_0080|MAX": 1.0,
+					"Taverne/Dachbalken||W1_TAV_MAX_0260|MAX": 1.0,
+					"Taverne/Ei||W1_TAV_MAX_1430|MAX": 1.0,
+					"Taverne/Fischsuppe||W1_TAV_MAX_0310|MAX": 1.0,
+					"Taverne/FlascheVielsaftLimo||W1_TAV_MAX_0290|MAX": 1.0,
+					"Taverne/FondueTopf||W1_TAV_MAX_0120|MAX": 1.0,
+					"Taverne/Kamin||W1_TAV_MAX_0200|MAX": 1.0,
+					"Taverne/Kellertuer||W1_TAV_MAX_0160|MAX": 1.0,
+					"Taverne/LauteMitMuenzbecher||W1_TAV_MAX_0230|MAX": 1.0,
+					"Taverne/LeereSchilder||W1_TAV_MAX_0220|MAX": 1.0,
+					"Taverne/SchwerterSammlung||W1_TAV_MAX_0210|MAX": 1.0,
+					"Taverne/SteckbriefPlakatDrache||W1_TAV_MAX_0170|MAX": 1.0,
+					"Taverne/Tresen||W1_TAV_MAX_0110|MAX": 1.0,
+					"Taverne/WeinkarteAmTresen||W1_TAV_MAX_0270|MAX": 1.0,
+					"Taverne/ZiegenfellVorleger||W1_TAV_MAX_0250|MAX": 1.0,
+					"Testkammer2/Kritzelei||W3_KAM2_MAX_0140|MAX": 1.0,
+					"ThronsaalRamses/Inschrift||W2_THRO_PIX_0290|MAX": 1.0,
+					"Trollbruecke/Bach||W1_BRUE_MAX_0020|MAX": 1.0,
+					"Trollbruecke/Bruecke||W1_BRUE_MAX_0010|MAX": 1.0,
+					"Trollbruecke/Grammophon||W1_BRUE_MAX_0090|MAX": 1.0,
+					"Trollbruecke/Notenblaetter||W1_BRUE_MAX_0100|MAX": 1.0,
+					"Trollbruecke/Schild||W1_BRUE_MAX_0030|MAX": 1.0,
+					"Trollbruecke/Wildblumen||W1_BRUE_MAX_0140|MAX": 1.0,
+					"Turmkeller/Besen||W1_TURM_MAX_0090|MAX": 1.0,
+					"Wasserschloss/Ruderboot||W1_WASS_MAX_0110|MAX": 1.0,
+					"Wasserschloss/SchildAmTor||W1_WASS_MAX_0060|MAX": 1.0,
+					"Wasserschloss/Schilf||W1_WASS_MAX_0150|MAX": 1.0,
+					"Wasserschloss/Teppich||W1_WASS_MAX_0100|MAX": 1.0,
+					"Wasserschloss/Umzugskartons||W1_WASS_MAX_0070|MAX": 1.0,
+					"Zauberstabladen/Kochloeffel||W1_STAB_MAX_0060|MAX": 1.0,
+					"Zauberstabladen/Zahnstocher||W1_STAB_MAX_0040|MAX": 1.0,
+					"Zauberstabladen/Zollstock||W1_STAB_MAX_0050|MAX": 1.0,
+					"Zauberwald/Ketchup||W1_WALD_MAX_0090|MAX": 1.0,
+					"Zauberwald/KuerbisturmUndGlasschuh||W1_WALD_MAX_0120|MAX": 1.0,
+					"Zauberwald/Leuchtpilze||W1_WALD_MAX_0020|MAX": 1.0,
+					"Zauberwald/Lieferkarren||W1_WALD_MAX_0080|MAX": 1.0,
+					"Zauberwald/Niesrosen||W1_WALD_MAX_0050|MAX": 1.0,
+					"Zauberwald/Riesenpilze||W1_WALD_MAX_0010|MAX": 1.0,
+					"benutzen|Dachboden/ZappOMat|P0_DACH_MAX_1750": 1.0
 				},
 				"besucht": [
 					"wohnzimmer",
+					"treppenhaus",
+					"dachboden",
+					"dorfplatz",
+					"taverne",
+					"zauberstabladen",
+					"schmiede",
+					"trollbruecke",
+					"wasserschloss",
+					"zauberwald",
+					"bergwerk",
+					"klassenzimmer",
+					"luftschloss",
+					"turmkeller",
+					"abstellkammer_1",
+					"abstellkammern",
+					"thronsaal",
+					"nil_delta",
+					"thronsaal_ramses",
+					"palastkueche",
+					"sphinx",
+					"faehrsteg_olympia",
+					"agora",
+					"startbuero",
+					"hafen_syrakus",
+					"werkstatt",
+					"stadion",
+					"grabhuegel",
 					"unterstadt_strasse",
 					"apothekengasse",
 					"stadtstrasse",
@@ -479,27 +476,160 @@
 					"testkammer_2",
 					"testkammer_3",
 					"kern",
-					"dachboden",
 					"testbild"
 				],
 				"hinweis_stufe": {
-					"welt-3/R12": 1.0,
-					"welt-3/R3b": 1.0,
-					"welt-3/R6b": 1.0
+					"welt-1/R10": 3.0,
+					"welt-1/R1a": 1.0,
+					"welt-1/R1b": 1.0,
+					"welt-1/R1c": 1.0,
+					"welt-1/R2": 1.0,
+					"welt-1/R3": 1.0,
+					"welt-1/R4a": 1.0,
+					"welt-1/R4b": 2.0,
+					"welt-1/R4c": 1.0,
+					"welt-1/R5": 1.0,
+					"welt-1/R6a": 1.0,
+					"welt-1/R7": 2.0,
+					"welt-1/R8": 2.0,
+					"welt-2/R7": 3.0
 				},
 				"hinweis_zeit": {
-					"welt-3/R12": 1035.11601333333,
-					"welt-3/R3b": 522.929860444445,
-					"welt-3/R6b": 2292.70175437027
+					"welt-1/R10": 9429.19616420594,
+					"welt-1/R1a": 1138.00248455555,
+					"welt-1/R1b": 1704.62474307406,
+					"welt-1/R1c": 1924.70745922216,
+					"welt-1/R2": 2459.66316588877,
+					"welt-1/R3": 3688.68886622194,
+					"welt-1/R4a": 3936.02219955522,
+					"welt-1/R4b": 4138.79174755521,
+					"welt-1/R4c": 4268.23111555526,
+					"welt-1/R5": 2735.0041557935,
+					"welt-1/R6a": 5915.04454042743,
+					"welt-1/R7": 4939.17314410963,
+					"welt-1/R8": 2971.90316988871,
+					"welt-2/R7": 12217.8152712805
 				},
 				"letzter_schritt": "R11",
 				"nahansichten": [
+					"kalender",
+					"opas_zettel",
+					"maerchen_satzung",
+					"hinweiszettel",
+					"zeugnis",
+					"luftschloss_kritzelei",
+					"hieroglyphen_grammatik",
 					"kochbuch",
 					"schmidts_akte",
 					"kritzelei_kammer_2"
 				],
 				"notizbuch_ziel": "",
 				"schalter": {
+					"P0_DOSE_OFFEN": true,
+					"P0_P1_GELOEST": true,
+					"P0_P2_GELOEST": true,
+					"P0_P3_GELOEST": true,
+					"P0_PIXEL_GEWECKT": true,
+					"P0_TASSE_GEFUELLT": true,
+					"W1_ANK_NACHTRAG": false,
+					"W1_BERTA_MUSIK": true,
+					"W1_BERTA_WEG": true,
+					"W1_BOHNE_GEPFLANZT": true,
+					"W1_GOBLIN_LICHT": true,
+					"W1_GRIMMZAHN_FOLGT": true,
+					"W1_KESSEL_EI": true,
+					"W1_KESSEL_MILCH": true,
+					"W1_KESSEL_PILZ": true,
+					"W1_KREUZUNG_1": true,
+					"W1_KREUZUNG_2": true,
+					"W1_KREUZUNG_3": true,
+					"W1_MAKLERIN_FREI": true,
+					"W1_MELK_SCHWUR": true,
+					"W1_MOD_GENIEST": true,
+					"W1_MOD_KAESE": true,
+					"W1_PASSWORT_MO": true,
+					"W1_PIXEL_IM_FELL": false,
+					"W1_R01_A_GELOEST": true,
+					"W1_R01_B_GELOEST": true,
+					"W1_R01_C_GELOEST": true,
+					"W1_R02_GELOEST": true,
+					"W1_R03_GELOEST": true,
+					"W1_R04_A_GELOEST": true,
+					"W1_R04_B_GELOEST": true,
+					"W1_R04_C_GELOEST": true,
+					"W1_R05_GELOEST": true,
+					"W1_R06_A_GELOEST": true,
+					"W1_R06_B_GELOEST": true,
+					"W1_R07_GELOEST": true,
+					"W1_R08_GELOEST": true,
+					"W1_R09_GELOEST": true,
+					"W1_R10_B_GELOEST": true,
+					"W1_R11_A_GELOEST": true,
+					"W1_R11_B_GELOEST": true,
+					"W1_R12_FACKELN": true,
+					"W1_R12_GELOEST": true,
+					"W1_R12_KRONLEUCHTER": true,
+					"W1_R12_SCHWERTER": true,
+					"W1_R13_GELOEST": true,
+					"W1_REZEPT_BEKANNT": true,
+					"W1_SATZUNG_VORGELESEN": true,
+					"W1_TAV_KEINER_GUCKT": true,
+					"W1_WALDEMAR_ABSPANN": true,
+					"W1_WALDEMAR_SINGT": true,
+					"W1_WECHSEL_FREI": true,
+					"W1_XXL_GELIEFERT": true,
+					"W1_ZELDINA_FOLGT": true,
+					"W1_ZIEGEN_FOLGEN": false,
+					"W1_ZIEGE_FOLGT": true,
+					"W2_ANKUNFT": true,
+					"W2_AUDIENZ": true,
+					"W2_BARREN_GEMESSEN": true,
+					"W2_BESUCHT_AGORA": true,
+					"W2_BESUCHT_GRABHUEGEL": true,
+					"W2_BESUCHT_PALASTKUECHE": true,
+					"W2_BESUCHT_STADION": true,
+					"W2_BESUCHT_STARTBUERO": true,
+					"W2_BESUCHT_THRONSAAL_RAMSES": true,
+					"W2_BESUCHT_WERKSTATT": true,
+					"W2_CICERO_FORDERUNG": true,
+					"W2_DUELL": true,
+					"W2_DUELL_GEFOLGE": true,
+					"W2_DUELL_OPFER": true,
+					"W2_DUELL_WUNDER": true,
+					"W2_FAHRT_AUFWAERTS": true,
+					"W2_FAHRT_OLYMPIA": true,
+					"W2_FAHRT_SYRAKUS": true,
+					"W2_FLUSSKARTE_OFFEN": true,
+					"W2_FLUSSKARTE_ZWEITES": true,
+					"W2_HAUFEN_BESTELLT": true,
+					"W2_HEBEL_BESTLEISTUNG": false,
+					"W2_HERMES_IM_BUERO": true,
+					"W2_KRONE_GEMESSEN": true,
+					"W2_LAUF_BESTLEISTUNG": true,
+					"W2_LAUF_GEOELT": true,
+					"W2_OPAS_PAPYRUS": true,
+					"W2_R01_GELOEST": true,
+					"W2_R02_A_GELOEST": true,
+					"W2_R02_B_GELOEST": true,
+					"W2_R03_A_GELOEST": true,
+					"W2_R03_B_GELOEST": true,
+					"W2_R04_GELOEST": true,
+					"W2_R05_GELOEST": true,
+					"W2_R06_A_GELOEST": true,
+					"W2_R06_B_GELOEST": true,
+					"W2_R08_GELOEST": true,
+					"W2_R09_GELOEST": true,
+					"W2_SANDALEN_GEOELT": true,
+					"W2_SANDALE_GESEHEN": true,
+					"W2_SOBEK_FOLGT": true,
+					"W2_TAG1_GELOEST": true,
+					"W2_TAG1_LAEUFT": false,
+					"W2_VERHOERT_SPHINX_FIGUR": true,
+					"W2_VERHOERT_TIRO": true,
+					"W2_WECHSEL_FREI": true,
+					"W2_ZEITLOS_HANDY": true,
+					"W2_ZEITLOS_OLIVENOEL": true,
+					"W2_ZEITLOS_THUNFISCHDOSE": true,
 					"W3_ANKUNFT": true,
 					"W3_BEOBACHTUNG_MUSIKER": true,
 					"W3_BEOBACHTUNG_SCHIRM": true,
@@ -519,7 +649,8 @@
 					"W3_ERST_TESTKAMMER_2": true,
 					"W3_ERST_TESTKAMMER_3": true,
 					"W3_FARBCODE_GESENDET": true,
-					"W3_FREUND_0815": false,
+					"W3_FREUND_0815": true,
+					"W3_GEDANKENTRICK": true,
 					"W3_GLASTUER_OFFEN": true,
 					"W3_HAUSMEISTER_ERSTES_MAL": true,
 					"W3_HAUSMEISTER_WEG": true,
@@ -537,6 +668,7 @@
 					"W3_MORPHAEUS_GETROFFEN": true,
 					"W3_MORSE_TABELLE": true,
 					"W3_MUTTI_AUS": true,
+					"W3_OEL_WARNUNG": true,
 					"W3_OPAS_NACHRICHT": true,
 					"W3_PANZERTUER_OFFEN": true,
 					"W3_PIXEL_AUF_LEITUNG": true,
@@ -581,15 +713,33 @@
 					"W3_ZELLE_KALT": true,
 					"W4_ANKUNFT": true,
 					"W4_WECHSEL_FREI": true,
+					"ZS1_EI_ABGEGEBEN": true,
+					"ZS1_GEPACKT": true,
+					"ZS2_GEPACKT": true,
+					"ZS2_MITBRINGSEL_ABGEGEBEN": true,
 					"ZS3_GEPACKT": true,
 					"ZS3_MITBRINGSEL_ABGEGEBEN": true
 				},
-				"spielzeit": 3891.34778168325,
-				"stufe3_zaehler": {},
+				"spielzeit": 19292.3992334237,
+				"stufe3_zaehler": {
+					"welt-1": 1.0,
+					"welt-2": 1.0
+				},
 				"werte": {
 					"EINKAUFSLISTE": 3.0,
 					"FUNDKISTE": [
+						"Reisetasche",
+						"Eimer",
+						"ZiegenfellVorleger",
+						"Zeugnis",
+						"Socke",
 						"Dosenoeffner",
+						"Handy",
+						"Schriftrolle",
+						"Schallplatte",
+						"Wurfscheibe",
+						"Olivenoel",
+						"Sandale",
 						"MorseTabelle",
 						"Kaffeetasse",
 						"SchmidtsAkte",
@@ -599,7 +749,42 @@
 						"Sonnenbrille",
 						"OmasKekse"
 					],
+					"W1_EIMER": "leer",
+					"W1_FLASCHE": 0.0,
+					"W1_R4A_REIHE": 3.0,
+					"W1_R4B_XXL_VERSUCHE": 2.0,
+					"W1_R4B_ZIE_VERSUCHE": 2.0,
+					"W1_SCHNUPPER": 2.0,
+					"W1_TAVERNE_WECHSEL": 2.0,
+					"W2_BAUSTEINE": [
+						"stirbt",
+						"klingelt",
+						"leuchtet",
+						"sonne",
+						"schreibt"
+					],
+					"W2_FAEHRE_STEG": "nil_delta",
+					"W2_FAHRTEN": 5.0,
+					"W2_FEIGE_ZUSTAND": "feigenkern",
+					"W2_FLADEN": "mit Kruste",
+					"W2_GETAUCHT": "goldbarren",
+					"W2_HEBEL_FEHLER": 2.0,
+					"W2_KONTER": [
+						1.0,
+						2.0,
+						3.0,
+						4.0,
+						5.0,
+						6.0,
+						7.0
+					],
+					"W2_KORB": [],
+					"W2_RUNDSCHREIBEN": "mit Kugelschreiber",
+					"W2_WINKEL": 0.0,
 					"W3_EBENE": "realitaet",
+					"W3_FEHLTAUSCHE": [
+						"testkammer_3"
+					],
 					"W3_LETZTE_ZELLE": "stadtstrasse",
 					"W3_MAX_RAUM": "widerstandsbasis",
 					"W3_PIXEL_RAUM": "widerstandsbasis",
@@ -613,7 +798,19 @@
 			"id": "Max",
 			"inventory": [
 				{
+					"name": "Thunfischdose",
+					"qty": 1.0
+				},
+				{
 					"name": "PixelFeld",
+					"qty": 1.0
+				},
+				{
+					"name": "Notizbuch",
+					"qty": 1.0
+				},
+				{
+					"name": "Kochloeffel",
 					"qty": 1.0
 				},
 				{
@@ -622,18 +819,6 @@
 				},
 				{
 					"name": "Sonnenbrille",
-					"qty": 1.0
-				},
-				{
-					"name": "Notizbuch",
-					"qty": 1.0
-				},
-				{
-					"name": "Thunfischdose",
-					"qty": 1.0
-				},
-				{
-					"name": "Kochloeffel",
 					"qty": 1.0
 				}
 			],
@@ -645,7 +830,140 @@
 		},
 		"rooms": {
 			"Abstellkammer1": {
-				"characters": {},
+				"characters": {
+					"Grimmzahn": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -139.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "c8c0dcff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 242.0,
+						"y": 308.0
+					},
+					"Max": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -193.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "c8c0dcff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 99.9732131958008,
+						"y": 299.996429443359
+					},
+					"Pixel": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -44.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "c8c0dcff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 214.005584716797,
+						"y": 297.871734619141
+					},
+					"Zeldina": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -200.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "c8c0dcff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 198.0,
+						"y": 308.0
+					}
+				},
 				"hotspots": {
 					"AusgangTurmkeller": {
 						"is_moving": false,
@@ -656,17 +974,17 @@
 					},
 					"Besen": {
 						"is_moving": false,
-						"times_clicked": 0.0,
+						"times_clicked": 1.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"Kram": {
 						"is_moving": false,
-						"times_clicked": 0.0,
+						"times_clicked": 1.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					}
 				},
 				"props": {
@@ -683,9 +1001,9 @@
 					}
 				},
 				"regions": {},
-				"visited": false,
-				"visited_first_time": false,
-				"visited_times": 0.0,
+				"visited": true,
+				"visited_first_time": true,
+				"visited_times": 1.0,
 				"walkable_areas": {
 					"Boden": {
 						"enabled": true,
@@ -735,7 +1053,206 @@
 				}
 			},
 			"Abstellkammern": {
-				"characters": {},
+				"characters": {
+					"Grimmzahn": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -139.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "c8c0dcff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 312.0,
+						"y": 324.0
+					},
+					"Humbert": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -205.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "c8c0dcff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 240.0,
+						"y": 324.0
+					},
+					"Max": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -193.0
+						},
+						"face_character": "",
+						"facing": 0.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "c8c0dcff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 540.000061035156,
+						"y": 240.000015258789
+					},
+					"Pixel": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -44.0
+						},
+						"face_character": "",
+						"facing": 0.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "c8c0dcff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 456.860717773438,
+						"y": 255.452270507812
+					},
+					"Smaugi": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -344.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "c8c0dcff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 360.0,
+						"y": 290.0
+					},
+					"Zeldina": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -200.0
+						},
+						"face_character": "",
+						"facing": 0.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "c8c0dcff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 384.0,
+						"y": 324.0
+					}
+				},
 				"hotspots": {
 					"DekoKram": {
 						"is_moving": false,
@@ -746,17 +1263,17 @@
 					},
 					"DracheneiNest": {
 						"is_moving": false,
-						"times_clicked": 0.0,
+						"times_clicked": 1.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
 						"times_right_clicked": 0.0
 					},
 					"Geheimtuer": {
 						"is_moving": false,
-						"times_clicked": 0.0,
+						"times_clicked": 2.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"Goldhaufen": {
 						"is_moving": false,
@@ -795,24 +1312,13 @@
 					}
 				},
 				"props": {
-					"Background": {
-						"alpha": 1.0,
-						"current_frame": 0.0,
-						"is_moving": false,
-						"obstacle": false,
-						"obstacle_polygon": [],
-						"times_clicked": 0.0,
-						"times_double_clicked": 0.0,
-						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
-					},
 					"FackelBuendel": {
 						"alpha": 1.0,
 						"current_frame": 0.0,
 						"is_moving": false,
 						"obstacle": false,
 						"obstacle_polygon": [],
-						"times_clicked": 0.0,
+						"times_clicked": 1.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
 						"times_right_clicked": 0.0
@@ -823,7 +1329,7 @@
 						"is_moving": false,
 						"obstacle": false,
 						"obstacle_polygon": [],
-						"times_clicked": 0.0,
+						"times_clicked": 1.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
 						"times_right_clicked": 0.0
@@ -834,16 +1340,16 @@
 						"is_moving": false,
 						"obstacle": false,
 						"obstacle_polygon": [],
-						"times_clicked": 0.0,
+						"times_clicked": 1.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
 						"times_right_clicked": 0.0
 					}
 				},
 				"regions": {},
-				"visited": false,
-				"visited_first_time": false,
-				"visited_times": 0.0,
+				"visited": true,
+				"visited_first_time": true,
+				"visited_times": 1.0,
 				"walkable_areas": {
 					"Boden": {
 						"enabled": true,
@@ -889,7 +1395,272 @@
 				}
 			},
 			"Agora": {
-				"characters": {},
+				"characters": {
+					"Cicero": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -200.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "ffffffff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 762.0,
+						"y": 233.0
+					},
+					"Max": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -193.0
+						},
+						"face_character": "",
+						"facing": 5.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "ffffffff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 1258.0,
+						"y": 305.0
+					},
+					"Philosoph": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -139.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "ffffffff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 480.0,
+						"y": 306.0
+					},
+					"Pixel": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -44.0
+						},
+						"face_character": "",
+						"facing": 0.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "ffffffff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 1197.390625,
+						"y": 320.0
+					},
+					"Strassenmusiker": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -200.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "ffffffff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 955.0,
+						"y": 304.0
+					},
+					"Tiro": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -181.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "ffffffff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 840.0,
+						"y": 300.0
+					},
+					"Tourist": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -200.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "ffffffff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 1040.0,
+						"y": 308.0
+					},
+					"Touristin": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -193.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "ffffffff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 1100.0,
+						"y": 308.0
+					}
+				},
 				"hotspots": {
 					"BogenZumStadion": {
 						"is_moving": false,
@@ -907,7 +1678,7 @@
 					},
 					"HoheSaeuleMitAdler": {
 						"is_moving": false,
-						"times_clicked": 0.0,
+						"times_clicked": 1.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
 						"times_right_clicked": 0.0
@@ -928,7 +1699,7 @@
 					},
 					"Menge": {
 						"is_moving": false,
-						"times_clicked": 0.0,
+						"times_clicked": 1.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
 						"times_right_clicked": 0.0
@@ -956,7 +1727,7 @@
 					},
 					"Tonne": {
 						"is_moving": false,
-						"times_clicked": 0.0,
+						"times_clicked": 1.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
 						"times_right_clicked": 0.0
@@ -997,9 +1768,9 @@
 					}
 				},
 				"regions": {},
-				"visited": false,
+				"visited": true,
 				"visited_first_time": false,
-				"visited_times": 0.0,
+				"visited_times": 4.0,
 				"walkable_areas": {
 					"Boden": {
 						"enabled": true,
@@ -1159,8 +1930,8 @@
 							"x": 0.0,
 							"y": 0.0
 						},
-						"x": 574.513793945312,
-						"y": 319.654998779297
+						"x": 595.0,
+						"y": 320.0
 					}
 				},
 				"hotspots": {
@@ -1246,7 +2017,206 @@
 				}
 			},
 			"Bergwerk": {
-				"characters": {},
+				"characters": {
+					"Goblin1": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -119.0
+						},
+						"face_character": "",
+						"facing": 0.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "c8b4a8ff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 880.0,
+						"y": 285.0
+					},
+					"Goblin2": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -119.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "c8b4a8ff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 1040.0,
+						"y": 292.0
+					},
+					"Grimmzahn": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -139.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "c8b4a8ff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 783.541687011719,
+						"y": 298.0
+					},
+					"Max": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -193.0
+						},
+						"face_character": "",
+						"facing": 0.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "c8b4a8ff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 1118.0,
+						"y": 250.000030517578
+					},
+					"Pixel": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -44.0
+						},
+						"face_character": "",
+						"facing": 0.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "c8b4a8ff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 895.0,
+						"y": 330.0
+					},
+					"Zeldina": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -200.0
+						},
+						"face_character": "",
+						"facing": 0.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "c8b4a8ff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 827.541687011719,
+						"y": 298.0
+					}
+				},
 				"hotspots": {
 					"AusgangZauberwald": {
 						"is_moving": false,
@@ -1267,7 +2237,7 @@
 						"times_clicked": 0.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"Loren": {
 						"is_moving": false,
@@ -1278,24 +2248,24 @@
 					},
 					"RuneTuer": {
 						"is_moving": false,
-						"times_clicked": 0.0,
+						"times_clicked": 1.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"Streikposten": {
 						"is_moving": false,
-						"times_clicked": 0.0,
+						"times_clicked": 1.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"Streikschilder": {
 						"is_moving": false,
 						"times_clicked": 0.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					}
 				},
 				"props": {
@@ -1323,9 +2293,9 @@
 					}
 				},
 				"regions": {},
-				"visited": false,
+				"visited": true,
 				"visited_first_time": false,
-				"visited_times": 0.0,
+				"visited_times": 2.0,
 				"walkable_areas": {
 					"Boden": {
 						"enabled": true,
@@ -1499,7 +2469,7 @@
 						"times_clicked": 1.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 1.0
+						"times_right_clicked": 0.0
 					},
 					"Fenster": {
 						"is_moving": false,
@@ -1662,7 +2632,7 @@
 							"y": -193.0
 						},
 						"face_character": "",
-						"facing": 5.0,
+						"facing": 6.0,
 						"follow_character": "",
 						"follow_character_offset": {
 							"x": 20.0,
@@ -1678,7 +2648,7 @@
 							"x": 0.0,
 							"y": 0.0
 						},
-						"modulate": "c8c4dcff",
+						"modulate": "ffffffff",
 						"self_modulate": "ffffffff",
 						"visible": true,
 						"walk_to_point": {
@@ -1728,7 +2698,7 @@
 							"y": -44.0
 						},
 						"face_character": "",
-						"facing": 4.0,
+						"facing": 0.0,
 						"follow_character": "",
 						"follow_character_offset": {
 							"x": 20.0,
@@ -1751,8 +2721,8 @@
 							"x": 0.0,
 							"y": 0.0
 						},
-						"x": 421.858062744141,
-						"y": 332.000030517578
+						"x": 320.0,
+						"y": 256.0
 					}
 				},
 				"hotspots": {
@@ -1779,7 +2749,7 @@
 					},
 					"Drehknopf": {
 						"is_moving": false,
-						"times_clicked": 1.0,
+						"times_clicked": 3.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
 						"times_right_clicked": 0.0
@@ -1817,7 +2787,7 @@
 						"times_clicked": 0.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"KisteMitFernbedienungen": {
 						"is_moving": false,
@@ -1932,7 +2902,7 @@
 						"is_moving": false,
 						"obstacle": false,
 						"obstacle_polygon": [],
-						"times_clicked": 0.0,
+						"times_clicked": 1.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
 						"times_right_clicked": 0.0
@@ -1943,18 +2913,18 @@
 						"is_moving": false,
 						"obstacle": false,
 						"obstacle_polygon": [],
-						"times_clicked": 0.0,
+						"times_clicked": 1.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
 						"times_right_clicked": 0.0
 					},
 					"ZappOMat": {
 						"alpha": 1.0,
-						"current_frame": 0.0,
+						"current_frame": 4.0,
 						"is_moving": false,
 						"obstacle": false,
 						"obstacle_polygon": [],
-						"times_clicked": 0.0,
+						"times_clicked": 1.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
 						"times_right_clicked": 0.0
@@ -1962,8 +2932,8 @@
 				},
 				"regions": {},
 				"visited": true,
-				"visited_first_time": true,
-				"visited_times": 1.0,
+				"visited_first_time": false,
+				"visited_times": 4.0,
 				"walkable_areas": {
 					"Boden": {
 						"enabled": true,
@@ -2037,7 +3007,140 @@
 				}
 			},
 			"Dorfplatz": {
-				"characters": {},
+				"characters": {
+					"Max": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -193.0
+						},
+						"face_character": "",
+						"facing": 7.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "ffffffff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 1235.0,
+						"y": 252.0
+					},
+					"Pixel": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -44.0
+						},
+						"face_character": "",
+						"facing": 0.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "ffffffff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 1130.55822753906,
+						"y": 285.992919921875
+					},
+					"Toadi": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -112.0
+						},
+						"face_character": "",
+						"facing": 0.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "ffffffff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 720.0,
+						"y": 300.0
+					},
+					"Zeldina": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -200.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "ffffffff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 1180.0,
+						"y": 300.0
+					}
+				},
 				"hotspots": {
 					"Bohnenranke": {
 						"is_moving": false,
@@ -2048,17 +3151,17 @@
 					},
 					"Brunnen": {
 						"is_moving": false,
-						"times_clicked": 0.0,
+						"times_clicked": 1.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"Dorfbrett": {
 						"is_moving": false,
-						"times_clicked": 0.0,
+						"times_clicked": 1.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"Erdfleck": {
 						"is_moving": false,
@@ -2093,11 +3196,11 @@
 						"times_clicked": 0.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"Stall": {
 						"is_moving": false,
-						"times_clicked": 0.0,
+						"times_clicked": 1.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
 						"times_right_clicked": 0.0
@@ -2107,7 +3210,7 @@
 						"times_clicked": 0.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"TaverneVonAussen": {
 						"is_moving": false,
@@ -2139,27 +3242,16 @@
 					}
 				},
 				"props": {
-					"Background": {
-						"alpha": 1.0,
-						"current_frame": 0.0,
-						"is_moving": false,
-						"obstacle": false,
-						"obstacle_polygon": [],
-						"times_clicked": 0.0,
-						"times_double_clicked": 0.0,
-						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
-					},
 					"Bestellzettel": {
 						"alpha": 1.0,
 						"current_frame": 0.0,
 						"is_moving": false,
 						"obstacle": false,
 						"obstacle_polygon": [],
-						"times_clicked": 0.0,
+						"times_clicked": 1.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"Eimer": {
 						"alpha": 1.0,
@@ -2167,10 +3259,10 @@
 						"is_moving": false,
 						"obstacle": false,
 						"obstacle_polygon": [],
-						"times_clicked": 0.0,
+						"times_clicked": 1.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"Steckbrief": {
 						"alpha": 1.0,
@@ -2178,16 +3270,16 @@
 						"is_moving": false,
 						"obstacle": false,
 						"obstacle_polygon": [],
-						"times_clicked": 0.0,
+						"times_clicked": 1.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					}
 				},
 				"regions": {},
-				"visited": false,
+				"visited": true,
 				"visited_first_time": false,
-				"visited_times": 0.0,
+				"visited_times": 11.0,
 				"walkable_areas": {
 					"Boden": {
 						"enabled": true,
@@ -2397,7 +3489,107 @@
 				}
 			},
 			"FaehrstegOlympia": {
-				"characters": {},
+				"characters": {
+					"Faehrmann": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -200.0
+						},
+						"face_character": "",
+						"facing": 0.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "ffffffff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 30.0,
+						"y": 302.0
+					},
+					"Max": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -193.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "ffffffff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 89.9992980957031,
+						"y": 299.999877929688
+					},
+					"Pixel": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -44.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "ffffffff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 134.998626708984,
+						"y": 300.000091552734
+					}
+				},
 				"hotspots": {
 					"Faehre": {
 						"is_moving": false,
@@ -2456,9 +3648,9 @@
 					}
 				},
 				"regions": {},
-				"visited": false,
+				"visited": true,
 				"visited_first_time": false,
-				"visited_times": 0.0,
+				"visited_times": 4.0,
 				"walkable_areas": {
 					"Boden": {
 						"enabled": true,
@@ -2852,14 +4044,81 @@
 				}
 			},
 			"Grabhuegel": {
-				"characters": {},
+				"characters": {
+					"Max": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -193.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "ffffffff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 30.000732421875,
+						"y": 300.0
+					},
+					"Pixel": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -44.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "ffffffff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 129.847808837891,
+						"y": 289.408599853516
+					}
+				},
 				"hotspots": {
 					"AlteGrabsteine": {
 						"is_moving": false,
 						"times_clicked": 0.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"AusgangHafen": {
 						"is_moving": false,
@@ -2877,10 +4136,10 @@
 					},
 					"Sockel": {
 						"is_moving": false,
-						"times_clicked": 0.0,
+						"times_clicked": 1.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"Zikaden": {
 						"is_moving": false,
@@ -2911,9 +4170,9 @@
 					}
 				},
 				"regions": {},
-				"visited": false,
-				"visited_first_time": false,
-				"visited_times": 0.0,
+				"visited": true,
+				"visited_first_time": true,
+				"visited_times": 1.0,
 				"walkable_areas": {
 					"Boden": {
 						"enabled": true,
@@ -2943,7 +4202,107 @@
 				}
 			},
 			"HafenSyrakus": {
-				"characters": {},
+				"characters": {
+					"Faehrmann": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -200.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "ffffffff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 105.0,
+						"y": 258.0
+					},
+					"Max": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -193.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "ffffffff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 100.000885009766,
+						"y": 249.999984741211
+					},
+					"Pixel": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -44.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "ffffffff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 208.926422119141,
+						"y": 247.649719238281
+					}
+				},
 				"hotspots": {
 					"AmphorenAmKai": {
 						"is_moving": false,
@@ -2996,17 +4355,6 @@
 					}
 				},
 				"props": {
-					"Background": {
-						"alpha": 1.0,
-						"current_frame": 0.0,
-						"is_moving": false,
-						"obstacle": false,
-						"obstacle_polygon": [],
-						"times_clicked": 0.0,
-						"times_double_clicked": 0.0,
-						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
-					},
 					"Tintenfass": {
 						"alpha": 1.0,
 						"current_frame": 0.0,
@@ -3020,9 +4368,9 @@
 					}
 				},
 				"regions": {},
-				"visited": false,
+				"visited": true,
 				"visited_first_time": false,
-				"visited_times": 0.0,
+				"visited_times": 5.0,
 				"walkable_areas": {
 					"Boden": {
 						"enabled": true,
@@ -3467,7 +4815,140 @@
 				}
 			},
 			"Klassenzimmer": {
-				"characters": {},
+				"characters": {
+					"Alwin": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -213.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "ffffffff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 248.0,
+						"y": 245.0
+					},
+					"Max": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -193.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "ffffffff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 60.0,
+						"y": 242.0
+					},
+					"Pixel": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -44.0
+						},
+						"face_character": "",
+						"facing": 5.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "ffffffff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 240.999984741211,
+						"y": 249.999984741211
+					},
+					"Toadi": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -112.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "ffffffff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 470.0,
+						"y": 262.0
+					}
+				},
 				"hotspots": {
 					"AusgangDorfplatz": {
 						"is_moving": false,
@@ -3481,49 +4962,49 @@
 						"times_clicked": 0.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"DurchgeloecherteZweiteSocke": {
 						"is_moving": false,
 						"times_clicked": 0.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"Fenster": {
 						"is_moving": false,
 						"times_clicked": 0.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"Flasche1": {
 						"is_moving": false,
-						"times_clicked": 0.0,
+						"times_clicked": 3.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"Flasche2": {
 						"is_moving": false,
-						"times_clicked": 0.0,
+						"times_clicked": 2.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
 						"times_right_clicked": 0.0
 					},
 					"Flasche3": {
 						"is_moving": false,
-						"times_clicked": 0.0,
+						"times_clicked": 2.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
 						"times_right_clicked": 0.0
 					},
 					"Flasche4": {
 						"is_moving": false,
-						"times_clicked": 0.0,
+						"times_clicked": 1.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"Flasche5": {
 						"is_moving": false,
@@ -3544,28 +5025,28 @@
 						"times_clicked": 0.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"Kessel": {
 						"is_moving": false,
-						"times_clicked": 0.0,
+						"times_clicked": 2.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"Schulbank": {
 						"is_moving": false,
 						"times_clicked": 0.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"Tafel": {
 						"is_moving": false,
 						"times_clicked": 0.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					}
 				},
 				"props": {
@@ -3582,9 +5063,9 @@
 					}
 				},
 				"regions": {},
-				"visited": false,
+				"visited": true,
 				"visited_first_time": false,
-				"visited_times": 0.0,
+				"visited_times": 2.0,
 				"walkable_areas": {
 					"Boden": {
 						"enabled": true,
@@ -4053,8 +5534,8 @@
 							"x": 0.0,
 							"y": 0.0
 						},
-						"x": 205.507034301758,
-						"y": 315.345977783203
+						"x": 205.559967041016,
+						"y": 306.60888671875
 					}
 				},
 				"hotspots": {
@@ -4088,14 +5569,14 @@
 					},
 					"Kartenleser": {
 						"is_moving": false,
-						"times_clicked": 0.0,
+						"times_clicked": 2.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
 						"times_right_clicked": 0.0
 					},
 					"Panzertuer": {
 						"is_moving": false,
-						"times_clicked": 0.0,
+						"times_clicked": 1.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
 						"times_right_clicked": 0.0
@@ -4144,8 +5625,8 @@
 				},
 				"regions": {},
 				"visited": true,
-				"visited_first_time": true,
-				"visited_times": 1.0,
+				"visited_first_time": false,
+				"visited_times": 2.0,
 				"walkable_areas": {
 					"Boden": {
 						"enabled": true,
@@ -4183,7 +5664,107 @@
 				}
 			},
 			"Luftschloss": {
-				"characters": {},
+				"characters": {
+					"Max": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -193.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "ffffffff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 155.000045776367,
+						"y": 265.999938964844
+					},
+					"Pixel": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -44.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "ffffffff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 233.359680175781,
+						"y": 270.327697753906
+					},
+					"Zeldina": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -200.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "ffffffff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 1010.0,
+						"y": 268.0
+					}
+				},
 				"hotspots": {
 					"Balkon": {
 						"is_moving": false,
@@ -4197,7 +5778,7 @@
 						"times_clicked": 0.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"Rankenende": {
 						"is_moving": false,
@@ -4242,9 +5823,9 @@
 					}
 				},
 				"regions": {},
-				"visited": false,
-				"visited_first_time": false,
-				"visited_times": 0.0,
+				"visited": true,
+				"visited_first_time": true,
+				"visited_times": 1.0,
 				"walkable_areas": {
 					"Boden": {
 						"enabled": true,
@@ -4318,7 +5899,173 @@
 				}
 			},
 			"NilDelta": {
-				"characters": {},
+				"characters": {
+					"Faehrmann": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -200.0
+						},
+						"face_character": "",
+						"facing": 0.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "ffffffff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 185.0,
+						"y": 302.0
+					},
+					"Max": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -193.0
+						},
+						"face_character": "",
+						"facing": 0.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "ffffffff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 1149.99816894531,
+						"y": 262.000122070312
+					},
+					"Pixel": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -44.0
+						},
+						"face_character": "",
+						"facing": 0.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "ffffffff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 1052.79809570312,
+						"y": 263.679931640625
+					},
+					"Sobek": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -58.0
+						},
+						"face_character": "",
+						"facing": 0.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "ffffffff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 209.996887207031,
+						"y": 325.000915527344
+					},
+					"Steinmetz": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -205.0
+						},
+						"face_character": "",
+						"facing": 0.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "ffffffff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 790.0,
+						"y": 268.0
+					}
+				},
 				"hotspots": {
 					"Bauplan": {
 						"is_moving": false,
@@ -4336,7 +6083,7 @@
 					},
 					"Faehre": {
 						"is_moving": false,
-						"times_clicked": 0.0,
+						"times_clicked": 1.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
 						"times_right_clicked": 0.0
@@ -4385,17 +6132,6 @@
 					}
 				},
 				"props": {
-					"Background": {
-						"alpha": 1.0,
-						"current_frame": 0.0,
-						"is_moving": false,
-						"obstacle": false,
-						"obstacle_polygon": [],
-						"times_clicked": 0.0,
-						"times_double_clicked": 0.0,
-						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
-					},
 					"Papyrusblatt": {
 						"alpha": 1.0,
 						"current_frame": 0.0,
@@ -4409,9 +6145,9 @@
 					}
 				},
 				"regions": {},
-				"visited": false,
+				"visited": true,
 				"visited_first_time": false,
-				"visited_times": 0.0,
+				"visited_times": 6.0,
 				"walkable_areas": {
 					"Boden": {
 						"enabled": true,
@@ -4457,7 +6193,107 @@
 				}
 			},
 			"Palastkueche": {
-				"characters": {},
+				"characters": {
+					"Max": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -193.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "f0dcc4ff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 59.9988403320312,
+						"y": 259.999938964844
+					},
+					"Nebet": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -181.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "f0dcc4ff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 408.0,
+						"y": 262.0
+					},
+					"Pixel": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -44.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "f0dcc4ff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 215.0,
+						"y": 260.0
+					}
+				},
 				"hotspots": {
 					"AusgangThronsaal": {
 						"is_moving": false,
@@ -4517,24 +6353,13 @@
 					}
 				},
 				"props": {
-					"Background": {
-						"alpha": 1.0,
-						"current_frame": 0.0,
-						"is_moving": false,
-						"obstacle": false,
-						"obstacle_polygon": [],
-						"times_clicked": 0.0,
-						"times_double_clicked": 0.0,
-						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
-					},
 					"Brot": {
 						"alpha": 1.0,
 						"current_frame": 0.0,
 						"is_moving": false,
 						"obstacle": false,
 						"obstacle_polygon": [],
-						"times_clicked": 0.0,
+						"times_clicked": 1.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
 						"times_right_clicked": 0.0
@@ -4545,7 +6370,7 @@
 						"is_moving": false,
 						"obstacle": false,
 						"obstacle_polygon": [],
-						"times_clicked": 0.0,
+						"times_clicked": 1.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
 						"times_right_clicked": 0.0
@@ -4567,16 +6392,16 @@
 						"is_moving": false,
 						"obstacle": false,
 						"obstacle_polygon": [],
-						"times_clicked": 0.0,
+						"times_clicked": 1.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
 						"times_right_clicked": 0.0
 					}
 				},
 				"regions": {},
-				"visited": false,
-				"visited_first_time": false,
-				"visited_times": 0.0,
+				"visited": true,
+				"visited_first_time": true,
+				"visited_times": 1.0,
 				"walkable_areas": {
 					"Boden": {
 						"enabled": true,
@@ -4799,14 +6624,147 @@
 				}
 			},
 			"Schmiede": {
-				"characters": {},
+				"characters": {
+					"Max": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -193.0
+						},
+						"face_character": "",
+						"facing": 7.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "f0d0b8ff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 605.0,
+						"y": 249.999938964844
+					},
+					"Pixel": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -44.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "f0d0b8ff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 555.0,
+						"y": 262.0
+					},
+					"Schmied": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -205.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "f0d0b8ff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 330.0,
+						"y": 242.0
+					},
+					"SchmiedeZiege": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -97.0
+						},
+						"face_character": "",
+						"facing": 0.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "f0d0b8ff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 432.55224609375,
+						"y": 307.999542236328
+					}
+				},
 				"hotspots": {
 					"Amboss": {
 						"is_moving": false,
 						"times_clicked": 0.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"AusgangDorfplatz": {
 						"is_moving": false,
@@ -4820,44 +6778,33 @@
 						"times_clicked": 0.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"Kochgeschirr": {
 						"is_moving": false,
-						"times_clicked": 0.0,
+						"times_clicked": 1.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					}
 				},
 				"props": {
-					"Background": {
-						"alpha": 1.0,
-						"current_frame": 0.0,
-						"is_moving": false,
-						"obstacle": false,
-						"obstacle_polygon": [],
-						"times_clicked": 0.0,
-						"times_double_clicked": 0.0,
-						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
-					},
 					"Krug": {
 						"alpha": 1.0,
 						"current_frame": 0.0,
 						"is_moving": false,
 						"obstacle": false,
 						"obstacle_polygon": [],
-						"times_clicked": 0.0,
+						"times_clicked": 1.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					}
 				},
 				"regions": {},
-				"visited": false,
+				"visited": true,
 				"visited_first_time": false,
-				"visited_times": 0.0,
+				"visited_times": 2.0,
 				"walkable_areas": {
 					"Boden": {
 						"enabled": true,
@@ -5045,7 +6992,107 @@
 				}
 			},
 			"Sphinx": {
-				"characters": {},
+				"characters": {
+					"Max": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -193.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "ffffffff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 367.317810058594,
+						"y": 298.917297363281
+					},
+					"Pixel": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -44.0
+						},
+						"face_character": "",
+						"facing": 0.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "ffffffff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 299.999267578125,
+						"y": 299.999938964844
+					},
+					"SphinxFigur": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -64.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "ffffffff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 560.0,
+						"y": 240.0
+					}
+				},
 				"hotspots": {
 					"AusgangNilDelta": {
 						"is_moving": false,
@@ -5111,9 +7158,9 @@
 					}
 				},
 				"regions": {},
-				"visited": false,
+				"visited": true,
 				"visited_first_time": false,
-				"visited_times": 0.0,
+				"visited_times": 2.0,
 				"walkable_areas": {
 					"Boden": {
 						"enabled": true,
@@ -5375,7 +7422,173 @@
 				}
 			},
 			"Stadion": {
-				"characters": {},
+				"characters": {
+					"Hermes": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -193.0
+						},
+						"face_character": "",
+						"facing": 0.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "f2ebdcff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 420.0,
+						"y": 292.0
+					},
+					"Leonidas": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -220.0
+						},
+						"face_character": "",
+						"facing": 0.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "ffffffff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": -80.0,
+						"y": 300.0
+					},
+					"Max": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -193.0
+						},
+						"face_character": "",
+						"facing": 0.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "ffffffff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 1250.0,
+						"y": 290.0
+					},
+					"Pixel": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -44.0
+						},
+						"face_character": "",
+						"facing": 0.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "ffffffff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 1029.18920898438,
+						"y": 284.328643798828
+					},
+					"Schildkroete": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -43.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "ffffffff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 750.0,
+						"y": 322.0
+					}
+				},
 				"hotspots": {
 					"AusgangAgora": {
 						"is_moving": false,
@@ -5421,14 +7634,14 @@
 					},
 					"Startlinie": {
 						"is_moving": false,
-						"times_clicked": 0.0,
+						"times_clicked": 2.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
 						"times_right_clicked": 0.0
 					},
 					"Wurfhebel": {
 						"is_moving": false,
-						"times_clicked": 0.0,
+						"times_clicked": 1.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
 						"times_right_clicked": 0.0
@@ -5455,9 +7668,9 @@
 					}
 				},
 				"regions": {},
-				"visited": false,
-				"visited_first_time": false,
-				"visited_times": 0.0,
+				"visited": true,
+				"visited_first_time": true,
+				"visited_times": 1.0,
 				"walkable_areas": {
 					"Boden": {
 						"enabled": true,
@@ -5659,7 +7872,7 @@
 					},
 					"Gehweg": {
 						"is_moving": false,
-						"times_clicked": 1.0,
+						"times_clicked": 0.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
 						"times_right_clicked": 0.0
@@ -5723,7 +7936,7 @@
 				"regions": {},
 				"visited": true,
 				"visited_first_time": false,
-				"visited_times": 3.0,
+				"visited_times": 4.0,
 				"walkable_areas": {
 					"Boden": {
 						"enabled": true,
@@ -5785,7 +7998,173 @@
 				}
 			},
 			"Startbuero": {
-				"characters": {},
+				"characters": {
+					"Beamter1": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -151.0
+						},
+						"face_character": "",
+						"facing": 0.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "f2ebdcff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 255.0,
+						"y": 213.0
+					},
+					"Beamter2": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -200.0
+						},
+						"face_character": "",
+						"facing": 0.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "f2ebdcff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 392.0,
+						"y": 214.0
+					},
+					"Hermes": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -193.0
+						},
+						"face_character": "",
+						"facing": 0.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "f2ebdcff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 220.0,
+						"y": 290.0
+					},
+					"Max": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -193.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "f2ebdcff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 110.0,
+						"y": 240.0
+					},
+					"Pixel": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -44.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "f2ebdcff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 330.622009277344,
+						"y": 263.416259765625
+					}
+				},
 				"hotspots": {
 					"AusgangAgora": {
 						"is_moving": false,
@@ -5831,33 +8210,22 @@
 					}
 				},
 				"props": {
-					"Background": {
-						"alpha": 1.0,
-						"current_frame": 0.0,
-						"is_moving": false,
-						"obstacle": false,
-						"obstacle_polygon": [],
-						"times_clicked": 0.0,
-						"times_double_clicked": 0.0,
-						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
-					},
 					"LeeresFormular": {
 						"alpha": 1.0,
 						"current_frame": 0.0,
 						"is_moving": false,
 						"obstacle": false,
 						"obstacle_polygon": [],
-						"times_clicked": 0.0,
+						"times_clicked": 1.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
 						"times_right_clicked": 0.0
 					}
 				},
 				"regions": {},
-				"visited": false,
-				"visited_first_time": false,
-				"visited_times": 0.0,
+				"visited": true,
+				"visited_first_time": true,
+				"visited_times": 1.0,
 				"walkable_areas": {
 					"Boden": {
 						"enabled": true,
@@ -5973,7 +8341,173 @@
 				}
 			},
 			"Taverne": {
-				"characters": {},
+				"characters": {
+					"Gollo": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -151.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "f0d8bcff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 282.0,
+						"y": 264.0
+					},
+					"Huhn": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -51.0
+						},
+						"face_character": "",
+						"facing": 0.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "f0d8bcff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 235.0,
+						"y": 50.0
+					},
+					"Humbert": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -205.0
+						},
+						"face_character": "",
+						"facing": 0.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "f0d8bcff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 170.0,
+						"y": 208.0
+					},
+					"Max": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -193.0
+						},
+						"face_character": "",
+						"facing": 0.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "f0d8bcff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 605.0,
+						"y": 245.0
+					},
+					"Pixel": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -44.0
+						},
+						"face_character": "",
+						"facing": 0.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "f0d8bcff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 417.366149902344,
+						"y": 242.064926147461
+					}
+				},
 				"hotspots": {
 					"AusgangDorfplatz": {
 						"is_moving": false,
@@ -5987,108 +8521,97 @@
 						"times_clicked": 0.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"Fischsuppe": {
 						"is_moving": false,
-						"times_clicked": 0.0,
+						"times_clicked": 2.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"FlascheVielsaftLimo": {
 						"is_moving": false,
 						"times_clicked": 0.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"FondueTopf": {
 						"is_moving": false,
-						"times_clicked": 0.0,
+						"times_clicked": 3.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"Kamin": {
 						"is_moving": false,
 						"times_clicked": 0.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"Kellertuer": {
 						"is_moving": false,
-						"times_clicked": 0.0,
+						"times_clicked": 1.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"LauteMitMuenzbecher": {
 						"is_moving": false,
-						"times_clicked": 0.0,
+						"times_clicked": 1.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"LeereSchilder": {
 						"is_moving": false,
 						"times_clicked": 0.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"SchwerterSammlung": {
 						"is_moving": false,
 						"times_clicked": 0.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"SteckbriefPlakatDrache": {
 						"is_moving": false,
 						"times_clicked": 0.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"Tresen": {
 						"is_moving": false,
 						"times_clicked": 0.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"WeinkarteAmTresen": {
 						"is_moving": false,
-						"times_clicked": 0.0,
+						"times_clicked": 1.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					}
 				},
 				"props": {
-					"Background": {
-						"alpha": 1.0,
-						"current_frame": 0.0,
-						"is_moving": false,
-						"obstacle": false,
-						"obstacle_polygon": [],
-						"times_clicked": 0.0,
-						"times_double_clicked": 0.0,
-						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
-					},
 					"Ei": {
 						"alpha": 1.0,
 						"current_frame": 0.0,
 						"is_moving": false,
 						"obstacle": false,
 						"obstacle_polygon": [],
-						"times_clicked": 0.0,
+						"times_clicked": 1.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"ZiegenfellVorleger": {
 						"alpha": 1.0,
@@ -6096,16 +8619,16 @@
 						"is_moving": false,
 						"obstacle": false,
 						"obstacle_polygon": [],
-						"times_clicked": 0.0,
+						"times_clicked": 2.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					}
 				},
 				"regions": {},
-				"visited": false,
-				"visited_first_time": false,
-				"visited_times": 0.0,
+				"visited": true,
+				"visited_first_time": true,
+				"visited_times": 1.0,
 				"walkable_areas": {
 					"Boden": {
 						"enabled": true,
@@ -6208,7 +8731,7 @@
 							"y": -193.0
 						},
 						"face_character": "",
-						"facing": 5.0,
+						"facing": 6.0,
 						"follow_character": "",
 						"follow_character_offset": {
 							"x": 20.0,
@@ -6224,7 +8747,7 @@
 							"x": 0.0,
 							"y": 0.0
 						},
-						"modulate": "c8c4dcff",
+						"modulate": "ffffffff",
 						"self_modulate": "ffffffff",
 						"visible": true,
 						"walk_to_point": {
@@ -6410,7 +8933,7 @@
 					},
 					"Bodenschalter": {
 						"is_moving": false,
-						"times_clicked": 1.0,
+						"times_clicked": 0.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
 						"times_right_clicked": 0.0
@@ -6528,7 +9051,7 @@
 							"y": -193.0
 						},
 						"face_character": "",
-						"facing": 0.0,
+						"facing": 6.0,
 						"follow_character": "",
 						"follow_character_offset": {
 							"x": 20.0,
@@ -6614,8 +9137,8 @@
 				},
 				"regions": {},
 				"visited": true,
-				"visited_first_time": true,
-				"visited_times": 1.0,
+				"visited_first_time": false,
+				"visited_times": 2.0,
 				"walkable_areas": {
 					"Boden": {
 						"enabled": true,
@@ -6751,8 +9274,8 @@
 				},
 				"regions": {},
 				"visited": true,
-				"visited_first_time": true,
-				"visited_times": 1.0,
+				"visited_first_time": false,
+				"visited_times": 2.0,
 				"walkable_areas": {
 					"Boden": {
 						"enabled": true,
@@ -6782,7 +9305,140 @@
 				}
 			},
 			"Thronsaal": {
-				"characters": {},
+				"characters": {
+					"Max": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -193.0
+						},
+						"face_character": "",
+						"facing": 0.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "bcb4d4ff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 351.728118896484,
+						"y": 296.0
+					},
+					"Moderwort": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -205.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "bcb4d4ff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 400.0,
+						"y": 296.0
+					},
+					"Pixel": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -44.0
+						},
+						"face_character": "",
+						"facing": 0.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "bcb4d4ff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 306.728118896484,
+						"y": 296.0
+					},
+					"Zeldina": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -200.0
+						},
+						"face_character": "",
+						"facing": 0.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "bcb4d4ff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 208.0,
+						"y": 298.0
+					}
+				},
 				"hotspots": {
 					"AusgangAbstellkammern": {
 						"is_moving": false,
@@ -6841,9 +9497,9 @@
 					}
 				},
 				"regions": {},
-				"visited": false,
-				"visited_first_time": false,
-				"visited_times": 0.0,
+				"visited": true,
+				"visited_first_time": true,
+				"visited_times": 1.0,
 				"walkable_areas": {
 					"Boden": {
 						"enabled": true,
@@ -6889,7 +9545,173 @@
 				}
 			},
 			"ThronsaalRamses": {
-				"characters": {},
+				"characters": {
+					"Faecherwedler": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -193.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "f2e2ccff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 1112.0,
+						"y": 300.0
+					},
+					"Max": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -193.0
+						},
+						"face_character": "",
+						"facing": 0.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "f2e2ccff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 60.0,
+						"y": 309.999694824219
+					},
+					"Pixel": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -44.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "f2e2ccff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 82.6835327148438,
+						"y": 329.9990234375
+					},
+					"Ramses": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -205.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "f2e2ccff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 955.0,
+						"y": 266.0
+					},
+					"Schreiber": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -127.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "f2e2ccff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 305.0,
+						"y": 300.0
+					}
+				},
 				"hotspots": {
 					"AusgangNilDelta": {
 						"is_moving": false,
@@ -6910,7 +9732,7 @@
 						"times_clicked": 0.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"MumifizierteKatze": {
 						"is_moving": false,
@@ -6970,17 +9792,6 @@
 					}
 				},
 				"props": {
-					"Background": {
-						"alpha": 1.0,
-						"current_frame": 0.0,
-						"is_moving": false,
-						"obstacle": false,
-						"obstacle_polygon": [],
-						"times_clicked": 0.0,
-						"times_double_clicked": 0.0,
-						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
-					},
 					"Pharaonenteller": {
 						"alpha": 1.0,
 						"current_frame": 0.0,
@@ -6994,9 +9805,9 @@
 					}
 				},
 				"regions": {},
-				"visited": false,
+				"visited": true,
 				"visited_first_time": false,
-				"visited_times": 0.0,
+				"visited_times": 4.0,
 				"walkable_areas": {
 					"Boden": {
 						"enabled": true,
@@ -7026,7 +9837,41 @@
 				}
 			},
 			"Treppenhaus": {
-				"characters": {},
+				"characters": {
+					"Max": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -193.0
+						},
+						"face_character": "",
+						"facing": 7.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "ffffffff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 592.0,
+						"y": 50.0
+					}
+				},
 				"hotspots": {
 					"AusgangDachboden": {
 						"is_moving": false,
@@ -7093,33 +9938,22 @@
 					}
 				},
 				"props": {
-					"Background": {
-						"alpha": 1.0,
-						"current_frame": 0.0,
-						"is_moving": false,
-						"obstacle": false,
-						"obstacle_polygon": [],
-						"times_clicked": 0.0,
-						"times_double_clicked": 0.0,
-						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
-					},
 					"Thunfischdose": {
 						"alpha": 1.0,
 						"current_frame": 0.0,
 						"is_moving": false,
 						"obstacle": false,
 						"obstacle_polygon": [],
-						"times_clicked": 0.0,
+						"times_clicked": 1.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
 						"times_right_clicked": 0.0
 					}
 				},
 				"regions": {},
-				"visited": false,
-				"visited_first_time": false,
-				"visited_times": 0.0,
+				"visited": true,
+				"visited_first_time": true,
+				"visited_times": 1.0,
 				"walkable_areas": {
 					"Boden": {
 						"enabled": true,
@@ -7197,7 +10031,140 @@
 				}
 			},
 			"Trollbruecke": {
-				"characters": {},
+				"characters": {
+					"Max": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -193.0
+						},
+						"face_character": "",
+						"facing": 0.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "ffffffff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 620.0,
+						"y": 228.0
+					},
+					"Pixel": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -44.0
+						},
+						"face_character": "",
+						"facing": 0.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "ffffffff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 391.252532958984,
+						"y": 187.999801635742
+					},
+					"XxlZiege": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -240.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "ffffffff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 338.0,
+						"y": 178.0
+					},
+					"Zeldina": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -200.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "ffffffff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 158.0,
+						"y": 196.0
+					}
+				},
 				"hotspots": {
 					"AusgangDorfplatz": {
 						"is_moving": false,
@@ -7211,35 +10178,35 @@
 						"times_clicked": 0.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"Bruecke": {
 						"is_moving": false,
 						"times_clicked": 0.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"Grammophon": {
 						"is_moving": false,
 						"times_clicked": 0.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"Notenblaetter": {
 						"is_moving": false,
 						"times_clicked": 0.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"Schild": {
 						"is_moving": false,
-						"times_clicked": 0.0,
+						"times_clicked": 1.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"Waldweg": {
 						"is_moving": false,
@@ -7260,7 +10227,7 @@
 						"times_clicked": 0.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					}
 				},
 				"props": {
@@ -7277,9 +10244,9 @@
 					}
 				},
 				"regions": {},
-				"visited": false,
+				"visited": true,
 				"visited_first_time": false,
-				"visited_times": 0.0,
+				"visited_times": 6.0,
 				"walkable_areas": {
 					"Boden": {
 						"enabled": true,
@@ -7381,14 +10348,147 @@
 				}
 			},
 			"Turmkeller": {
-				"characters": {},
+				"characters": {
+					"Grimmzahn": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -139.0
+						},
+						"face_character": "",
+						"facing": 0.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "b9b4d0ff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 424.0,
+						"y": 254.0
+					},
+					"Max": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -193.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "b9b4d0ff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 324.999938964844,
+						"y": 231.999984741211
+					},
+					"Pixel": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -44.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "b9b4d0ff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 438.019683837891,
+						"y": 236.122497558594
+					},
+					"Zeldina": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -200.0
+						},
+						"face_character": "",
+						"facing": 0.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "b9b4d0ff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 468.0,
+						"y": 254.0
+					}
+				},
 				"hotspots": {
 					"Besen": {
 						"is_moving": false,
 						"times_clicked": 0.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"GeradeRoute": {
 						"is_moving": false,
@@ -7399,7 +10499,7 @@
 					},
 					"Kammertuer": {
 						"is_moving": false,
-						"times_clicked": 0.0,
+						"times_clicked": 2.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
 						"times_right_clicked": 0.0
@@ -7413,21 +10513,21 @@
 					},
 					"Kreuzung1": {
 						"is_moving": false,
-						"times_clicked": 0.0,
+						"times_clicked": 2.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
 						"times_right_clicked": 0.0
 					},
 					"Kreuzung2": {
 						"is_moving": false,
-						"times_clicked": 0.0,
+						"times_clicked": 1.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
 						"times_right_clicked": 0.0
 					},
 					"Kreuzung3": {
 						"is_moving": false,
-						"times_clicked": 0.0,
+						"times_clicked": 1.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
 						"times_right_clicked": 0.0
@@ -7441,7 +10541,7 @@
 					},
 					"TreppeNachOben": {
 						"is_moving": false,
-						"times_clicked": 0.0,
+						"times_clicked": 1.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
 						"times_right_clicked": 0.0
@@ -7468,9 +10568,9 @@
 					}
 				},
 				"regions": {},
-				"visited": false,
+				"visited": true,
 				"visited_first_time": false,
-				"visited_times": 0.0,
+				"visited_times": 2.0,
 				"walkable_areas": {
 					"Boden": {
 						"enabled": true,
@@ -7804,7 +10904,7 @@
 					},
 					"Pfuetzen": {
 						"is_moving": false,
-						"times_clicked": 0.0,
+						"times_clicked": 3.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
 						"times_right_clicked": 0.0
@@ -7847,7 +10947,7 @@
 				"regions": {},
 				"visited": true,
 				"visited_first_time": false,
-				"visited_times": 4.0,
+				"visited_times": 6.0,
 				"walkable_areas": {
 					"Boden": {
 						"enabled": true,
@@ -7925,7 +11025,140 @@
 				}
 			},
 			"Wasserschloss": {
-				"characters": {},
+				"characters": {
+					"Max": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -193.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "ffffffff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 15.0,
+						"y": 292.0
+					},
+					"Pixel": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -44.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "ffffffff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 248.746932983398,
+						"y": 297.946685791016
+					},
+					"Schwan": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -85.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "ffffffff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 520.0,
+						"y": 265.0
+					},
+					"Toadi": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -112.0
+						},
+						"face_character": "",
+						"facing": 0.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "ffffffff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 440.0,
+						"y": 322.0
+					}
+				},
 				"hotspots": {
 					"AusgangTrollbruecke": {
 						"is_moving": false,
@@ -7939,35 +11172,35 @@
 						"times_clicked": 0.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"SchildAmTor": {
 						"is_moving": false,
 						"times_clicked": 0.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"Schilf": {
 						"is_moving": false,
 						"times_clicked": 0.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"Teppich": {
 						"is_moving": false,
 						"times_clicked": 0.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"Umzugskartons": {
 						"is_moving": false,
-						"times_clicked": 0.0,
+						"times_clicked": 1.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					}
 				},
 				"props": {
@@ -7984,9 +11217,9 @@
 					}
 				},
 				"regions": {},
-				"visited": false,
-				"visited_first_time": false,
-				"visited_times": 0.0,
+				"visited": true,
+				"visited_first_time": true,
+				"visited_times": 1.0,
 				"walkable_areas": {
 					"Boden": {
 						"enabled": true,
@@ -8199,7 +11432,140 @@
 				}
 			},
 			"Werkstatt": {
-				"characters": {},
+				"characters": {
+					"Archimedes": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -186.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "ece0ccff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 720.0,
+						"y": 300.0
+					},
+					"Hieron": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -213.0
+						},
+						"face_character": "",
+						"facing": 0.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "ece0ccff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 110.0,
+						"y": 345.0
+					},
+					"Max": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -193.0
+						},
+						"face_character": "",
+						"facing": 6.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "ece0ccff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 610.0,
+						"y": 300.0
+					},
+					"Pixel": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -44.0
+						},
+						"face_character": "",
+						"facing": 0.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "ece0ccff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 555.0,
+						"y": 330.0
+					}
+				},
 				"hotspots": {
 					"AusgangHafen": {
 						"is_moving": false,
@@ -8273,17 +11639,6 @@
 					}
 				},
 				"props": {
-					"Background": {
-						"alpha": 1.0,
-						"current_frame": 0.0,
-						"is_moving": false,
-						"obstacle": false,
-						"obstacle_polygon": [],
-						"times_clicked": 0.0,
-						"times_double_clicked": 0.0,
-						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
-					},
 					"Brennspiegel": {
 						"alpha": 1.0,
 						"current_frame": 0.0,
@@ -8312,7 +11667,7 @@
 						"is_moving": false,
 						"obstacle": false,
 						"obstacle_polygon": [],
-						"times_clicked": 0.0,
+						"times_clicked": 1.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
 						"times_right_clicked": 0.0
@@ -8330,9 +11685,9 @@
 					}
 				},
 				"regions": {},
-				"visited": false,
+				"visited": true,
 				"visited_first_time": false,
-				"visited_times": 0.0,
+				"visited_times": 2.0,
 				"walkable_areas": {
 					"Boden": {
 						"enabled": true,
@@ -8678,7 +12033,7 @@
 					},
 					"Terminal": {
 						"is_moving": false,
-						"times_clicked": 0.0,
+						"times_clicked": 1.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
 						"times_right_clicked": 0.0
@@ -8707,7 +12062,7 @@
 				"regions": {},
 				"visited": true,
 				"visited_first_time": false,
-				"visited_times": 5.0,
+				"visited_times": 7.0,
 				"walkable_areas": {
 					"Boden": {
 						"enabled": true,
@@ -8769,7 +12124,7 @@
 							"y": -193.0
 						},
 						"face_character": "",
-						"facing": 2.0,
+						"facing": 0.0,
 						"follow_character": "",
 						"follow_character_offset": {
 							"x": 20.0,
@@ -8792,8 +12147,8 @@
 							"x": 0.0,
 							"y": 0.0
 						},
-						"x": 187.0,
-						"y": 330.0
+						"x": 600.0,
+						"y": 305.0
 					}
 				},
 				"hotspots": {
@@ -8882,7 +12237,7 @@
 						"is_moving": false,
 						"obstacle": false,
 						"obstacle_polygon": [],
-						"times_clicked": 0.0,
+						"times_clicked": 1.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
 						"times_right_clicked": 0.0
@@ -9035,7 +12390,107 @@
 				}
 			},
 			"Zauberstabladen": {
-				"characters": {},
+				"characters": {
+					"Max": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -193.0
+						},
+						"face_character": "",
+						"facing": 0.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "dcd0e4ff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 605.0,
+						"y": 245.0
+					},
+					"Pixel": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -44.0
+						},
+						"face_character": "",
+						"facing": 0.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "dcd0e4ff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 511.710144042969,
+						"y": 257.356750488281
+					},
+					"Stabmacher": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -200.0
+						},
+						"face_character": "",
+						"facing": 0.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "dcd0e4ff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 440.0,
+						"y": 232.0
+					}
+				},
 				"hotspots": {
 					"AusgangDorfplatz": {
 						"is_moving": false,
@@ -9074,27 +12529,16 @@
 					}
 				},
 				"props": {
-					"Background": {
-						"alpha": 1.0,
-						"current_frame": 0.0,
-						"is_moving": false,
-						"obstacle": false,
-						"obstacle_polygon": [],
-						"times_clicked": 0.0,
-						"times_double_clicked": 0.0,
-						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
-					},
 					"Kochloeffel": {
 						"alpha": 1.0,
 						"current_frame": 0.0,
 						"is_moving": false,
 						"obstacle": false,
 						"obstacle_polygon": [],
-						"times_clicked": 0.0,
+						"times_clicked": 1.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"Zahnstocher": {
 						"alpha": 1.0,
@@ -9102,10 +12546,10 @@
 						"is_moving": false,
 						"obstacle": false,
 						"obstacle_polygon": [],
-						"times_clicked": 0.0,
+						"times_clicked": 1.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"Zollstock": {
 						"alpha": 1.0,
@@ -9113,16 +12557,16 @@
 						"is_moving": false,
 						"obstacle": false,
 						"obstacle_polygon": [],
-						"times_clicked": 0.0,
+						"times_clicked": 1.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					}
 				},
 				"regions": {},
-				"visited": false,
+				"visited": true,
 				"visited_first_time": false,
-				"visited_times": 0.0,
+				"visited_times": 2.0,
 				"walkable_areas": {
 					"Boden": {
 						"enabled": true,
@@ -9176,7 +12620,140 @@
 				}
 			},
 			"Zauberwald": {
-				"characters": {},
+				"characters": {
+					"Max": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -193.0
+						},
+						"face_character": "",
+						"facing": 0.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "d2dcc8ff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 996.0,
+						"y": 242.0
+					},
+					"Pixel": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -44.0
+						},
+						"face_character": "",
+						"facing": 0.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "d2dcc8ff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 505.210510253906,
+						"y": 210.578948974609
+					},
+					"Rotkaeppchen": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -166.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "d2dcc8ff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 1270.0,
+						"y": 290.0
+					},
+					"Zeldina": {
+						"baseline": 0.0,
+						"dialog_pos": {
+							"x": 0.0,
+							"y": -200.0
+						},
+						"face_character": "",
+						"facing": 4.0,
+						"follow_character": "",
+						"follow_character_offset": {
+							"x": 20.0,
+							"y": -5.0
+						},
+						"follow_character_outside_room": false,
+						"follow_character_threshold": {
+							"x": 35.0,
+							"y": 10.0
+						},
+						"light_mask": 1.0,
+						"look_at_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"modulate": "d2dcc8ff",
+						"self_modulate": "ffffffff",
+						"visible": true,
+						"walk_to_point": {
+							"x": 0.0,
+							"y": 0.0
+						},
+						"x": 108.0,
+						"y": 276.0
+					}
+				},
 				"hotspots": {
 					"AusgangTrollbruecke": {
 						"is_moving": false,
@@ -9204,35 +12781,35 @@
 						"times_clicked": 0.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"Leuchtpilze": {
 						"is_moving": false,
-						"times_clicked": 0.0,
+						"times_clicked": 1.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"Lieferkarren": {
 						"is_moving": false,
-						"times_clicked": 0.0,
+						"times_clicked": 1.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"Niesrosen": {
 						"is_moving": false,
-						"times_clicked": 0.0,
+						"times_clicked": 1.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"Riesenpilze": {
 						"is_moving": false,
 						"times_clicked": 0.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"Stolleneingang": {
 						"is_moving": false,
@@ -9249,18 +12826,7 @@
 						"is_moving": false,
 						"obstacle": false,
 						"obstacle_polygon": [],
-						"times_clicked": 0.0,
-						"times_double_clicked": 0.0,
-						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
-					},
-					"Background": {
-						"alpha": 1.0,
-						"current_frame": 0.0,
-						"is_moving": false,
-						"obstacle": false,
-						"obstacle_polygon": [],
-						"times_clicked": 0.0,
+						"times_clicked": 1.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
 						"times_right_clicked": 0.0
@@ -9271,10 +12837,10 @@
 						"is_moving": false,
 						"obstacle": false,
 						"obstacle_polygon": [],
-						"times_clicked": 0.0,
+						"times_clicked": 1.0,
 						"times_double_clicked": 0.0,
 						"times_middle_clicked": 0.0,
-						"times_right_clicked": 0.0
+						"times_right_clicked": 1.0
 					},
 					"Leuchtpilz": {
 						"alpha": 1.0,
@@ -9289,9 +12855,9 @@
 					}
 				},
 				"regions": {},
-				"visited": false,
+				"visited": true,
 				"visited_first_time": false,
-				"visited_times": 0.0,
+				"visited_times": 4.0,
 				"walkable_areas": {
 					"Boden": {
 						"enabled": true,
@@ -9411,7 +12977,7 @@
 		}
 	},
 	"raum": "Testbild",
-	"spielzeit": 3891.34778168325,
+	"spielzeit": 19292.3992334237,
 	"version": 3,
-	"zeitstempel": 1795612993.81034
+	"zeitstempel": 1795632087.87408
 }

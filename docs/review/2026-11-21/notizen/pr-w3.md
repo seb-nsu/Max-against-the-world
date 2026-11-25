@@ -4,7 +4,7 @@
 
 **Wie geprüft:** Fernsteuerung (`werkzeuge/cloud/fs`) ohne Testmodus, echte Maus- und Tastenereignisse. Läufe unter `/home/user/lauf/pr-w3-*`. Kontrollpunkte unter `kontrollpunkte/welt-3/` mit `liste.md`. Lösungsweg: `belege/pr-w3/loesungsweg.txt`. Alle Belegpfade relativ zu `docs/review/2026-11-21/`.
 
-**Anfangsstand:** Der Hauptteil der Prüfung begann mit `start welt-3` (Schnellstart: Inventar nur das Pixel-Feld), weil `kontrollpunkte/welt-2/welt2_ende.json` erst am 25.11. um 14:06 UTC kam. Dieser Stand ist kein voller Endstand der Welt 2 (Inventar echt, Schalter R7, R10, R11, R13 der Welt 2 offen); `welt2_ende_umgangen.json` lag bis zum Schluss nicht vor. Von `welt2_ende` aus ist der Lösungsweg bis zum geölten Hausmeister nachgespielt (Abschnitt „Lauf vom Stand `welt2_ende`“); `kontrollpunkte/welt-3/welt3_ende.json` stammt weiter aus dem Schnellstart.
+**Anfangsstand:** Der Hauptteil der Prüfung begann mit `start welt-3` (Schnellstart: Inventar nur das Pixel-Feld), weil `kontrollpunkte/welt-2/welt2_ende.json` erst am 25.11. um 14:06 UTC kam. Zum Schluss ist die ganze Welt 3 noch einmal vom Stand `welt2_ende` aus mit echten Klicks durchgespielt (Abschnitt „Lauf vom Stand `welt2_ende`“), und `kontrollpunkte/welt-3/welt3_ende.json` stammt jetzt aus diesem Lauf. `welt2_ende` ist laut `pr-w2` kein voller Endstand der Welt 2 (Inventar echt, Schalter R7, R10, R11, R13 der Welt 2 offen); `welt2_ende_umgangen.json` lag bis zum Schluss nicht vor.
 
 **Stand der Notiz:** abgeschlossen am 25.11.2026.
 
@@ -15,7 +15,7 @@
 - **Selbst im laufenden Spiel bestätigt:** Vom ersten freien Moment in der Unterstadt (`start welt-3`) bis zum ersten freien Moment in Welt 4 (Raum `testbild`) mit echten Klicks durchgespielt, alle 20 Rätselschritte (R1a bis R13), Welt-Ende, Zwischenspiel 3 mit Packen und Abreise; kein Hänger, kein Absturz. 17 Proben auf Sackgassen (andere Reihenfolgen, leere Budgets, Lösung B, Fehltausche): keine Sackgasse im Spielablauf. Die Pfote hat an jedem abgefragten Schritt drei Stufen.
 - **Kritisch (im Spiel bestätigt, zweimal nachgestellt):** R5-W3-22. Wer das Spiel während der Schluss-Szene beendet und „Fortsetzen“ wählt, steht mit der Zelle in der Basis, und das Welt-Ende startet nie mehr. Die Szene dauert in Lesetempo 6 min 40 s ohne Eingabe (R5-W3-25), das Fenster für diesen Fehler ist also groß.
 - **Kritisch aus anderen Notizen, in Welt 3 im Spiel bestätigt:** R5-W1-34 (nach Neustart und Laden hängt Deckerts Gespräch, R1b wird unlösbar), R5-P-01 (älteren Stand in derselben Sitzung laden: Huhn oder Tasse fehlen, R9c und R6 unlösbar; Inventar aus der Zukunft bleibt).
-- **Vom echten Inventar der Welt 2 aus** (`welt2_ende`) bis zum geölten Hausmeister gespielt: Olivenöl und Warnung funktionieren; der dritte Tausch mit der Sandale in Kammer 3 ist nicht geprüft.
+- **Vom echten Inventar der Welt 2 aus** (`welt2_ende`) ein zweites Mal bis Welt 4 durchgespielt, im Spiel bestätigt: Olivenöl am Hausmeister (`W3_FREUND_0815`, eigene Zeile des Hausmeisters im Welt-Ende), dritter Tausch mit der Sandale in Kammer 3, Reisetasche, Abreise.
 
 **Funde in dieser Notiz:** 1 kritisch (R5-W3-22), 17 wichtig (R5-W3-01, -03, -04, -07, -10, -14, -15, -16, -19, -20, -23, -24, -25, -26, GD-W3-01, -04, -05), 14 kosmetisch (R5-W3-02, -05, -06, -08, -09, -11, -12, -13, -17, -18, -21, GD-W3-02, -03, -06). Alle im laufenden Spiel gesehen; wo eine Ursache aus dem Code gelesen ist, steht es in der Zeile dabei.
 
@@ -188,7 +188,7 @@ Jede Zeile im laufenden Spiel mit echten Klicks, von Kontrollpunkten aus (älter
 | Ausgänge am Weltanfang | `klick @ausgang_apothekengasse`, `@ausgang_widerstandsbasis`, `@ausgang_laboreingang` | Gasse: Deckert hält auf (`W3_STR_DEC_0290`). Basis: Ersatzzeile (R5-W3-16). Laboreingang ist von Anfang an offen; Hausmeister, Kartenleser („Ich halt meine Hand mit dem Stempel dran …“), Panzertür und Gang haben eigene Zeilen (**W3-R05-03 behoben**), die Pfote nennt dort R8. |
 | Kammer 1: Fehltausche | Stand `w3_26_kammer1_anfang`, „schwer“ ↔ „Pappe“, „treu“ ↔ „müde“ | Nach zwei Fehltauschen: „Keine Tausche mehr. Du darfst gehen und wiederkommen …“ und Pixel: „Gehen? Durch welche Tür denn? Wechsel kurz zu mir und zurück …“ (`W3_KAM1_MUT_0570`, `PIX_0575`). `portraet pixel`, `portraet max` setzt zurück (`W3_KAM1_MUT_0560`). Kein Festsitzen. |
 | Kammer 2: Fehltausche, Laser ungelöst | Stand `w3_28_kammer2_anfang`, „tödlich“ ↔ „wahr“, „rot“ ↔ „fest“; Ausgang zu Kammer 3 | Beide Tausche: „… keins der beiden Wörter passt an sein neues Ding. Der Versuch ist trotzdem weg.“ (`W3_TUER_MAX_0390`). Danach „Keine Tausche mehr. Du darfst gehen und wiederkommen.“; raus in Kammer 1 und zurück setzt zurück (`W3_KAM2_MUT_0220`). Der Ausgang durch den tödlichen Laser gibt eine Ersatzzeile (R5-W3-16). |
-| Kammer 3: Fehltausch, andere Reihenfolge | Stand `w3_30_kammer3_anfang` | Lösbar in beiden Reihenfolgen; Zurücksetzen über Raus-und-Rein (`W3_KAM3_MUT_0260`). Texte dabei falsch: R5-W3-15. Der dritte Tausch mit Hermes' Sandale ist nicht geprüft (siehe „Lauf vom Stand `welt2_ende`“). |
+| Kammer 3: Fehltausch, andere Reihenfolge | Stand `w3_30_kammer3_anfang` | Lösbar in beiden Reihenfolgen; Zurücksetzen über Raus-und-Rein (`W3_KAM3_MUT_0260`). Texte dabei falsch: R5-W3-15. Der dritte Tausch mit Hermes' Sandale funktioniert (siehe „Lauf vom Stand `welt2_ende`“). |
 | Kern: Regeln in falscher Reihenfolge | Stand `w3_32_kern_anfang`, `option 2`, `option 3`, Nebenfragen, `option 1`, `option 3`, `option 2`, `option 3` | Jede falsche Regel bekommt eine eigene Abfuhr („Meintest du: Gehorsam?“), die Kette beginnt erst mit Regel 1 und läuft dann 1, 2, 3. Nichts geht verloren. |
 | Kern: Fehltausch an der Zelle, dann Lösung B | nach R10: `klick @energiezelle`, `knopf heiß`, `knopf müde` | „Heiß auf mich? … Das ist ein Tausch für Leute ohne Plan B.“, dann „Kein Tausch mehr übrig, und die Zelle glüht. Also brauch ich Wetter. Pixel. Fenster. Jetzt.“ (`W3_KERN_MAX_0470`). `portraet pixel`, `klick @fenster`, `portraet max` → Schnee im Kern, `W3_ZELLE_KALT`, `W3_ZELLE_SCHNEE` (`W3_KERN_NAR_0480`). **Lösung B trägt** (W3-R03-06 behoben). Stand: `w3_alt_kern_loesung_b_zelle_kalt`. |
 | F5 und Esc in der Code-Sicht | Kammer 2, Code-Sicht offen: `taste f5`, `taste esc` | F5 speichert (Platz 13), Esc schließt die Code-Sicht; ohne Code-Sicht öffnet Esc das Pausemenü. Laden bei offener Code-Sicht lässt das Spiel nicht zu. |
@@ -241,7 +241,7 @@ Zweimal gespielt: im geraden Durchlauf (Stände `w3_34_zs3_dachboden_frei`, `w3_
 
 ## Lauf vom Stand `welt2_ende` (echtes Inventar aus Welt 2)
 
-Ausgang: `kontrollpunkte/welt-2/welt2_ende.json` (Thunfischdose, Notizbuch, Kochlöffel, Olivenöl, geflügelte Sandale; laut `pr-w2` kein voller Endstand). Lauf `pr-w3-echt`, Tempo 4, echte Klicks. Stände: `w3e_07_sim_anfang`, `w3e_14_nach_R12`, `w3e_15b_geoelt` unter `kontrollpunkte/welt-3/`.
+Ausgang: `kontrollpunkte/welt-2/welt2_ende.json` (Thunfischdose, Notizbuch, Kochlöffel, Olivenöl, geflügelte Sandale; laut `pr-w2` kein voller Endstand). Lauf `pr-w3-echt`, Tempo 4, echte Klicks. Stände `w3e_*` und der neue `welt3_ende` unter `kontrollpunkte/welt-3/` (siehe `liste.md`).
 
 | Stück | Ergebnis |
 | --- | --- |
@@ -252,7 +252,12 @@ Ausgang: `kontrollpunkte/welt-2/welt2_ende.json` (Thunfischdose, Notizbuch, Koch
 | Notizbuch | Ziele-Seite zeigt `UI_ZIEL_W3_R4`, `UI_ZIEL_W3_R5` (R5-W2-31, oben) |
 | Mitgebrachte Gegenstände auf die Orakel-Oma | vier Ersatzzeilen, kein Hänger |
 | **Olivenöl** | Seite auf den Hausmeister mit Öl in der Tasche: Pixel warnt einmal („Er quietscht noch. Und du hast Öl in der Tasche.“, `W3_EING_PIX_0185`), die Seite bleibt. Öl auf den Hausmeister: eigene Szene (`W3_EING_MAX_0240` bis `PIX_0270`), `W3_FREUND_0815 = true`. Das geht auch, bevor man je mit ihm gesprochen hat. **Das Öl bleibt danach im Inventar**; ein zweites Ölen gibt eine Ersatzzeile („Das überspring ich. So wie jedes Intro.“, `SYS_ERS_MAX_0180`) – kosmetisch, eine eigene Zeile („Er glänzt schon.“) wäre schöner. |
-| R8 danach, Turm, Labor, **Sandale in Kammer 3**, Reisetasche im Zwischenspiel 3 mit den Welt-2-Gegenständen | **nicht mehr gespielt** (Zeit); der zweite Anlauf über die Befehlsdatei lief am offenen Gespräch des Hausmeisters aus dem Tritt |
+| R8 nach dem Ölen | Seite geht über, Hausmeister rollt ab, `W3_FREUND_0815` bleibt gesetzt. (Ein erster Versuch blieb ohne Reaktion; nicht wiederholbar, vermutlich ein geschluckter Klick nach einem Zuruf, kein Fund.) |
+| R9a, Turm (R6a, R6b, Akte, R7a, R7b), Labor, Kammer 1 und 2 | wie im Lösungsweg, ohne Befund |
+| **Sandale in Kammer 3** | Beim Betreten: „Die Sandale an meinem Fuß zuckt. Ein dritter Tausch. Danke, Hermes …“ (`W3_KAM3_MAX_0270`, `PIX_0280`). Drei Tausche gespielt: Fehltausch „gesprächig“ ↔ „leicht“ („Das Huhn redet … Der Lautsprecher ist leicht und schwebt an der Decke“), dann „verschlossen“ ↔ „gesprächig“, dann „schwer“ ↔ „leicht“ → `W3_KAMMER_3_GELOEST`. **Der dritte Tausch funktioniert.** Nebenbefund zu R5-W3-15: Nach dem Fehltausch stehen in der Code-Sicht alle vier Wörter wieder an ihrem alten Platz, und der Erzähler sagt beim nächsten Tausch „Der Lautsprecher knackt und schweigt“, obwohl er eben noch „an der Decke schwebte“. Der Fehltausch kostet also nur den Versuch, der Text behauptet mehr. |
+| Regel 3, Kern, R10, R11, Welt-Ende | ohne Befund; im Welt-Ende meldet sich der geölte Hausmeister („Wenn du mich brauchst: Ich komme …“, `W3_ENDE_HAU_0070`) |
+| **Reisetasche im Zwischenspiel 3** | Pflichtfach mit Bildern (Notizbuch, Dose, Kochlöffel). **Zehn der zwanzig Kacheln unter „Daneben liegt“ sind grüne Platzhalter mit drei Buchstaben** („Opa“, „Eim“, „Zie“, „Mod“, „Sor“, „Dos“, „Han“, „Sch“, „Sch“, „Wur“ – die Fundkiste aus Welt 1 und 2), `belege/pr-w3/zs3_tasche_echter_stand_zehn_platzhalter_kacheln.png`. Gehört zum weltübergreifenden Fund der Reisetasche (für `pr-p`); wichtig, weil der Spieler hier wählen soll und zwei Kacheln gleich heißen. Gepackt: Sonnenbrille, Omas Kekse. |
+| Abreise, Welt 4 | erster freier Moment im Raum `testbild`, Inventar: Thunfischdose, Notizbuch, Kochlöffel, Omas Kekse, Sonnenbrille. Stand: `welt3_ende` |
 
 ## Weltübergreifende Funde, in Welt 3 bestätigt / nicht bestätigt
 
@@ -447,7 +452,7 @@ Restpunkte W3-1 bis W3-14 aus `docs/offene-punkte.md`: **weiterhin offen**; heut
 
 ## Nicht geprüft
 
-- **Voller Endstand der Welt 2.** `kontrollpunkte/welt-2/welt2_ende.json` kam am 25.11. um 14:06 und ist kein voller Endstand (Inventar echt, Schalter R7, R10, R11, R13 der Welt 2 offen); `welt2_ende_umgangen.json` lag bis zum Schluss nicht vor. Was vom echten Inventar aus gespielt wurde, steht unter „Lauf vom Stand `welt2_ende`“.
+- **Voller Endstand der Welt 2.** Gespielt ist vom Stand `welt2_ende` (Inventar echt, Schalter R7, R10, R11, R13 der Welt 2 offen); `welt2_ende_umgangen.json` lag nicht vor. Ob ein Schalter aus dem Finale der Welt 2 in Welt 3 etwas ändert, ist damit offen (im Skript der Welt 3 nicht gesucht).
 - **Laufgitter:** kein systematisches Abklopfen der Böden; Laufwege nur aus dem Spielen.
 - **Feinheiten der Animation** (Fußrutschen, Münder, 2-px-Sprünge, Autos, W3-09, W3-15, W3-16, W3-R08-04, W3-NS-01 bis -04): die Filme haben 4 Bilder je Sekunde.
 - **Englisch:** nur Nahansichten, Code-Sicht-Wörter, Inventarnamen und rund zehn Zeilen; keine Gespräche, keine Rätselmenüs, keine Pfote.
