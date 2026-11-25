@@ -1,0 +1,271 @@
+> stand holen w36_kammern_anfang
+KONTROLLPUNKT w36_kammern_anfang geladen
+[ 1098.6] INVENTAR - thunfischdose (Max)
+[ 1098.8] INVENTAR - PixelFeld (Max)
+[ 1098.9] INVENTAR - reisetasche (Max)
+[ 1099.1] INVENTAR - notizbuch (Max)
+[ 1099.2] INVENTAR - opas_zettel (Max)
+[ 1099.3] INVENTAR - eimer (Max)
+[ 1099.5] INVENTAR - socke (Max)
+[ 1099.6] INVENTAR - ziegenfell_vorleger (Max)
+[ 1099.7] INVENTAR - zeugnis (Max)
+[ 1099.9] INVENTAR - tarifvertrag (Max)
+[ 1100.1] INVENTAR - kochloeffel (Max)
+[ 1100.3] INVENTAR + thunfischdose (Max)
+[ 1100.3] INVENTAR + PixelFeld (Max)
+[ 1100.3] INVENTAR + reisetasche (Max)
+[ 1100.3] INVENTAR + notizbuch (Max)
+[ 1100.3] INVENTAR + opas_zettel (Max)
+[ 1100.3] INVENTAR + eimer (Max)
+[ 1100.3] INVENTAR + kochloeffel (Max)
+[ 1100.3] INVENTAR + socke (Max)
+[ 1100.3] INVENTAR + ziegenfell_vorleger (Max)
+[ 1100.3] INVENTAR + zeugnis (Max)
+[ 1100.3] INVENTAR + tarifvertrag (Max)
+[ 1100.3] ZUSTAND *
+[ 1100.3] GELADEN Platz 12
+[ 1104.4] RAUM abstellkammern (vorher -)
+LAGE frei | Raum abstellkammern | Max (130,300) Skala 0.89 | Kamera x=0 | Hand: - | Dauer 0.0 s
+> warte 2
+LAGE frei | Raum abstellkammern | Max (130,300) Skala 0.89 | Kamera x=0 | Hand: - | Dauer 4.4 s
+> objekte
+Objekte im Raum abstellkammern (Kamera x=0). Bildkoordinaten der Klickfläche:
+  @background  Prop  „Smaugis Abstellkammern“  x 0–0, y 0–0 (nicht anklickbar) (außerhalb des Bildes)
+  @wendeltreppe  Ausgang  „Wendeltreppe“  x 0–100, y 190–360
+  @stapel  Hotspot  „Stapel“  x 40–240, y 160–232
+  @schwerter_buendel  Prop  „Schwerter-Bündel“  x 98–138, y 167–207
+  @max  Figur  „Max“  x 109–150, y 132–300 (Spielfigur)
+  @pixel  Figur  „Pixel“  x 139–210, y 264–300
+  @deko_kram  Hotspot  „Kram“  x 140–220, y 145–230
+  @fackel_buendel  Prop  „Fackel-Bündel“  x 190–221, y 186–226
+  @humbert  Figur  „Humbert“  x 216–263, y 136–324
+  @schwert_im_stein  Hotspot  „Schwert im Stein“  x 226–256, y 140–205
+  @okarina  Hotspot  „Okarina“  x 241–261, y 208–228
+  @goldhaufen  Hotspot  „Goldhaufen“  x 265–380, y 155–225
+  @kronleuchter  Prop  „Kronleuchter“  x 292–348, y 8–63
+  @grimmzahn  Figur  „Grimmzahn“  x 293–330, y 198–324
+  @smaugi  Figur  „Smaugi“  x 323–396, y -5–290
+  @zeldina  Figur  „Zeldina“  x 361–406, y 141–324
+  @drachenei_nest  Hotspot  „Drachenei“  x 395–475, y 180–225
+  @geheimtuer  Ausgang  „Geheimtür“  x 508–570, y 82–222
+> klick 118 187
+KLICK (118,187) auf: schwerter_buendel „Schwerter-Bündel“
+[ 1114.1] SAGT W1_SMAU_SMA_0510 | SMA: Macht dich das glücklich?
+[ 1115.9] SAGT W1_SMAU_MAX_0520 | MAX: Mich nicht. Aber ich kenne da jemanden.
+[ 1117.3] INVENTAR + schwerter_buendel (Max)
+LAGE frei | Raum abstellkammern | Max (150,251) Skala 0.80 | Kamera x=0 | Hand: - | Dauer 11.3 s
+> warte
+LAGE frei | Raum abstellkammern | Max (150,251) Skala 0.80 | Kamera x=0 | Hand: - | Dauer 2.2 s
+> klick 118 187
+KLICK (118,187) auf: stapel „Stapel“
+[ 1124.6] ERSATZZEILE (MAX) SYS_ERS_MAX_0150
+[ 1124.6] SAGT SYS_ERS_MAX_0150 | MAX: Ich spür richtig, wie mein Akku sinkt.
+LAGE frei | Raum abstellkammern | Max (180,251) Skala 0.80 | Kamera x=0 | Hand: - | Dauer 4.7 s
+> warte
+LAGE frei | Raum abstellkammern | Max (180,251) Skala 0.80 | Kamera x=0 | Hand: - | Dauer 1.5 s
+> inv
+Inventarleiste (Max):
+  inv:PixelFeld  „Pixel“  bei (111,24) 36x36
+  inv:thunfischdose  „Thunfischdose“  bei (150,24) 36x36
+  inv:reisetasche  „Opas Reisetasche“  bei (189,24) 36x36
+  inv:notizbuch  „Notizbuch“  bei (228,24) 36x36
+  inv:opas_zettel  „Opas Zettel“  bei (267,24) 36x36
+  inv:eimer  „Eimer“  bei (306,24) 36x36
+  inv:kochloeffel  „Kochlöffel-Zauberstab“  bei (345,24) 36x36
+  inv:socke  „Sortierende Socke“  bei (384,24) 36x36
+  inv:ziegenfell_vorleger  „Ziegenfell-Vorleger“  bei (423,24) 36x36
+  inv:zeugnis  „Moderworts Zeugnis“  bei (462,24) 36x36
+  inv:tarifvertrag  „Tarifvertrag“  bei (501,24) 36x36
+  inv:schwerter_buendel  „Schwerter-Bündel“  bei (540,24) 36x36
+  Besitz Max: thunfischdose, PixelFeld, reisetasche, notizbuch, opas_zettel, eimer, kochloeffel, socke, ziegenfell_vorleger, zeugnis, tarifvertrag, schwerter_buendel
+  Besitz Pixel: -
+  In der Hand: -
+> stand holen w36_kammern_anfang
+KONTROLLPUNKT w36_kammern_anfang geladen
+[ 1131.3] INVENTAR - thunfischdose (Max)
+[ 1131.6] INVENTAR - PixelFeld (Max)
+[ 1131.8] INVENTAR - reisetasche (Max)
+[ 1132.1] INVENTAR - notizbuch (Max)
+[ 1132.4] INVENTAR - opas_zettel (Max)
+[ 1132.6] INVENTAR - eimer (Max)
+[ 1132.9] INVENTAR - kochloeffel (Max)
+[ 1133.2] INVENTAR - socke (Max)
+[ 1133.4] INVENTAR - ziegenfell_vorleger (Max)
+[ 1133.6] INVENTAR - zeugnis (Max)
+[ 1133.9] INVENTAR - tarifvertrag (Max)
+[ 1134.1] INVENTAR - schwerter_buendel (Max)
+[ 1134.2] INVENTAR + thunfischdose (Max)
+[ 1134.2] INVENTAR + PixelFeld (Max)
+[ 1134.2] INVENTAR + reisetasche (Max)
+[ 1134.2] INVENTAR + notizbuch (Max)
+[ 1134.2] INVENTAR + opas_zettel (Max)
+[ 1134.2] INVENTAR + eimer (Max)
+[ 1134.2] INVENTAR + kochloeffel (Max)
+[ 1134.2] INVENTAR + socke (Max)
+[ 1134.2] INVENTAR + ziegenfell_vorleger (Max)
+[ 1134.2] INVENTAR + zeugnis (Max)
+[ 1134.2] INVENTAR + tarifvertrag (Max)
+[ 1134.2] ZUSTAND *
+[ 1134.2] GELADEN Platz 12
+[ 1138.0] RAUM abstellkammern (vorher -)
+LAGE frei | Raum abstellkammern | Max (130,300) Skala 0.89 | Kamera x=0 | Hand: - | Dauer 0.0 s
+> warte 2
+LAGE frei | Raum abstellkammern | Max (130,300) Skala 0.89 | Kamera x=0 | Hand: - | Dauer 3.9 s
+> objekte
+Objekte im Raum abstellkammern (Kamera x=0). Bildkoordinaten der Klickfläche:
+  @background  Prop  „Smaugis Abstellkammern“  x 0–0, y 0–0 (nicht anklickbar) (außerhalb des Bildes)
+  @wendeltreppe  Ausgang  „Wendeltreppe“  x 0–100, y 190–360
+  @stapel  Hotspot  „Stapel“  x 40–240, y 160–232
+  @schwerter_buendel  Prop  „Schwerter-Bündel“  x 98–138, y 167–207 (unsichtbar)
+  @max  Figur  „Max“  x 109–150, y 132–300 (Spielfigur)
+  @pixel  Figur  „Pixel“  x 139–210, y 264–300
+  @deko_kram  Hotspot  „Kram“  x 140–220, y 145–230
+  @fackel_buendel  Prop  „Fackel-Bündel“  x 190–221, y 186–226
+  @humbert  Figur  „Humbert“  x 216–263, y 136–324
+  @schwert_im_stein  Hotspot  „Schwert im Stein“  x 226–256, y 140–205
+  @okarina  Hotspot  „Okarina“  x 241–261, y 208–228
+  @goldhaufen  Hotspot  „Goldhaufen“  x 265–380, y 155–225
+  @kronleuchter  Prop  „Kronleuchter“  x 292–348, y 8–63
+  @grimmzahn  Figur  „Grimmzahn“  x 293–330, y 198–324
+  @smaugi  Figur  „Smaugi“  x 323–396, y -5–290
+  @zeldina  Figur  „Zeldina“  x 361–406, y 141–324
+  @drachenei_nest  Hotspot  „Drachenei“  x 395–475, y 180–225
+  @geheimtuer  Ausgang  „Geheimtür“  x 508–570, y 82–222
+> foto lade1_kammern_nach_ruecksprung
+FOTO /home/user/lauf/pr-w1-haupt/fotos/lade1_kammern_nach_ruecksprung.png (640x360)
+> klick 118 187
+KLICK (118,187) auf: stapel „Stapel“
+[ 1144.8] ERSATZZEILE (MAX) SYS_ERS_MAX_0070
+[ 1144.8] SAGT SYS_ERS_MAX_0070 | MAX: Das ist eine Idee. Keine gute, aber immerhin eine.
+LAGE frei | Raum abstellkammern | Max (180,251) Skala 0.80 | Kamera x=0 | Hand: - | Dauer 5.6 s
+> warte
+LAGE frei | Raum abstellkammern | Max (180,251) Skala 0.80 | Kamera x=0 | Hand: - | Dauer 1.2 s
+> klick 118 187
+KLICK (118,187) auf: stapel „Stapel“
+[ 1150.6] ERSATZZEILE (MAX) SYS_ERS_MAX_0030
+[ 1150.6] SAGT SYS_ERS_MAX_0030 | MAX: Funktioniert nicht.
+LAGE frei | Raum abstellkammern | Max (180,251) Skala 0.80 | Kamera x=0 | Hand: - | Dauer 4.3 s
+> warte
+LAGE frei | Raum abstellkammern | Max (180,251) Skala 0.80 | Kamera x=0 | Hand: - | Dauer 1.7 s
+> inv
+Inventarleiste (Max):
+  inv:PixelFeld  „Pixel“  bei (111,24) 36x36
+  inv:thunfischdose  „Thunfischdose“  bei (150,24) 36x36
+  inv:reisetasche  „Opas Reisetasche“  bei (189,24) 36x36
+  inv:notizbuch  „Notizbuch“  bei (228,24) 36x36
+  inv:opas_zettel  „Opas Zettel“  bei (267,24) 36x36
+  inv:eimer  „Eimer“  bei (306,24) 36x36
+  inv:kochloeffel  „Kochlöffel-Zauberstab“  bei (345,24) 36x36
+  inv:socke  „Sortierende Socke“  bei (384,24) 36x36
+  inv:ziegenfell_vorleger  „Ziegenfell-Vorleger“  bei (423,24) 36x36
+  inv:zeugnis  „Moderworts Zeugnis“  bei (462,24) 36x36
+  inv:tarifvertrag  „Tarifvertrag“  bei (501,24) 36x36
+  Besitz Max: thunfischdose, PixelFeld, reisetasche, notizbuch, opas_zettel, eimer, kochloeffel, socke, ziegenfell_vorleger, zeugnis, tarifvertrag
+  Besitz Pixel: -
+  In der Hand: -
+> stand holen w00_anfang
+KONTROLLPUNKT w00_anfang geladen
+[ 1157.3] INVENTAR - thunfischdose (Max)
+[ 1157.6] INVENTAR - PixelFeld (Max)
+[ 1157.9] INVENTAR - reisetasche (Max)
+[ 1158.1] INVENTAR - notizbuch (Max)
+[ 1158.3] INVENTAR - opas_zettel (Max)
+[ 1158.5] INVENTAR - eimer (Max)
+[ 1158.7] INVENTAR - kochloeffel (Max)
+[ 1158.8] INVENTAR - socke (Max)
+[ 1159.0] INVENTAR - ziegenfell_vorleger (Max)
+[ 1159.2] INVENTAR - zeugnis (Max)
+[ 1159.3] INVENTAR - tarifvertrag (Max)
+[ 1159.5] INVENTAR + thunfischdose (Max)
+[ 1159.5] INVENTAR + PixelFeld (Max)
+[ 1159.5] INVENTAR + reisetasche (Max)
+[ 1159.5] INVENTAR + notizbuch (Max)
+[ 1159.5] INVENTAR + opas_zettel (Max)
+[ 1159.5] ZUSTAND *
+[ 1159.5] GELADEN Platz 12
+[ 1163.5] RAUM dorfplatz (vorher -)
+LAGE frei | Raum dorfplatz | Max (430,320) Skala 0.59 | Kamera x=110 | Hand: - | Dauer 0.0 s
+> warte 2
+LAGE frei | Raum dorfplatz | Max (430,320) Skala 0.59 | Kamera x=110 | Hand: - | Dauer 3.5 s
+> warte
+LAGE frei | Raum dorfplatz | Max (430,320) Skala 0.59 | Kamera x=110 | Hand: - | Dauer 1.5 s
+> klick @eimer
+FEHLER Objekt eimer ist unsichtbar
+> warte
+LAGE frei | Raum dorfplatz | Max (430,320) Skala 0.59 | Kamera x=110 | Hand: - | Dauer 1.4 s
+> klick @bestellzettel
+FEHLER Objekt bestellzettel liegt außerhalb des Bildes (Bild-x 832 bis 853, y 161 bis 199; Kamera x=110). Erst hinlaufen: Klick auf den Boden am Bildrand.
+> warte
+LAGE frei | Raum dorfplatz | Max (430,320) Skala 0.59 | Kamera x=110 | Hand: - | Dauer 1.6 s
+> inv
+Inventarleiste (Max):
+  inv:PixelFeld  „Pixel“  bei (111,24) 36x36
+  inv:thunfischdose  „Thunfischdose“  bei (150,24) 36x36
+  inv:reisetasche  „Opas Reisetasche“  bei (189,24) 36x36
+  inv:notizbuch  „Notizbuch“  bei (228,24) 36x36
+  inv:opas_zettel  „Opas Zettel“  bei (267,24) 36x36
+  Besitz Max: thunfischdose, PixelFeld, reisetasche, notizbuch, opas_zettel
+  Besitz Pixel: -
+  In der Hand: -
+> stand holen w00_anfang
+KONTROLLPUNKT w00_anfang geladen
+[ 1172.8] INVENTAR - thunfischdose (Max)
+[ 1173.1] INVENTAR - PixelFeld (Max)
+[ 1173.4] INVENTAR - reisetasche (Max)
+[ 1173.5] INVENTAR - notizbuch (Max)
+[ 1173.7] INVENTAR - opas_zettel (Max)
+[ 1173.9] INVENTAR + thunfischdose (Max)
+[ 1173.9] INVENTAR + PixelFeld (Max)
+[ 1173.9] INVENTAR + reisetasche (Max)
+[ 1173.9] INVENTAR + notizbuch (Max)
+[ 1173.9] INVENTAR + opas_zettel (Max)
+[ 1173.9] ZUSTAND *
+[ 1173.9] GELADEN Platz 12
+[ 1178.1] RAUM dorfplatz (vorher -)
+LAGE frei | Raum dorfplatz | Max (430,320) Skala 0.59 | Kamera x=110 | Hand: - | Dauer 0.0 s
+> warte 2
+LAGE frei | Raum dorfplatz | Max (430,320) Skala 0.59 | Kamera x=110 | Hand: - | Dauer 3.8 s
+> objekte
+Objekte im Raum dorfplatz (Kamera x=110). Bildkoordinaten der Klickfläche:
+  @background  Prop  „Dorfplatz Unterbrösel“  x 0–0, y 0–0 (nicht anklickbar) (außerhalb des Bildes)
+  @taverne_von_aussen  Ausgang  „Taverne“  x 28–82, y 158–278
+  @stall  Hotspot  „Stall“  x 130–290, y 84–265
+  @haeuser  Hotspot  „Häuser“  x 248–415, y 39–110
+  @max  Figur  „Max“  x 306–333, y 207–320 (Spielfigur)
+  @ring_laden  Hotspot  „Ring-Laden“  x 325–482, y 115–262
+  @pixel  Figur  „Pixel“  x 340–389, y 296–320
+  @weg_nach_hoggelwarz  Ausgang  „Weg nach Hoggelwarz“  x 480–530, y 140–248
+  @zauberstab_laden_von_aussen  Ausgang  „Zauberstab-Laden“  x 530–642, y 70–258
+  @luftschloss  Hotspot  „Luftschloss“  x 597–709, y 6–106
+  @toadi  Figur  „Toadi“  x 599–620, y 243–300
+  @erdfleck  Hotspot  „Erdfleck“  x 635–713, y 238–260
+  @bohnenranke  Ausgang  „Bohnenranke“  x 635–715, y 20–240 (unsichtbar)
+  @brunnen  Hotspot  „Brunnen“  x 709–802, y 123–258 (außerhalb des Bildes)
+  @statue  Hotspot  „Statue“  x 719–780, y 19–123 (außerhalb des Bildes)
+  @eimer  Prop  „Eimer“  x 796–821, y 233–260 (unsichtbar) (außerhalb des Bildes)
+  @dorfbrett  Hotspot  „Dorfbrett“  x 812–892, y 133–226 (außerhalb des Bildes)
+  @bestellzettel  Prop  „Bestellzettel“  x 832–853, y 161–199 (außerhalb des Bildes)
+  @steckbrief  Prop  „Moderworts Steckbrief“  x 855–882, y 160–199 (unsichtbar) (außerhalb des Bildes)
+  @schmiede_von_aussen  Ausgang  „Schmiede“  x 882–1048, y 71–242 (außerhalb des Bildes)
+  @waldweg  Ausgang  „Waldweg“  x 1055–1170, y 150–228 (außerhalb des Bildes)
+> foto lade2_dorf_nach_ruecksprung
+FOTO /home/user/lauf/pr-w1-haupt/fotos/lade2_dorf_nach_ruecksprung.png (640x360)
+> klick @eimer
+FEHLER Objekt eimer ist unsichtbar
+> warte
+LAGE frei | Raum dorfplatz | Max (430,320) Skala 0.59 | Kamera x=110 | Hand: - | Dauer 2.0 s
+> klick @bestellzettel
+FEHLER Objekt bestellzettel liegt außerhalb des Bildes (Bild-x 832 bis 853, y 161 bis 199; Kamera x=110). Erst hinlaufen: Klick auf den Boden am Bildrand.
+> warte
+LAGE frei | Raum dorfplatz | Max (430,320) Skala 0.59 | Kamera x=110 | Hand: - | Dauer 1.2 s
+> inv
+Inventarleiste (Max):
+  inv:PixelFeld  „Pixel“  bei (111,24) 36x36
+  inv:thunfischdose  „Thunfischdose“  bei (150,24) 36x36
+  inv:reisetasche  „Opas Reisetasche“  bei (189,24) 36x36
+  inv:notizbuch  „Notizbuch“  bei (228,24) 36x36
+  inv:opas_zettel  „Opas Zettel“  bei (267,24) 36x36
+  Besitz Max: thunfischdose, PixelFeld, reisetasche, notizbuch, opas_zettel
+  Besitz Pixel: -
+  In der Hand: -
+> stand holen w13_vor_bestellung
