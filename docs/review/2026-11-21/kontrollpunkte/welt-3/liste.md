@@ -45,3 +45,6 @@ Alle Stände sind mit echten Klicks über die Fernsteuerung entstanden (`stand s
 | w4_sitcom_anfang | sitcom_kueche (Welt 4) | wie w4_nach_R2, in die Sitcom-Küche umgeschaltet, Vater noch nicht angesprochen | Fernbedienung zweimal | wie w4_nach_R2 |
 | w3_alt_turm_zuerst_nach_R7b | widerstandsbasis | Nebenweg: Turm vor dem ersten Aufwachen, nach R7b (R6, R13, R7 gelöst; R12, R8, R9a offen) |
 | w3_alt_kern_loesung_b_zelle_kalt | kern | Nebenweg: R10 gelöst, ein Fehltausch an der Zelle, Zelle über das Fenster gekühlt (Lösung B), Zelle noch nicht genommen |
+| w3_alt_zs3_dachboden_frei_echtes_inventar | (Nebenweg, aus start welt-3) | siehe notizen/pr-w3.md, Zwischenspiel 3 |
+| w3_alt_zs3_gepackt_tasse_akte | (Nebenweg, aus start welt-3) | siehe notizen/pr-w3.md, Zwischenspiel 3 |
+| w3_alt_welt4_anfang_tasse_akte | (Nebenweg, aus start welt-3) | siehe notizen/pr-w3.md, Zwischenspiel 3 |
