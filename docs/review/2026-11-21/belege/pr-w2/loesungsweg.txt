@@ -123,9 +123,9 @@ klick @sphinx_figur
 warte
 option 0250
 option "Handy"
-option "„Es stirbt bei drei Prozent“"
-option "„Es klingelt, wenn jemand dich will“"
-option "„Es leuchtet im Dunkeln, aber nur kurz“"
+option 1
+option 1
+option 1
 warte
 option 0230
 warte

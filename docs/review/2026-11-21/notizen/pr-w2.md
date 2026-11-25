@@ -114,6 +114,7 @@
 | R5-P-08 / GD-W1-04 (Zuruf schluckt den nächsten Klick) | bestätigt, auch bei offenem Auswahlmenü | Flusskarte offen, `option` → nur `W2_ZURU_PIX_0010_2`, Auswahl bleibt offen; `klick @pharaonenteller` → nur `W2_ZURU_PIX_0030`, Teller bleibt liegen (= GD-W2-02) |
 | GD-W1-03 (Pixel-Feld der Leiste unter dem Porträt) | bestätigt ab 12 Gegenständen | `belege/pr-w2/leiste_13_gegenstaende_pixelfeld_unter_portraet.png`; `inv`: PixelFeld bei (92,24), Porträt bei (80,28) |
 | R5-W1-06 (Schrift der Nahansichten: B, Z) | bestätigt | Fährtafel: „Bitte“ liest sich „6itte“, „Zeit“ „2eit“ (`belege/pr-w2/nil_faehrtafel_nah_de_schrift_B_Z.png`) |
+| R5-W1-34 (Gespräche hängen nach Neustart und Laden) | **bestätigt (kritisch)** | Frischer Prozess, `stand holen w2_22_nach_R3`, `klick @beamter_1` (mit ihm war vor dem Speichern geredet worden): `GESPRÄCH beginnt: Beamter1`, danach `STEHT seit 20 Spielsekunden ohne Fortschritt`, keine Optionen, Esc und Klick wirkungslos (`belege/pr-w2/buero_gespraech_haengt_nach_neustart_und_laden.png`). In Welt 2 trifft das nach jedem Weiterspielen am nächsten Tag: Fährmann, Schreiber, Nebet, Sphinx (Empfehlungsschreiben), Cicero, Brian, Leonidas, Beamte. |
 | R5-W1-02 (Pfote: „geh irgendwohin, wo du noch nicht warst“) | bestätigt | nach der Audienz: `pfote` → `W2_HINT_PIX_0010`; `status`: „Offene Rätselschritte: -“ (W2-01 damit nur zum Teil behoben: eigene Zeile für Welt 2, aber kein Ziel) |
 
 ## Frühere Funde, Stand heute
