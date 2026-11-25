@@ -207,3 +207,53 @@ Zu den Erweiterungen: Sie tun dasselbe wie die Zwischenbild-Funktionen in den ei
 | **Lassen:** fertige Figuren- und Katzen-Sprites (zu klein, anderer Stil), Mund-Pakete, Pakete ohne Lizenztext, Cartoon Coffee (25 $ für Fackeln), 3D-Rendern statt Malen | – | – | – |
 
 **Gesamtkosten der Empfehlung: 0 €** (plus Meshy-Credits aus dem Bestand), höchstens etwa 12 € für die beiden Kann-Käufe. Der größte Hebel für bessere Animationen liegt nicht in fremden Quellen, sondern im Einbau der schon gebauten Bewegungen und in den Fußlinien- und Größensprüngen (Funde der Welt-Prüfer).
+
+## 2. Synfig Studio
+
+**Kurzantwort:** Synfig ist ein freies Vektor-Animationsprogramm mit Knochen und automatischen Zwischenbildern. Für die Figuren dieses Spiels bringt es gegenüber dem vorhandenen Python-Teile-Rig nichts und kostet Qualität (Zwischenfarben, Einstellungen je Ebene). Sinnvoll wäre es höchstens für **weiche, nicht gepixelte Bewegtbilder**: Werbeblock, Abspann, Trailer, Vektor-Effekte, die danach durch die Pixelierung laufen. Empfehlung: nicht in die Pipeline aufnehmen.
+
+### 2.1 Was es ist und kann (abgerufen 25.11.2026)
+
+| Punkt | Befund | Quelle |
+| --- | --- | --- |
+| Zweck | „free and open-source 2D animation software“, Vektor- und Bitmap-Grafik; Windows, Linux, macOS | https://github.com/synfig/synfig |
+| Funktionen | Vektor-Tweening (Schlüsselstellungen, Zwischenbilder werden berechnet), über 50 Ebenen- und Filtertypen, Verknüpfen von Parametern auch über Ausdrücke; Knochen: „Full-featured bone system allows to create cutout animation using bitmap images or control your vector artwork.“ | https://www.synfig.org/ |
+| Knochen für Rasterbilder | „Skeleton Deformation Layer“: verzerrt das gerenderte Bild der Ebenen darunter über ein Gitter; Einflussbereich je Knochen muss von Hand gesetzt werden, sonst verschwinden Bildteile; Unterteilung des Gitters bestimmt die Qualität. Die einfache „Skeleton“-Ebene bewegt verknüpfte Teile starr (Cutout) | https://synfig.readthedocs.io/en/latest/layers/skeleton_deformation.html |
+| Lizenz | GPL-3.0 (betrifft das Programm, nicht die damit erzeugten Bilder) | https://github.com/synfig/synfig |
+| Stand | letzte **stabile** Version 1.4.5 vom 19.05.2024; **Entwicklungs**-Versionen 1.5.4 (18.01.2026) und 1.5.5 (22.03.2026); kein 1.6 angekündigt. 12.549 Commits, 566 offene Issues, 171 Pull Requests. Meldungen stammen von einem Autor (Konstantin Dmitriev); Finanzierung über Spenden (Open Collective), Google Summer of Code 2022–2024 | https://www.synfig.org/news/, https://www.synfig.org/category/releases/stable-releases/, https://github.com/synfig/synfig |
+| Kommandozeile | `synfig` rendert `.sif`-Dateien ohne Oberfläche: `-t` Ziel, `-w`/`-h` Größe, `-a` Antialias 1–30, `-Q` Qualität, `--begin-time`, `--end-time`, `--fps`, `-o` Ausgabe, `-c` Canvas, `-T` Threads; `--targets` listet die Ziele | https://wiki.synfig.org/Synfig_CLI_syntax |
+| Sprite-Bogen | Ziel `png-spritesheet` (Richtung, Bilder je Zeile); im Forum Probleme mit Bogengröße, Ausweg dort: Einzelbilder und ImageMagick | https://forums.synfig.org/t/png-spritesheet-size/4325 |
+| Pixel-Art | Kantenglättung lässt sich nicht global abschalten: je Vektorebene Haken „Antialiasing“ aus, je Bild-Ebene Interpolation „Nearest Neighbor“. „You have to do it for all the layers manually, there's no global option to disable anti aliasing unfortunately.“ (10.04.2024) | https://forums.synfig.org/t/how-do-i-disable-anti-aliasing/14970 |
+
+Einordnung der Pflege: Das Projekt lebt (zwei Entwicklungsversionen 2026), aber langsam; die stabile Fassung ist anderthalb Jahre alt, die Entwicklerbasis klein. Ob 1.5.5 unter Windows stabil läuft, ist **nicht geprüft** (nichts installiert).
+
+### 2.2 Passt es in die Pipeline?
+
+Technisch ja: `.sif` ist XML, lässt sich aus Python schreiben, und `synfig -t png` rendert Bildfolgen im Batch. Praktisch spricht fast alles dagegen:
+
+1. **Es löst ein Problem, das schon gelöst ist.** `tools/figur.py animieren` hat Knochen mit Gelenk, Spitze, Eltern, Z-Ordnung und Posen je Bild (`tools/figuren/*_rig.json`, 69 Rigs im Repo). Es schneidet Teile aus dem Sprite, dreht und versetzt sie und schreibt Bilder; dazu kommen die Prüfungen (zwei Beine, keine Löcher, 5 % Größe). Synfig brächte dasselbe mit einem zweiten Dateiformat und ohne diese Prüfungen.
+2. **Zwischenfarben.** Synfig rechnet in Fließkomma mit Kantenglättung. Gedrehte Rasterteile bekommen ohne „Nearest Neighbor“ je Ebene weiche Ränder und neue Farben außerhalb der Palette; mit „Nearest Neighbor“ entstehen dieselben Treppenkanten wie im eigenen Rig, nur ohne dessen Nacharbeit (Kontur schließen, Einzelpixel entfernen). Die Deformations-Ebene verzerrt über ein Gitter, also immer mit Neuabtastung. Danach müsste jedes Bild erneut durch Palette und Säuberung.
+3. **Automatische Zwischenbilder sind hier kein Gewinn.** Die Lessons sagen ausdrücklich: 8 starke Schlüsselbilder, 16 machten Läufe zäh. Synfigs Stärke (beliebig viele weiche Zwischenbilder) ist für Bild-für-Bild-Sprites bei 60–160 ms je Bild die falsche Richtung.
+4. **Winkelquelle bleibt Blender.** Die Bewegung kommt aus Meshy-Clips (FBX/GLB). Synfig liest keine 3D-Clips; man müsste die Winkel weiterhin in Blender auslesen und dann in `.sif` übersetzen statt in das eigene JSON.
+5. **Bedienung:** Claude steuert Aseprite und Blender über MCP. Für Synfig gäbe es nur den Weg über erzeugte XML-Dateien; ein Blick auf das Ergebnis braucht ohnehin den Render-Lauf.
+
+### 2.3 Vergleich für genau diesen Zweck (Teile einer gemalten Figur bewegen, 8 saubere Bilder ausgeben)
+
+| Werkzeug | Stand, Preis, Lizenz | Stärke | Schwäche für Couch Quest | Urteil |
+| --- | --- | --- | --- | --- |
+| **Python-Teile-Rig** (`tools/figur.py`, Skripte auf dem PC) | vorhanden, 0 € | kennt Stil, Palette, Prüfungen; läuft im Batch; Winkel aus Meshy/Blender | Teile der Skripte liegen nur auf dem PC (wf.md Block C); Gesten mit neuen Armhaltungen gehen nicht | **behalten**, Skripte ins Repo holen |
+| **Aseprite** (vorhanden, über MCP/Lua) | vorhanden | Nacharbeit je Bild, Tags, RotSprite-Drehung für Pixel-Art, Erweiterungen wie Tweencel (ab 3,75 $) | kein Knochen-System | **behalten** für Nacharbeit und Smear-Bilder |
+| **Blender** (vorhanden, über MCP) | vorhanden, GPL | Clips abspielen, Winkel auslesen; Grease Pencil und 2D-Rig möglich | ein 2D-Rig in Blender wäre der dritte Ort für dieselbe Figur | **behalten** als Winkelquelle, kein 2D-Rig |
+| **Synfig Studio** | 1.4.5 stabil (2024), 1.5.5 Entwicklung (2026), GPL-3.0, 0 € | Vektor-Tweening, Knochen, CLI | siehe 2.2 | **nein** für Sprites; allenfalls für Vektor-Bewegtbild |
+| **Spine** | Essential 69 $ (statt 99 $), Professional 379 $ (statt 449 $), je Nutzer; Enterprise ab 500.000 $ Umsatz (https://esotericsoftware.com/spine-purchase) | Industriestandard für Skelett-Animation zur Laufzeit, Mesh-Verformung (erst ab Professional: **nicht bestätigt**) | Laufzeit-Skelett passt nicht zur Bild-für-Bild-Optik; Godot braucht ein eigenes Modul bzw. einen angepassten Build (Forum, 2024/2025) | **nein** |
+| **DragonBones** | MIT, bei AlternativeTo als eingestellt geführt: „The developer disappeared, hasn't responded to anyone for a few years“, Download lädt nicht (https://alternativeto.net/software/dragonbones/about) | – | tot | **nein** |
+| **Godot Skeleton2D/Bone2D** | in Godot enthalten | keine Zusatz-Software | Nutzer nennen es „pretty cumbersome“ und „very frustrating in practice“ (Forum, 2024–2026); dreht Texturen zur Laufzeit (schräge Pixel) | **nein** für Figuren; Verformung ganzer Sprites per `scale`/`skew` reicht (1.5) |
+| **PixelOver** | Steam, 19,99 $ (bis 30.11. 12,99 $), Early Access seit 13.10.2021, Windows/macOS/Linux (https://store.steampowered.com/app/1762550/PixelOver/) | genau für diesen Zweck gebaut: Knochen und IK auf Bildern, „pixel-accurate transforms“, Neuabtastung für Pixel-Art, Indexieren auf Palette, Export als Bogen und GIF, 3D-Import | Bedienung von Hand, keine Kommandozeile genannt; seit fünf Jahren Early Access | **einziger Kandidat für einen Versuch**, wenn Sebastian selbst Gesten bauen möchte |
+| **Smack Studio** | Steam, 14,99 $, Early Access; eigentlich ein Kampfspiel mit Editor (https://www.dekudeals.com/items/smack-studio) | legt 2D-Pixelbilder auf ein 3D-Skelett, Drehung in die Tiefe | für kleine Kampfspiel-Figuren gedacht; Export in eigene Pipeline unklar | **nein** |
+
+### 2.4 Empfehlung zu Frage 2
+
+- **Nein** für Figuren, Gänge, Gesten, Effekt-Schleifen im Spiel. Das vorhandene Teile-Rig ist für diese Aufgabe das bessere Werkzeug; die wirksamste „Optimierung“ ist, die Rig- und Prüfskripte vom PC ins Repo zu holen (schon als WF-Fund geführt) und um die Vierbeiner-Prüfung zu ergänzen (Kapitel 1).
+- **Vielleicht** für Bewegtbild außerhalb der Sprites: Werbeblock-Spot (5 s), Abspann-Tafeln, Titel-Animation, Trailer. Dort stören weiche Kanten nicht, wenn das Ergebnis als Ganzes durch `pixelieren.py` läuft. Dafür täte es aber auch Godots `AnimationPlayer` mit Tweens auf vorhandenen Bildern, ohne neues Programm.
+- **Aufwand eines Versuchs,** falls gewünscht: Installation und Einarbeitung 2–3 h, ein Testfall (Max' Arm als Cutout mit „Nearest Neighbor“, 8 Bilder über `synfig -t png` rendern, gegen das Ergebnis von `figur.py animieren` legen) weitere 2–3 h. Kosten 0 €. Erwartetes Ergebnis: gleichwertig oder schlechter. Ich würde die 5 h lieber in den Vierbeiner-Versuch stecken.
+- Wenn ein zusätzliches Programm, dann **PixelOver** (13–20 $) als Handwerkzeug für Sebastian: Es ist das einzige der geprüften, das Knochen-Animation mit pixelgenauer Neuabtastung und Palettenbindung verbindet. Versuch 2 h mit der kostenlosen Demo (Demo auf Steam vorhanden, Umfang **nicht geprüft**).
