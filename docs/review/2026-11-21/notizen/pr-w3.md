@@ -78,3 +78,22 @@ Im laufenden Spiel beobachtet, außer wo „aus dem Code“ dabeisteht. „Verla
 | R5-W3-07 | testkammer_1 (R9b) | wichtig | Rätsel, Animation | **Kammer 1 löst sich beim Tausch von selbst.** Nach „schwer“ ↔ „leicht“ steht Max weiter bei (212, 306) neben der Halterung; der Bodenschalter (x 270–362) wird nie betreten. Der Erzähler sagt „Klick. Die Tür gleitet auf.“ Der zweite Schritt des Rätsels (sich auf den Schalter stellen) entfällt, und was man sieht, passt nicht zum Text. Ein Klick auf den Schalter danach wiederholt die Erzählzeile `W3_KAM1_NAR_0460` („Klick. Die Tür gleitet auf. Bernd dreht sich weg …“), obwohl beides schon geschehen ist. In Tempo 1 noch zu filmen. | Stand `w3_26_kammer1_anfang`: `klick @bernd`, `knopf schwer`, `knopf leicht` → `W3_KAMMER_1_GELOEST`, `LAGE … Max (212,306)`; `klick @bodenschalter` → `W3_KAM1_NAR_0460`; Verlauf 2687–2715 | Nach dem Tausch nur „Ich bin schwer“; gelöst erst, wenn Max auf den Schalter geht (Klick auf den Schalter). Nach dem Lösen eigene Zeile für den Schalter. |
 | R5-W3-08 | testkammer_2 | kosmetisch | Klickflächen | Nach R9c liegt der harmlose Laser weiter über dem Ausgang zu Kammer 3: Der Ausgang gewinnt an 14 von 36 Probestellen, an 22 der Laser. Wer auf die Tür klickt, bekommt meist die Laser-Zeile. | `klick @ausgang_testkammer_3` nach `W3_KAMMER_2_GELOEST`: „gewinnt an 14 von 36 (sonst: laser 22)“, Verlauf 2855 | Laser-Hotspot nach dem Lösen verkleinern (nur die Pfosten) oder unter den Ausgang ordnen. |
 | R5-W3-09 | laboreingang | kosmetisch | Zustandswechsel | Pixels Zuruf „Er wischt im Kreis. Du stehst im Kreis. …“ (`W3_EING_PIX_0910`) kommt, nachdem der Hausmeister längst fort ist (`W3_HAUSMEISTER_WEG`, R9a gelöst). | Verlauf 1894.1 (Stand `w3_18_nach_R9a`, 45 s warten) | Zuruf an „Hausmeister da“ binden. |
+
+## Stichprobe Welt 4: R5-W4-11 (Gespräche ohne Ausstieg) mit echten Klicks
+
+Auftrag: den aus Code und Daten geschlossenen Fund R5-W4-11 (`notizen/w4.md`) im laufenden Spiel nachstellen, sonst nichts von Welt 4. Dauer rund 12 Minuten. Ausgang: `welt3_ende` (Raum `testbild`).
+
+**Ergebnis: bestätigt, bei beiden Figuren.** Wer den Sitcom-Vater oder Wonder-Wilma anspricht, kommt aus dem Gespräch nicht mehr heraus; das Spiel lässt sich nur noch beenden.
+
+| Figur | Befehlsfolge | Was geschieht |
+| --- | --- | --- |
+| Weg dorthin | `portraet pixel`, `klick @balken`, `option 1` („Von hell nach dunkel sortieren“) → Glücksrad; Quiz `option 1`, `option 2`, `option 3` (A, B, C) → Fernbedienung; `klick inv:billig_fernbedienung` zweimal, Sender wählen (Stand `w4_nach_R2`) | R1 und R2 von Welt 4 gehen mit echten Klicks |
+| Sitcom-Vater | `klick @sitcom_vater` → 2 Optionen (0390 „Was ist in der Dose?“, 0410 „Erwarten Sie Besuch?“); `option 0390`, `option 0410` → Menü zeigt nur noch 0410 (schon gewählt); `option 0410` → dieselben vier Zeilen (`W4_SIT_MAX_0410`, `VAT_0420`, `MAX_0720`, `VAT_0730`), Menü wieder mit 0410 | Kein Ausstieg: `taste esc`, `rklick 500 300`, `klick 500 200`, `taste f5`, `taste f9` ohne Wirkung (`LAGE menue … 1 Optionen` bleibt). `taste tab` wechselt bei offenem Menü zu Pixel, das Menü bleibt; die Pfote antwortet (`W4_HINT_PIX_0070`), das Menü bleibt. Speichern geht nicht mehr, also ist alles seit dem letzten Autospeicher verloren. |
+| Wonder-Wilma | Neustart, `stand holen w4_nach_R2`, nach Kapitolis umschalten, `klick @wonder_wilma` → 3 Optionen (0380, 0440, 0460); alle drei gewählt → Menü zeigt nur noch 0440 „Wie werde ich ein Held?“ (schon gewählt); erneut gewählt → Menü wieder da | wie beim Vater: `taste esc`, `rklick 300 200` ohne Wirkung |
+
+Belege: `belege/pr-w3/w4_sitcom_vater_menue_nur_eine_option_kein_ausstieg.png`, `belege/pr-w3/w4_wilma_menue_nur_eine_option_kein_ausstieg.png`; Lauf `pr-w3-haupt`, Verlauf 4105–4190 (Vater), zweite Sitzung 90–160 (Wilma). Sohn, Fledermann und FBI-Agent wurden nicht angesprochen (Zeitgrenze).
+
+Nebenbeobachtungen aus diesen 12 Minuten (für `w4`, nicht weiter untersucht):
+
+- **Das erste Umschalten wechselt den Sender nicht.** Erster Gebrauch der Fernbedienung (Flimmer erklärt die Regel, `W4_RAU_FLI_0050`), Sender gewählt, Erzähler: „Rauschen wischt übers Bild. Der neue Sender steht.“ (`W4_FERN_NAR_0060`), Max steht weiter im Glücksrad-Studio. Erst der zweite Gebrauch bringt ihn in den beim ersten Mal gewählten Sender. Zweimal gesehen (Sitcom-Küche in der ersten Sitzung, Kapitolis nach Neustart und `stand holen w4_nach_R2`).
+- Die Graubox-Räume von Welt 4 haben Hotspots als Raster oben im Bild (`objekte`: y 40–104 und 120–184), wie erwartet ohne Grafik.
