@@ -6,7 +6,13 @@
 - **Wie geprüft:** Repo gelesen (Doku, Sprite-Bestand, `cq_figur.gd`, Gesten-Skripte, Kandidatenlisten der Welt-Prüfer), danach Netzrecherche. Jede Angabe zu Preis, Lizenz, Version, Hardware stammt von einer am 25.11.2026 abgerufenen Seite (URL im Quellenverzeichnis). Was sich nicht auf einer Seite bestätigen ließ, ist als „nicht bestätigt“ markiert.
 - **Nicht getan (Auftrag):** nichts gekauft, nirgends angemeldet, keine Assets geladen, nichts außerhalb von `docs/review/2026-11-21/` geändert.
 
-Stand der Notiz: in Arbeit (Kapitel folgen blockweise).
+Stand der Notiz: fertig (25.11.2026). Aufbau: 0 Ausgangslage und Bedarfsliste, 1 Animationen aus externen Quellen, 2 Synfig, 3 Lippensync, 4 Musik, danach Funde im Überblick, Gut gelöst, Nicht geprüft / nicht bestätigt, Vorschläge für `docs/quellen.md` und die Lessons Learned, Quellenverzeichnis, Werkzeug. Der Abschnitt „Recherchestand (Rohfassung)“ zwischen Kapitel 0 und 1 ist der Zwischenstand vor der Unterbrechung; sein Inhalt steht ausgearbeitet in den Kapiteln.
+
+**Die vier Antworten in je einem Satz:**
+1. **Animationen:** Fertige Figuren-Sprites aus itch.io und OpenGameArt passen nicht (20–64 px gegen 100–290 px, anderer Stil); der wichtigste Fund ist, dass Meshy inzwischen **Vierbeiner** riggt und 127 Tier-Clips hat (auch Katze), also der bewährte Weg „Clip plus Teile-Rig“ auch für Pixel und die Ziegen offensteht; Effekte am besten aus CC0-Quellen. Kosten 0 bis etwa 12 €.
+2. **Synfig:** nein für Sprites (löst, was das eigene Python-Teile-Rig schon besser löst, und bringt Zwischenfarben); höchstens für weiches Bewegtbild wie Werbeblock oder Trailer.
+3. **Lippensync:** Audio2Face ist unnötig und läuft auf der Radeon nicht; der Mund ist 2 × 2 Pixel groß, eine vorab berechnete Lautstärke-Kurve reicht (6–10 h, 0 €), Rhubarb erst bei großen Köpfen. Vorher zwei Fehler beheben: Der Mund richtet sich heute nie nach der Aufnahme (R5-EXT-01) und steht bei „Untertitel aus“ still (R5-EXT-02).
+4. **Musik:** ACE-Step 1.5 ist MIT-lizenziert (nicht Apache-2.0, wie im Audio-Plan steht), läuft auf der 7900 XT und ist einen Versuch mit zwei Stücken wert; es hat keine Schleifen-Funktion und überträgt über Referenz-Audio keine Melodie. Rückfall ElevenLabs Music (für Indie-Spiele unter 500.000 $ Umsatz erlaubt), zweiter lokaler Kandidat Stable Audio 3.
 
 ## 0. Ausgangslage aus dem Repo
 
@@ -38,7 +44,7 @@ Das ist für Kapitel 1 entscheidend: Fertige Pixel-Art-Pakete aus dem Netz sind 
 
 **Wichtige Einordnung:** Der größere Teil der Animationsfunde der drei Reviews ist kein Mangel an Bildern, sondern am Einbau: gebaute, aber nie aufgerufene Bewegungen (z. B. 14 Effektfolgen und die Kapsel-Bewegungen in Welt 3, Pixels `ohrfeige`, Schmied `abschrecken`), Größen- und Fußliniensprünge zwischen Stand und Geste (2 bis 6 px, bis 22 % Größe), Standpunkte der Figuren ineinander. Dagegen hilft kein Kauf. Fremde Quellen können nur bei B1/B2 (Vorlage), B5–B8 (Effekte) und B9–B12 (Bewegungsvorlagen) etwas beitragen.
 
-## Recherchestand (Rohfassung, 25.11., 14:45 UTC; wird unten in die Kapitel eingearbeitet)
+## Recherchestand (Rohfassung, 25.11., 14:45 UTC; in die Kapitel 1 bis 4 eingearbeitet)
 
 Alles hier ist am 25.11.2026 von der genannten Seite abgerufen.
 
@@ -332,7 +338,7 @@ Reihenfolge: Stufe 0 sofort (ist ein Fehler), Stufe 1 zusammen mit dem Blindtest
 | Trainingsdaten | Modellkarte: „Licensed Data: Professionally licensed music tracks“, lizenzfreie und gemeinfreie Musik, synthetische MIDI-Aufnahmen. Bericht: Korpus mit 27 Mio. Stücken, beschriftet mit Gemini 2.5 Pro und eigenen Modellen; die Herkunft im Einzelnen legt der Bericht nicht offen. AMD gibt die Angabe nur als Behauptung wieder: „The project also claims it was trained entirely on royalty-free non copyrighted material.“ | Modellkarte, arXiv, AMD-Blog |
 | Korrektur am Repo | `docs/04-audio.md` nennt „Apache-2.0-Lizenz“. Für 1.5 ist es **MIT** (Code und Gewichte). In die Credits gehört MIT mit Copyright-Vermerk | – |
 
-Zur Trainingsdaten-Frage nüchtern: Die Lizenz (MIT) räumt Rechte am Modell ein und die Modellkarte verspricht kommerzielle Nutzbarkeit der Ausgaben. Eine Freistellung von Ansprüchen Dritter (wie sie Stability und ElevenLabs für Unternehmenskunden anbieten) gibt es nicht; ob die „lizenzierte Musik“ wirklich für KI-Training lizenziert war, lässt sich von außen **nicht bestätigen**. Das Risiko ist kleiner als bei Suno (laufende Klagen, Urteil gegen Suno in München), aber nicht null. Rechnungen gibt es bei einem lokalen Modell nicht; als Nachweis taugen Protokoll (Prompt, Seed, Modell-Datei mit Prüfsumme, Datum) und eine Kopie von Lizenz und Modellkarte vom Tag der Erzeugung.
+Zur Trainingsdaten-Frage nüchtern: Die Lizenz (MIT) räumt Rechte am Modell ein und die Modellkarte verspricht kommerzielle Nutzbarkeit der Ausgaben. Eine Freistellung von Ansprüchen Dritter (wie sie Stability in der Enterprise-Lizenz von Stable Audio 3 nennt) gibt es nicht; ob die „lizenzierte Musik“ wirklich für KI-Training lizenziert war, lässt sich von außen **nicht bestätigen**. Das Risiko ist kleiner als bei Suno (laufende Klagen, Urteil gegen Suno in München), aber nicht null. Rechnungen gibt es bei einem lokalen Modell nicht; als Nachweis taugen Protokoll (Prompt, Seed, Modell-Datei mit Prüfsumme, Datum) und eine Kopie von Lizenz und Modellkarte vom Tag der Erzeugung.
 
 ### 4.2 Hardware und Wege
 
@@ -372,7 +378,7 @@ Rund 48 Minuten Musik: 30 Raum-Schleifen zu 90 s, 3 Lieder, Stings und Jingles. 
 | Rahmen | `titel`, `gegenwart`, `zappomat` (4 s), `werbeblock` (5 s), `abspann`, `finale_maschine`, `finale_geburtstag` | Lo-Fi (`gegenwart`) leicht; die drei Stücke, die „das Titelthema“ variieren, sind per Text nicht erreichbar: nur über Cover einer eingespielten Vorlage oder Nachbearbeitung. Stings von 4–5 s liegen unter der empfohlenen Mindestlänge; länger erzeugen und schneiden |
 | Welt 1 | `w1_dorf`, `w1_schule`, `w1_taverne`, `w1_turm`, `w1_wald`, `w1_luftschloss`, `w1_bergwerk` | akustische Mittelalter-Besetzung (Laute, Blockflöte, Fiedel) ist der härtere Test: Modelle setzen gern Schlagzeug und Flächen dazu |
 | Welt 2 | `w2_aegypten`, `w2_olympia`, `w2_syrakus`, `w2_fuenfkampf` | seltene Instrumente (Oud, Ney, Aulos, Lyra): Stiltreue unsicher |
-| Welt 3 | `w3_unterstadt`, `w3_basis`, `w3_simulation`, `w3_labor`, `w3_kern` | Synthwave, Muzak, Minimal-Elektronik: erfahrungsgemäß die leichteste Gruppe für solche Modelle; `w3_basis` soll „same key as the rain theme“ haben, das geht über das Tonart-Feld |
+| Welt 3 | `w3_unterstadt`, `w3_basis`, `w3_simulation`, `w3_labor`, `w3_kern` | Synthwave, Muzak, Minimal-Elektronik: nach meiner Einschätzung die leichteste Gruppe für solche Modelle (nicht getestet); `w3_basis` soll „same key as the rain theme“ haben, das geht über das Tonart-Feld |
 | Welt 4 | `w4_testbild`, `w4_gluecksrad`, `w4_sitcom`, `w4_savanne`, `w4_mitternacht`, `w4_comic`, `w4_spukhaus`, `w4_zentrale`, `w4_zappmann` | Genre-Parodien (Gameshow, Sitcom, Big Band) liegen nah an Trainingsmaterial mit Gesang; `[Instrumental]` prüfen. `w4_mitternacht` trägt ein Rhythmus-Minispiel: Tempo nachmessen, Taktmarken von Hand (steht schon im Plan) |
 | Lieder | `lied_goblin` (Passwort muss verständlich sein), `lied_waldemar`, `lied_werbepause`, deutsch gesungen | größtes Risiko; früh testen, sonst ElevenLabs Music oder echte Stimmen |
 | Jingles | `aufgehoben`, `geloest`, `welt_geschafft`, `falsch`, `lachkonserve`, `gluecksrad` (2–5 s) | besser aus einer Klangbibliothek oder selbst gebaut; für Musikmodelle zu kurz |
@@ -436,3 +442,106 @@ Ausgang: Sind 1 bis 4 erfüllt, entstehen die 30 Schleifen lokal (geschätzt 30 
 | Versuch wie oben | 3–4 h | 0–2 € | klärt die Frage mit den eigenen Ohren statt mit Herstellerzahlen |
 | `docs/04-audio.md` berichtigen (MIT statt Apache-2.0; Referenz-Audio trägt keine Melodie; BPM/Tonart in Felder; Indie-Grenze bei ElevenLabs Music; Stable Audio 3 aufnehmen) | 0,5 h | 0 € | verhindert falsche Credits und einen Plan, der technisch nicht aufgeht |
 | Leitmotiv und Jingles von Hand (MIDI, ein Instrument je Welt) | 3–5 h | 0 € | das Einzige, was das Spiel musikalisch zusammenhält; kein Modell liefert das |
+
+## Funde im Überblick
+
+Format des gemeinsamen Auftrags. R5-EXT-01 und -02 stehen ausführlich in Kapitel 3.1.
+
+| ID | Raum | Priorität | Kategorie | Beschreibung | Beleg | Vorschlag |
+| --- | --- | --- | --- | --- | --- | --- |
+| R5-EXT-01 | alle | wichtig (ab Vertonung) | Animation, Technik | Mundbewegung richtet sich nie nach der Länge der Aufnahme: `_mund_schliessen()` fragt Popochius Sprach-Cues, die Stimmen laufen aber über `Klang.zeile()`. Es gilt immer die Schätzung 14 Zeichen/s. | `game/skripte/objekte/cq_figur.gd` Z. 16–19, 65–72; `game/skripte/klang.gd` Z. 317–336; `game/skripte/spiel.gd` Z. 244 | Länge über `Klang.stimme_zu()` holen; besser Stufe 1 aus Kapitel 3.4. |
+| R5-EXT-02 | alle | wichtig (ab Vertonung) | Animation | Bei „Untertitel aus“ mit Aufnahme wird `say()` übersprungen: Die Figur spricht ohne Redebewegung. | `game/skripte/spiel.gd` Z. 244–248, 313–317 | Redebewegung auch ohne Text starten. |
+| R5-EXT-03 | – | wichtig | Workflow | Doku überholt: „Meshy riggt keine Vierbeiner“ (`docs/lessons-learned.md` Abschnitt 1, Tabelle „Tiere“) und „Keine Vierbeiner“ (`docs/quellen.md`, Meshy). Meshy hat heute `animation_type: quadruped` und 127 Vierbeiner-Clips (Katze, Kuh, Hirsch u. a.). Damit entfällt der Grund, Tiergänge Bild für Bild zu malen. | https://docs.meshy.ai/api/rigging.md, https://www.meshy.ai/animation-library (25.11.2026) | Beide Stellen berichtigen; Versuch mit Pixels Gang (Kapitel 1.7). |
+| R5-EXT-04 | – | kosmetisch | Sonstiges (Lizenz) | `docs/04-audio.md` (auch die neuere Fassung auf `origin/claude/project-thread-hfwol7`) nennt für ACE-Step 1.5 „Apache-2.0-Lizenz … so in die Credits eintragen“. Code und Gewichte von 1.5 stehen unter **MIT**. | https://github.com/ACE-Step/ACE-Step-1.5, https://huggingface.co/ACE-Step/Ace-Step1.5 | Auf MIT ändern; Lizenztext und Modellkarte vom Tag der Erzeugung ablegen. |
+| R5-EXT-05 | – | wichtig | Workflow (Audio) | Der Leitmotiv-Plan („bei ACE-Step die Aufnahme als Referenz-Audio mitgeben“) geht technisch nicht auf: Referenz-Audio überträgt laut Tutorial Klangfarbe und Stimmung, „removes specific melody and rhythm information“. Ebenso gehören BPM und Tonart in eigene Felder statt in den Prompt, und „seamless loop“ erzeugt keine Schleife. | https://raw.githubusercontent.com/ace-step/ACE-Step-1.5/HEAD/docs/en/Tutorial.md; `docs/04-audio.md`, Abschnitt „Leitmotiv“ | Motiv über Cover-Aufgabe oder in Audacity einsetzen; Prompt-Regeln für ACE-Step ergänzen (Kapitel 4.4). |
+| R5-EXT-06 | – | kosmetisch | Sonstiges (Lizenz) | `docs/04-audio.md`: ElevenLabs Music, „Spiele ausdrücklich erlaubt“. Die Musik-Bedingungen (09.10.2026) nehmen „Studio Games“ aus; erlaubt sind nur „Indie Games“ (Spiel unter 500.000 $ Umsatz, Entwickler unter 1 Mio. $ aus allen Spielen), danach 60 Tage Frist für einen größeren Tarif. | https://elevenlabs.io/eleven-music-model-specific-terms | Grenze in die Doku und in `entscheidungen.md` aufnehmen. |
+| R5-EXT-07 | – | kosmetisch | Workflow (Lizenz) | Gekaufte Asset-Pakete (itch.io) verbieten durchweg die Weitergabe; das Repo ist öffentlich und der Web-Export baut daraus. Eine Regel, wie Fremd-Assets mit Weitergabeverbot abgelegt werden, gibt es im Projekt nicht. | Lizenzzitate in Kapitel 1.2, Einordnung 1.6 | Regel in `docs/03-produktion.md`: nur CC0/CC-BY ins Repo; alles andere außerhalb halten oder nicht verwenden; je Fremddatei Quelle, Lizenz, Kaufbeleg in einer Liste. |
+
+## Frühere Funde, Stand heute
+
+Der Bereich `ext` ist neu; es gibt keine früheren Funde dazu. Berührt wird AN-05 vom 20.11. (vier Welt-3-Figuren reden ohne Mundbewegung): in den Daten weiterhin so (`talk` ist dort eine Armgeste, die Mund-Schleife liegt in `talk_alt`; Stand der JSON-Dateien vom 25.11., nicht im Spiel nachgestellt). Für die Lautstärke-Steuerung (Kapitel 3.4) müssen diese vier ihre Mund-Bilder zurückbekommen.
+
+## Gut gelöst
+
+- Die Aufteilung nach Art der Bewegung (Lessons, Abschnitt 1) entspricht dem, was die Lernquellen empfehlen: wenige starke Schlüsselbilder, 8 Bilder je Gang, Bewegung aus 3D nur als Winkelquelle. Kein externes Werkzeug macht das für diese Figurengröße besser.
+- Das Teile-Rig als Python-Werkzeug mit automatischer Prüfung ist das, was PixelOver, Smack Studio oder Synfig von Hand bieten, nur im Batch und mit Stilbindung (`tools/figur.py animieren`, 70 Rig-Dateien unter `tools/figuren/`).
+- Das Feld `folge` in den Figurendaten erlaubt Halte-Bilder ohne neue Sprites; genau das Mittel gegen „springt von Pose zu Pose“.
+- Das Audio-Gerüst (`klang.gd`: Datei je Zeilen-ID, Brabbel als Ersatz, Probe-Stimmen für Tests) macht die Lautstärke-Steuerung des Munds zu einer kleinen Ergänzung statt zu einem Umbau.
+- Der Audio-Plan hat die Lizenzfrage je Modell schon geprüft (nicht kommerzielle Modelle ausgeschlossen, Suno gemieden); die Recherche bestätigt das bis auf die drei Korrekturen R5-EXT-04 bis -06.
+
+## Nicht geprüft / nicht bestätigt
+
+**Nicht geprüft (nichts geladen, nichts installiert, nichts gehört):**
+- Kein Asset wurde heruntergeladen oder im Spiel ausprobiert; Stil-Urteile beruhen auf Seitenbeschreibungen, Größenangaben und dem gemessenen Bestand des Spiels.
+- Kein Musikmodell wurde ausgeführt oder angehört; alle Qualitätsaussagen zu ACE-Step stammen von Hersteller und Dritten. Einen unabhängigen Hörtest für instrumentale Spielmusik habe ich nicht gefunden.
+- Synfig, Rhubarb, PixelOver, Tweencel wurden nicht installiert. Rechenzeit von Rhubarb für rund zehn Stunden Sprache ist nicht gemessen.
+- R5-EXT-01 und -02 sind aus dem Code gelesen, nicht im Spiel gesehen (es gibt noch keine Stimmdateien).
+- Kandidaten-Tabelle von `pr-w3.md` lag bis zum Schluss nicht vor; für Welt 3 gelten die Animations-Notizen vom 20.11.
+- OpenGameArt-Musik, Komponisten-Preise, Tracker-Werkzeuge: nicht recherchiert. PixelLab und Retro Diffusion (offener Punkt P7): nicht geprüft.
+
+**Nicht bestätigt (auf keiner abgerufenen Seite gefunden oder Seite nicht abrufbar):**
+- Meshy: aktuelle Credit-Preise für Rig und Clip (Preisseite nicht abgerufen; die Beispiele der API-Doku zeigen 5 und 3); ob das Vierbeiner-Rig aus einem gemalten Seitenbild ein brauchbares Skelett macht.
+- itch.io: Preis von „+50 Pixel Art Effects Pack 1“; Lizenztexte von Magory, Danger Goose, Helix, Xanthius, sinbadstudios (auf den Seiten keine Angabe); Elthens verlinkte Lizenzseite; Bildzahlen der meisten Pakete; Mehrwertsteuer-Aufschlag in der EU.
+- OpenGameArt „Animated particle effects 1“ (Abruf von der Seite abgelehnt).
+- Synfig: Stabilität von 1.5.5 unter Windows; Umfang der PixelOver-Demo; ob Mesh-Verformung in Spine erst ab Professional enthalten ist.
+- Audio2Face: Lizenztexte der einzelnen Modelle auf Hugging Face; Sprachliste.
+- Rhubarb: Jahr der Version 1.14.0 (die Seite zeigt nur „03 Apr“); welche Erkenner-Option das Godot-Addon „Baked Lipsync“ setzt.
+- ElevenLabs: ob der Zeitmarken-Endpunkt mit `eleven_v4` arbeitet; heutiger Minutenpreis von ElevenLabs Music. Fish Audio und VoxCPM2: Zeitmarken.
+- ACE-Step: XL auf der Radeon 7900 XT unter ROCm; deutsche Gesangsqualität; ob die „lizenzierten“ Trainingsdaten für KI-Training lizenziert waren; Preis von Comfy Cloud.
+- Stable Audio 3 Medium: Hardwarebedarf und AMD-Tauglichkeit. DiffRhythm: Lizenz strittig. Udio: heutiger Stand der Downloads.
+- Steam: wie die KI-Angabe auf der Shopseite erscheint. itch.io: Regel zur KI-Kennzeichnung.
+- Aseprite: Inhalt der „Scripts Collection“ und von Slynyrd Pixelblog 50 (nur gefunden, nicht gelesen).
+
+## Vorschläge für `docs/quellen.md` (Datei nicht geändert)
+
+| Abschnitt | Eintrag | Was man daraus übernimmt |
+| --- | --- | --- |
+| Animation und Pixel-Art | Slynyrd, Pixelblog 25 „Motion Cycles“, https://slynyrd.com/blog/2020/1/23/pixelblog-25-motion-cycles | Vierbeiner-Gang in 8 Bildern: Beinpaare wie zwei versetzte Zweibeiner, Hinterbein folgt dem Vorderbein der Gegenseite, gleiche Schrittweite vorn und hinten, Becken und Schulter wippen gegenläufig; Flügelschlag in 8 Bildern |
+| Animation und Pixel-Art | Cathy Feraday Miller, „Animating Four-Legged Beasts“, https://gamedeveloper.com/art/animating-four-legged-beasts | Fußfolge hinten links, vorn links, hinten rechts, vorn rechts; vier symmetrische Hauptposen; Hüfte, Brust, Kopf als versetzte hüpfende Bälle. Grundlage für eine automatische Vierbeiner-Prüfung |
+| Animation und Pixel-Art | Powerhoof, Gang für „The Drifter“, https://www.powerhoof.com/?p=975 | erst Striche für Glieder, wenige Bilder, Zwischenbilder nur an langsamen Stellen |
+| Werkzeuge und Dienste, Meshy (**berichtigen**) | https://www.meshy.ai/animation-library, https://docs.meshy.ai/api/rigging.md, https://docs.meshy.ai/api/animation-library | 779 Animationen, davon 127 Vierbeiner (Dog, Cat, Horse, Cow, Deer …); Rig mit `animation_type: quadruped`; „Keine Vierbeiner“ streichen. Clip-Namen für Hinken, Treppe, Hinknien, Aufheben, Redegesten (Kapitel 1.1). Hinweis: `meshy-7` für 3D-Erzeugung endet am 31.12.2026 |
+| Werkzeuge und Dienste | LuizMelo, Pet Cats Pack (CC0), https://luizmelo.itch.io/pet-cat-pack | Posenvorlage Katze: Gehen 8, Strecken 13, Hinlegen 8 Bilder; darf als CC0 auch im Repo liegen |
+| Werkzeuge und Dienste | Reactorcore, Fire Smoke Animations (CC0), https://opengameart.org/content/fire-smoke-animations | Feuer- und Rauch-Schleifen als Ausgangsmaterial für Fackeln, Esse, Smaugi |
+| Werkzeuge und Dienste | Synfig Studio, https://github.com/synfig/synfig | geprüft und verworfen für Sprites (Begründung Kapitel 2); PixelOver als einzige Alternative mit pixelgenauer Knochen-Animation, https://store.steampowered.com/app/1762550/PixelOver/ |
+| neuer Abschnitt „Audio und Lippensync“ | Rhubarb Lip Sync (MIT), https://github.com/DanielSWolf/rhubarb-lip-sync | Mundformen A–F/X; für Deutsch `--recognizer phonetic`; Ausgabe JSON; erst bei großen Köpfen einsetzen |
+| Audio und Lippensync | PowerQuest-Doku, https://powerquest.powerhoof.com/audio.html | wie ein Adventure-Baukasten Rhubarb einbindet: Rede-Animation mit den Bildern A, B, C, D, E, F, X in dieser Reihenfolge, Mund als eigene Animation über dem Körper |
+| Audio und Lippensync | Baked Lipsync für Godot (MIT), https://github.com/fbcosentino/godot-baked-lipsync | Vorlage für das Datenformat (vorab gebackene Mundwechsel, Signal je Wechsel) |
+| Audio und Lippensync | ElevenLabs, Zeitmarken je Zeichen, https://elevenlabs.io/docs/api-reference/text-to-speech/convert-with-timestamps.md | `alignment` mitspeichern, sobald vertont wird (kostet nichts extra, nützt Mund und Untertitel-Takt) |
+| Audio und Lippensync | Audio2Face-3D-SDK, https://github.com/NVIDIA/Audio2Face-3D-SDK | geprüft und verworfen: 3D-Ausgabe, verlangt NVIDIA-Karte |
+| Audio und Lippensync | ACE-Step 1.5: Repo, Modellkarte, Tutorial (URLs im Quellenverzeichnis) | MIT; `[Instrumental]` ins Textfeld; BPM/Tonart als Felder; Referenz-Audio trägt keine Melodie, dafür Cover; keine Schleifen-Funktion; 2, 4 oder 8 Fassungen je Lauf |
+| Audio und Lippensync | ElevenLabs Music Terms (09.10.2026), https://elevenlabs.io/eleven-music-model-specific-terms | Indie-Game-Grenze 500.000 $ / 1 Mio. $; keine Künstler- und Titelnamen im Prompt |
+| Audio und Lippensync | Stable Audio 3, https://stability.ai/news-updates/meet-stable-audio-3-the-model-family-built-for-artistic-experimentation-with-open-weight-models | zweiter lokaler Kandidat für instrumentale Schleifen (Medium bis 6:20, Community License bis 1 Mio. $ Umsatz) |
+| Audio und Lippensync | Steam-Inhaltsumfrage, https://partner.steamgames.com/doc/gettingstarted/contentsurvey | Wortlaut der KI-Offenlegung („Pre-Generated“); vor der Steam-Seite neu lesen |
+
+## Vorschläge für die Lessons Learned
+
+1. **Aussagen über Dienste mit Datum versehen und vor jeder neuen Welt nachprüfen.** „Meshy riggt keine Vierbeiner“ war bei der Niederschrift richtig und ist es nicht mehr; deshalb wurden Tiergänge weiter von Hand gemalt. Beleg: R5-EXT-03.
+2. **Lizenz und Bedienregeln eines Modells von der Modellkarte und dem Tutorial abschreiben, nicht aus Berichten Dritter.** Im Audio-Plan standen für ACE-Step eine falsche Lizenz und eine Funktion (Melodie über Referenz-Audio), die es nicht gibt. Beleg: R5-EXT-04, -05.
+3. **Fremde Assets: zuerst Größe und Lizenz gegen den eigenen Bestand halten.** Die Figuren sind 100–290 px hoch und gemalt; Pakete mit 20–64 px scheiden aus, bevor man sie ansieht. Und: Weitergabeverbot plus öffentliches Repo schließen sich aus. Beleg: Kapitel 1.2, 1.6.
+4. **Mundbewegung an die Tonquelle des Spiels binden, nicht an die der Engine.** Der Fehler R5-EXT-01 entstand, weil das Spiel ein eigenes Stimmen-System bekam und die Mundlogik beim Popochiu-Weg blieb; ein Test mit `probe_stimmen` hätte es gezeigt.
+
+## Quellenverzeichnis (alle abgerufen am 25.11.2026)
+
+**Meshy:** https://www.meshy.ai/animation-library · https://docs.meshy.ai/api/animation-library · https://docs.meshy.ai/api/rigging.md · https://docs.meshy.ai/en/api/animation
+
+**itch.io, Figuren und Katzen:** https://seethingswarm.itch.io/catset · https://luizmelo.itch.io/pet-cat-pack · https://elthen.itch.io/2d-pixel-art-cat-sprites · https://pixelbean.itch.io/cat-pixel-animations-pack · https://toffeecraft.itch.io/cat-pack · https://magory.itch.io/animated-pointclick-character · https://danger-goose.itch.io/point-and-click-adventure-game-sprite-template · https://crosswiredstudios.itch.io/helix-8-directional-point-and-click-character · https://xanthius.itch.io/lip-sync-asset-pack
+
+**itch.io, Effekte und Werkzeuge:** https://fellor.itch.io/elemental-bundle · https://kiddolink.itch.io/vfx-fx-collection-vol-1-pixel-art · https://pixel-zowie.itch.io/50-pixel-art-effects-pack-1 · https://cartooncoffee.itch.io/fire-spritesheets · https://sinbadstudios.itch.io/ultimate-vfx-pack-fire-lightning-water-smoke-animations · https://carbscode.itch.io/the-tween-machine · https://devkidd.itch.io/tweencel · https://animesuro.itch.io/rhubarb-lip-sync-godot · https://alkakrab.itch.io/270bundle
+
+**OpenGameArt:** https://opengameart.org/content/fire-smoke-animations · https://opengameart.org/content/cat-sprites · https://opengameart.org/content/2d-cat-sprite · https://opengameart.org/content/animated-particle-effects-1 (Abruf abgelehnt)
+
+**Lernquellen, Aseprite-Umfeld:** https://slynyrd.com/blog/2020/1/23/pixelblog-25-motion-cycles · https://www.slynyrd.com/blog/2022/9/25/pixelblog-40-3d-animation (gelesen, für das Thema nicht einschlägig) · https://slynyrd.com/blog/2024/5/24/pixelblog-50-human-walk-cycle (nur gefunden) · https://gamedeveloper.com/art/animating-four-legged-beasts · https://www.powerhoof.com/?p=975 · https://community.aseprite.org/t/any-extensions-addons-for-animating/9663 · https://community.aseprite.org/t/aseprite-scripts-collection/3599 (nur gefunden)
+
+**Synfig und Vergleich:** https://github.com/synfig/synfig · https://www.synfig.org/ · https://www.synfig.org/news/ · https://www.synfig.org/category/releases/stable-releases/ · https://www.synfig.org/2026/01/18/synfig-studio-1-5-4-released/ · https://wiki.synfig.org/Synfig_CLI_syntax · https://synfig.readthedocs.io/en/latest/layers/skeleton_deformation.html · https://forums.synfig.org/t/how-do-i-disable-anti-aliasing/14970 · https://forums.synfig.org/t/png-spritesheet-size/4325 · https://esotericsoftware.com/spine-purchase · https://alternativeto.net/software/dragonbones/about · https://forum.godotengine.org/t/state-of-skeleton2d-in-godot-bone-2d-rigging-cutout-animations/65393 · https://store.steampowered.com/app/1762550/PixelOver/ · https://www.dekudeals.com/items/smack-studio
+
+**Lippensync:** https://github.com/DanielSWolf/rhubarb-lip-sync · https://github.com/DanielSWolf/rhubarb-lip-sync/releases · https://raw.githubusercontent.com/DanielSWolf/rhubarb-lip-sync/master/LICENSE.md · https://godotengine.org/asset-library/asset/3629 · https://github.com/fbcosentino/godot-baked-lipsync · https://powerquest.powerhoof.com/audio.html · https://developer.nvidia.com/blog/nvidia-open-sources-audio2face-animation-model · https://github.com/NVIDIA/Audio2Face-3D-SDK · https://raw.githubusercontent.com/NVIDIA/Audio2Face-3D-SDK/main/README.md · https://elevenlabs.io/docs/api-reference/text-to-speech/convert-with-timestamps.md · https://docs.godotengine.org/en/4.7/classes/class_audioeffectspectrumanalyzerinstance.html · https://github.com/ogallagher/papagayo-ng · https://huggingface.co/MontrealCorpusTools/german_mfa
+
+**Musik:** https://github.com/ACE-Step/ACE-Step-1.5 · https://huggingface.co/ACE-Step/Ace-Step1.5 · https://raw.githubusercontent.com/ace-step/ACE-Step-1.5/HEAD/docs/en/Tutorial.md · https://arxiv.org/html/2602.00744 · https://www.amd.com/en/blogs/2026/commercial-grade-ai-music-generation-on-amd-ryzen-ai-and-radeon-ace-step-1-5.html · https://blog.comfy.org/p/ace-step-15-xl-commercial-grade-music · https://okmiku.com/blog/ace-step-v1-5-review · https://decrypt.co/383070/new-ai-music-model-already-better-than-suno-ace-review · https://www.creativeainews.com/articles/best-open-source-ai-music-models-2026/ · https://stability.ai/news-updates/meet-stable-audio-3-the-model-family-built-for-artistic-experimentation-with-open-weight-models · https://elevenlabs.io/eleven-music-model-specific-terms · https://musicbusinessworldwide.com/5-things-to-know-about-sunos-bmg-licensing-deal-download-caps-watermarks-and-more · https://www.musicbusinessworldwide.com/suno-limits-pro-subscribers-to-20-song-downloads-per-month · https://partner.steamgames.com/doc/gettingstarted/contentsurvey
+
+## Werkzeug
+
+- Keine Fernsteuerung, kein Godot-Lauf: Diese Rolle hat nur gelesen und recherchiert. Der Bestand (Bildgrößen, Bildzahlen, Dauer je Bewegung) ist mit kurzen Python-Auszügen aus `game/daten/figuren/*.json` und den Sheets gezählt; die Auszüge sind nicht als Skript abgelegt, die Zahlen stehen in Kapitel 0.1 und 3.
+- Belege: `belege/ext/max_talk_kopf_6fach.png` (Kopf der vier `talk`-Bilder von Max, sechsfach), `belege/ext/pixel_walk_8_bilder_2fach.png` (Pixels acht Gang-Bilder, zweifach). Beide aus den Sheets ausgeschnitten, nicht aus dem laufenden Spiel.
+- Netz: Seitenabrufe liefen über ein Werkzeug, das den Seitentext zusammenfasst; wörtliche Zitate sind kurze Ausschnitte daraus. Wo eine Seite Angaben nicht hergab (Preis, Datum, Lizenz), steht das in der Tabelle oder unter „nicht bestätigt“. Direkter Abruf mit `curl` war für docs.meshy.ai gesperrt.
+
+FERTIG
