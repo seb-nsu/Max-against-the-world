@@ -62,6 +62,7 @@ Im laufenden Spiel beobachtet, außer wo „aus dem Code“ dabeisteht. „Verla
 | GD-W3-04 | apothekengasse | wichtig | Rätsel (Bedienung) | **Bestätigt:** Die Pastille lässt sich nur schlucken, indem man sie in der Leiste zweimal anklickt. Rote Pastille auf Max: `SYS_ERS_MAX_0230`; auf den Automaten: `SYS_ERS_MAX_0120`. Pfote Stufe 1 (`W3_HINT_PIX_0340`) sagt nicht, wie. | Stand `w3_06_pastillenwahl`: `klick inv:rote_pastille`, `klick @max`; `klick inv:rote_pastille`, `klick @automat`; Verlauf 401.9, 414.9 | wie gd-w3 |
 | GD-W3-05 | apothekengasse | wichtig | Rätsel (Text gegen Zustand) | **Bestätigt:** Ansehen von Omas Keksen direkt nach dem Erhalt in der Gasse: „Hundekuchen. Knochenförmig. Drüben waren das Kekse. Ich hab die Verwandlung gesehen …“ (`W3_BAS_MAX_0870`). Max war noch nie drüben. | Stand `w3_06_pastillenwahl`: `rklick inv:omas_kekse`, Verlauf 383.0 | wie gd-w3 |
 | GD-W3-06 | apothekengasse | kosmetisch | Hinweise | **Bestätigt:** Der Zuruf „Wenn du noch länger auf die Pastillen starrst, wählt der Automat für dich. Er würde Beige nehmen.“ (`W3_APO_PIX_0920`) kommt bei offenem R3a, bevor es Pastillen gibt. | Pfoten-Lauf `pr-w3-pfote`: `stand holen w3_05_gasse_anfang`, Pfote, `warte 31`, Pfote, `warte 61` → Zuruf bei 1357.9 | wie gd-w3 |
+| R5-W3-26 | apothekengasse (R3a) | wichtig | Animation, Rätsel | **Das Déjà-vu, um das sich Rätsel 3a dreht, ist nicht zu sehen.** Max bittet Pixel, zweimal genau gleich am Automaten vorbeizugehen; Pixel sagt „Gehen. Würdevoll. Schwanz hoch, Blick geradeaus …“ und „Und noch einmal. Dieselbe Pfote zuerst …“ und sitzt dabei 49 s lang an derselben Stelle (x 196–214 in allen 197 Bildern). Der Automat reagiert danach auf eine Bewegung, die es im Bild nie gab. Im Skript ist die Stelle eine reine Textfolge (`welt_3.gd` Z. 869, nur gelesen). | `belege/pr-w3/film02_dejavu_pixel_sitzt_49s_still.png` (20 Bilder aus Film `02_dejavu`); Befehle: Stand `w3_05_gasse_anfang`, `film an 02_dejavu 4`, `klick @pixel` | Pixel bei `W3_APO_PIX_0180` und `0190` je einmal am Automaten vorbeilaufen lassen (gleicher Weg, zweites Mal mit kurzem Bildflackern des Automaten). Der Trab ist vorhanden. |
 
 ### Stadtstraße (Simulation)
 
@@ -288,6 +289,7 @@ Grundlage: 19 Bildfolgen im laufenden Spiel (`film an … 4`, Tempo 1, `textmodu
 | Film | Szene | Dauer | Läuft und sitzt | Fehlt oder sitzt falsch |
 | --- | --- | --- | --- | --- |
 | 01 | Ankunft Unterstadt | 107 s | Handy-Geste, Regen, Neon | Max steht von Anfang an da, keine Ankunft (F21 offen) |
+| 02 | R3a, Déjà-vu in der Gasse | 49 s | Regen, Dampf | **Pixel geht nicht**, er sitzt die ganze Szene (R5-W3-26) |
 | 03 | blaue Pastille | 67 s | Sofa-Traumbild, Pixels Ohrfeige (Pointe aus W3-07 ist da) | – |
 | 04 | rote Pastille, Ankunft Simulation | 98 s | Passanten, Takt-Autos, Vogelschwarm | Schlucken und Auffangen nicht zu sehen: Morphäus bleibt stehen, harte Blende (P30 offen); drei gleiche Passanten sind Absicht |
 | 05 | erstes Aufwachen | 162 s | **Max kommt aus der Kapsel: Kopf, Sitzen, Aufstehen, etwa 2 s** (`anim_kapsel_aufstehen_4fps.gif`; W3-10 behoben); Kalle bewegt Hand und Headset | Erzähler: „Auf seiner Brust sitzt ein nasser Kater“, Pixel sitzt am Boden. Danach 150 s zwei stehende Figuren; „Max zieht die Tüte heraus“ ohne Geste |
@@ -311,6 +313,7 @@ Grundlage: 19 Bildfolgen im laufenden Spiel (`film an … 4`, Tempo 1, `textmodu
 
 | Rang | Stelle | Heute | Vorschlag | Aufwand |
 | --- | --- | --- | --- | --- |
+| 1 | R3a: Pixel geht zweimal am Automaten vorbei | sitzt still (R5-W3-26) | zwei gleiche Läufe mit dem vorhandenen Trab | klein |
 | 1 | R13: Tasse, Piepsi, Opas Nachricht | nichts davon im Bild (R5-W3-24) | Pixel läuft zum Tisch, Tasse kippt (zwei Zustandsbilder), Piepsi ins Bild rücken, blaues Flackerbild für die Nachricht | mittel; Hologramm-Bilder gibt es laut W3-07 schon |
 | 2 | Kammer 3: Tür springt auf, Bernd schwebt weg | Zustand wechselt nach dem Text | Zustandswechsel an den Anfang der jeweiligen Erzählzeile ziehen | klein (Reihenfolge im Skript) |
 | 3 | Kammer 1: Portal | 8 s nach dem Erzähler | Portal mit der Zeile „Max drückt ab“ öffnen | klein |
@@ -330,7 +333,7 @@ Dauer ohne Eingriff des Spielers, aus `marke`/`zeit` oder aus der Bildzahl der F
 | Abschnitt | Dauer | Quelle |
 | --- | --- | --- |
 | Ankunft Unterstadt bis zum ersten Klick | 107 s | Film 01, 428 Bilder |
-| Déjà-vu-Zeile in der Gasse (Klick auf Pixel) | 49 s | Film 02, 197 Bilder |
+| R3a, Déjà-vu in der Gasse (Klick auf Pixel) | 49 s | Film 02, 197 Bilder |
 | blaue Pastille (Schleife zurück) | 67 s | Film 03 |
 | rote Pastille bis frei in der Simulation | 98 s | Film 04 |
 | erstes Aufwachen | 162 s | Film 05, 647 Bilder |
