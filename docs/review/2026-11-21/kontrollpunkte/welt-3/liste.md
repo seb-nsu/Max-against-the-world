@@ -44,3 +44,4 @@ Alle Stände sind mit echten Klicks über die Fernsteuerung entstanden (`stand s
 | w4_nach_R2 | gluecksrad (Welt 4) | nur für die Stichprobe R5-W4-11: Welt 4 R1 (Pixel sortiert die Balken) und R2 (Quiz A, B, C) gelöst, Fernbedienung | `stand holen welt3_ende`, `portraet pixel`, `klick @balken`, `option 1`, `option 1`, `option 2`, `option 3` | dazu billig_fernbedienung, taste_umschalten, programmzeitschrift, lichtroehre_deluxe |
 | w4_sitcom_anfang | sitcom_kueche (Welt 4) | wie w4_nach_R2, in die Sitcom-Küche umgeschaltet, Vater noch nicht angesprochen | Fernbedienung zweimal | wie w4_nach_R2 |
 | w3_alt_turm_zuerst_nach_R7b | widerstandsbasis | Nebenweg: Turm vor dem ersten Aufwachen, nach R7b (R6, R13, R7 gelöst; R12, R8, R9a offen) |
+| w3_alt_kern_loesung_b_zelle_kalt | kern | Nebenweg: R10 gelöst, ein Fehltausch an der Zelle, Zelle über das Fenster gekühlt (Lösung B), Zelle noch nicht genommen |
