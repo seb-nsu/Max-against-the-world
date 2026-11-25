@@ -495,7 +495,9 @@ Restpunkte W3-1 bis W3-14 aus `docs/offene-punkte.md`: **weiterhin offen**; heut
 - `werkzeuge/pr-w3_abtasten.py LAUF STAND [lauf_y] [figur]`: lädt einen Kontrollpunkt, sieht jedes sichtbare Objekt an (`rklick`) und benutzt jeden Hotspot (`klick`), schließt Überlagerungen und Menüs, zählt Ersatzzeilen und meldet, wer an den Probestellen gewinnt. Nur echte Klicks.
 - `werkzeuge/pr-w3_raumbogen.py ZIEL.png SPALTEN BILDER…`: Kontaktbogen aus Raumaufnahmen mit Dateinamen.
 - Pfoten-Lauf und Film-Lauf als Befehlsdateien im Lauf-Ordner (`/home/user/lauf/pr-w3-pfote/lauf.sh`, `/home/user/lauf/pr-w3-haupt/film.txt`; nicht im Repo, Inhalt in dieser Notiz beschrieben).
-- Läufe: `/home/user/lauf/pr-w3-haupt` (Hauptlauf, mehrere Sitzungen), `/home/user/lauf/pr-w3-pfote` (Pfote, danach Abtasten). Zeitweise liefen zwei eigene Godot-Prozesse neben dem von `pr-w2`.
+- `werkzeuge/pr-w3_filmbogen.py FILMORDNER ZIEL.png [ANZAHL] [SPALTEN] [VON BIS] [x y w h] [FAKTOR]`: Kontaktbogen aus einer Bildfolge, mit Ausschnitt und Bildnummern.
+- Läufe: `/home/user/lauf/pr-w3-haupt` (Hauptlauf und Filme, mehrere Sitzungen), `/home/user/lauf/pr-w3-pfote` (Pfote, danach Abtasten), `/home/user/lauf/pr-w3-echt` (Nahansichten, Gegenproben, Lauf vom Stand `welt2_ende`).
+- Befehlsdateien (`fs ORDNER -f datei`): Die Ausgabe kommt erst am Ende, nach 900 s Echtzeit bricht die Fernsteuerung ab (die Zeitwerte der ersten 15 Filme gingen so verloren; Dauer dort aus der Bildzahl). Nach mehr als 45 s Leerlauf schluckt ein Zuruf den ersten Klick der nächsten Datei; jede Datei mit einem Bodenklick beginnen. Der Radiowecker läuft in Echtzeit und ist bei Tempo 4 erst nach 120 Spielsekunden so weit. Zeitweise liefen zwei eigene Godot-Prozesse neben dem von `pr-w2`.
 - Fallen der Fernsteuerung, die Zeit gekostet haben: `klick @opa` und Koordinaten aus `knoepfe` (Mittelpunkte); erstes Menü einer Sitzung nur in Tempo 1 (R5-P-09); nach einem Hänger hilft nur `stop` und `start`.
 
 FERTIG
