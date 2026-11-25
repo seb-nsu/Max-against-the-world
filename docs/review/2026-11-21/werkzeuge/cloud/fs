@@ -1,0 +1,9 @@
+#!/bin/bash
+# Fernsteuerung unter Linux: wie fs.py, aber mit virtueller Anzeige :99 und Godot über OpenGL (Mesa).
+# Aufruf: fs start ORDNER [tempo=4] [frisch] | fs ORDNER "befehl" … | fs stop ORDNER
+REPO="$(cd "$(dirname "$0")/../../../../.." && pwd)"
+export DISPLAY=:99
+export CQ_CHECKOUT="$REPO"
+export CQ_GODOT=/home/user/werkzeug/godot-gl
+pgrep -x Xvfb > /dev/null || { (Xvfb :99 -screen 0 1920x1080x24 -nolisten tcp > /tmp/xvfb.log 2>&1 &); sleep 1; }
+exec python3 "$REPO/docs/review/2026-11-21/werkzeuge/fs.py" "$@"
