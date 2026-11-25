@@ -2,6 +2,13 @@
 
 **Stand: fertig (25.11.2026).**
 
+**Zahlen:** 56 Funde, davon 3 kritisch, 27 wichtig, 26 kosmetisch. Neu (R5-W1-…): 37 (1 kritisch, 19 wichtig, 17 kosmetisch). Mit alter ID bestätigt oder weiterhin offen (GD-W1-…, GD-W2-03, W1-13, W1-20): 19 (2 kritisch, 8 wichtig, 9 kosmetisch).
+
+**Kritisch:**
+- GD-W1-K1: Rotkäppchen steht außerhalb des Zauberwalds, Weg A von R10 ist nicht lösbar (im Spiel bestätigt; die Welt bleibt über Weg B lösbar).
+- R5-W1-34: Nach Programmneustart und Laden haben schon geführte Gespräche keine Optionen, das Spiel hängt (im Spiel über das echte Lade-Menü bestätigt; Ursache aus Code und Speicherdatei geschlossen).
+- GD-W2-03: Nach dem Laden eines älteren Stands in derselben Sitzung fehlen aufgehobene Gegenstände, Welt 1 ist von dort nicht lösbar (im Spiel an zwei Stellen bestätigt).
+
 - Rolle: Welt-Prüfer (Durchspieler, Level-, Game-Designer, Technical Artist, Gameplay-Scripter in einem Durchgang). Kürzel `pr-w1`.
 - Umfang: Welt 1 vollständig, vom ersten freien Moment auf dem Dorfplatz bis zum ersten freien Moment in Welt 2 (einschließlich Welt-Ende, Übergang, Zwischenspiel 1).
 - Geprüfter Commit: `04c5a79f` (Checkout `/home/user/Max-against-the-world`, Branch `claude/project-thread-me923s`).
@@ -313,7 +320,7 @@ Nicht gemessen: Ankunftsszene (W1-01), Gespräche mit Lesezeit je Raum.
 
 - **Englische Fassung:** keine Nahansicht und kein Gespräch auf Englisch angesehen.
 - **Pfote:** Stufe 1 für R1a bis R8 je einmal gehört, Stufe 2 nur für R4b, R7, R8 und R10, Stufe 3 nur für R10. Für R6b, R9 und R11 bis R13 kein Hinweis gehört. Ab dem Turm gibt die Pfote ohnehin nur R10-Hinweise (R5-W1-01), R11 bis R13 sind deshalb gar nicht prüfbar.
-- **Sackgassen:** nicht systematisch jede Reihenfolge. Geprüft: R1c auf zwei Wegen, Weg B mit und ohne abgegebenen Leuchttrank, Geheimtür ohne „Mo“, Rücksprünge (GD-W2-03). Nicht geprüft: Thronsaal ohne Pollen/Socke, R7 ohne Socke, Bohne vor Brunnen, Taverne in anderer Reihenfolge, Speichern mitten in einer Rätselkette über F5/F9 (außer dem einen Fall in R5-W1-34).
+- **Sackgassen:** nicht systematisch jede Reihenfolge. Geprüft: R1c auf zwei Wegen, Weg B mit und ohne abgegebenen Leuchttrank, Geheimtür ohne „Mo“, Rücksprünge (GD-W2-03). Nicht gespielt: Thronsaal ohne gelöstes R7 (aus dem Code, `room_thronsaal.gd` Z. 40: die Socke wirkt auf Moderwort nur nach R7; ob man ohne R7 dorthin kommt und was das Spiel dann sagt, ist offen, die Pfote hilft dort wegen R5-W1-01 nicht), R7 ohne Socke, Bohne vor Brunnen, Taverne in anderer Reihenfolge, Speichern mitten in einer Rätselkette über F5/F9 (außer dem einen Fall in R5-W1-34).
 - **R5-W1-34 nach Neustart:** an drei Gesprächen gezeigt (Toadi, Grimmzahn, Zeldina), nicht an allen Figuren. Die Ursache (`_has_done_init` im Spielstand) ist aus Code und Speicherdatei geschlossen, nicht durch einen Gegenversuch belegt.
 - **GD-W2-03:** Ob ein Programmneustart den Fehler immer vermeidet, nur an einem Stand gesehen.
 - **Raum für Raum in jedem Zustand:** Fotos und `objekte` je Raum im Zustand des Durchlaufs; nicht jeder Raum in jedem Zwischenzustand. Wasserschloss und Zauberstab-Laden nur einmal besucht. Regale im Laden (W1-07) nicht gemessen.
@@ -329,6 +336,9 @@ Nicht gemessen: Ankunftsszene (W1-01), Gespräche mit Lesezeit je Raum.
 - **Folgende und wartende Figuren im Raum mit allen anderen Figuren prüfen** (Regel steht schon in CLAUDE.md, „im Raum mit allen Figuren prüfen“), und zwar je Zustand: Abnehmer in den Abstellkammern, Zeldina an der Brücke, XXL-Ziege vor Schild und Schmiede. Beleg: R5-W1-30, GD-W1-10, R5-W1-12.
 - **Hinweis-Schritte mit zwei Lösungswegen als ein Schritt führen.** R10a blieb nach Weg B offen und hat die Pfote für den Rest der Welt blockiert. Beleg: R5-W1-01.
 - **Auswahlmenüs mit Reihenfolge-Rätseln nie in Lösungsreihenfolge anlegen.** Beleg: R5-W1-29.
+- **Jede Szene mit Begleitern in Tempo 1 filmen, solange die Begleiter dabei sind.** Die XXL-Ziege ist größer als jede andere Figur und folgt Max durch zwei Räume; sie verdeckt die Lieferszene (Rotkäppchen) und das Fußbad (Waldemar, Max) vollständig. Standbilder der Räume zeigen das nicht, weil die Ziege nur in zwei Zuständen dort steht. Beleg: GD-W1-10, R5-W1-40.
+- **Rücksprung-Test als fester Schritt:** Gegenstand nehmen, älteren Stand laden, prüfen, ob der Gegenstand wieder im Raum liegt; und: späteren Stand laden, dann einen früheren. Beides in der CI, je Welt mit einem Prop. Beleg: GD-W2-03.
+- **Schlussszenen mit festen Plätzen bauen.** Im Thronsaal bleibt Max dort stehen, wo ihn der letzte Klick hingeführt hat (in Moderwort), und Figuren, die laut Skript hereinkommen (Toadi), sprechen ohne Bild. Für jede Szene mit mehr als zwei Sprechern vorher Plätze als Marker anlegen und die Figuren hinstellen. Beleg: R5-W1-36.
 
 ## Werkzeug
 
@@ -338,3 +348,8 @@ Nicht gemessen: Ankunftsszene (W1-01), Gespräche mit Lesezeit je Raum.
 - `start welt-1` liefert einen Stand ohne Thunfischdose und Notizbuch; für R1c nicht brauchbar.
 - `stand sichern` geht nicht in Gesprächen und Nahansichten („Spiel ist beschäftigt“).
 - Eigener Kurzaufruf `/home/user/lauf/f.sh` (kürzt die Ausgabe; liegt außerhalb des Repos).
+- `warte N` klickt Text nicht weiter (anders als `warte` ohne Zahl). Wer in `textmodus lesen` filmt und `warte 120` schreibt, bleibt auf der ersten Zeile stehen; so ist der zweite Teil des Thronsaal-Films unbrauchbar geworden.
+- `@id`-Klicks dauern so lange, dass ein Zuruf dazwischen starten und den Klick schlucken kann (zweimal bei Zeldina in den Abstellkammern); für Proben, auf die es ankommt, Koordinaten nehmen.
+- Nach `stand holen` in einem frischen Prozess lassen sich nur Figuren ansprechen, mit denen im Stand noch nie geredet wurde (R5-W1-34). Abhilfe für Tests: im selben Prozess durchspielen (Lauf `pr-w1-weg`) und von dort Stände holen; dann greift aber GD-W2-03 für Props.
+
+FERTIG
