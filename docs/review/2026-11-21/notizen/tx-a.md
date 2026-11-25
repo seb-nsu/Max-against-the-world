@@ -14,7 +14,7 @@ Geprüft wird: Humor und Ton, eigene Stimme je Figur, KI-Klang jeder Dialogzeile
 | ZS1_ | 110 | 110 |
 | ZS2_ | 87 | 87 |
 | ZS3_ | 112 | 112 |
-| W1_ | 496 | 1433 |
+| W1_ | 1049 | 1433 |
 | SYS_ | 0 | 108 |
 | UI_ | 0 | 965 |
 
@@ -188,3 +188,45 @@ Kein eigener Fund. `W1_SCHM_PIX_0300_2` („Das ist keine Treue, das ist Anbiede
 | R5-TX-24 | `W1_STAB_STA_0220` | Stabmacher | kosmetisch | Lokalisierung: Anrede im Englischen ergänzt | EN: „The wand chooses the wizard, young man. Not the other way round. I have three left.“ | Im Deutschen fehlt die Anrede. „Young man“ ist Pixels Erkennungswort (höchstens viermal je Abschnitt) und fällt im selben Raum in `W1_STAB_PIX_0490`. Das Zitat ist ohne Anrede genauso erkennbar. | „The wand chooses the wizard. Not the other way round. I have three left.“ |
 
 Gut in diesen fünf Räumen (Belegzeilen, ausführlich im Abschnitt „Gut gelöst“): `W1_DORF_MAX_0950` („Das ist keine Ziege. Das ist ein Sofa mit Hörnern.“), `W1_ANK_MAX_0121`, `W1_DORF_TOA_0522`, `W1_DORF_ROT_0930`, `W1_TAV_PIX_0340` („Meine Nase lügt nie. Sie interpretiert.“) mit Rückruf in `W1_STAB_PIX_0540`, `W1_TAV_HUM_0540`, `W1_TAV_GOL_1210`, `W1_SCHM_SCH_0240`, `W1_STAB_STA_0222` („Das sagst du. Der Löffel hat sich dazu noch nicht geäußert.“), `W1_STAB_STA_0282`, `W1_STAB_STA_0420`.
+
+### Hoggelwarz (`W1_HOGG`, 116 Zeilen)
+
+| ID | Zeilen-ID | Sprecher | Priorität | Muster | Original | Grund | Vorschlag |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| R5-TX-25 | `W1_HOGG_MAX_0130` | Max | kosmetisch | Symmetrisches Satzpaar, baugleich mit `W1_TAV_MAX_0120` | „Ein Kessel, in dem schon etwas Grünes blubbert. Alwin nennt das Grundlage. Ich nenne das verdächtig.“ | Dieselbe Schablone wie in der Taverne („Gollo nennt das Vulkan. Ich nenne das Abendessen.“), wieder vor einem blubbernden Topf. Beim zweiten Mal hört man den Bauplan. | „Ein Kessel, in dem schon etwas Grünes blubbert. Alwin sagt, das ist die Grundlage. Wovon, sagt er nicht.“ |
+| R5-TX-26 | `W1_HOGG_MAX_0120` (dazu `W1_HOGG_MAX_0140`, `W1_HOGG_ALW_0580`, `W1_HOGG_MAX_0930`) | Max | kosmetisch | Entweder-oder-Schluss | „Eine leere Tafel. Entweder hat Alwin nichts zu sagen, oder er hat schon wieder alles vergessen.“ | Tafel und Flaschenregal liegen nebeneinander und enden beide auf Entweder-oder; dazu Alwins „Wähle weise. Oder schnell. Beides ergibt eine Geschichte.“ und Max' „Ob das mutig ist oder dumm …“. `0140` („entweder Magie oder Marketing“) ist die stärkste und bleibt. | „Eine leere Tafel. Alwin hat den Stoff vergessen, und die Tafel verrät nichts.“ |
+
+`W1_HOGG_MAX_0940` (Reserve, kommt laut Regie nicht vor) hat „kein Trank …, sondern Chaos“; falls die Zeile wieder eingebaut wird, vorher glätten. `W1_HOGG_MAX_0040` (Million Follower) steht unverändert und trägt.
+
+### Troll-Brücke (`W1_BRUE`, 131 Zeilen)
+
+| ID | Zeilen-ID | Sprecher | Priorität | Muster | Original | Grund | Vorschlag |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| R5-TX-27 | `W1_BRUE_WAL_1230`, `W1_BRUE_WAL_0490`, `W1_BRUE_PIX_1130_2` (im Verbund mit `W1_BRUE_WAL_0280`, `0620`, `0770`, `0810`, `0940`) | Waldemar, Pixel | kosmetisch | Kontrast-Schablone (M8), Häufung im Raum | „… ich bin Troll, kein Vorleser.“ / „Das ist ein Märchen, keine Horde!“ / „Das ist kein Abenteuer mehr, das ist ein Wartezimmer.“ – daneben „Ich bin Troll, kein Anwalt. Leider.“, „Das ist kein Satz. Das ist ein Laut.“, „Das ist keine Drohung! Das ist eine Mittagspause!“, „Das steht nicht im Text, das ist privat.“ | Acht Kontraste in einem Raum. Bei Waldemar ist das Einordnen Figur (ein Pedant sortiert), `0620`, `0770`, `0810` und `0280` bleiben. Übrig sind die Dublette „Ich bin Troll, kein …“ (`0280` und `1230`), ein vierter Ausruf gleicher Bauart und Pixels Formel im Zuruf. „Wir sind X, keine Y“ gehört in Welt 1 den Goblins (Streikschild, siehe Bergwerk). | `1230`: „Dann bist du vorsorglich angehalten. Das Schild dort erklärt alles. Lesen musst du selbst, Vorlesen steht nicht in der Satzung.“ · `0490`: „HALT! Nach dem Kleinen der Mittlere! Nicht der Große! Wir sind hier in einem Märchen!“ · `1130_2`: „Für ein Wartezimmer fehlen nur noch die Zeitschriften.“ |
+
+### Wasserschloss (`W1_WASS`, 30 Zeilen)
+
+Kein eigener Fund. Der Raum ist kurz und sitzt: „Er hat das geübt. Vor dem Spiegel, mit Betonung auf ‚anderen‘.“ (`W1_WASS_PIX_0050`), „Haustiere erlaubt. Außer Fische. Fische sind Vormieter.“ (`W1_WASS_MAX_0065`), „Der Teppich hat eine Beule. Die Beule schnarcht.“ (`W1_WASS_MAX_0105`). Der Zuruf `W1_WASS_PIX_0170` gehört zum raumübergreifenden Fund R5-TX-33.
+
+### Zauberwald (`W1_WALD`, 92 Zeilen)
+
+| ID | Zeilen-ID | Sprecher | Priorität | Muster | Original | Grund | Vorschlag |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| R5-TX-28 | `W1_WALD_MAX_0015`, `W1_WALD_MAX_0450` (dazu `W1_WALD_MAX_0010`, `0110`) | Max | kosmetisch | „Oder …“-Nachklapp | „Wenn ich da draufspringe, werde ich größer. Oder ich krieg Bauchschmerzen.“ / „Hab ich irgendwo gelesen. Oder gerade erfunden.“ | Viermal im Raum schiebt Max ein „Oder …“ nach, zweimal an demselben Hotspot hintereinander (`0010`, `0015`). `0010` (gewarnt oder überredet) und `0110` (unterschreiben oder Pommes) tragen und bleiben. | `0015`: „Wenn ich da draufspringe, werde ich größer. Im Spiel jedenfalls. Hier gibt's wahrscheinlich nur Bauchschmerzen.“ · `0450`: „Wasser hilft Rosen beim Wachsen, aber nicht beim Aufgehen. Hab ich irgendwo gelesen, glaub ich.“ |
+
+### Luftschloss (`W1_LUFT`, 99 Zeilen)
+
+| ID | Zeilen-ID | Sprecher | Priorität | Muster | Original | Grund | Vorschlag |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| R5-TX-29 | `W1_LUFT_MAX_0090` | Max | kosmetisch | Schiefe Redewendung | „Das Geländer hat bestimmt noch nie einen Prüfer von innen gesehen.“ | „Von innen gesehen“ sagt man von Orten (eine Werkstatt, eine Schule). Einen Prüfer von innen zu sehen ergibt kein Bild. Das Englische ist richtig („has definitely never met a safety inspector“). | „Das Geländer hat bestimmt noch nie einen Prüfer gesehen.“ |
+| R5-TX-30 | `W1_LUFT_MAX_0165` | Max | kosmetisch | Kontrast-Formel A; nimmt die Pointe einer anderen Figur vorweg | „Das ist keine Prinzessin, die gerettet werden will, das ist eine, die umzieht.“ | Max erklärt den Witz, den Zeldina zwei Klicks später selbst macht („Ich suche eine Wohnung, keinen Retter.“, `W1_LUFT_ZEL_0220`). `0160` („Entführt sieht anders aus.“) sagt schon genug. | „Sie trägt das Schwert über dem Karton, griffbereit. So packt jemand, der schon oft umgezogen ist.“ |
+
+Das Luftschloss ist der stärkste Raum der Welt: „Vier. Feilschen kostet extra. Fünf, wenn Sie so weitergucken.“ (`W1_LUFT_MAK_0420`), „Das ist kein Blick. Das ist mein Gesicht.“ (`W1_LUFT_PIX_0460`, hier trägt die Formel), „Du hast gerade meinen Entführer an eine Maklerin verkauft.“ – „Vermittelt.“ (`W1_LUFT_ZEL_0540`/`MAX_0550`), „Das ist Finden mit Anlauf.“ (`W1_LUFT_TOA_0640`), und Max' Entwicklungsmoment in zwei Wörtern: „Ja. … Trotzdem.“ (`W1_LUFT_MAX_0310`).
+
+### Goblin-Bergwerk (`W1_BERG`, 85 Zeilen)
+
+| ID | Zeilen-ID | Sprecher | Priorität | Muster | Original | Grund | Vorschlag |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| R5-TX-31 | `W1_BERG_PIX_0060`, `W1_BERG_PIX_0810_2` (dazu `W1_BERG_MAX_0670`, `W1_BRUE_PIX_1130_2`, `ZS1_DACH_PIX_0454_2`) | Pixel | kosmetisch | Kontrast-Schablone „Das ist kein X mehr, das ist Y“ | „Das ist kein Streik mehr, das ist Resignation mit Filter.“ / „Das ist weniger ein Streik als ein Keller mit Meinung …“ – später Max: „Das ist kein Passwort mehr. Das ist eine ganze Kindheit.“ | Pixel stuft im selben Raum zweimal den Streik um, und Max' beste Zeile des Raums (`0670`) kommt danach im selben Bau und verliert dadurch. Dieselbe Schablone steht in `W1_BRUE_PIX_1130_2` und `ZS1_DACH_PIX_0454_2`. `0670` soll sie allein haben. | `0060`: „Kaffee von vorgestern. So riecht Resignation, und zwar mit Filter.“ (`0060_2` „Ich erkenne sie am Geruch …“ schließt an) · `0810_2`: „Ein Keller mit Meinung. Solche Keller kenne ich, ich habe in einem gewohnt.“ |
+
+„Wir sind Goblins, keine Maschinen“ (Streikschild, `W1_BERG_MAX_0025`), „Wir sind Goblins, keine Möwen.“ (`GRI_0600`), „Ich bin Gewerkschafter, keine Mauer.“ (`GRI_0380`), „Ich hab Spitzhacke, keine Bürste.“ (`GO1_0200`): Hier ist die Formel Parole und gehört der Gruppe; das bleibt. Stark: Grimmzahns Daumen („Ich habe keinen mehr!“ `0320_2`, „Ich habe doch noch einen!“ `0520`), „Hell!“ – „Zu hell.“ (`GO1_0530`/`GO2_0540`), „Goblins, die nichts tun. Aber organisiert.“ (`MAX_0020`), „Jetzt nicht mehr.“ (`MAX_0690`).
