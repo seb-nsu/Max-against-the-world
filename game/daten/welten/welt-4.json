@@ -68,7 +68,7 @@
    "skript_code": [
     "SIT"
    ],
-   "groesse": "640x360",
+   "groesse": "1280x360",
    "ausgaenge": [
     "gluecksrad",
     "savanne",
@@ -215,7 +215,7 @@
    "skript_code": [
     "WERB"
    ],
-   "groesse": "640x360",
+   "groesse": "1280x360",
    "ausgaenge": [
     "gluecksrad",
     "sitcom_kueche",
@@ -238,7 +238,7 @@
    "skript_code": [
     "EMPF"
    ],
-   "groesse": "640x360",
+   "groesse": "1280x360",
    "ausgaenge": [
     "kellerarchiv",
     "zappmanns_studio",

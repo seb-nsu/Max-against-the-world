@@ -36,7 +36,7 @@ raeume:
   - id: sitcom_kueche
     name: Sitcom-Küche
     skript_code: [SIT]
-    groesse: 640x360
+    groesse: 1280x360
     ausgaenge: [gluecksrad, savanne, friedhof, kapitolis, werbespot_set, empfang]   # Umschalten
     erreichbar_ab: R2
     musik: w4_sitcom
@@ -98,7 +98,7 @@ raeume:
   - id: werbespot_set
     name: Werbespot-Set
     skript_code: [WERB]
-    groesse: 640x360
+    groesse: 1280x360
     ausgaenge: [gluecksrad, sitcom_kueche, savanne, friedhof, kapitolis, empfang]   # hinein über die Programmzeitschrift
     erreichbar_ab: R2
     musik: lied_werbepause   # Dr. Werbepauses Jingle läuft im Spot, bis Stumm ihn abbricht (R11b)
@@ -107,7 +107,7 @@ raeume:
   - id: empfang
     name: Empfang
     skript_code: [EMPF]
-    groesse: 640x360
+    groesse: 1280x360
     ausgaenge: [kellerarchiv, zappmanns_studio, gluecksrad, sitcom_kueche, savanne, friedhof, kapitolis, werbespot_set]   # Aufzug nur hinauf (R12); hinaus per Umschalten
     erreichbar_ab: R11                 # Sendersuchlauf, danach Kanal 999 in der Programmzeitschrift
     musik: w4_zentrale

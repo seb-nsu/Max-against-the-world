@@ -1,0 +1,84 @@
+{
+ "raum": "gluecksrad",
+ "breite": 1280,
+ "hoehe": 720,
+ "labels": [
+  [
+   "rows of light bulbs",
+   640.0,
+   31.398324966430664
+  ],
+  [
+   "blank glowing phone-number sign",
+   640.0,
+   188.11623573303223
+  ],
+  [
+   "huge upright prize wheel (12 segments, pointer on top)",
+   346.07139587402344,
+   266.1230278015137
+  ],
+  [
+   "contestant podium (Max stands here in the quiz)",
+   496.5878677368164,
+   579.1524946689606
+  ],
+  [
+   "host podium with big button and coffee stains",
+   742.0560455322266,
+   415.1716661453247
+  ],
+  [
+   "rotating prize platform: 2 toasters, cruise ship model, tube in blister",
+   981.6571044921875,
+   536.8922638893127
+  ],
+  [
+   "exit on foot back to the test pattern (left edge)",
+   78.59599113464355,
+   229.41139698028564
+  ],
+  [
+   "dark audience silhouettes below the floor edge",
+   277.2108840942383,
+   622.980090379715
+  ]
+ ],
+ "figuren": [
+  [
+   "Gerd Glueck 1.86 m",
+   596.6103744506836,
+   288.1866216659546,
+   684.0858459472656,
+   610.959609746933
+  ],
+  [
+   "antiques appraiser 1.81 m",
+   854.4599151611328,
+   303.5645627975464,
+   952.8696441650391,
+   640.8041042089462
+  ],
+  [
+   "tomcat 0.56 m",
+   265.7627296447754,
+   556.1568224430084,
+   382.55374908447266,
+   664.9967497587204
+  ],
+  [
+   "Max 1.75 m (front)",
+   67.89924621582031,
+   328.325514793396,
+   153.63279342651367,
+   694.9562358856201
+  ],
+  [
+   "Max (back of walk area)",
+   993.2741546630859,
+   310.5875301361084,
+   1080.5126953125,
+   623.2278835773468
+  ]
+ ]
+}

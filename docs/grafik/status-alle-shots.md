@@ -407,3 +407,153 @@ Offene Grafik in Welt 3: Max in der Pfütze bei der Ankunft (F21), fliegender Lo
 | W3-N03 | Kochbuch (Regel 2) | Nahansicht | welt3/nahansichten/W3-N03_*.png (Sebastian, Gemini, 20.11.; Schrift perspektivisch mit tools/nahansichten_welt3_schrift.py, Entwürfe in nahansichten/v1) | ja: welt3/nahansichten/fertig/kochbuch.png und _en.png | eingebaut, in main (PR #43), Nacharbeit auf Zweig | Fassung 3 mit eigener Pixelschrift ohne Verzerrung (AP-08) |
 | W3-N04 | Kritzelei (Regel 3) | Nahansicht | welt3/nahansichten/W3-N04_*.png (Sebastian, Gemini, 20.11.; Schrift perspektivisch mit tools/nahansichten_welt3_schrift.py, Entwürfe in nahansichten/v1) | ja: welt3/nahansichten/fertig/kritzelei_kammer_2.png und _en.png | eingebaut, in main (PR #43), Nacharbeit auf Zweig | Fassung 3 mit eigener Pixelschrift ohne Verzerrung (AP-08) |
 | W3-N05 | Morse-Tabelle (Rätsel 13) | Nahansicht | welt3/nahansichten/W3-N05_*.png (Sebastian, Gemini, 20.11.; Schrift perspektivisch mit tools/nahansichten_welt3_schrift.py, Entwürfe in nahansichten/v1) | ja: welt3/nahansichten/fertig/morse_tabelle.png und _en.png | eingebaut, in main (PR #43), Nacharbeit auf Zweig | Fassung 3 mit eigener Pixelschrift ohne Verzerrung (AP-08) |
+
+## Welt 4
+
+Angelegt am 26. November 2026 aus `fertige-prompts/welt-4.md` (138 IDs, noch kein Bild erzeugt, Zweig `claude/project-thread-pmnx1g`). Rohbau aller Räume unter `docs/grafik/skizzen/welt-4/rohbau/`. Nach jeder Runde hier nachführen (Quelle, gebaut, im Spiel, offen), keine weiteren Offen-Listen.
+
+| Status | Anzahl |
+| --- | --- |
+| offen | 138 |
+| **gesamt** | **138** |
+
+| ID | Titel | Art | Quelle (Bogen/Bild) | Bewegung gebaut | im Spiel | offen: Grund, wer erledigt |
+| --- | --- | --- | --- | --- | --- | --- |
+| W4-R01 | Testbild | Raum | – | – | – | Sebastian (Gemini), Rohbau anhängen |
+| W4-R02 | Rauschen zwischen den Sendern | Raum | – | – | – | Sebastian (Gemini), Rohbau anhängen |
+| W4-R03 | Glücksrad-Studio | Raum | – | – | – | Sebastian (Gemini), Rohbau anhängen |
+| W4-R04 | Sitcom-Küche | Raum | – | – | – | Sebastian (Gemini), Rohbau anhängen |
+| W4-R05 | Savanne | Raum | – | – | – | Sebastian (Gemini), Rohbau anhängen |
+| W4-R06 | Musikvideo-Friedhof | Raum | – | – | – | Sebastian (Gemini), Rohbau anhängen |
+| W4-R07 | Spukhaus, Keller | Raum | – | – | – | Sebastian (Gemini), Rohbau anhängen |
+| W4-R08 | Spukhaus, Halle | Raum | – | – | – | Sebastian (Gemini), Rohbau anhängen |
+| W4-R09 | Kapitolis | Raum | – | – | – | Sebastian (Gemini), Rohbau anhängen |
+| W4-R10 | Fondue-Fabrik | Raum | – | – | – | Sebastian (Gemini), Rohbau anhängen |
+| W4-R11 | Werbespot-Set | Raum | – | – | – | Sebastian (Gemini), Rohbau anhängen |
+| W4-R12 | Empfang | Raum | – | – | – | Sebastian (Gemini), Rohbau anhängen |
+| W4-R13 | Zappmanns Studio | Raum | – | – | – | Sebastian (Gemini), Rohbau anhängen |
+| W4-R14 | Zappmanns erste Kindersendung | Raum | – | – | – | Sebastian (Gemini), Rohbau anhängen |
+| W4-R15 | Kellerarchiv | Raum | – | – | – | Sebastian (Gemini), Rohbau anhängen |
+| W4-F01 | Gerd Glück | Figur | – | – | – | Sebastian (Gemini) |
+| W4-F02 | Trödel-Experte | Figur | – | – | – | Sebastian (Gemini) |
+| W4-F03 | Flimmer | Figur | – | – | – | Sebastian (Gemini) |
+| W4-F04 | Max auf dem Testbild | Figur | – | – | – | Sebastian (Gemini) |
+| W4-F05 | Sitcom-Vater | Figur | – | – | – | Sebastian (Gemini) |
+| W4-F06 | Sitcom-Mutter | Figur | – | – | – | Sebastian (Gemini) |
+| W4-F07 | Sitcom-Sohn | Figur | – | – | – | Sebastian (Gemini) |
+| W4-F08 | Kommissar | Figur | – | – | – | Sebastian (Gemini) |
+| W4-F09 | Erzähler | Figur | – | – | – | Sebastian (Gemini) |
+| W4-F10 | Löwe | Figur | – | – | – | Sebastian (Gemini) |
+| W4-F11 | Hyäne | Figur | – | – | – | Sebastian (Gemini) |
+| W4-F12 | Gepard | Figur | – | – | – | Sebastian (Gemini) |
+| W4-F13 | Geier | Figur | – | – | – | Sebastian (Gemini) |
+| W4-F14 | Nashorn | Figur | – | – | – | Sebastian (Gemini) |
+| W4-F15 | Flamingo | Figur | – | – | – | Sebastian (Gemini) |
+| W4-F16 | Zombie | Figur | – | – | – | Sebastian (Gemini) |
+| W4-F17 | Zombie im Grab | Figur | – | – | – | Sebastian (Gemini) |
+| W4-F18 | Geist | Figur | – | – | – | Sebastian (Gemini) |
+| W4-F19 | FBI-Agent | Figur | – | – | – | Sebastian (Gemini) |
+| W4-F20 | Super-Siegfried | Figur | – | – | – | Sebastian (Gemini) |
+| W4-F21 | Fledermann | Figur | – | – | – | Sebastian (Gemini) |
+| W4-F22 | Wonder-Wilma | Figur | – | – | – | Sebastian (Gemini) |
+| W4-F23 | Dr. Werbepause | Figur | – | – | – | Sebastian (Gemini) |
+| W4-F24 | Fabrikarbeiter | Figur | – | – | – | Sebastian (Gemini) |
+| W4-F25 | Empfangsdame | Figur | – | – | – | Sebastian (Gemini) |
+| W4-F26 | Sicherheitsmann | Figur | – | – | – | Sebastian (Gemini) |
+| W4-F27 | Zappmann | Figur | – | – | – | Sebastian (Gemini) |
+| W4-F28 | Junger Zappmann | Figur | – | – | – | Sebastian (Gemini) |
+| W4-F29 | Wettkandidat | Figur | – | – | – | Sebastian (Gemini) |
+| W4-F30 | Max als Käsemann | Figur | – | – | – | Sebastian (Gemini) |
+| W4-P01 | Max Fernbedienung | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P02 | Max Lichtröhre | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P03 | Max Fabrik | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P04 | Käsemann | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P05 | Pixel Welt 4 | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P06 | Gerd Glück | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P07 | Gerd Glück 2 | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P08 | Trödel-Experte | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P09 | Sitcom-Vater | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P10 | Sitcom-Vater 2 | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P11 | Sitcom-Mutter | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P12 | Sitcom-Sohn | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P13 | Kommissar | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P14 | Kommissar 2 | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P15 | Erzähler | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P16 | FBI-Agent | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P17 | Super-Siegfried | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P18 | Fledermann | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P19 | Wonder-Wilma | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P20 | Dr. Werbepause | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P21 | Dr. Werbepause 2 | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P22 | Fabrikarbeiter | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P23 | Empfangsdame | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P24 | Sicherheitsmann | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P25 | Zappmann | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P26 | Zappmann 2 | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P27 | Zappmann 3 | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P28 | Junger Zappmann | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P29 | Wettkandidat | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B01 | Flimmer: Flackern | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B02 | Flimmer: Aus dem Rauschen ploppen | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B03 | Flimmer: Kichern | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B04 | Gepard: Sprinten und umfallen | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B05 | Hyäne: Lachen, Krone fällt | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B06 | Hyäne: Lachend abgeführt | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B07 | Löwe: Schmollen | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B08 | Löwe: Sprung und Krone | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B09 | Geier: Eincremen | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B10 | Nashorn: Schnarchen | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B11 | Flamingo: Tuscheln | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B12 | Zombies: Aufstehen aus dem Grab | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B13 | Geister: Vorbeischweben | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B14 | Geister: Erschrecken und fliehen | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B15 | Pixel: Sternchen nach dem Amboss | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B16 | Glücksrad: Rad dreht | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B17 | Glücksrad-Studio: Preis-Podest dreht | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B18 | Sitcom-Küche: Fondue-Topf blubbert | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B19 | Sitcom-Küche: Lachkonserve wackelt | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B20 | Sitcom-Küche: Keksdose zerspringt | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B21 | Savanne: Regenwolke über dem Schlagzeug | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B22 | Savanne: Krabbelkiste | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B23 | Musikvideo-Friedhof: Leuchtfliesen | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B24 | Musikvideo-Friedhof: Discokugel | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B25 | Musikvideo-Friedhof: Hände winken | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B26 | Musikvideo-Friedhof: Tor schwingt auf | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B27 | Spukhaus, Keller: Röhrenfernseher | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B28 | Spukhaus, Keller: Ketten fallen | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B29 | Kapitolis: Amboss fällt | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B30 | Fondue-Fabrik: Käse blubbert | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B31 | Fondue-Fabrik: Laufband | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B32 | Fondue-Fabrik: Deckel springt auf | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B33 | Fondue-Fabrik: Käse-Platsch | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B34 | Werbespot-Set: Couch-Magnet brummt | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B35 | Werbespot-Set: Stinkwolke | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B36 | Empfang: Monitor am Tresen | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B37 | Zappmanns Studio: Monitorwand | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B38 | Zappmanns Studio: Band klatscht | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B39 | Zappmanns Studio: Quote fällt | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B40 | Max: Comic-Look-Wechsel | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B41 | Umschalten: Effekt | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B42 | Pause: Effekt | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B43 | Rückspulen: Effekt | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B44 | Stumm: Effekt | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B45 | Sendersuchlauf: Effekt | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B46 | Kanal 999: Senderanzeige | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B47 | Lampenflackern: Effekt | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B48 | WRRUMM-Blase: Effekt | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B49 | Testbild: Balken rasten ein | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B50 | Rauschen: Geisterbilder | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B51 | Müllpresse: Wände rücken, Auge blinzelt | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-G01 | Tasten-Symbole (2×3, 32×32) | Gegenstände | – | – | – | Sebastian (Gemini) |
+| W4-G02 | Splitscreen-Adapter (1×1) | Gegenstände | – | – | – | Sebastian (Gemini) |
+| W4-G03 | Genre-Ketten (2×3) | Gegenstände | – | – | – | Sebastian (Gemini) |
+| W4-G04 | Sender (2×2) | Gegenstände | – | – | – | Sebastian (Gemini) |
+| W4-G05 | Comic-Panels (1×4, Sortier-Bildschirm, kein Inventar) | Gegenstände | – | – | – | Sebastian (Gemini) |
+| W4-G06 | Drehbuch (1×1) | Gegenstände | – | – | – | Sebastian (Gemini) |
+| W4-G07 | Lichtröhre Deluxe (1×1) | Gegenstände | – | – | – | Sebastian (Gemini) |
+| W4-G08 | Archivband (1×1) | Gegenstände | – | – | – | Sebastian (Gemini) |
+| W4-G09 | Szenen-Requisiten (2×3, kein Inventar) | Gegenstände | – | – | – | Sebastian (Gemini) |
+| W4-G10 | Deko Welt 4 (3×3) | Gegenstände | – | – | – | Sebastian (Gemini) |
+| W4-N01 | Programmzeitschrift (Rätsel 4, 5, 9, 11) | Nahansicht | – | – | – | Sebastian (Gemini) |
+| W4-N02 | Messingschild am Porträt (Rätsel 12) | Nahansicht | – | – | – | Sebastian (Gemini) |
+| W4-N03 | Pausentafel Mitternachts-TV (Rätsel 5) | Nahansicht | – | – | – | Sebastian (Gemini) |

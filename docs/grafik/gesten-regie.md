@@ -216,6 +216,10 @@ Stand 21. November 2026 (Review 20.11., AN-17). Für Welt 3 gibt es hier keine e
 - **Mitsprechende Dinge:** Glastür (Tag und Nacht), Küchenradio (Radio und Pixel), Lautsprecher der drei Kammern (M.U.T.T.I. und Pixel) und Tür in Kammer 3 über `spricht:` im Layout (`tools/layout/welt-3.yaml`); das Terminal im Büro flackert dauernd, der Radiowecker blinkt und klingelt nach `W3_WECKER_KLINGELT`.
 - **Bewusst nicht eingebunden:** Liste mit Grund in `ZURUECKGESTELLT` in `tools/grafik_fundstellen.py` (unter anderem Morphäus hält den Kater, Pixel `tragen`, `schieben`, `vom_schrank_fallen`, Gänge von Deckert und Schmidt). Die Prüfung meldet in der CI jede Welt-3-Bewegung und jeden Effekt ohne Aufruf.
 
+## Welt 4
+
+Stand 26. November 2026: noch nichts gebaut. Welcher Moment im Skript welche Geste, welchen Posenbogen oder welche gemalte Bildfolge bekommt, steht mit Zeilen-ID in `grafik/welt-4.md`, Abschnitt „Bewegung und Posen“. Beim Einbau wie in Welt 3 eine eigene Datei `game/skripte/gesten_welt_4.gd` anlegen; Ruhe-Schleifen für Trödel-Experte, Empfangsdame, Wettkandidat, Siegfried, Wilma und den Fabrikarbeiter.
+
 ## Weltenübergreifend: Max und Pixel
 
 **Regel für Max' Redegesten (Sebastian, 17. November 2026, aus dem Review):** Max spricht in fast jeder zweiten Zeile. Beim normalen Reden bewegt er nur Mund und Kopf (talk), keine Geste. Gesten bekommt er gezielt: bei Pointen, Ärger, Staunen und wenn er auf etwas zeigt, grob jede fünfte Zeile. Beim Ansehen von Gegenständen meist keine. Neue Einträge in der Tabelle ZEILE in gesten_einsatz.gd folgen dieser Regel; bestehende werden beim nächsten Durchgang daran gemessen.

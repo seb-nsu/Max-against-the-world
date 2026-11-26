@@ -123,58 +123,58 @@ sitcom_kueche:
   farbe: '#d8b070'
   laufbereich:
   - [8, 280]
-  - [632, 280]
-  - [632, 356]
+  - [1272, 280]
+  - [1272, 356]
   - [8, 356]
   wechsel: [gluecksrad, savanne, friedhof, kapitolis, werbespot_set, empfang]
   marker:
-    start: [320, 320]
-    von_gluecksrad: [320, 320]
-    von_savanne: [320, 320]
-    von_friedhof: [320, 320]
-    von_kapitolis: [320, 320]
-    von_werbespot_set: [320, 320]
-    von_empfang: [320, 320]
+    start: [640, 320]
+    von_gluecksrad: [640, 320]
+    von_savanne: [640, 320]
+    von_friedhof: [640, 320]
+    von_kapitolis: [640, 320]
+    von_werbespot_set: [640, 320]
+    von_empfang: [640, 320]
   figuren:
-    sitcom_vater: [140, 309]
-    sitcom_mutter: [260, 309]
-    sitcom_sohn: [380, 309]
-    kommissar: [500, 309]
+    sitcom_vater: [280, 309]
+    sitcom_mutter: [520, 309]
+    sitcom_sohn: [760, 309]
+    kommissar: [1000, 309]
   hotspots:
     lachkonserven_maschine:
-      rect: [59, 40, 77, 64]
-      gehe: [97, 313]
+      rect: [118, 40, 154, 64]
+      gehe: [194, 313]
     pappe_publikum:
-      rect: [147, 40, 77, 64]
-      gehe: [185, 313]
+      rect: [294, 40, 154, 64]
+      gehe: [370, 313]
     keksdose:
-      rect: [235, 40, 77, 64]
-      gehe: [273, 313]
+      rect: [470, 40, 154, 64]
+      gehe: [546, 313]
     kuechentuer:
-      rect: [323, 40, 77, 64]
-      gehe: [361, 313]
+      rect: [646, 40, 154, 64]
+      gehe: [722, 313]
     durchreiche:
-      rect: [411, 40, 77, 64]
-      gehe: [449, 313]
+      rect: [822, 40, 154, 64]
+      gehe: [898, 313]
     fondue_topf:
-      rect: [499, 40, 77, 64]
-      gehe: [537, 313]
+      rect: [998, 40, 154, 64]
+      gehe: [1074, 313]
     studiolicht_und_set_rand:
-      rect: [59, 120, 77, 64]
-      gehe: [97, 313]
+      rect: [118, 120, 154, 64]
+      gehe: [194, 313]
     skateboard:
-      rect: [147, 120, 77, 64]
-      gehe: [185, 313]
+      rect: [294, 120, 154, 64]
+      gehe: [370, 313]
     scherben_der_keksdose:
-      rect: [235, 120, 77, 64]
-      gehe: [273, 313]
+      rect: [470, 120, 154, 64]
+      gehe: [546, 313]
   props:
     fondue_kaese:
-      rect: [133, 260, 20, 16]
-      gehe: [143, 313]
+      rect: [266, 260, 40, 16]
+      gehe: [286, 313]
     bananenschale:
-      rect: [213, 260, 20, 16]
-      gehe: [223, 313]
+      rect: [426, 260, 40, 16]
+      gehe: [446, 313]
 savanne:
   ohne: [schlaeft_weiter, nach_0350, drehbuch_in_der_sitcom, drehbuch_im_comic_kanal]
   alias: {regenwolke_ueber_dem_schlagzeug: regenwolke, kiste_mit_krabbeltieren: kiste, drehbuch_beim_erzaehler: drehbuch}
@@ -498,118 +498,118 @@ werbespot_set:
   farbe: '#e0e0f0'
   laufbereich:
   - [8, 280]
-  - [632, 280]
-  - [632, 356]
+  - [1272, 280]
+  - [1272, 356]
   - [8, 356]
   wechsel: [gluecksrad, sitcom_kueche, savanne, friedhof, kapitolis, empfang]
   marker:
-    start: [320, 320]
-    von_gluecksrad: [320, 320]
-    von_sitcom_kueche: [320, 320]
-    von_savanne: [320, 320]
-    von_friedhof: [320, 320]
-    von_kapitolis: [320, 320]
-    von_empfang: [320, 320]
+    start: [640, 320]
+    von_gluecksrad: [640, 320]
+    von_sitcom_kueche: [640, 320]
+    von_savanne: [640, 320]
+    von_friedhof: [640, 320]
+    von_kapitolis: [640, 320]
+    von_empfang: [640, 320]
   figuren:
-    super_siegfried: [140, 309]
-    fledermann: [260, 309]
-    wonder_wilma: [380, 309]
-    dr_werbepause: [500, 309]
+    super_siegfried: [280, 309]
+    fledermann: [520, 309]
+    wonder_wilma: [760, 309]
+    dr_werbepause: [1000, 309]
   hotspots:
     werbepause:
-      rect: [59, 40, 77, 64]
-      gehe: [97, 313]
+      rect: [118, 40, 154, 64]
+      gehe: [194, 313]
     comic_panels:
-      rect: [147, 40, 77, 64]
-      gehe: [185, 313]
+      rect: [294, 40, 154, 64]
+      gehe: [370, 313]
     panel_schurke_lacht:
-      rect: [235, 40, 77, 64]
-      gehe: [273, 313]
+      rect: [470, 40, 154, 64]
+      gehe: [546, 313]
     panel_held_springt:
-      rect: [323, 40, 77, 64]
-      gehe: [361, 313]
+      rect: [646, 40, 154, 64]
+      gehe: [722, 313]
     panel_explosion:
-      rect: [411, 40, 77, 64]
-      gehe: [449, 313]
+      rect: [822, 40, 154, 64]
+      gehe: [898, 313]
     panel_schurke_im_kaese:
-      rect: [499, 40, 77, 64]
-      gehe: [537, 313]
+      rect: [998, 40, 154, 64]
+      gehe: [1074, 313]
     produktpodest:
-      rect: [59, 120, 77, 64]
-      gehe: [97, 313]
+      rect: [118, 120, 154, 64]
+      gehe: [194, 313]
     kamera:
-      rect: [147, 120, 77, 64]
-      gehe: [185, 313]
+      rect: [294, 120, 154, 64]
+      gehe: [370, 313]
     regiestuhl:
-      rect: [235, 120, 77, 64]
-      gehe: [273, 313]
+      rect: [470, 120, 154, 64]
+      gehe: [546, 313]
     plastikpalme:
-      rect: [323, 120, 77, 64]
-      gehe: [361, 313]
+      rect: [646, 120, 154, 64]
+      gehe: [722, 313]
     klappe:
-      rect: [411, 120, 77, 64]
-      gehe: [449, 313]
+      rect: [822, 120, 154, 64]
+      gehe: [898, 313]
     hintergrund:
-      rect: [499, 120, 77, 64]
-      gehe: [537, 313]
+      rect: [998, 120, 154, 64]
+      gehe: [1074, 313]
     autoplay_countdown:
-      rect: [59, 200, 77, 64]
-      gehe: [97, 313]
+      rect: [118, 200, 154, 64]
+      gehe: [194, 313]
   props:
     taste_sendersuchlauf:
-      rect: [133, 260, 20, 16]
-      gehe: [143, 313]
+      rect: [266, 260, 40, 16]
+      gehe: [286, 313]
 empfang:
   alias: {zahlenfeld_oder_aufzug: zahlenfeld_mit_code, aufzug: ausgang_zappmanns_studio, servicetuer_zum_keller: ausgang_kellerarchiv}
   farbe: '#8a6a40'
   laufbereich:
   - [8, 280]
-  - [632, 280]
-  - [632, 356]
+  - [1272, 280]
+  - [1272, 356]
   - [8, 356]
   wechsel: [gluecksrad, sitcom_kueche, savanne, friedhof, kapitolis, werbespot_set]
   marker:
-    start: [320, 320]
-    von_kellerarchiv: [48, 320]
-    von_zappmanns_studio: [592, 320]
-    von_gluecksrad: [320, 320]
-    von_sitcom_kueche: [320, 320]
-    von_savanne: [320, 320]
-    von_friedhof: [320, 320]
-    von_kapitolis: [320, 320]
-    von_werbespot_set: [320, 320]
+    start: [640, 320]
+    von_kellerarchiv: [96, 320]
+    von_zappmanns_studio: [1184, 320]
+    von_gluecksrad: [640, 320]
+    von_sitcom_kueche: [640, 320]
+    von_savanne: [640, 320]
+    von_friedhof: [640, 320]
+    von_kapitolis: [640, 320]
+    von_werbespot_set: [640, 320]
   figuren:
-    empfangsdame: [200, 309]
-    sicherheitsmann: [440, 309]
+    empfangsdame: [400, 309]
+    sicherheitsmann: [880, 309]
   hotspots:
     zahlenfeld_mit_code:
-      rect: [59, 40, 77, 64]
-      gehe: [97, 313]
+      rect: [118, 40, 154, 64]
+      gehe: [194, 313]
     portraet:
-      rect: [147, 40, 77, 64]
-      gehe: [185, 313]
+      rect: [294, 40, 154, 64]
+      gehe: [370, 313]
     kaputtes_radio:
-      rect: [235, 40, 77, 64]
-      gehe: [273, 313]
+      rect: [470, 40, 154, 64]
+      gehe: [546, 313]
     wand_mit_goldenen_schallplatten:
-      rect: [323, 40, 77, 64]
-      gehe: [361, 313]
+      rect: [646, 40, 154, 64]
+      gehe: [722, 313]
     empfangstresen:
-      rect: [411, 40, 77, 64]
-      gehe: [449, 313]
+      rect: [822, 40, 154, 64]
+      gehe: [898, 313]
     samtkordeln:
-      rect: [499, 40, 77, 64]
-      gehe: [537, 313]
+      rect: [998, 40, 154, 64]
+      gehe: [1074, 313]
     logo_an_der_wand:
-      rect: [59, 120, 77, 64]
-      gehe: [97, 313]
+      rect: [118, 120, 154, 64]
+      gehe: [194, 313]
   ausgaenge:
     kellerarchiv:
-      rect: [8, 140, 36, 140]
-      gehe: [48, 320]
+      rect: [16, 140, 72, 140]
+      gehe: [96, 320]
     zappmanns_studio:
-      rect: [596, 140, 36, 140]
-      gehe: [592, 320]
+      rect: [1192, 140, 72, 140]
+      gehe: [1184, 320]
 kellerarchiv:
   alias: {auge_auf_dem_stiel: auge}
   farbe: '#404040'

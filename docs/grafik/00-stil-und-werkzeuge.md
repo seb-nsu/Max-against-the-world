@@ -270,6 +270,7 @@ no in-between blur, no speed lines, no smear frames, no sliding feet, no change 
 | welt-4 | Comic-Kanal | primary red #e43b44, primary blue #0099db, primary yellow #fee761, outline black #181425 |
 | welt-4 | Senderzentrale | black marble #181425, gold trim #feae34, monitor blue #2ce8f5, steel grey #5a6988 |
 | welt-4 | Kindersendung 1977 | washed-out orange #d77643, brown #733e39, mustard #feae34, faded cream #ead4aa |
+| welt-4 | Programmzeitschrift | newsprint cream #ead4aa, ink black #181425, channel red #e43b44, channel blue #0099db, channel yellow #fee761, soft grey #c0cbdc |
 
 Die Neon-Töne in Welt 3 (#ff4fd8, #b0207a, #3ff7ff) sind die Zusatzfarben aus „Zusatzfarben pro Welt“ oben; alle übrigen Werte stammen aus Endesga 32.
 

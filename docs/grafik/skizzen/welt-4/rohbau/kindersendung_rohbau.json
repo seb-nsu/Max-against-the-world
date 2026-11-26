@@ -1,0 +1,41 @@
+{
+ "raum": "kindersendung",
+ "breite": 1280,
+ "hoehe": 720,
+ "labels": [
+  [
+   "small wooden puppet theatre, red curtain",
+   640.0,
+   294.52534675598145
+  ],
+  [
+   "cardboard sun on a stick",
+   316.11486434936523,
+   250.9451150894165
+  ],
+  [
+   "felt rainbow pinned to the back wall",
+   419.62249755859375,
+   178.71296882629395
+  ],
+  [
+   "wooden stool",
+   956.8888092041016,
+   528.3621740341187
+  ],
+  [
+   "worn studio floor, kept clear",
+   640.0,
+   660.3877758979797
+  ]
+ ],
+ "figuren": [
+  [
+   "young Zappmann 1.75 m, hand puppet",
+   758.6904144287109,
+   312.71042346954346,
+   853.3255004882812,
+   631.8328714370728
+  ]
+ ]
+}
