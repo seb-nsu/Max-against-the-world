@@ -210,7 +210,7 @@ NEGATIVE: no new objects, no changed camera or framing, no style change, no text
 
 **Shot W4-R02**
 
-**Zustände:** Empfehlung Übergangsbild (R5-W4-16)
+**Zustände:** Pixels Raum (Entscheidung 26. Nov. 2026); die vier Geisterbilder sind Klickflächen zum Spähen
 
 **Rohbau:** [Rauschen zwischen den Sendern](../skizzen/welt-4/rohbau/rauschen_rohbau.png)
 

@@ -26,6 +26,8 @@ const KANAL_FREI := {"gluecksrad": "R2", "sitcom_kueche": "R2", "savanne": "R2",
 ## Genre je Raum (Spukhaus gehört zum Mitternachts-TV, die Fabrik zum Comic-Kanal)
 const GENRE := {"friedhof": "grusel", "spukhaus_keller": "grusel", "spukhaus_halle": "grusel",
 	"kapitolis": "comic", "fondue_fabrik": "comic"}
+## Räume, in denen Max nach R10 als Käsemann zu sehen ist
+const COMIC_KANAL := ["kapitolis", "fondue_fabrik", "werbespot_set"]
 const SENDERZENTRALE := ["empfang", "kellerarchiv", "zappmanns_studio"]
 const TASTEN := ["taste_pause", "taste_rueckspulen", "taste_stumm", "taste_untertitel",
 	"taste_sendersuchlauf", "splitscreen_adapter"]
@@ -569,6 +571,9 @@ func _sender_wechseln(ziel: String, von := "") -> void:
 			and not _g("R3") and _hat("billig_fernbedienung"):
 		Zustand.setze("W4_KOMMISSAR_KOMMT")
 	Zustand.setze("W4_KOMMISSAR_FOLGT", false)
+	# Käsemann gibt es nur im Comic-Kanal (Entscheidung 26. Nov. 2026): beim ersten Verlassen Maske ab
+	if von in COMIC_KANAL and not ziel in COMIC_KANAL and _g("R10") and _einmal("W4_KAESEMANN_ABGELEGT"):
+		await _sag("W4_FERN_MAX_0280")
 	Klang.geraeusch("umschalten")
 	await _sag("W4_FERN_NAR_0060")
 	I.active = null
