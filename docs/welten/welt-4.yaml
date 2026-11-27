@@ -658,6 +658,8 @@ weitere_schalter:
   - W4_ZEITSCHRIFT_BENUTZT     # Programmzeitschrift zum ersten Mal aufgeschlagen
   - W4_ZEITSCHRIFT_ANGESEHEN   # Nahansicht der Programmzeitschrift gesehen
   - W4_ZEITSCHRIFT_GEFUNDEN    # Wert: angeklickte Einträge der Programmzeitschrift
+  - W4_APPLAUS_AUS            # Kampf, Stumm-Taste: Applaus-Schild im Studio aus (Hintergrund)
+  - W4_QUOTE_ROT               # Kampf, Untertitel-Taste: Quotenmesser im Studio rot (Hintergrund)
   - W4_ALLE_KANAELE            # alle Einträge der Programmzeitschrift gefunden (Errungenschaft Zapp-Meister)
   - W4_FOLGE_2015_GELESEN      # 20:15-Folge in der Zeitschrift gelesen: Fondue (R4a)
   - W4_MUTTER_FONDUE           # Sitcom-Mutter hat das Fondue bestätigt (R4a), auch vor dem Lesen der Zeitschrift

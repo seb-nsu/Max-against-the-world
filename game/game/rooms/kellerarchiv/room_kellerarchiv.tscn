@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://brwuw3pg21m5c"]
 
-[ext_resource type="Script" path="res://game/rooms/kellerarchiv/room_kellerarchiv.gd" id="1_8kb26"]
+[ext_resource type="Script" uid="uid://by625vt13xprt" path="res://game/rooms/kellerarchiv/room_kellerarchiv.gd" id="1_8kb26"]
 [ext_resource type="PackedScene" uid="uid://dun8mkkfllagj" path="res://game/rooms/kellerarchiv/walkable_areas/boden/walkable_area_boden.tscn" id="2_qhrgn"]
 [ext_resource type="PackedScene" uid="uid://deqgy1ntyhnav" path="res://game/rooms/kellerarchiv/props/background/prop_background.tscn" id="3_nluyl"]
-[ext_resource type="Texture2D" uid="uid://dke4gpv4ckbhd" path="res://grafik/platzhalter/raum_kellerarchiv.png" id="4_7lolo"]
+[ext_resource type="Texture2D" uid="uid://covl0nxgdu5md" path="res://grafik/hintergruende/w4_bg_kellerarchiv_v01.png" id="4_qhrgn"]
 [ext_resource type="PackedScene" uid="uid://cirtw6j8jj8q4" path="res://game/rooms/kellerarchiv/props/archivband/prop_archivband.tscn" id="5_8yyf8"]
-[ext_resource type="Texture2D" uid="uid://cr3vgewygo7r8" path="res://grafik/platzhalter/prop_archivband.png" id="6_adxir"]
+[ext_resource type="Texture2D" uid="uid://c27aljiayi422" path="res://grafik/props/archivband.png" id="6_nluyl"]
 [ext_resource type="PackedScene" uid="uid://cbvuodlbdhmt2" path="res://game/rooms/kellerarchiv/hotspots/auge/hotspot_auge.tscn" id="7_f33jb"]
 [ext_resource type="PackedScene" uid="uid://bfe7k4veglqiv" path="res://game/rooms/kellerarchiv/hotspots/regale/hotspot_regale.tscn" id="8_e1q6b"]
 [ext_resource type="PackedScene" uid="uid://g0i6mymujw7d" path="res://game/rooms/kellerarchiv/hotspots/neonroehre/hotspot_neonroehre.tscn" id="9_4lgkh"]
@@ -24,69 +24,76 @@ height = 360
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=1087906266]
 
 [node name="Boden" parent="WalkableAreas" unique_id=2010166536 instance=ExtResource("2_qhrgn")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(8, 280, 632, 280, 632, 356, 8, 356)])
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(40, 300, 600, 300, 636, 330, 636, 358, 4, 358, 4, 330)])
 
 [node name="Props" type="Node2D" parent="." unique_id=1233452269]
 
 [node name="Background" parent="Props" unique_id=1032379479 instance=ExtResource("3_nluyl")]
 position = Vector2(320, 180)
-texture = ExtResource("4_7lolo")
+texture = ExtResource("4_qhrgn")
 description = "UI_RAUM_KELLERARCHIV"
 
 [node name="Archivband" parent="Props" unique_id=256116965 instance=ExtResource("5_8yyf8")]
-position = Vector2(143.333, 268)
-texture = ExtResource("6_adxir")
+position = Vector2(341.5, 228.5)
+texture = ExtResource("6_nluyl")
 description = "UI_OBJ_ARCHIVBAND"
-baseline = 8
-walk_to_point = Vector2(-0.666667, 45)
+baseline = 21
+walk_to_point = Vector2(-1.5, 91.5)
+interaction_polygon = PackedVector2Array(-28.5, -21.5, 28.5, -21.5, 28.5, 21.5, -28.5, 21.5)
 
 [node name="Hotspots" type="Node2D" parent="." unique_id=482088801]
 
 [node name="Auge" parent="Hotspots" unique_id=976982369 instance=ExtResource("7_f33jb")]
-position = Vector2(107, 72)
+position = Vector2(355, 160)
 description = "UI_OBJ_AUGE"
-baseline = 32
-walk_to_point = Vector2(0, 241)
+baseline = 20
+walk_to_point = Vector2(-25, 156)
+interaction_polygon = PackedVector2Array(-15, -20, 15, -20, 15, 20, -15, 20)
 
 [node name="Regale" parent="Hotspots" unique_id=1256140546 instance=ExtResource("8_e1q6b")]
-position = Vector2(213, 72)
+position = Vector2(147.5, 187.5)
 description = "UI_OBJ_REGALE"
-baseline = 32
-walk_to_point = Vector2(0, 241)
+baseline = 97
+walk_to_point = Vector2(2.5, 132.5)
+interaction_polygon = PackedVector2Array(-47.5, -97.5, 47.5, -97.5, 47.5, 97.5, -47.5, 97.5)
 
 [node name="Neonroehre" parent="Hotspots" unique_id=1863179657 instance=ExtResource("9_4lgkh")]
-position = Vector2(320, 72)
+position = Vector2(322.5, 27.5)
 description = "UI_OBJ_NEONROEHRE"
-baseline = 32
-walk_to_point = Vector2(0, 241)
+baseline = 12
+walk_to_point = Vector2(-2.5, 288.5)
+interaction_polygon = PackedVector2Array(-77.5, -12.5, 77.5, -12.5, 77.5, 12.5, -77.5, 12.5)
 
 [node name="Muellpresse" parent="Hotspots" unique_id=1337753311 instance=ExtResource("10_45tcb")]
-position = Vector2(427, 72)
+position = Vector2(320, 232.5)
 description = "UI_OBJ_MUELLPRESSE"
-baseline = 32
-walk_to_point = Vector2(0, 241)
+baseline = 77
+walk_to_point = Vector2(-70, 97.5)
+interaction_polygon = PackedVector2Array(-110, -77.5, 110, -77.5, 110, 77.5, -110, 77.5)
 
 [node name="BandInDerPresse" parent="Hotspots" unique_id=1981222643 instance=ExtResource("11_rcbse")]
-position = Vector2(533, 72)
+position = Vector2(312.5, 192.5)
 description = "UI_OBJ_BAND_IN_DER_PRESSE"
-baseline = 32
-walk_to_point = Vector2(0, 241)
+baseline = 12
+walk_to_point = Vector2(17.5, 127.5)
+interaction_polygon = PackedVector2Array(-12.5, -12.5, 12.5, -12.5, 12.5, 12.5, -12.5, 12.5)
 
 [node name="AusgangEmpfang" parent="Hotspots" unique_id=701758927 instance=ExtResource("12_aiaq4")]
-position = Vector2(26.0, 210.0)
+position = Vector2(582.5, 155)
 description = "UI_RAUM_EMPFANG"
-baseline = 69
-walk_to_point = Vector2(22.0, 110.0)
+baseline = 75
+walk_to_point = Vector2(-22.5, 145)
 cursor = 9
+interaction_polygon = PackedVector2Array(-27.5, -75, 27.5, -75, 27.5, 75, -27.5, 75)
 
 [node name="Regions" type="Node2D" parent="." unique_id=2064205113]
 
 [node name="Markers" type="Node2D" parent="." unique_id=1029894097]
 
 [node name="Start" parent="Markers" unique_id=322476369 instance=ExtResource("13_dfb35")]
-position = Vector2(320, 320)
+position = Vector2(320, 330)
 
 [node name="VonEmpfang" parent="Markers" unique_id=698353280 instance=ExtResource("14_51dor")]
-position = Vector2(48, 320)
+position = Vector2(560, 300)
 
 [node name="Characters" type="Node2D" parent="." unique_id=100238941]

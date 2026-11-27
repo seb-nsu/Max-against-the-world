@@ -412,28 +412,32 @@ Offene Grafik in Welt 3: Max in der Pfütze bei der Ankunft (F21), fliegender Lo
 
 Angelegt am 26. November 2026 aus `fertige-prompts/welt-4.md` (138 IDs, noch kein Bild erzeugt, Zweig `claude/project-thread-pmnx1g`). Rohbau aller Räume unter `docs/grafik/skizzen/welt-4/rohbau/`. Nach jeder Runde hier nachführen (Quelle, gebaut, im Spiel, offen), keine weiteren Offen-Listen.
 
+**Stand 27. November 2026 (Zweig `claude/project-thread-pmnx1g`, PR #48):** Alle Räume, Gegenstände und Nahansichten aus Gemini (Rohbau, Notiz und Skizze als Vorlage; Nahansichten mit ihrem Raum als Stilvorlage). Räume gepixelt mit `tools/grafik_w4/raeume_pixelieren.py` (Zustände nur an der geänderten Stelle eingesetzt), Layout `tools/layout/welt-4.yaml` auf die Bilder gemessen, Nahansichten mit Schrift aus `tools/nahansichten_welt4_schrift.py`. Figuren, Posenbögen und Bewegungen sind noch offen; im Spiel stehen dafür graue Platzhalter.
+
 | Status | Anzahl |
 | --- | --- |
-| offen | 138 |
+| eingebaut auf Zweig (PR #48) | 22 |
+| Bild fertig, noch nicht im Spiel | 6 |
+| offen | 110 |
 | **gesamt** | **138** |
 
 | ID | Titel | Art | Quelle (Bogen/Bild) | Bewegung gebaut | im Spiel | offen: Grund, wer erledigt |
 | --- | --- | --- | --- | --- | --- | --- |
-| W4-R01 | Testbild | Raum | – | – | – | Sebastian (Gemini), Rohbau anhängen |
-| W4-R02 | Rauschen zwischen den Sendern | Raum | – | – | – | Sebastian (Gemini), Rohbau anhängen |
-| W4-R03 | Glücksrad-Studio | Raum | – | – | – | Sebastian (Gemini), Rohbau anhängen |
-| W4-R04 | Sitcom-Küche | Raum | – | – | – | Sebastian (Gemini), Rohbau anhängen |
-| W4-R05 | Savanne | Raum | – | – | – | Sebastian (Gemini), Rohbau anhängen |
-| W4-R06 | Musikvideo-Friedhof | Raum | – | – | – | Sebastian (Gemini), Rohbau anhängen |
-| W4-R07 | Spukhaus, Keller | Raum | – | – | – | Sebastian (Gemini), Rohbau anhängen |
-| W4-R08 | Spukhaus, Halle | Raum | – | – | – | Sebastian (Gemini), Rohbau anhängen |
-| W4-R09 | Kapitolis | Raum | – | – | – | Sebastian (Gemini), Rohbau anhängen |
-| W4-R10 | Fondue-Fabrik | Raum | – | – | – | Sebastian (Gemini), Rohbau anhängen |
-| W4-R11 | Werbespot-Set | Raum | – | – | – | Sebastian (Gemini), Rohbau anhängen |
-| W4-R12 | Empfang | Raum | – | – | – | Sebastian (Gemini), Rohbau anhängen |
-| W4-R13 | Zappmanns Studio | Raum | – | – | – | Sebastian (Gemini), Rohbau anhängen |
-| W4-R14 | Zappmanns erste Kindersendung | Raum | – | – | – | Sebastian (Gemini), Rohbau anhängen |
-| W4-R15 | Kellerarchiv | Raum | – | – | – | Sebastian (Gemini), Rohbau anhängen |
+| W4-R01 | Testbild | Raum | Welt 4/Hintergründe/korrigiert/W4-R01_testbild_a/b/c (Gemini, 27.11.) | gepixelt (`tools/grafik_w4/raeume_pixelieren.py`): w4_bg_testbild_v01, _geordnet (R1), _graustufen | eingebaut auf Zweig (PR #48) | _graustufen noch ohne Verwendung im Spiel |
+| W4-R02 | Rauschen zwischen den Sendern | Raum | Welt 4/Hintergründe/korrigiert/W4-R02_rauschen | gepixelt (`tools/grafik_w4/raeume_pixelieren.py`): w4_bg_rauschen_v01 | eingebaut auf Zweig (PR #48) | Figuren fehlen noch; Skala und Laufbereich im Spiel anspielen |
+| W4-R03 | Glücksrad-Studio | Raum | Welt 4/Hintergründe/korrigiert/W4-R03_gluecksrad | gepixelt (`tools/grafik_w4/raeume_pixelieren.py`): w4_bg_gluecksrad_v01 | eingebaut auf Zweig (PR #48) | Figuren fehlen noch; Skala und Laufbereich im Spiel anspielen |
+| W4-R04 | Sitcom-Küche | Raum | Welt 4/Hintergründe/korrigiert/W4-R04_sitcom_kueche_a/b/c (Gemini, 27.11.) | gepixelt (`tools/grafik_w4/raeume_pixelieren.py`): w4_bg_sitcom_kueche_v01, _scherben (R3), _tuer_weg (R6), _scherben_tuer_weg | eingebaut auf Zweig (PR #48) | Figuren fehlen noch; Skala und Laufbereich im Spiel anspielen |
+| W4-R05 | Savanne | Raum | Welt 4/Hintergründe/korrigiert/W4-R05_savanne | gepixelt (`tools/grafik_w4/raeume_pixelieren.py`): w4_bg_savanne_v01 | eingebaut auf Zweig (PR #48) | Figuren fehlen noch; Skala und Laufbereich im Spiel anspielen |
+| W4-R06 | Musikvideo-Friedhof | Raum | Welt 4/Hintergründe/korrigiert/W4-R06_friedhof_a/b/c | gepixelt (`tools/grafik_w4/raeume_pixelieren.py`): w4_bg_friedhof_v01, _graeber_offen (W4_ZOMBIES_START), _tor_offen (R5b) | eingebaut auf Zweig (PR #48) | Figuren fehlen noch; Skala und Laufbereich im Spiel anspielen |
+| W4-R07 | Spukhaus, Keller | Raum | Welt 4/Hintergründe/korrigiert/W4-R07_spukhaus_keller_a/b | gepixelt (`tools/grafik_w4/raeume_pixelieren.py`): w4_bg_spukhaus_keller_v01, _sitcomtuer (R6) | eingebaut auf Zweig (PR #48) | Figuren fehlen noch; Skala und Laufbereich im Spiel anspielen |
+| W4-R08 | Spukhaus, Halle | Raum | Welt 4/Hintergründe/korrigiert/W4-R08_spukhaus_halle_a/b | gepixelt (`tools/grafik_w4/raeume_pixelieren.py`): w4_bg_spukhaus_halle_v01, Lichterkette als Ambiente w4_lichterkette_v01 (2 Bilder) | eingebaut auf Zweig (PR #48) | Figuren fehlen noch; Skala und Laufbereich im Spiel anspielen |
+| W4-R09 | Kapitolis | Raum | Welt 4/Hintergründe/korrigiert/W4-R09_kapitolis_a/b | gepixelt (`tools/grafik_w4/raeume_pixelieren.py`): w4_bg_kapitolis_v01 (ohne Amboss), Amboss als Prop | eingebaut auf Zweig (PR #48) | Figuren fehlen noch; Skala und Laufbereich im Spiel anspielen |
+| W4-R10 | Fondue-Fabrik | Raum | Welt 4/Hintergründe/korrigiert/W4-R10_fondue_fabrik_a/b | gepixelt (`tools/grafik_w4/raeume_pixelieren.py`): w4_bg_fondue_fabrik_v01, _offen (R10c) | eingebaut auf Zweig (PR #48) | Figuren fehlen noch; Skala und Laufbereich im Spiel anspielen |
+| W4-R11 | Werbespot-Set | Raum | Welt 4/Hintergründe/korrigiert/W4-R11_werbespot_set_a/b | gepixelt (`tools/grafik_w4/raeume_pixelieren.py`): w4_bg_werbespot_set_v01, _leer (R11c) | eingebaut auf Zweig (PR #48) | Figuren fehlen noch; Skala und Laufbereich im Spiel anspielen |
+| W4-R12 | Empfang | Raum | Welt 4/Hintergründe/korrigiert/W4-R12_empfang (Panorama 32:9) | gepixelt (`tools/grafik_w4/raeume_pixelieren.py`): w4_bg_empfang_v01 (1280 breit) | eingebaut auf Zweig (PR #48) | Figuren fehlen noch; Skala und Laufbereich im Spiel anspielen |
+| W4-R13 | Zappmanns Studio | Raum | Welt 4/Hintergründe/korrigiert/W4-R13_zappmanns_studio_a/b/c | gepixelt (`tools/grafik_w4/raeume_pixelieren.py`): w4_bg_zappmanns_studio_v01, _applaus_aus, _quote_rot und beides (Kampf) | eingebaut auf Zweig (PR #48) | Figuren fehlen noch; Skala und Laufbereich im Spiel anspielen |
+| W4-R14 | Zappmanns erste Kindersendung | Raum | Welt 4/Hintergründe/korrigiert/W4-R14_kindersendung | gepixelt (`tools/grafik_w4/raeume_pixelieren.py`): w4_bg_kindersendung_v01 | – | Bild fertig, im Spiel noch nicht verwendet (Rückblende) |
+| W4-R15 | Kellerarchiv | Raum | Welt 4/Hintergründe/korrigiert/W4-R15_kellerarchiv | gepixelt (`tools/grafik_w4/raeume_pixelieren.py`): w4_bg_kellerarchiv_v01, Archivband als Prop ausgeschnitten | eingebaut auf Zweig (PR #48) | Figuren fehlen noch; Skala und Laufbereich im Spiel anspielen |
 | W4-F01 | Gerd Glück | Figur | – | – | – | Sebastian (Gemini) |
 | W4-F02 | Trödel-Experte | Figur | – | – | – | Sebastian (Gemini) |
 | W4-F03 | Flimmer | Figur | – | – | – | Sebastian (Gemini) |
@@ -544,16 +548,16 @@ Angelegt am 26. November 2026 aus `fertige-prompts/welt-4.md` (138 IDs, noch kei
 | W4-B49 | Testbild: Balken rasten ein | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
 | W4-B50 | Rauschen: Geisterbilder | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
 | W4-B51 | Müllpresse: Wände rücken, Auge blinzelt | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
-| W4-G01 | Tasten-Symbole (2×3, 32×32) | Gegenstände | – | – | – | Sebastian (Gemini) |
-| W4-G02 | Splitscreen-Adapter (1×1) | Gegenstände | – | – | – | Sebastian (Gemini) |
-| W4-G03 | Genre-Ketten (2×3) | Gegenstände | – | – | – | Sebastian (Gemini) |
-| W4-G04 | Sender (2×2) | Gegenstände | – | – | – | Sebastian (Gemini) |
-| W4-G05 | Comic-Panels (1×4, Sortier-Bildschirm, kein Inventar) | Gegenstände | – | – | – | Sebastian (Gemini) |
-| W4-G06 | Drehbuch (1×1) | Gegenstände | – | – | – | Sebastian (Gemini) |
-| W4-G07 | Lichtröhre Deluxe (1×1) | Gegenstände | – | – | – | Sebastian (Gemini) |
-| W4-G08 | Archivband (1×1) | Gegenstände | – | – | – | Sebastian (Gemini) |
-| W4-G09 | Szenen-Requisiten (2×3, kein Inventar) | Gegenstände | – | – | – | Sebastian (Gemini) |
-| W4-G10 | Deko Welt 4 (3×3) | Gegenstände | – | – | – | Sebastian (Gemini) |
-| W4-N01 | Programmzeitschrift (Rätsel 4, 5, 9, 11) | Nahansicht | – | – | – | Sebastian (Gemini) |
-| W4-N02 | Messingschild am Porträt (Rätsel 12) | Nahansicht | – | – | – | Sebastian (Gemini) |
-| W4-N03 | Pausentafel Mitternachts-TV (Rätsel 5) | Nahansicht | – | – | – | Sebastian (Gemini) |
+| W4-G01 | Tasten-Symbole (2×3, 32×32) | Gegenstände | Welt 4/Gegenstände/W4-G01_*.png (Gemini, 27.11.) | ja: taste_umschalten, _pause, _rueckspulen, _stumm, _untertitel, _sendersuchlauf (Icons 36 px), Props taste_stumm und taste_sendersuchlauf | eingebaut auf Zweig (PR #48) |  |
+| W4-G02 | Splitscreen-Adapter (1×1) | Gegenstände | Welt 4/Gegenstände/W4-G02_*.png (Gemini, 27.11.) | ja: splitscreen_adapter | eingebaut auf Zweig (PR #48) |  |
+| W4-G03 | Genre-Ketten (2×3) | Gegenstände | Welt 4/Gegenstände/W4-G03_*.png (Gemini, 27.11.) | ja: bananenschale (frisch, faulig, stinkbombe), fondue_kaese (normal, leuchtend, wunderkaese), bettlaken (bettlaken, superhelden_anzug), dazu Props | eingebaut auf Zweig (PR #48) |  |
+| W4-G04 | Sender (2×2) | Gegenstände | Welt 4/Gegenstände/W4-G04_*.png (Gemini, 27.11.) | ja: programmzeitschrift (Icon) | eingebaut auf Zweig (PR #48) |  |
+| W4-G05 | Comic-Panels (1×4, Sortier-Bildschirm, kein Inventar) | Gegenstände | Welt 4/Gegenstände/W4-G05_*.png (Gemini, 27.11.) | – | – | Bilder liegen bereit (Max als Held, Comic-Stadt); Sortier-Bildschirm noch nicht gebaut |
+| W4-G06 | Drehbuch (1×1) | Gegenstände | Welt 4/Gegenstände/W4-G06_*.png (Gemini, 27.11.) | ja: drehbuch (Icon und Prop) | eingebaut auf Zweig (PR #48) |  |
+| W4-G07 | Lichtröhre Deluxe (1×1) | Gegenstände | Welt 4/Gegenstände/W4-G07_*.png (Gemini, 27.11.) | ja: lichtroehre_deluxe | eingebaut auf Zweig (PR #48) |  |
+| W4-G08 | Archivband (1×1) | Gegenstände | Welt 4/Gegenstände/W4-G08_*.png (Gemini, 27.11.) | ja: archivband (Icon, Prop aus dem Kellerarchiv) | eingebaut auf Zweig (PR #48) |  |
+| W4-G09 | Szenen-Requisiten (2×3, kein Inventar) | Gegenstände | Welt 4/Gegenstände/W4-G09_*.png (Gemini, 27.11.) | – | – | Bilder liegen bereit, noch nicht platziert |
+| W4-G10 | Deko Welt 4 (3×3) | Gegenstände | Welt 4/Gegenstände/W4-G10_*.png (Gemini, 27.11.) | – | – | Bilder liegen bereit, noch nicht platziert |
+| W4-N01 | Programmzeitschrift (Rätsel 4, 5, 9, 11) | Nahansicht | Welt 4/Nahansichten/W4-N01_programmzeitschrift.png (Gemini, 27.11., Raum als Stilvorlage) | ja: nahansichten/programmzeitschrift.png und _en.png, Schrift mit `tools/nahansichten_welt4_schrift.py` | eingebaut auf Zweig (PR #48) |  |
+| W4-N02 | Messingschild am Porträt (Rätsel 12) | Nahansicht | Welt 4/Nahansichten/W4-N02_messingschild.png (Gemini, 27.11., Raum als Stilvorlage) | ja: nahansichten/messingschild.png und _en.png, Schrift mit `tools/nahansichten_welt4_schrift.py` | – | Bild fertig; das Spiel zeigt beim Porträt noch keine Nahansicht (Max liest das Schild vor) |
+| W4-N03 | Pausentafel Mitternachts-TV (Rätsel 5) | Nahansicht | Welt 4/Nahansichten/W4-N03_pausentafel.png (Gemini, 27.11., Raum als Stilvorlage) | ja: nahansichten/pausentafel.png und _en.png, Schrift mit `tools/nahansichten_welt4_schrift.py` | – | Bild fertig; noch nicht im Spiel verwendet |

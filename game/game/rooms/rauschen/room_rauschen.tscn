@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://b06s5u88u5mve"]
 
-[ext_resource type="Script" path="res://game/rooms/rauschen/room_rauschen.gd" id="1_nkwy5"]
+[ext_resource type="Script" uid="uid://d3c02rmf62oge" path="res://game/rooms/rauschen/room_rauschen.gd" id="1_nkwy5"]
 [ext_resource type="PackedScene" uid="uid://b1yanmbxifj12" path="res://game/rooms/rauschen/walkable_areas/boden/walkable_area_boden.tscn" id="2_tcxdi"]
 [ext_resource type="PackedScene" uid="uid://chgkhhwf63yvf" path="res://game/rooms/rauschen/props/background/prop_background.tscn" id="3_xowoi"]
-[ext_resource type="Texture2D" uid="uid://bvvsyxvt713v0" path="res://grafik/platzhalter/raum_rauschen.png" id="4_od7j5"]
+[ext_resource type="Texture2D" uid="uid://cmywasffkb30s" path="res://grafik/hintergruende/w4_bg_rauschen_v01.png" id="4_tcxdi"]
 [ext_resource type="PackedScene" uid="uid://js5cohkynj0d" path="res://game/rooms/rauschen/hotspots/geisterbilder_im_rauschen/hotspot_geisterbilder_im_rauschen.tscn" id="5_1kxqu"]
 [ext_resource type="PackedScene" uid="uid://d00dmm5ooj7ty" path="res://game/rooms/rauschen/hotspots/kriechweg/hotspot_kriechweg.tscn" id="6_lrwfl"]
 [ext_resource type="PackedScene" uid="uid://dhdo4g7rx6dhj" path="res://game/rooms/rauschen/markers/start/marker_start.tscn" id="7_hwu37"]
@@ -25,58 +25,60 @@ height = 360
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=221737822]
 
 [node name="Boden" parent="WalkableAreas" unique_id=1573293303 instance=ExtResource("2_tcxdi")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(8, 280, 632, 280, 632, 356, 8, 356)])
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(100, 288, 540, 288, 620, 356, 20, 356)])
 
 [node name="Props" type="Node2D" parent="." unique_id=681646866]
 
 [node name="Background" parent="Props" unique_id=1343657109 instance=ExtResource("3_xowoi")]
 position = Vector2(320, 180)
-texture = ExtResource("4_od7j5")
+texture = ExtResource("4_tcxdi")
 description = "UI_RAUM_RAUSCHEN"
 
 [node name="Hotspots" type="Node2D" parent="." unique_id=803763411]
 
 [node name="GeisterbilderImRauschen" parent="Hotspots" unique_id=1754609319 instance=ExtResource("5_1kxqu")]
-position = Vector2(187, 72)
+position = Vector2(310, 155)
 description = "UI_OBJ_GEISTERBILDER_IM_RAUSCHEN"
-baseline = 32
-walk_to_point = Vector2(0, 241)
+baseline = 45
+walk_to_point = Vector2(10, 155)
+interaction_polygon = PackedVector2Array(-190, -45, 190, -45, 190, 45, -190, 45)
 
 [node name="Kriechweg" parent="Hotspots" unique_id=239850205 instance=ExtResource("6_lrwfl")]
-position = Vector2(453, 72)
+position = Vector2(47.5, 225)
 description = "UI_OBJ_KRIECHWEG"
-baseline = 32
-walk_to_point = Vector2(0, 241)
+baseline = 95
+walk_to_point = Vector2(42.5, 95)
+interaction_polygon = PackedVector2Array(-32.5, -95, 32.5, -95, 32.5, 95, -32.5, 95)
 
 [node name="Regions" type="Node2D" parent="." unique_id=1128624923]
 
 [node name="Markers" type="Node2D" parent="." unique_id=1575960870]
 
 [node name="Start" parent="Markers" unique_id=53983254 instance=ExtResource("7_hwu37")]
-position = Vector2(320, 320)
+position = Vector2(320, 330)
 
 [node name="VonGluecksrad" parent="Markers" unique_id=1528639008 instance=ExtResource("8_eennj")]
-position = Vector2(320, 320)
+position = Vector2(320, 330)
 
 [node name="VonSitcomKueche" parent="Markers" unique_id=2015016469 instance=ExtResource("9_vb44e")]
-position = Vector2(320, 320)
+position = Vector2(320, 330)
 
 [node name="VonSavanne" parent="Markers" unique_id=816174051 instance=ExtResource("10_1y7t5")]
-position = Vector2(320, 320)
+position = Vector2(320, 330)
 
 [node name="VonFriedhof" parent="Markers" unique_id=1487461445 instance=ExtResource("11_hq8ah")]
-position = Vector2(320, 320)
+position = Vector2(320, 330)
 
 [node name="VonKapitolis" parent="Markers" unique_id=1888880829 instance=ExtResource("12_55gva")]
-position = Vector2(320, 320)
+position = Vector2(320, 330)
 
 [node name="VonEmpfang" parent="Markers" unique_id=859005985 instance=ExtResource("13_olk2n")]
-position = Vector2(320, 320)
+position = Vector2(320, 330)
 
 [node name="Characters" type="Node2D" parent="." unique_id=1498445173]
 
 [node name="CharacterFlimmer *" parent="Characters" unique_id=1629242648 instance=ExtResource("14_ph81n")]
-position = Vector2(200, 309)
+position = Vector2(200, 330)
 
 [node name="CharacterNachrichtensprecher *" parent="Characters" unique_id=1670805931 instance=ExtResource("15_8pewy")]
-position = Vector2(440, 309)
+position = Vector2(440, 320)

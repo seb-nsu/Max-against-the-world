@@ -35,6 +35,15 @@ const VARIANTEN := {
 		"testkammer_3": ["R9d"],
 		"kern": ["W3_ZELLE_KALT", "R11"],
 	},
+	"welt-4": {
+		"testbild": ["R1"],
+		"sitcom_kueche": ["R3", "R6", "R3+R6"],
+		"friedhof": ["W4_ZOMBIES_START", "R5b"],
+		"spukhaus_keller": ["R6"],
+		"fondue_fabrik": ["R10c"],
+		"werbespot_set": ["R11c"],
+		"zappmanns_studio": ["W4_APPLAUS_AUS", "W4_APPLAUS_AUS+W4_QUOTE_ROT"],
+	},
 }
 
 

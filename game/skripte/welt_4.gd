@@ -1368,12 +1368,14 @@ func _kampf(t: String) -> void:
 				await _sag("W4_STUD_MAX_0570")
 			elif schritt == 3:
 				await _szene(["W4_STUD_MAX_0270", "W4_STUD_NAR_0280", "W4_STUD_MAX_0290"])
+				Zustand.setze("W4_APPLAUS_AUS")   # Hintergrund: Applaus-Schild aus
 				Zustand.setze_wert("W4_KAMPF", 4)
 			else:
 				await Spiel.ersatz()
 		"taste_untertitel":
 			if schritt == 4:
 				await _szene(["W4_STUD_ZAP_0300", "W4_STUD_MAX_0310", "W4_STUD_PIX_0320", "W4_STUD_NAR_0330"])
+				Zustand.setze("W4_QUOTE_ROT")     # Hintergrund: Quote eingebrochen
 				Zustand.setze_wert("W4_KAMPF", 5)
 			else:
 				await _sag("W4_STUD_MAX_0530")

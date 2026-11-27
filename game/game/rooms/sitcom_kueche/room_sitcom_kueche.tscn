@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://di0rhsrhvux2w"]
 
-[ext_resource type="Script" path="res://game/rooms/sitcom_kueche/room_sitcom_kueche.gd" id="1_38edt"]
+[ext_resource type="Script" uid="uid://2cbrvla7nutp" path="res://game/rooms/sitcom_kueche/room_sitcom_kueche.gd" id="1_38edt"]
 [ext_resource type="PackedScene" uid="uid://csgcikxe1lfe3" path="res://game/rooms/sitcom_kueche/walkable_areas/boden/walkable_area_boden.tscn" id="2_i5pw1"]
 [ext_resource type="PackedScene" uid="uid://bfmpcaoiwdb4k" path="res://game/rooms/sitcom_kueche/props/background/prop_background.tscn" id="3_lel8a"]
-[ext_resource type="Texture2D" uid="uid://bnyqgge55uo3a" path="res://grafik/platzhalter/raum_sitcom_kueche.png" id="4_d5lj4"]
+[ext_resource type="Texture2D" uid="uid://moe7apug0eax" path="res://grafik/hintergruende/w4_bg_sitcom_kueche_v01.png" id="4_i5pw1"]
 [ext_resource type="PackedScene" uid="uid://mma81l82biqu" path="res://game/rooms/sitcom_kueche/props/fondue_kaese/prop_fondue_kaese.tscn" id="5_f2ans"]
-[ext_resource type="Texture2D" uid="uid://cinn7pciave1g" path="res://grafik/platzhalter/prop_fondue_kaese.png" id="6_a20jo"]
+[ext_resource type="Texture2D" uid="uid://cgo7pkvdkld7f" path="res://grafik/props/fondue_kaese.png" id="6_lel8a"]
 [ext_resource type="PackedScene" uid="uid://srmnqmdv0cgj" path="res://game/rooms/sitcom_kueche/props/bananenschale/prop_bananenschale.tscn" id="7_d3jr1"]
-[ext_resource type="Texture2D" uid="uid://bajsy11ncg3id" path="res://grafik/platzhalter/prop_bananenschale.png" id="8_oek0g"]
+[ext_resource type="Texture2D" uid="uid://cmy103j8kjdum" path="res://grafik/props/bananenschale.png" id="8_d5lj4"]
 [ext_resource type="PackedScene" uid="uid://d3n5mt4v7hty4" path="res://game/rooms/sitcom_kueche/hotspots/lachkonserven_maschine/hotspot_lachkonserven_maschine.tscn" id="9_gy62r"]
 [ext_resource type="PackedScene" uid="uid://dct3e8n7kclqy" path="res://game/rooms/sitcom_kueche/hotspots/pappe_publikum/hotspot_pappe_publikum.tscn" id="10_jjcr2"]
 [ext_resource type="PackedScene" uid="uid://bsg76u8hltayn" path="res://game/rooms/sitcom_kueche/hotspots/keksdose/hotspot_keksdose.tscn" id="11_iiapy"]
@@ -32,126 +32,137 @@
 [node name="RoomSitcomKueche" type="Node2D" unique_id=249266653]
 script = ExtResource("1_38edt")
 script_name = "SitcomKueche"
-width = 640
+width = 1280
 height = 360
 
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=417046021]
 
 [node name="Boden" parent="WalkableAreas" unique_id=1039005391 instance=ExtResource("2_i5pw1")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(8, 280, 632, 280, 632, 356, 8, 356)])
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(160, 284, 1110, 284, 1272, 300, 1272, 318, 8, 318, 8, 300)])
 
 [node name="Props" type="Node2D" parent="." unique_id=1003101193]
 
 [node name="Background" parent="Props" unique_id=1502096066 instance=ExtResource("3_lel8a")]
-position = Vector2(320, 180)
-texture = ExtResource("4_d5lj4")
+position = Vector2(640, 180)
+texture = ExtResource("4_i5pw1")
 description = "UI_RAUM_SITCOM_KUECHE"
 
 [node name="FondueKaese" parent="Props" unique_id=125157668 instance=ExtResource("5_f2ans")]
-position = Vector2(143.333, 268)
-texture = ExtResource("6_a20jo")
+position = Vector2(675.5, 204)
+texture = ExtResource("6_lel8a")
 description = "UI_OBJ_FONDUE_KAESE"
-baseline = 8
-walk_to_point = Vector2(-0.666667, 45)
+baseline = 6
+walk_to_point = Vector2(4.5, 96)
+interaction_polygon = PackedVector2Array(-7.5, -6, 7.5, -6, 7.5, 6, -7.5, 6)
 
 [node name="Bananenschale" parent="Props" unique_id=1067218744 instance=ExtResource("7_d3jr1")]
-position = Vector2(223.333, 268)
-texture = ExtResource("8_oek0g")
+position = Vector2(966, 226.5)
+texture = ExtResource("8_d5lj4")
 description = "UI_OBJ_BANANENSCHALE"
-baseline = 8
-walk_to_point = Vector2(-0.666667, 45)
+baseline = 5
+walk_to_point = Vector2(-6, 79.5)
+interaction_polygon = PackedVector2Array(-8, -5.5, 8, -5.5, 8, 5.5, -8, 5.5)
 
 [node name="Hotspots" type="Node2D" parent="." unique_id=1573758845]
 
 [node name="LachkonservenMaschine" parent="Hotspots" unique_id=347896838 instance=ExtResource("9_gy62r")]
-position = Vector2(97, 72)
+position = Vector2(60, 272.5)
 description = "UI_OBJ_LACHKONSERVEN_MASCHINE"
-baseline = 32
-walk_to_point = Vector2(0, 241)
+baseline = 22
+walk_to_point = Vector2(20, 37.5)
+interaction_polygon = PackedVector2Array(-30, -22.5, 30, -22.5, 30, 22.5, -30, 22.5)
 
 [node name="PappePublikum" parent="Hotspots" unique_id=774969414 instance=ExtResource("10_jjcr2")]
-position = Vector2(185, 72)
+position = Vector2(640, 339)
 description = "UI_OBJ_PAPPE_PUBLIKUM"
-baseline = 32
-walk_to_point = Vector2(0, 241)
+baseline = 21
+walk_to_point = Vector2(0, -27)
+interaction_polygon = PackedVector2Array(-640, -21, 640, -21, 640, 21, -640, 21)
 
 [node name="Keksdose" parent="Hotspots" unique_id=622850299 instance=ExtResource("11_iiapy")]
-position = Vector2(273, 72)
+position = Vector2(705, 190)
 description = "UI_OBJ_KEKSDOSE"
-baseline = 32
-walk_to_point = Vector2(0, 241)
+baseline = 15
+walk_to_point = Vector2(-5, 116)
+interaction_polygon = PackedVector2Array(-15, -15, 15, -15, 15, 15, -15, 15)
 
 [node name="Kuechentuer" parent="Hotspots" unique_id=1059046588 instance=ExtResource("12_ber0y")]
-position = Vector2(361, 72)
+position = Vector2(1148, 195)
 description = "UI_OBJ_KUECHENTUER"
-baseline = 32
-walk_to_point = Vector2(0, 241)
+baseline = 100
+walk_to_point = Vector2(-28, 111)
+interaction_polygon = PackedVector2Array(-70, -100, 70, -100, 70, 100, -70, 100)
 
 [node name="Durchreiche" parent="Hotspots" unique_id=1324081229 instance=ExtResource("13_3xfwr")]
-position = Vector2(449, 72)
+position = Vector2(315, 162.5)
 description = "UI_OBJ_DURCHREICHE"
-baseline = 32
-walk_to_point = Vector2(0, 241)
+baseline = 42
+walk_to_point = Vector2(5, 137.5)
+interaction_polygon = PackedVector2Array(-60, -42.5, 60, -42.5, 60, 42.5, -60, 42.5)
 
 [node name="FondueTopf" parent="Hotspots" unique_id=1254351407 instance=ExtResource("14_eg1me")]
-position = Vector2(537, 72)
+position = Vector2(610, 197.5)
 description = "UI_OBJ_FONDUE_TOPF"
-baseline = 32
-walk_to_point = Vector2(0, 241)
+baseline = 17
+walk_to_point = Vector2(10, 102.5)
+interaction_polygon = PackedVector2Array(-25, -17.5, 25, -17.5, 25, 17.5, -25, 17.5)
 
 [node name="StudiolichtUndSetRand" parent="Hotspots" unique_id=2032277391 instance=ExtResource("15_vur7b")]
-position = Vector2(97, 152)
+position = Vector2(630, 42.5)
 description = "UI_OBJ_STUDIOLICHT_UND_SET_RAND"
-baseline = 32
-walk_to_point = Vector2(0, 161)
+baseline = 27
+walk_to_point = Vector2(10, 257.5)
+interaction_polygon = PackedVector2Array(-400, -27.5, 400, -27.5, 400, 27.5, -400, 27.5)
 
 [node name="Skateboard" parent="Hotspots" unique_id=1536216952 instance=ExtResource("16_xqso0")]
-position = Vector2(185, 152)
+position = Vector2(510, 255)
 description = "UI_OBJ_SKATEBOARD"
-baseline = 32
-walk_to_point = Vector2(0, 161)
+baseline = 40
+walk_to_point = Vector2(0, 47)
+interaction_polygon = PackedVector2Array(-20, -40, 20, -40, 20, 40, -20, 40)
 
 [node name="ScherbenDerKeksdose" parent="Hotspots" unique_id=1818516536 instance=ExtResource("17_875fs")]
-position = Vector2(273, 152)
+position = Vector2(380, 294)
 description = "UI_OBJ_SCHERBEN_DER_KEKSDOSE"
-baseline = 32
-walk_to_point = Vector2(0, 161)
+baseline = 18
+walk_to_point = Vector2(0, 12)
+interaction_polygon = PackedVector2Array(-120, -18, 120, -18, 120, 18, -120, 18)
 
 [node name="Regions" type="Node2D" parent="." unique_id=978245109]
 
 [node name="Markers" type="Node2D" parent="." unique_id=177313105]
 
 [node name="Start" parent="Markers" unique_id=1069342547 instance=ExtResource("18_dwyf6")]
-position = Vector2(320, 320)
+position = Vector2(640, 330)
 
 [node name="VonGluecksrad" parent="Markers" unique_id=581303724 instance=ExtResource("19_3opfy")]
-position = Vector2(320, 320)
+position = Vector2(640, 330)
 
 [node name="VonSavanne" parent="Markers" unique_id=1226152229 instance=ExtResource("20_a85ma")]
-position = Vector2(320, 320)
+position = Vector2(640, 330)
 
 [node name="VonFriedhof" parent="Markers" unique_id=633805297 instance=ExtResource("21_0h87u")]
-position = Vector2(320, 320)
+position = Vector2(640, 330)
 
 [node name="VonKapitolis" parent="Markers" unique_id=87945997 instance=ExtResource("22_jx08e")]
-position = Vector2(320, 320)
+position = Vector2(640, 330)
 
 [node name="VonWerbespotSet" parent="Markers" unique_id=255096302 instance=ExtResource("23_k23a5")]
-position = Vector2(320, 320)
+position = Vector2(640, 330)
 
 [node name="VonEmpfang" parent="Markers" unique_id=1632601394 instance=ExtResource("24_fnhyr")]
-position = Vector2(320, 320)
+position = Vector2(640, 330)
 
 [node name="Characters" type="Node2D" parent="." unique_id=1443171703]
 
 [node name="CharacterSitcomVater *" parent="Characters" unique_id=498754438 instance=ExtResource("25_22oqv")]
-position = Vector2(140, 309)
+position = Vector2(700, 300)
 
 [node name="CharacterSitcomMutter *" parent="Characters" unique_id=424208824 instance=ExtResource("26_nu2xa")]
-position = Vector2(260, 309)
+position = Vector2(860, 300)
 
 [node name="CharacterSitcomSohn *" parent="Characters" unique_id=68141443 instance=ExtResource("27_nfuav")]
-position = Vector2(380, 309)
+position = Vector2(1000, 304)
 
 [node name="CharacterKommissar *" parent="Characters" unique_id=1799452822 instance=ExtResource("28_xwmjn")]
-position = Vector2(500, 309)
+position = Vector2(330, 306)
