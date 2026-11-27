@@ -1,0 +1,15 @@
+{
+ "bild": [
+  202,
+  165
+ ],
+ "animationen": {
+  "idle": {
+   "von": 0,
+   "bilder": 1,
+   "ms": 500,
+   "schleife": true
+  }
+ },
+ "quelle": "tools/grafik_w4/figuren_stand.py (loewe)"
+}

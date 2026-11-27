@@ -27,7 +27,7 @@ Opa steht ihre feste Beschreibung wortgleich in der Zeile CHARACTER LOCK; den Fi
 
 # Shotliste
 
-138 Shots, davon 138 sicher offen („–“: Stand nicht automatisch prüfbar). Kürzel:
+138 Shots, davon 112 sicher offen („–“: Stand nicht automatisch prüfbar). Kürzel:
 R Raum, F Figur, P Posenbogen, B Bewegung, G Gegenstände, N Nahansicht, K Figurenbogen.
 
 | Shot | Bild | Stand |
@@ -47,35 +47,35 @@ R Raum, F Figur, P Posenbogen, B Bewegung, G Gegenstände, N Nahansicht, K Figur
 | W4-R13 | Zappmanns Studio | offen |
 | W4-R14 | Zappmanns erste Kindersendung | offen |
 | W4-R15 | Kellerarchiv | offen |
-| W4-F01 | Gerd Glück | offen |
-| W4-F02 | Trödel-Experte | offen |
-| W4-F03 | Flimmer | offen |
+| W4-F01 | Gerd Glück | im Spiel |
+| W4-F02 | Trödel-Experte | im Spiel |
+| W4-F03 | Flimmer | im Spiel |
 | W4-F04 | Max auf dem Testbild | offen |
-| W4-F05 | Sitcom-Vater | offen |
-| W4-F06 | Sitcom-Mutter | offen |
-| W4-F07 | Sitcom-Sohn | offen |
-| W4-F08 | Kommissar | offen |
-| W4-F09 | Erzähler | offen |
-| W4-F10 | Löwe | offen |
-| W4-F11 | Hyäne | offen |
-| W4-F12 | Gepard | offen |
-| W4-F13 | Geier | offen |
-| W4-F14 | Nashorn | offen |
+| W4-F05 | Sitcom-Vater | im Spiel |
+| W4-F06 | Sitcom-Mutter | im Spiel |
+| W4-F07 | Sitcom-Sohn | im Spiel |
+| W4-F08 | Kommissar | im Spiel |
+| W4-F09 | Erzähler | im Spiel |
+| W4-F10 | Löwe | im Spiel |
+| W4-F11 | Hyäne | im Spiel |
+| W4-F12 | Gepard | im Spiel |
+| W4-F13 | Geier | im Spiel |
+| W4-F14 | Nashorn | im Spiel |
 | W4-F15 | Flamingo | offen |
-| W4-F16 | Zombie | offen |
+| W4-F16 | Zombie | im Spiel |
 | W4-F17 | Zombie im Grab | offen |
-| W4-F18 | Geist | offen |
-| W4-F19 | FBI-Agent | offen |
-| W4-F20 | Super-Siegfried | offen |
-| W4-F21 | Fledermann | offen |
-| W4-F22 | Wonder-Wilma | offen |
-| W4-F23 | Dr. Werbepause | offen |
-| W4-F24 | Fabrikarbeiter | offen |
-| W4-F25 | Empfangsdame | offen |
-| W4-F26 | Sicherheitsmann | offen |
-| W4-F27 | Zappmann | offen |
-| W4-F28 | Junger Zappmann | offen |
-| W4-F29 | Wettkandidat | offen |
+| W4-F18 | Geist | im Spiel |
+| W4-F19 | FBI-Agent | im Spiel |
+| W4-F20 | Super-Siegfried | im Spiel |
+| W4-F21 | Fledermann | im Spiel |
+| W4-F22 | Wonder-Wilma | im Spiel |
+| W4-F23 | Dr. Werbepause | im Spiel |
+| W4-F24 | Fabrikarbeiter | im Spiel |
+| W4-F25 | Empfangsdame | im Spiel |
+| W4-F26 | Sicherheitsmann | im Spiel |
+| W4-F27 | Zappmann | im Spiel |
+| W4-F28 | Junger Zappmann | im Spiel |
+| W4-F29 | Wettkandidat | im Spiel |
 | W4-F30 | Max als Käsemann | offen |
 | W4-P01 | Max Fernbedienung | offen |
 | W4-P02 | Max Lichtröhre | offen |

@@ -400,6 +400,7 @@ func _figuren_anwenden(raum: CQRaum) -> void:
 func _raum_betreten(raum: CQRaum) -> void:
 	var rid := raum.raum_id()
 	_tanz_fehler = 0
+	_bildvarianten(rid)
 	if rid != "rauschen" and not Zustand.ist("W4_PIXEL_IM_RAUSCHEN"):
 		Zustand.setze_wert("W4_MAX_RAUM", rid)
 	# Genre-Logik: Max' Gegenstände nehmen das Genre des Senders an
@@ -415,6 +416,25 @@ func _raum_betreten(raum: CQRaum) -> void:
 				Zustand.loese("R10a")
 			if _hat("bananenschale") and _zustand_gegenstand("bananenschale") == "faulig":
 				Zustand.setze_wert("W4_BANANE", "Stinkbombe")
+
+
+## Figuren mit zweitem Bild (tools/grafik_w4/figuren_stand.py): Fledermann hängt in Kapitolis am Laternenarm,
+## der Vater sitzt im Spukhaus-Keller auf der Kiste, Löwe mit Krone nach dem Savannen-Fall, Gepard liegt nach dem Sprint.
+func _bildvarianten(rid: String) -> void:
+	_variante("Fledermann", "fledermann_kopfueber" if rid == "kapitolis" else "")
+	_variante("SitcomVater", "sitcom_vater_kiste" if rid == "spukhaus_keller" else "")
+	_variante("Loewe", "loewe_krone" if _g("R4") else "")
+	_variante("Gepard", "gepard_liegt" if _g("R4b") else "")
+
+
+## Figur sn auf eine Bildvariante setzen (leer = ihr normales Blatt), nur wenn sie im Raum steht.
+func _variante(sn: String, variante: String) -> void:
+	var c = C.get_character(sn)
+	if not c is CQFigur or not c.is_inside_tree():
+		return
+	var soll := variante if variante != c.objekt_id() else ""
+	if c.grafik_variante != soll:
+		c.grafik_laden(soll)
 
 
 ## Szene beim ersten Betreten (einmal je Raum)
@@ -931,6 +951,7 @@ func benutzen_flamingos(_obj, _x) -> bool:
 	if Zustand.ist("W4_GEPARD_VERHOERT") and not _g("R4b"):
 		await _szene(["W4_VERH_FLA_0180", "W4_VERH_MAX_0190"])
 		Zustand.loese("R4b")
+		_bildvarianten(_raum_id())
 		return true
 	return false
 
@@ -986,6 +1007,7 @@ func gegenstand_hyaene(_obj, iid) -> bool:
 		_geben.bind("taste_rueckspulen"), "W4_VERH_MAX_0420", "W4_VERH_ERZ_0430"])
 	await _geben("taste_rueckspulen")
 	Zustand.loese("R4")
+	_bildvarianten(_raum_id())
 	return true
 
 

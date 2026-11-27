@@ -412,13 +412,14 @@ Offene Grafik in Welt 3: Max in der Pfütze bei der Ankunft (F21), fliegender Lo
 
 Angelegt am 26. November 2026 aus `fertige-prompts/welt-4.md` (138 IDs, noch kein Bild erzeugt, Zweig `claude/project-thread-pmnx1g`). Rohbau aller Räume unter `docs/grafik/skizzen/welt-4/rohbau/`. Nach jeder Runde hier nachführen (Quelle, gebaut, im Spiel, offen), keine weiteren Offen-Listen.
 
-**Stand 27. November 2026 (Zweig `claude/project-thread-pmnx1g`, PR #48):** Alle Räume, Gegenstände und Nahansichten aus Gemini (Rohbau, Notiz und Skizze als Vorlage; Nahansichten mit ihrem Raum als Stilvorlage). Räume gepixelt mit `tools/grafik_w4/raeume_pixelieren.py` (Zustände nur an der geänderten Stelle eingesetzt), Layout `tools/layout/welt-4.yaml` auf die Bilder gemessen, Nahansichten mit Schrift aus `tools/nahansichten_welt4_schrift.py`. Figuren, Posenbögen und Bewegungen sind noch offen; im Spiel stehen dafür graue Platzhalter.
+**Stand 27. November 2026 (Zweig `claude/project-thread-pmnx1g`, PR #48):** Alle Räume, Gegenstände und Nahansichten aus Gemini (Rohbau, Notiz und Skizze als Vorlage; Nahansichten mit ihrem Raum als Stilvorlage). Räume gepixelt mit `tools/grafik_w4/raeume_pixelieren.py` (Zustände nur an der geänderten Stelle eingesetzt), Layout `tools/layout/welt-4.yaml` auf die Bilder gemessen, Nahansichten mit Schrift aus `tools/nahansichten_welt4_schrift.py`. Figuren (27.11. abends): alle 30 Konzeptblätter von Sebastian als Stand-Sprites, 28 davon im Spiel (zweite Posen als Bildvariante je Raum oder Rätselstand: Fledermann kopfüber in Kapitolis, Vater auf der Kiste, Löwe mit Krone, Gepard liegt). Reden, Läufe, Posenbögen und Bewegungen sind noch offen.
 
 | Status | Anzahl |
 | --- | --- |
 | eingebaut auf Zweig (PR #48) | 22 |
-| Bild fertig, noch nicht im Spiel | 6 |
-| offen | 110 |
+| Figur eingebaut auf Zweig, nur Stand (Reden, Lauf, Gesten offen) | 28 |
+| Bild fertig, noch nicht im Spiel | 8 |
+| offen | 80 |
 | **gesamt** | **138** |
 
 | ID | Titel | Art | Quelle (Bogen/Bild) | Bewegung gebaut | im Spiel | offen: Grund, wer erledigt |
@@ -438,36 +439,36 @@ Angelegt am 26. November 2026 aus `fertige-prompts/welt-4.md` (138 IDs, noch kei
 | W4-R13 | Zappmanns Studio | Raum | Welt 4/Hintergründe/korrigiert/W4-R13_zappmanns_studio_a/b/c | gepixelt (`tools/grafik_w4/raeume_pixelieren.py`): w4_bg_zappmanns_studio_v01, _applaus_aus, _quote_rot und beides (Kampf) | eingebaut auf Zweig (PR #48) | Figuren fehlen noch; Skala und Laufbereich im Spiel anspielen |
 | W4-R14 | Zappmanns erste Kindersendung | Raum | Welt 4/Hintergründe/korrigiert/W4-R14_kindersendung | gepixelt (`tools/grafik_w4/raeume_pixelieren.py`): w4_bg_kindersendung_v01 | – | Bild fertig, im Spiel noch nicht verwendet (Rückblende) |
 | W4-R15 | Kellerarchiv | Raum | Welt 4/Hintergründe/korrigiert/W4-R15_kellerarchiv | gepixelt (`tools/grafik_w4/raeume_pixelieren.py`): w4_bg_kellerarchiv_v01, Archivband als Prop ausgeschnitten | eingebaut auf Zweig (PR #48) | Figuren fehlen noch; Skala und Laufbereich im Spiel anspielen |
-| W4-F01 | Gerd Glück | Figur | – | – | – | Sebastian (Gemini) |
-| W4-F02 | Trödel-Experte | Figur | – | – | – | Sebastian (Gemini) |
-| W4-F03 | Flimmer | Figur | – | – | – | Sebastian (Gemini) |
-| W4-F04 | Max auf dem Testbild | Figur | – | – | – | Sebastian (Gemini) |
-| W4-F05 | Sitcom-Vater | Figur | – | – | – | Sebastian (Gemini) |
-| W4-F06 | Sitcom-Mutter | Figur | – | – | – | Sebastian (Gemini) |
-| W4-F07 | Sitcom-Sohn | Figur | – | – | – | Sebastian (Gemini) |
-| W4-F08 | Kommissar | Figur | – | – | – | Sebastian (Gemini) |
-| W4-F09 | Erzähler | Figur | – | – | – | Sebastian (Gemini) |
-| W4-F10 | Löwe | Figur | – | – | – | Sebastian (Gemini) |
-| W4-F11 | Hyäne | Figur | – | – | – | Sebastian (Gemini) |
-| W4-F12 | Gepard | Figur | – | – | – | Sebastian (Gemini) |
-| W4-F13 | Geier | Figur | – | – | – | Sebastian (Gemini) |
-| W4-F14 | Nashorn | Figur | – | – | – | Sebastian (Gemini) |
-| W4-F15 | Flamingo | Figur | – | – | – | Sebastian (Gemini) |
-| W4-F16 | Zombie | Figur | – | – | – | Sebastian (Gemini) |
-| W4-F17 | Zombie im Grab | Figur | – | – | – | Sebastian (Gemini) |
-| W4-F18 | Geist | Figur | – | – | – | Sebastian (Gemini) |
-| W4-F19 | FBI-Agent | Figur | – | – | – | Sebastian (Gemini) |
-| W4-F20 | Super-Siegfried | Figur | – | – | – | Sebastian (Gemini) |
-| W4-F21 | Fledermann | Figur | – | – | – | Sebastian (Gemini) |
-| W4-F22 | Wonder-Wilma | Figur | – | – | – | Sebastian (Gemini) |
-| W4-F23 | Dr. Werbepause | Figur | – | – | – | Sebastian (Gemini) |
-| W4-F24 | Fabrikarbeiter | Figur | – | – | – | Sebastian (Gemini) |
-| W4-F25 | Empfangsdame | Figur | – | – | – | Sebastian (Gemini) |
-| W4-F26 | Sicherheitsmann | Figur | – | – | – | Sebastian (Gemini) |
-| W4-F27 | Zappmann | Figur | – | – | – | Sebastian (Gemini) |
-| W4-F28 | Junger Zappmann | Figur | – | – | – | Sebastian (Gemini) |
-| W4-F29 | Wettkandidat | Figur | – | – | – | Sebastian (Gemini) |
-| W4-F30 | Max als Käsemann | Figur | – | – | – | Sebastian (Gemini) |
+| W4-F01 | Gerd Glück | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), nur Stand | Reden (Mund), Lauf und Gesten fehlen noch |
+| W4-F02 | Trödel-Experte | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), nur Stand | Reden (Mund), Lauf und Gesten fehlen noch |
+| W4-F03 | Flimmer | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), nur Stand | Reden (Mund), Lauf und Gesten fehlen noch |
+| W4-F04 | Max auf dem Testbild | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | – | Stand fertig; Ankunftsbild noch nicht im Spiel |
+| W4-F05 | Sitcom-Vater | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), nur Stand | Reden (Mund), Lauf und Gesten fehlen noch |
+| W4-F06 | Sitcom-Mutter | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), nur Stand | Reden (Mund), Lauf und Gesten fehlen noch |
+| W4-F07 | Sitcom-Sohn | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), nur Stand | Reden (Mund), Lauf und Gesten fehlen noch |
+| W4-F08 | Kommissar | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), nur Stand | Reden (Mund), Lauf und Gesten fehlen noch |
+| W4-F09 | Erzähler | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), nur Stand | Reden (Mund), Lauf und Gesten fehlen noch |
+| W4-F10 | Löwe | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), nur Stand | Reden (Mund), Lauf und Gesten fehlen noch |
+| W4-F11 | Hyäne | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), nur Stand | Reden (Mund), Lauf und Gesten fehlen noch |
+| W4-F12 | Gepard | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), nur Stand | Reden (Mund), Lauf und Gesten fehlen noch |
+| W4-F13 | Geier | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), nur Stand | Reden (Mund), Lauf und Gesten fehlen noch |
+| W4-F14 | Nashorn | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), nur Stand | Reden (Mund), Lauf und Gesten fehlen noch |
+| W4-F15 | Flamingo | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), nur Stand | Reden (Mund), Lauf und Gesten fehlen noch |
+| W4-F16 | Zombie | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), nur Stand | Reden (Mund), Lauf und Gesten fehlen noch |
+| W4-F17 | Zombie im Grab | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), nur Stand | Reden (Mund), Lauf und Gesten fehlen noch |
+| W4-F18 | Geist | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), nur Stand | Reden (Mund), Lauf und Gesten fehlen noch |
+| W4-F19 | FBI-Agent | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), nur Stand | Reden (Mund), Lauf und Gesten fehlen noch |
+| W4-F20 | Super-Siegfried | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), nur Stand | Reden (Mund), Lauf und Gesten fehlen noch |
+| W4-F21 | Fledermann | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), nur Stand | Reden (Mund), Lauf und Gesten fehlen noch |
+| W4-F22 | Wonder-Wilma | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), nur Stand | Reden (Mund), Lauf und Gesten fehlen noch |
+| W4-F23 | Dr. Werbepause | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), nur Stand | Reden (Mund), Lauf und Gesten fehlen noch |
+| W4-F24 | Fabrikarbeiter | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), nur Stand | Reden (Mund), Lauf und Gesten fehlen noch |
+| W4-F25 | Empfangsdame | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), nur Stand | Reden (Mund), Lauf und Gesten fehlen noch |
+| W4-F26 | Sicherheitsmann | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), nur Stand | Reden (Mund), Lauf und Gesten fehlen noch |
+| W4-F27 | Zappmann | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), nur Stand | Reden (Mund), Lauf und Gesten fehlen noch |
+| W4-F28 | Junger Zappmann | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), nur Stand | Reden (Mund), Lauf und Gesten fehlen noch |
+| W4-F29 | Wettkandidat | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), nur Stand | Reden (Mund), Lauf und Gesten fehlen noch |
+| W4-F30 | Max als Käsemann | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | – | Stand fertig; Käsemann nur im Comic-Kanal (Entscheidungen, W4_FERN_MAX_0280), Einbau mit Reden und Wurf |
 | W4-P01 | Max Fernbedienung | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
 | W4-P02 | Max Lichtröhre | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
 | W4-P03 | Max Fabrik | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |

@@ -3463,8 +3463,8 @@
      "id": "fledermann",
      "script_name": "Fledermann",
      "pos": [
-      300,
-      120
+      354,
+      160
      ]
     },
     {
@@ -3959,7 +3959,7 @@
      "id": "super_siegfried",
      "script_name": "SuperSiegfried",
      "pos": [
-      420,
+      375,
       300
      ]
     },
@@ -3967,7 +3967,7 @@
      "id": "fledermann",
      "script_name": "Fledermann",
      "pos": [
-      460,
+      445,
       296
      ]
     },
@@ -3975,7 +3975,7 @@
      "id": "wonder_wilma",
      "script_name": "WonderWilma",
      "pos": [
-      500,
+      520,
       300
      ]
     },
@@ -3983,7 +3983,7 @@
      "id": "fabrikarbeiter",
      "script_name": "Fabrikarbeiter",
      "pos": [
-      560,
+      598,
       300
      ]
     }

@@ -38,6 +38,7 @@ const VARIANTEN := {
 	"welt-4": {
 		"testbild": ["R1"],
 		"sitcom_kueche": ["R3", "R6", "R3+R6"],
+		"savanne": ["R4b+R4"],
 		"friedhof": ["W4_ZOMBIES_START", "R5b"],
 		"spukhaus_keller": ["R6"],
 		"fondue_fabrik": ["R10c"],

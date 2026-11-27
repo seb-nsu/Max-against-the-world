@@ -39,7 +39,6 @@ height = 360
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=336423266]
 
 [node name="Boden" parent="WalkableAreas" unique_id=1763892352 instance=ExtResource("2_7uwp7")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(90, 300, 230, 218, 350, 218, 600, 300, 640, 300, 640, 358, 0, 358, 0, 320)])
 
 [node name="Props" type="Node2D" parent="." unique_id=1268356859]
 
@@ -171,7 +170,7 @@ position = Vector2(320, 330)
 position = Vector2(170, 320)
 
 [node name="CharacterFledermann *" parent="Characters" unique_id=1569251706 instance=ExtResource("28_kol83")]
-position = Vector2(300, 120)
+position = Vector2(354, 160)
 
 [node name="CharacterWonderWilma *" parent="Characters" unique_id=284281013 instance=ExtResource("29_74rfs")]
 position = Vector2(470, 320)

@@ -268,7 +268,7 @@ kapitolis:
     von_empfang: [320, 330]
   figuren:
     super_siegfried: [170, 320]
-    fledermann: [300, 120]
+    fledermann: [354, 160]             # hängt kopfüber am Laternenarm (Bild fledermann_kopfueber)
     wonder_wilma: [470, 320]
   hotspots:
     umhaenge_schild_nicht_der_fledermann: {rect: [115, 145, 65, 95], gehe: [150, 310]}
@@ -298,10 +298,10 @@ fondue_fabrik:
     start: [320, 330]
     von_kapitolis: [600, 300]
   figuren:
-    super_siegfried: [420, 300]
-    fledermann: [460, 296]
-    wonder_wilma: [500, 300]
-    fabrikarbeiter: [560, 300]
+    super_siegfried: [375, 300]
+    fledermann: [445, 296]
+    wonder_wilma: [520, 300]
+    fabrikarbeiter: [598, 300]
   hotspots:
     suchscheinwerfer: {rect: [160, 0, 115, 65], gehe: [220, 290]}
     bottiche: {rect: [100, 140, 210, 125], gehe: [200, 300]}
