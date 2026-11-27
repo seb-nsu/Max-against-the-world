@@ -162,6 +162,18 @@ Restpunkte aus der Umsetzung der Arbeitspakete AP-01 bis AP-11 (Stand je Paket i
 | W3-13 | Anspieltest über den echten Klick- und Gesprächsweg auch für Welt 1 und Welt 2 (L-S01, Vorbild `welt_3_anspiel.gd`) | Claude | `game/tests/` |
 | W3-14 | Rest aus AP-11 (Workflow): Statusliste aus den Daten erzeugen statt von Hand (WF-04), KI-Protokoll um Seed, Status, Kosten und Nacharbeit erweitern und Ist-Kosten Welt 3 mit Kontostand nachtragen (WF-05, WF-10), Lauf-Rig und Bein-Prüfung mit Grenzwerten ins Repo (WF-08, WF-09), Originale als PNG (WF-12), CI-Cache und Pfadfilter (WF-13), Werkzeug-Rezepte aus den Lessons ins `liesmich.md` (WF-15) | Claude; Kontostände Sebastian (AI Studio) | `review/2026-11-20/arbeitspakete.md` (AP-11) |
 
+## UX-Review (27. November 2026)
+
+Aus der Durchsicht aller Repositories (Rolle UI/UX-Designer und Anwender). Ziel: Spielen ohne Installation, einfacher Einstieg. Sebastian hat diese Punkte an das Projekt übergeben.
+
+| Nr. | Was offen ist | Wer, was zu tun ist | Besitzer-Datei |
+| --- | --- | --- | --- |
+| U1 | Der Web-Build läuft unter https://seb-nsu.github.io/Max-against-the-world/, steht aber nur in `game/README.md`. Wer das Repository öffnet, findet ihn nicht | Claude: Link „Im Browser spielen“ in die erste Zeile der Haupt-README (wie bei Bitschmiede) | `README.md` |
+| U2 | Name uneinheitlich: Repository „Max against the world“, Titel „Couch Quest – Max against the worlds“ (mit „s“) | Sebastian entscheidet die Schreibweise; danach README, `project.godot` und Pages-Titel angleichen | `01-konzept.md` |
+| U3 | Die Haupt-README richtet sich nur an Autoren (Welt-Tabellen, Skripte); Spieler und Tester finden keine Steuerung | Claude: Abschnitt „Spielen“ mit der Steuerung aus `game/README.md` (Maus, Gamepad) in die Haupt-README | `README.md`, `05-spielsysteme.md` (UI) |
+| U4 | F5 ist im Godot-Editor „Starten“ und im Spiel „Schnellspeichern“; für Tester verwirrend | Sebastian entscheidet: andere Tasten (z. B. F6/F7) oder Hinweis im Pausemenü | `05-spielsysteme.md` (Speichern) |
+| U5 | Die Steuerung ist reich (Rechtsklick, Doppelklick, Pixel ziehen, Tab, Shift). Ein kurzes Einblenden beim ersten Spielen fehlt; bisher steht sie nur in der README | Claude: Hinweis-Overlay beim ersten Start im Prolog, abschaltbar, mit Gamepad-Variante; im Zusammenhang mit P9 (Hinweissystem) testen | `05-spielsysteme.md` (Hinweissystem, UI) |
+
 ## Automatisierung
 
 Alle sechzehn Ideen sind in `03-produktion.md` (Abschnitt Automatisierung) mit Nutzen, Aufwand und Stufe beschrieben. Hier stehen nur die, an denen noch etwas offen ist. Erledigt und deshalb gestrichen: A13 (`tools/pruefen.py`), A14 (`tools/spieldaten.py`) und A16 (`game/tests/bildschirm_vergleich.gd`). Die Dokument-Prüfung deckt auch den Dokument-Teil von A2 ab.
