@@ -1,15 +1,21 @@
 {
  "bild": [
-  74,
-  196
+  94,
+  199
  ],
  "animationen": {
   "idle": {
    "von": 0,
-   "bilder": 1,
-   "ms": 500,
+   "bilder": 4,
+   "ms": 320,
+   "schleife": true
+  },
+  "talk": {
+   "von": 4,
+   "bilder": 4,
+   "ms": 150,
    "schleife": true
   }
  },
- "quelle": "tools/grafik_w4/figuren_stand.py (fabrikarbeiter)"
+ "quelle": "tools/grafik_w4/reden_ruhe.py (fabrikarbeiter) aus dem Stand von tools/grafik_w4/figuren_stand.py"
 }

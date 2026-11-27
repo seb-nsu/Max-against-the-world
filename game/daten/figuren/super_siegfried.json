@@ -1,15 +1,21 @@
 {
  "bild": [
-  70,
-  216
+  76,
+  218
  ],
  "animationen": {
   "idle": {
    "von": 0,
-   "bilder": 1,
-   "ms": 500,
+   "bilder": 10,
+   "ms": 320,
+   "schleife": true
+  },
+  "talk": {
+   "von": 10,
+   "bilder": 4,
+   "ms": 140,
    "schleife": true
   }
  },
- "quelle": "tools/grafik_w4/figuren_stand.py (super_siegfried)"
+ "quelle": "tools/grafik_w4/reden_ruhe.py (super_siegfried) aus dem Stand von tools/grafik_w4/figuren_stand.py"
 }

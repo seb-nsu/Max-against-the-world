@@ -1,0 +1,47 @@
+{
+ "knochen": [
+  {
+   "name": "koerper",
+   "eltern": null,
+   "gelenk": [
+    65,
+    0
+   ],
+   "spitze": [
+    65,
+    192
+   ],
+   "z": 1
+  }
+ ],
+ "bewegungen": {
+  "idle": {
+   "bilder": 4,
+   "ms": 340,
+   "posen": [
+    {},
+    {
+     "koerper": 0.012
+    },
+    {},
+    {
+     "koerper": -0.012
+    }
+   ]
+  },
+  "talk": {
+   "bilder": 4,
+   "ms": 160,
+   "posen": [
+    {},
+    {
+     "koerper": 0.025
+    },
+    {},
+    {
+     "koerper": -0.025
+    }
+   ]
+  }
+ }
+}

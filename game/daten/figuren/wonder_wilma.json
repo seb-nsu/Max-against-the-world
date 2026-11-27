@@ -1,15 +1,21 @@
 {
  "bild": [
-  108,
-  196
+  120,
+  198
  ],
  "animationen": {
   "idle": {
    "von": 0,
-   "bilder": 1,
-   "ms": 500,
+   "bilder": 4,
+   "ms": 320,
+   "schleife": true
+  },
+  "talk": {
+   "von": 4,
+   "bilder": 4,
+   "ms": 140,
    "schleife": true
   }
  },
- "quelle": "tools/grafik_w4/figuren_stand.py (wonder_wilma)"
+ "quelle": "tools/grafik_w4/reden_ruhe.py (wonder_wilma) aus dem Stand von tools/grafik_w4/figuren_stand.py"
 }

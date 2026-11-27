@@ -1,15 +1,21 @@
 {
  "bild": [
-  198,
-  115
+  206,
+  117
  ],
  "animationen": {
   "idle": {
    "von": 0,
-   "bilder": 1,
-   "ms": 500,
+   "bilder": 4,
+   "ms": 320,
+   "schleife": true
+  },
+  "talk": {
+   "von": 4,
+   "bilder": 4,
+   "ms": 150,
    "schleife": true
   }
  },
- "quelle": "tools/grafik_w4/figuren_stand.py (nashorn)"
+ "quelle": "tools/grafik_w4/reden_ruhe.py (nashorn) aus dem Stand von tools/grafik_w4/figuren_stand.py"
 }
