@@ -71,7 +71,9 @@ SKIZZE_SATZ = ("Use the attached sketch only for the position and size of object
                "not for style, colors or text. Leave the orange marked spots empty.")
 ROHBAU_SATZ = ("Use the attached grey blockout only for layout, perspective, horizon height and the size "
                "of every object relative to the 1.75 m person; paint in the style of the reference image, "
-               "do not copy the grey colours, do not paint any people or animals.")
+               "do not copy the grey colours, do not paint any people or animals. If a labelled blockout or "
+               "a layout sketch is attached as well, its labels, boxes, dashed outlines, green exit markers and "
+               "grey person are notes only: never paint them.")
 DUESTER = ("Keller", "Kammer", "Thronsaal", "Turm")
 OHNE_SKIZZE = ("welt-3", "welt-4")
 AUSSEN_MARKE = "**Außenszenen** (Baustein KONZEPT-AUSSEN):"
@@ -927,9 +929,10 @@ def datei_bauen(name, konzept, konzept_aussen, bausteine):
     anleitung = ["Räume: je Szene den Block komplett in ChatGPT oder Gemini kopieren und die Layout-Skizze als",
                  "Bild anhängen. Danach Prüfliste und Umwandeln wie in `../00-stil-und-werkzeuge.md` (Ablauf pro Szene)."]
     if rb:
-        anleitung = ["Räume: je Szene den Block komplett in Gemini kopieren und den Rohbau (graues Blender-Bild) als",
-                     "Bild anhängen, dazu wie immer das Stil-Referenzbild. Danach Prüfliste und Umwandeln wie in",
-                     "`../00-stil-und-werkzeuge.md` (Ablauf pro Szene)."]
+        anleitung = ["Räume: je Szene den Block komplett in Gemini kopieren und anhängen: den Rohbau (graues Blender-Bild),",
+                     "den Rohbau mit Notizen (`…_rohbau_notiz.png`) und die Layout-Skizze, dazu wie immer das",
+                     "Stil-Referenzbild (Sebastian, 27. November 2026). Grüne Ausgangsmarken und Beschriftungen danach",
+                     "im Bild prüfen. Danach Prüfliste und Umwandeln wie in `../00-stil-und-werkzeuge.md` (Ablauf pro Szene)."]
     elif name in OHNE_SKIZZE:
         anleitung = ["Räume: je Szene den Block komplett in ChatGPT oder Gemini kopieren. Keine Skizze anhängen: Für",
                      "diese Welt gibt es noch keine entworfenen Skizzen, die automatischen Raster widersprechen dem",
