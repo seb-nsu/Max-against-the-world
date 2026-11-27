@@ -1,0 +1,21 @@
+{
+ "bild": [
+  142,
+  203
+ ],
+ "animationen": {
+  "idle": {
+   "von": 0,
+   "bilder": 4,
+   "ms": 320,
+   "schleife": true
+  },
+  "talk": {
+   "von": 4,
+   "bilder": 4,
+   "ms": 140,
+   "schleife": true
+  }
+ },
+ "quelle": "tools/grafik_w4/reden_ruhe.py (dr_werbepause) aus dem Stand von tools/grafik_w4/figuren_stand.py"
+}

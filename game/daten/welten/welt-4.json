@@ -68,7 +68,7 @@
    "skript_code": [
     "SIT"
    ],
-   "groesse": "640x360",
+   "groesse": "1280x360",
    "ausgaenge": [
     "gluecksrad",
     "savanne",
@@ -215,7 +215,7 @@
    "skript_code": [
     "WERB"
    ],
-   "groesse": "640x360",
+   "groesse": "1280x360",
    "ausgaenge": [
     "gluecksrad",
     "sitcom_kueche",
@@ -238,7 +238,7 @@
    "skript_code": [
     "EMPF"
    ],
-   "groesse": "640x360",
+   "groesse": "1280x360",
    "ausgaenge": [
     "kellerarchiv",
     "zappmanns_studio",
@@ -1275,6 +1275,8 @@
   "W4_ZEITSCHRIFT_BENUTZT",
   "W4_ZEITSCHRIFT_ANGESEHEN",
   "W4_ZEITSCHRIFT_GEFUNDEN",
+  "W4_APPLAUS_AUS",
+  "W4_QUOTE_ROT",
   "W4_ALLE_KANAELE",
   "W4_FOLGE_2015_GELESEN",
   "W4_MUTTER_FONDUE",

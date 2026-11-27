@@ -1,0 +1,21 @@
+{
+ "bild": [
+  64,
+  58
+ ],
+ "animationen": {
+  "idle": {
+   "von": 0,
+   "bilder": 4,
+   "ms": 300,
+   "schleife": true
+  },
+  "talk": {
+   "von": 4,
+   "bilder": 4,
+   "ms": 160,
+   "schleife": true
+  }
+ },
+ "quelle": "tools/grafik_w4/reden_ruhe.py (flimmer) aus dem Stand von tools/grafik_w4/figuren_stand.py"
+}

@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://dq7sowc7u6ypi"]
 
-[ext_resource type="Script" path="res://game/rooms/spukhaus_halle/room_spukhaus_halle.gd" id="1_lk73u"]
+[ext_resource type="Script" uid="uid://deui87fs2drpo" path="res://game/rooms/spukhaus_halle/room_spukhaus_halle.gd" id="1_lk73u"]
 [ext_resource type="PackedScene" uid="uid://vwqkyu3qs20x" path="res://game/rooms/spukhaus_halle/walkable_areas/boden/walkable_area_boden.tscn" id="2_1h7g3"]
 [ext_resource type="PackedScene" uid="uid://cj7rgt371skk7" path="res://game/rooms/spukhaus_halle/props/background/prop_background.tscn" id="3_ttiec"]
-[ext_resource type="Texture2D" uid="uid://b4myue8idoqxr" path="res://grafik/platzhalter/raum_spukhaus_halle.png" id="4_y1dfq"]
+[ext_resource type="Texture2D" uid="uid://bncwnaddbek5v" path="res://grafik/hintergruende/w4_bg_spukhaus_halle_v01.png" id="4_1h7g3"]
 [ext_resource type="PackedScene" uid="uid://c744lbeqjj78m" path="res://game/rooms/spukhaus_halle/hotspots/lichterkette/hotspot_lichterkette.tscn" id="5_23s6n"]
 [ext_resource type="PackedScene" uid="uid://cl1a54mak5ka1" path="res://game/rooms/spukhaus_halle/hotspots/treppe/hotspot_treppe.tscn" id="6_q4qxd"]
 [ext_resource type="PackedScene" uid="uid://c1egi38femdyp" path="res://game/rooms/spukhaus_halle/hotspots/tapete/hotspot_tapete.tscn" id="7_3tf2g"]
@@ -23,62 +23,67 @@ height = 360
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=2099421818]
 
 [node name="Boden" parent="WalkableAreas" unique_id=544707742 instance=ExtResource("2_1h7g3")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(8, 280, 632, 280, 632, 356, 8, 356)])
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(0, 272, 440, 246, 470, 296, 640, 300, 640, 358, 0, 358)])
 
 [node name="Props" type="Node2D" parent="." unique_id=977433012]
 
 [node name="Background" parent="Props" unique_id=1388764212 instance=ExtResource("3_ttiec")]
 position = Vector2(320, 180)
-texture = ExtResource("4_y1dfq")
+texture = ExtResource("4_1h7g3")
 description = "UI_RAUM_SPUKHAUS_HALLE"
 
 [node name="Hotspots" type="Node2D" parent="." unique_id=450465890]
 
 [node name="Lichterkette" parent="Hotspots" unique_id=1523502235 instance=ExtResource("5_23s6n")]
-position = Vector2(120, 72)
+position = Vector2(340, 110)
 description = "UI_OBJ_LICHTERKETTE"
-baseline = 32
-walk_to_point = Vector2(0, 241)
+baseline = 20
+walk_to_point = Vector2(-20, 180)
+interaction_polygon = PackedVector2Array(-220, -20, 220, -20, 220, 20, -220, 20)
 
 [node name="Treppe" parent="Hotspots" unique_id=1952510765 instance=ExtResource("6_q4qxd")]
-position = Vector2(253, 72)
+position = Vector2(545, 177.5)
 description = "UI_OBJ_TREPPE"
-baseline = 32
-walk_to_point = Vector2(0, 241)
+baseline = 117
+walk_to_point = Vector2(-45, 132.5)
+interaction_polygon = PackedVector2Array(-95, -117.5, 95, -117.5, 95, 117.5, -95, 117.5)
 
 [node name="Tapete" parent="Hotspots" unique_id=258130930 instance=ExtResource("7_3tf2g")]
-position = Vector2(387, 72)
+position = Vector2(305, 170)
 description = "UI_OBJ_TAPETE"
-baseline = 32
-walk_to_point = Vector2(0, 241)
+baseline = 30
+walk_to_point = Vector2(-5, 120)
+interaction_polygon = PackedVector2Array(-125, -30, 125, -30, 125, 30, -125, 30)
 
 [node name="NebelInDerHalle" parent="Hotspots" unique_id=1223904703 instance=ExtResource("8_p7eoj")]
-position = Vector2(520, 72)
+position = Vector2(60, 335)
 description = "UI_OBJ_NEBEL_IN_DER_HALLE"
-baseline = 32
-walk_to_point = Vector2(0, 241)
+baseline = 25
+walk_to_point = Vector2(20, -15)
+interaction_polygon = PackedVector2Array(-60, -25, 60, -25, 60, 25, -60, 25)
 
 [node name="AusgangSpukhausKeller" parent="Hotspots" unique_id=496265984 instance=ExtResource("9_uodo8")]
-position = Vector2(26.0, 210.0)
+position = Vector2(85, 175)
 description = "UI_RAUM_SPUKHAUS_KELLER"
-baseline = 69
-walk_to_point = Vector2(22.0, 110.0)
+baseline = 90
+walk_to_point = Vector2(25, 113)
 cursor = 9
+interaction_polygon = PackedVector2Array(-65, -90, 65, -90, 65, 90, -65, 90)
 
 [node name="Regions" type="Node2D" parent="." unique_id=337218105]
 
 [node name="Markers" type="Node2D" parent="." unique_id=711710065]
 
 [node name="Start" parent="Markers" unique_id=1430276581 instance=ExtResource("10_rystv")]
-position = Vector2(320, 320)
+position = Vector2(320, 330)
 
 [node name="VonSpukhausKeller" parent="Markers" unique_id=310619718 instance=ExtResource("11_karf5")]
-position = Vector2(48, 320)
+position = Vector2(110, 288)
 
 [node name="Characters" type="Node2D" parent="." unique_id=793203151]
 
 [node name="CharacterOpa *" parent="Characters" unique_id=792275399 instance=ExtResource("12_mmpv3")]
-position = Vector2(200, 309)
+position = Vector2(330, 110)
 
 [node name="CharacterFbiAgent *" parent="Characters" unique_id=1954182870 instance=ExtResource("13_cm0l1")]
-position = Vector2(440, 309)
+position = Vector2(390, 300)

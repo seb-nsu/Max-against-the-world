@@ -407,3 +407,158 @@ Offene Grafik in Welt 3: Max in der Pfütze bei der Ankunft (F21), fliegender Lo
 | W3-N03 | Kochbuch (Regel 2) | Nahansicht | welt3/nahansichten/W3-N03_*.png (Sebastian, Gemini, 20.11.; Schrift perspektivisch mit tools/nahansichten_welt3_schrift.py, Entwürfe in nahansichten/v1) | ja: welt3/nahansichten/fertig/kochbuch.png und _en.png | eingebaut, in main (PR #43), Nacharbeit auf Zweig | Fassung 3 mit eigener Pixelschrift ohne Verzerrung (AP-08) |
 | W3-N04 | Kritzelei (Regel 3) | Nahansicht | welt3/nahansichten/W3-N04_*.png (Sebastian, Gemini, 20.11.; Schrift perspektivisch mit tools/nahansichten_welt3_schrift.py, Entwürfe in nahansichten/v1) | ja: welt3/nahansichten/fertig/kritzelei_kammer_2.png und _en.png | eingebaut, in main (PR #43), Nacharbeit auf Zweig | Fassung 3 mit eigener Pixelschrift ohne Verzerrung (AP-08) |
 | W3-N05 | Morse-Tabelle (Rätsel 13) | Nahansicht | welt3/nahansichten/W3-N05_*.png (Sebastian, Gemini, 20.11.; Schrift perspektivisch mit tools/nahansichten_welt3_schrift.py, Entwürfe in nahansichten/v1) | ja: welt3/nahansichten/fertig/morse_tabelle.png und _en.png | eingebaut, in main (PR #43), Nacharbeit auf Zweig | Fassung 3 mit eigener Pixelschrift ohne Verzerrung (AP-08) |
+
+## Welt 4
+
+Angelegt am 26. November 2026 aus `fertige-prompts/welt-4.md` (138 IDs, noch kein Bild erzeugt, Zweig `claude/project-thread-pmnx1g`). Rohbau aller Räume unter `docs/grafik/skizzen/welt-4/rohbau/`. Nach jeder Runde hier nachführen (Quelle, gebaut, im Spiel, offen), keine weiteren Offen-Listen.
+
+**Stand 27. November 2026 (Zweig `claude/project-thread-pmnx1g`, PR #48):** Alle Räume, Gegenstände und Nahansichten aus Gemini (Rohbau, Notiz und Skizze als Vorlage; Nahansichten mit ihrem Raum als Stilvorlage). Räume gepixelt mit `tools/grafik_w4/raeume_pixelieren.py` (Zustände nur an der geänderten Stelle eingesetzt), Layout `tools/layout/welt-4.yaml` auf die Bilder gemessen, Nahansichten mit Schrift aus `tools/nahansichten_welt4_schrift.py`. Figuren (27.11. abends): alle 30 Konzeptblätter von Sebastian als Stand-Sprites, 28 davon im Spiel (zweite Posen als Bildvariante je Raum oder Rätselstand: Fledermann kopfüber in Kapitolis, Vater auf der Kiste, Löwe mit Krone, Gepard liegt). Reden und Ruhe (27.11. nachts, `tools/grafik_w4/reden_ruhe.py`): alle 30 Figuren atmen und reden, Menschen und Hyäne/Löwe mit Mund, übrige Tiere mit Kopfnicken, Flimmer/Geist/Flamingos schweben, Fledermann kopfüber pendelt; Siegfried gähnt in der Ruhe-Schleife. Läufe, Posenbögen und Bewegungen sind noch offen.
+
+| Status | Anzahl |
+| --- | --- |
+| eingebaut auf Zweig (PR #48) | 22 |
+| Figur eingebaut auf Zweig, Stand mit Ruhe und Reden (Lauf, Gesten offen) | 28 |
+| Bild fertig, noch nicht im Spiel | 8 |
+| offen | 80 |
+| **gesamt** | **138** |
+
+| ID | Titel | Art | Quelle (Bogen/Bild) | Bewegung gebaut | im Spiel | offen: Grund, wer erledigt |
+| --- | --- | --- | --- | --- | --- | --- |
+| W4-R01 | Testbild | Raum | Welt 4/Hintergründe/korrigiert/W4-R01_testbild_a/b/c (Gemini, 27.11.) | gepixelt (`tools/grafik_w4/raeume_pixelieren.py`): w4_bg_testbild_v01, _geordnet (R1), _graustufen | eingebaut auf Zweig (PR #48) | _graustufen noch ohne Verwendung im Spiel |
+| W4-R02 | Rauschen zwischen den Sendern | Raum | Welt 4/Hintergründe/korrigiert/W4-R02_rauschen | gepixelt (`tools/grafik_w4/raeume_pixelieren.py`): w4_bg_rauschen_v01 | eingebaut auf Zweig (PR #48) | Figuren fehlen noch; Skala und Laufbereich im Spiel anspielen |
+| W4-R03 | Glücksrad-Studio | Raum | Welt 4/Hintergründe/korrigiert/W4-R03_gluecksrad | gepixelt (`tools/grafik_w4/raeume_pixelieren.py`): w4_bg_gluecksrad_v01 | eingebaut auf Zweig (PR #48) | Figuren fehlen noch; Skala und Laufbereich im Spiel anspielen |
+| W4-R04 | Sitcom-Küche | Raum | Welt 4/Hintergründe/korrigiert/W4-R04_sitcom_kueche_a/b/c (Gemini, 27.11.) | gepixelt (`tools/grafik_w4/raeume_pixelieren.py`): w4_bg_sitcom_kueche_v01, _scherben (R3), _tuer_weg (R6), _scherben_tuer_weg | eingebaut auf Zweig (PR #48) | Figuren fehlen noch; Skala und Laufbereich im Spiel anspielen |
+| W4-R05 | Savanne | Raum | Welt 4/Hintergründe/korrigiert/W4-R05_savanne | gepixelt (`tools/grafik_w4/raeume_pixelieren.py`): w4_bg_savanne_v01 | eingebaut auf Zweig (PR #48) | Figuren fehlen noch; Skala und Laufbereich im Spiel anspielen |
+| W4-R06 | Musikvideo-Friedhof | Raum | Welt 4/Hintergründe/korrigiert/W4-R06_friedhof_a/b/c | gepixelt (`tools/grafik_w4/raeume_pixelieren.py`): w4_bg_friedhof_v01, _graeber_offen (W4_ZOMBIES_START), _tor_offen (R5b) | eingebaut auf Zweig (PR #48) | Figuren fehlen noch; Skala und Laufbereich im Spiel anspielen |
+| W4-R07 | Spukhaus, Keller | Raum | Welt 4/Hintergründe/korrigiert/W4-R07_spukhaus_keller_a/b | gepixelt (`tools/grafik_w4/raeume_pixelieren.py`): w4_bg_spukhaus_keller_v01, _sitcomtuer (R6) | eingebaut auf Zweig (PR #48) | Figuren fehlen noch; Skala und Laufbereich im Spiel anspielen |
+| W4-R08 | Spukhaus, Halle | Raum | Welt 4/Hintergründe/korrigiert/W4-R08_spukhaus_halle_a/b | gepixelt (`tools/grafik_w4/raeume_pixelieren.py`): w4_bg_spukhaus_halle_v01, Lichterkette als Ambiente w4_lichterkette_v01 (2 Bilder) | eingebaut auf Zweig (PR #48) | Figuren fehlen noch; Skala und Laufbereich im Spiel anspielen |
+| W4-R09 | Kapitolis | Raum | Welt 4/Hintergründe/korrigiert/W4-R09_kapitolis_a/b | gepixelt (`tools/grafik_w4/raeume_pixelieren.py`): w4_bg_kapitolis_v01 (ohne Amboss), Amboss als Prop | eingebaut auf Zweig (PR #48) | Figuren fehlen noch; Skala und Laufbereich im Spiel anspielen |
+| W4-R10 | Fondue-Fabrik | Raum | Welt 4/Hintergründe/korrigiert/W4-R10_fondue_fabrik_a/b | gepixelt (`tools/grafik_w4/raeume_pixelieren.py`): w4_bg_fondue_fabrik_v01, _offen (R10c) | eingebaut auf Zweig (PR #48) | Figuren fehlen noch; Skala und Laufbereich im Spiel anspielen |
+| W4-R11 | Werbespot-Set | Raum | Welt 4/Hintergründe/korrigiert/W4-R11_werbespot_set_a/b | gepixelt (`tools/grafik_w4/raeume_pixelieren.py`): w4_bg_werbespot_set_v01, _leer (R11c) | eingebaut auf Zweig (PR #48) | Figuren fehlen noch; Skala und Laufbereich im Spiel anspielen |
+| W4-R12 | Empfang | Raum | Welt 4/Hintergründe/korrigiert/W4-R12_empfang (Panorama 32:9) | gepixelt (`tools/grafik_w4/raeume_pixelieren.py`): w4_bg_empfang_v01 (1280 breit) | eingebaut auf Zweig (PR #48) | Figuren fehlen noch; Skala und Laufbereich im Spiel anspielen |
+| W4-R13 | Zappmanns Studio | Raum | Welt 4/Hintergründe/korrigiert/W4-R13_zappmanns_studio_a/b/c | gepixelt (`tools/grafik_w4/raeume_pixelieren.py`): w4_bg_zappmanns_studio_v01, _applaus_aus, _quote_rot und beides (Kampf) | eingebaut auf Zweig (PR #48) | Figuren fehlen noch; Skala und Laufbereich im Spiel anspielen |
+| W4-R14 | Zappmanns erste Kindersendung | Raum | Welt 4/Hintergründe/korrigiert/W4-R14_kindersendung | gepixelt (`tools/grafik_w4/raeume_pixelieren.py`): w4_bg_kindersendung_v01 | – | Bild fertig, im Spiel noch nicht verwendet (Rückblende) |
+| W4-R15 | Kellerarchiv | Raum | Welt 4/Hintergründe/korrigiert/W4-R15_kellerarchiv | gepixelt (`tools/grafik_w4/raeume_pixelieren.py`): w4_bg_kellerarchiv_v01, Archivband als Prop ausgeschnitten | eingebaut auf Zweig (PR #48) | Figuren fehlen noch; Skala und Laufbereich im Spiel anspielen |
+| W4-F01 | Gerd Glück | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), Stand mit Ruhe und Reden | Lauf und Gesten fehlen noch |
+| W4-F02 | Trödel-Experte | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), Stand mit Ruhe und Reden | Lauf und Gesten fehlen noch |
+| W4-F03 | Flimmer | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), Stand mit Ruhe und Reden | Lauf und Gesten fehlen noch |
+| W4-F04 | Max auf dem Testbild | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | – | Stand fertig; Ankunftsbild noch nicht im Spiel |
+| W4-F05 | Sitcom-Vater | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), Stand mit Ruhe und Reden | Lauf und Gesten fehlen noch |
+| W4-F06 | Sitcom-Mutter | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), Stand mit Ruhe und Reden | Lauf und Gesten fehlen noch |
+| W4-F07 | Sitcom-Sohn | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), Stand mit Ruhe und Reden | Lauf und Gesten fehlen noch |
+| W4-F08 | Kommissar | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), Stand mit Ruhe und Reden | Lauf und Gesten fehlen noch |
+| W4-F09 | Erzähler | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), Stand mit Ruhe und Reden | Lauf und Gesten fehlen noch |
+| W4-F10 | Löwe | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), Stand mit Ruhe und Reden | Lauf und Gesten fehlen noch |
+| W4-F11 | Hyäne | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), Stand mit Ruhe und Reden | Lauf und Gesten fehlen noch |
+| W4-F12 | Gepard | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), Stand mit Ruhe und Reden | Lauf und Gesten fehlen noch |
+| W4-F13 | Geier | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), Stand mit Ruhe und Reden | Lauf und Gesten fehlen noch |
+| W4-F14 | Nashorn | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), Stand mit Ruhe und Reden | Lauf und Gesten fehlen noch |
+| W4-F15 | Flamingo | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), Stand mit Ruhe und Reden | Lauf und Gesten fehlen noch |
+| W4-F16 | Zombie | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), Stand mit Ruhe und Reden | Lauf und Gesten fehlen noch |
+| W4-F17 | Zombie im Grab | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), Stand mit Ruhe und Reden | Lauf und Gesten fehlen noch |
+| W4-F18 | Geist | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), Stand mit Ruhe und Reden | Lauf und Gesten fehlen noch |
+| W4-F19 | FBI-Agent | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), Stand mit Ruhe und Reden | Lauf und Gesten fehlen noch |
+| W4-F20 | Super-Siegfried | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), Stand mit Ruhe und Reden | Lauf und Gesten fehlen noch |
+| W4-F21 | Fledermann | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), Stand mit Ruhe und Reden | Lauf und Gesten fehlen noch |
+| W4-F22 | Wonder-Wilma | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), Stand mit Ruhe und Reden | Lauf und Gesten fehlen noch |
+| W4-F23 | Dr. Werbepause | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), Stand mit Ruhe und Reden | Lauf und Gesten fehlen noch |
+| W4-F24 | Fabrikarbeiter | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), Stand mit Ruhe und Reden | Lauf und Gesten fehlen noch |
+| W4-F25 | Empfangsdame | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), Stand mit Ruhe und Reden | Lauf und Gesten fehlen noch |
+| W4-F26 | Sicherheitsmann | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), Stand mit Ruhe und Reden | Lauf und Gesten fehlen noch |
+| W4-F27 | Zappmann | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), Stand mit Ruhe und Reden | Lauf und Gesten fehlen noch |
+| W4-F28 | Junger Zappmann | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), Stand mit Ruhe und Reden | Lauf und Gesten fehlen noch |
+| W4-F29 | Wettkandidat | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | eingebaut auf Zweig (PR #48), Stand mit Ruhe und Reden | Lauf und Gesten fehlen noch |
+| W4-F30 | Max als Käsemann | Figur | Welt 4/Figuren/ (Gemini, 27.11.; Zuordnung in `tools/grafik_w4/figuren_stand.py`) | Stand-Sprite (`tools/grafik_w4/figuren_stand.py`), zweite Posen als Bildvariante | – | Stand fertig; Käsemann nur im Comic-Kanal (Entscheidungen, W4_FERN_MAX_0280), Einbau mit Reden und Wurf |
+| W4-P01 | Max Fernbedienung | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P02 | Max Lichtröhre | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P03 | Max Fabrik | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P04 | Käsemann | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P05 | Pixel Welt 4 | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P06 | Gerd Glück | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P07 | Gerd Glück 2 | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P08 | Trödel-Experte | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P09 | Sitcom-Vater | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P10 | Sitcom-Vater 2 | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P11 | Sitcom-Mutter | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P12 | Sitcom-Sohn | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P13 | Kommissar | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P14 | Kommissar 2 | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P15 | Erzähler | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P16 | FBI-Agent | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P17 | Super-Siegfried | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P18 | Fledermann | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P19 | Wonder-Wilma | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P20 | Dr. Werbepause | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P21 | Dr. Werbepause 2 | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P22 | Fabrikarbeiter | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P23 | Empfangsdame | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P24 | Sicherheitsmann | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P25 | Zappmann | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P26 | Zappmann 2 | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P27 | Zappmann 3 | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P28 | Junger Zappmann | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-P29 | Wettkandidat | Posenbogen | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B01 | Flimmer: Flackern | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B02 | Flimmer: Aus dem Rauschen ploppen | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B03 | Flimmer: Kichern | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B04 | Gepard: Sprinten und umfallen | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B05 | Hyäne: Lachen, Krone fällt | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B06 | Hyäne: Lachend abgeführt | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B07 | Löwe: Schmollen | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B08 | Löwe: Sprung und Krone | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B09 | Geier: Eincremen | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B10 | Nashorn: Schnarchen | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B11 | Flamingo: Tuscheln | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B12 | Zombies: Aufstehen aus dem Grab | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B13 | Geister: Vorbeischweben | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B14 | Geister: Erschrecken und fliehen | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B15 | Pixel: Sternchen nach dem Amboss | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B16 | Glücksrad: Rad dreht | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B17 | Glücksrad-Studio: Preis-Podest dreht | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B18 | Sitcom-Küche: Fondue-Topf blubbert | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B19 | Sitcom-Küche: Lachkonserve wackelt | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B20 | Sitcom-Küche: Keksdose zerspringt | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B21 | Savanne: Regenwolke über dem Schlagzeug | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B22 | Savanne: Krabbelkiste | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B23 | Musikvideo-Friedhof: Leuchtfliesen | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B24 | Musikvideo-Friedhof: Discokugel | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B25 | Musikvideo-Friedhof: Hände winken | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B26 | Musikvideo-Friedhof: Tor schwingt auf | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B27 | Spukhaus, Keller: Röhrenfernseher | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B28 | Spukhaus, Keller: Ketten fallen | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B29 | Kapitolis: Amboss fällt | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B30 | Fondue-Fabrik: Käse blubbert | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B31 | Fondue-Fabrik: Laufband | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B32 | Fondue-Fabrik: Deckel springt auf | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B33 | Fondue-Fabrik: Käse-Platsch | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B34 | Werbespot-Set: Couch-Magnet brummt | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B35 | Werbespot-Set: Stinkwolke | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B36 | Empfang: Monitor am Tresen | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B37 | Zappmanns Studio: Monitorwand | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B38 | Zappmanns Studio: Band klatscht | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B39 | Zappmanns Studio: Quote fällt | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B40 | Max: Comic-Look-Wechsel | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B41 | Umschalten: Effekt | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B42 | Pause: Effekt | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B43 | Rückspulen: Effekt | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B44 | Stumm: Effekt | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B45 | Sendersuchlauf: Effekt | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B46 | Kanal 999: Senderanzeige | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B47 | Lampenflackern: Effekt | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B48 | WRRUMM-Blase: Effekt | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B49 | Testbild: Balken rasten ein | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B50 | Rauschen: Geisterbilder | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-B51 | Müllpresse: Wände rücken, Auge blinzelt | Bewegung | – | – | – | Claude (Meshy oder Gemini-API), nach dem Konzeptblatt |
+| W4-G01 | Tasten-Symbole (2×3, 32×32) | Gegenstände | Welt 4/Gegenstände/W4-G01_*.png (Gemini, 27.11.) | ja: taste_umschalten, _pause, _rueckspulen, _stumm, _untertitel, _sendersuchlauf (Icons 36 px), Props taste_stumm und taste_sendersuchlauf | eingebaut auf Zweig (PR #48) |  |
+| W4-G02 | Splitscreen-Adapter (1×1) | Gegenstände | Welt 4/Gegenstände/W4-G02_*.png (Gemini, 27.11.) | ja: splitscreen_adapter | eingebaut auf Zweig (PR #48) |  |
+| W4-G03 | Genre-Ketten (2×3) | Gegenstände | Welt 4/Gegenstände/W4-G03_*.png (Gemini, 27.11.) | ja: bananenschale (frisch, faulig, stinkbombe), fondue_kaese (normal, leuchtend, wunderkaese), bettlaken (bettlaken, superhelden_anzug), dazu Props | eingebaut auf Zweig (PR #48) |  |
+| W4-G04 | Sender (2×2) | Gegenstände | Welt 4/Gegenstände/W4-G04_*.png (Gemini, 27.11.) | ja: programmzeitschrift (Icon) | eingebaut auf Zweig (PR #48) |  |
+| W4-G05 | Comic-Panels (1×4, Sortier-Bildschirm, kein Inventar) | Gegenstände | Welt 4/Gegenstände/W4-G05_*.png (Gemini, 27.11.) | – | – | Bilder liegen bereit (Max als Held, Comic-Stadt); Sortier-Bildschirm noch nicht gebaut |
+| W4-G06 | Drehbuch (1×1) | Gegenstände | Welt 4/Gegenstände/W4-G06_*.png (Gemini, 27.11.) | ja: drehbuch (Icon und Prop) | eingebaut auf Zweig (PR #48) |  |
+| W4-G07 | Lichtröhre Deluxe (1×1) | Gegenstände | Welt 4/Gegenstände/W4-G07_*.png (Gemini, 27.11.) | ja: lichtroehre_deluxe | eingebaut auf Zweig (PR #48) |  |
+| W4-G08 | Archivband (1×1) | Gegenstände | Welt 4/Gegenstände/W4-G08_*.png (Gemini, 27.11.) | ja: archivband (Icon, Prop aus dem Kellerarchiv) | eingebaut auf Zweig (PR #48) |  |
+| W4-G09 | Szenen-Requisiten (2×3, kein Inventar) | Gegenstände | Welt 4/Gegenstände/W4-G09_*.png (Gemini, 27.11.) | – | – | Bilder liegen bereit, noch nicht platziert |
+| W4-G10 | Deko Welt 4 (3×3) | Gegenstände | Welt 4/Gegenstände/W4-G10_*.png (Gemini, 27.11.) | – | – | Bilder liegen bereit, noch nicht platziert |
+| W4-N01 | Programmzeitschrift (Rätsel 4, 5, 9, 11) | Nahansicht | Welt 4/Nahansichten/W4-N01_programmzeitschrift.png (Gemini, 27.11., Raum als Stilvorlage) | ja: nahansichten/programmzeitschrift.png und _en.png, Schrift mit `tools/nahansichten_welt4_schrift.py` | eingebaut auf Zweig (PR #48) |  |
+| W4-N02 | Messingschild am Porträt (Rätsel 12) | Nahansicht | Welt 4/Nahansichten/W4-N02_messingschild.png (Gemini, 27.11., Raum als Stilvorlage) | ja: nahansichten/messingschild.png und _en.png, Schrift mit `tools/nahansichten_welt4_schrift.py` | – | Bild fertig; das Spiel zeigt beim Porträt noch keine Nahansicht (Max liest das Schild vor) |
+| W4-N03 | Pausentafel Mitternachts-TV (Rätsel 5) | Nahansicht | Welt 4/Nahansichten/W4-N03_pausentafel.png (Gemini, 27.11., Raum als Stilvorlage) | ja: nahansichten/pausentafel.png und _en.png, Schrift mit `tools/nahansichten_welt4_schrift.py` | – | Bild fertig; noch nicht im Spiel verwendet |

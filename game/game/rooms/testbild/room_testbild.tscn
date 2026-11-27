@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://brdv2p3ys0fju"]
 
-[ext_resource type="Script" path="res://game/rooms/testbild/room_testbild.gd" id="1_b1oc7"]
+[ext_resource type="Script" uid="uid://bg3gwx707tdh8" path="res://game/rooms/testbild/room_testbild.gd" id="1_b1oc7"]
 [ext_resource type="PackedScene" uid="uid://7m31nnqj32ll" path="res://game/rooms/testbild/walkable_areas/boden/walkable_area_boden.tscn" id="2_jn42v"]
 [ext_resource type="PackedScene" uid="uid://bp0iruvlgvbo3" path="res://game/rooms/testbild/props/background/prop_background.tscn" id="3_wn1vi"]
-[ext_resource type="Texture2D" uid="uid://2pg1hlkfwaau" path="res://grafik/platzhalter/raum_testbild.png" id="4_lsls4"]
+[ext_resource type="Texture2D" uid="uid://c0iclmm6rtige" path="res://grafik/hintergruende/w4_bg_testbild_v01.png" id="4_jn42v"]
 [ext_resource type="PackedScene" uid="uid://csb58of1x5xj4" path="res://game/rooms/testbild/hotspots/balken/hotspot_balken.tscn" id="5_6ej3u"]
 [ext_resource type="PackedScene" uid="uid://tf504skl0ksw" path="res://game/rooms/testbild/hotspots/testkreis/hotspot_testkreis.tscn" id="6_op5dn"]
 [ext_resource type="PackedScene" uid="uid://dnukfk6q06m6f" path="res://game/rooms/testbild/hotspots/rauschen_am_rand/hotspot_rauschen_am_rand.tscn" id="7_sstfj"]
@@ -21,41 +21,45 @@ height = 360
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=97345365]
 
 [node name="Boden" parent="WalkableAreas" unique_id=234594936 instance=ExtResource("2_jn42v")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(8, 280, 632, 280, 632, 356, 8, 356)])
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(100, 252, 540, 252, 636, 300, 636, 356, 4, 356, 4, 300)])
 
 [node name="Props" type="Node2D" parent="." unique_id=80238654]
 
 [node name="Background" parent="Props" unique_id=537083678 instance=ExtResource("3_wn1vi")]
 position = Vector2(320, 180)
-texture = ExtResource("4_lsls4")
+texture = ExtResource("4_jn42v")
 description = "UI_RAUM_TESTBILD"
 
 [node name="Hotspots" type="Node2D" parent="." unique_id=1967526242]
 
 [node name="Balken" parent="Hotspots" unique_id=1348235037 instance=ExtResource("5_6ej3u")]
-position = Vector2(142.0, 72)
+position = Vector2(320.5, 145)
 description = "UI_OBJ_BALKEN"
-baseline = 32
-walk_to_point = Vector2(-0.666667, 241)
+baseline = 105
+walk_to_point = Vector2(-0.5, 155)
+interaction_polygon = PackedVector2Array(-212.5, -105, 212.5, -105, 212.5, 105, -212.5, 105)
 
 [node name="Testkreis" parent="Hotspots" unique_id=1859349556 instance=ExtResource("6_op5dn")]
-position = Vector2(319.333, 72)
+position = Vector2(320, 20)
 description = "UI_OBJ_TESTKREIS"
-baseline = 32
-walk_to_point = Vector2(-0.666667, 241)
+baseline = 20
+walk_to_point = Vector2(0, 280)
+interaction_polygon = PackedVector2Array(-100, -20, 100, -20, 100, 20, -100, 20)
 
 [node name="RauschenAmRand" parent="Hotspots" unique_id=367278700 instance=ExtResource("7_sstfj")]
-position = Vector2(496.667, 72)
+position = Vector2(592.5, 125)
 description = "UI_OBJ_RAUSCHEN_AM_RAND"
-baseline = 32
-walk_to_point = Vector2(-0.666667, 241)
+baseline = 125
+walk_to_point = Vector2(-32.5, 175)
+interaction_polygon = PackedVector2Array(-47.5, -125, 47.5, -125, 47.5, 125, -47.5, 125)
 
 [node name="AusgangGluecksrad" parent="Hotspots" unique_id=1357359236 instance=ExtResource("8_ese24")]
-position = Vector2(26.0, 210.0)
+position = Vector2(89.5, 176)
 description = "UI_RAUM_GLUECKSRAD"
-baseline = 69
-walk_to_point = Vector2(22.0, 110.0)
+baseline = 76
+walk_to_point = Vector2(0.5, 88)
 cursor = 9
+interaction_polygon = PackedVector2Array(-27.5, -76, 27.5, -76, 27.5, 76, -27.5, 76)
 
 [node name="Regions" type="Node2D" parent="." unique_id=900535713]
 
@@ -65,9 +69,9 @@ cursor = 9
 position = Vector2(320, 320)
 
 [node name="VonGluecksrad" parent="Markers" unique_id=1298333449 instance=ExtResource("10_pfng4")]
-position = Vector2(48, 320)
+position = Vector2(100, 268)
 
 [node name="Characters" type="Node2D" parent="." unique_id=564992503]
 
 [node name="CharacterFlimmer *" parent="Characters" unique_id=1629242648 instance=ExtResource("11_ytct1")]
-position = Vector2(320, 309)
+position = Vector2(560, 300)

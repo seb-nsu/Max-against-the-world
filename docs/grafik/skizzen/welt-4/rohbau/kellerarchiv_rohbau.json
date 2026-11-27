@@ -1,0 +1,60 @@
+{
+ "raum": "kellerarchiv",
+ "breite": 1280,
+ "hoehe": 720,
+ "labels": [
+  [
+   "dusty shelves, tape boxes with blank labels",
+   284.6103096008301,
+   466.19964122772217
+  ],
+  [
+   "huge rusty TRASH COMPACTOR PIT full of tapes",
+   640.0,
+   458.53925228118896
+  ],
+  [
+   "ONE black VHS tape sticks out at the front",
+   675.7069396972656,
+   452.21704959869385
+  ],
+  [
+   "small eye on a stalk",
+   539.6416091918945,
+   361.40069246292114
+  ],
+  [
+   "grey service door at the top of the steps, back to the lobby",
+   1018.5226440429688,
+   164.72162246704102
+  ],
+  [
+   "flickering neon tube",
+   640.0,
+   95.34313201904297
+  ]
+ ],
+ "figuren": [
+  [
+   "tomcat 0.56 m",
+   297.4560356140137,
+   564.1540217399597,
+   417.12364196777344,
+   675.4526978731155
+  ],
+  [
+   "Max 1.75 m (front)",
+   67.89924621582031,
+   328.325514793396,
+   153.63279342651367,
+   694.9562358856201
+  ],
+  [
+   "Max (back of walk area)",
+   993.2741546630859,
+   310.5875301361084,
+   1080.5126953125,
+   623.2278835773468
+  ]
+ ]
+}

@@ -71,7 +71,9 @@ SKIZZE_SATZ = ("Use the attached sketch only for the position and size of object
                "not for style, colors or text. Leave the orange marked spots empty.")
 ROHBAU_SATZ = ("Use the attached grey blockout only for layout, perspective, horizon height and the size "
                "of every object relative to the 1.75 m person; paint in the style of the reference image, "
-               "do not copy the grey colours, do not paint any people or animals.")
+               "do not copy the grey colours, do not paint any people or animals. If a labelled blockout or "
+               "a layout sketch is attached as well, its labels, boxes, dashed outlines, green exit markers and "
+               "grey person are notes only: never paint them.")
 DUESTER = ("Keller", "Kammer", "Thronsaal", "Turm")
 OHNE_SKIZZE = ("welt-3", "welt-4")
 AUSSEN_MARKE = "**Außenszenen** (Baustein KONZEPT-AUSSEN):"
@@ -133,6 +135,22 @@ REIHENFOLGE = {
         "6. **Nahansichten:** W3-N01 bis W3-N05 (nichts anhängen, Schrift setzt Claude).", "",
         "Als PNG in voller Größe unter `E:\\Game Engine\\Grafiken\\assets` ablegen, Name mit der Nummer vorn "
         "(etwa `W3-F02_morphaeus.png`).", ""],
+    # Welt 4 (26. November 2026): gleiche Arbeitsteilung wie Welt 3, Reihenfolge nach dem Review vom 21.11.
+    "welt-4": [
+        "# Grundlagenbilder für Welt 4", "",
+        "Diese Bilder entstehen in Gemini, von oben nach unten. Posenbögen (W4-P), Bewegungen und Effekte "
+        "(W4-B) macht Claude danach über Meshy oder die Gemini-API, mit dem fertigen Konzeptblatt als Vorlage. "
+        "Der Stand jeder Nummer steht in `../status-alle-shots.md`, Abschnitt Welt 4.", "",
+        "1. **Räume mit Rohbau zuerst, die heiklen vorn:** W4-R04 Sitcom-Küche und W4-R07 Spukhaus, Keller "
+        "(nebeneinander prüfen: Tür an der Naht), W4-R13 Zappmanns Studio mit allen drei Fassungen, W4-R12 Empfang, "
+        "W4-R10 Fondue-Fabrik, W4-R05 Savanne. Danach die übrigen Räume.",
+        "2. **Tiere mit dem Gepard als Probelauf:** W4-F12 Gepard, dann sofort W4-B04 im Raum prüfen; erst wenn "
+        "er passt, W4-F10 Löwe, W4-F11 Hyäne, W4-F13 Geier, W4-F14 Nashorn, W4-F15 Flamingo.",
+        "3. **Menschen:** W4-F01 bis W4-F09, W4-F16 bis W4-F30 (Zweitposen im selben Chat aus dem Grundbild).",
+        "4. **Gegenstände und Nahansichten:** W4-G01 bis W4-G10, W4-N01 bis W4-N03 (nichts anhängen, Schrift "
+        "setzt Claude).", "",
+        "Als PNG in voller Größe unter `E:\\Game Engine\\Grafiken\\assets` ablegen, Name mit der Nummer vorn "
+        "(etwa `W4-F01_gerd_glueck.png`).", ""],
 }
 
 # Vertical Slice, Welt 1 Rätsel 1 bis 4 (03-produktion.md, Stufe 2), in Arbeitsreihenfolge.
@@ -911,9 +929,10 @@ def datei_bauen(name, konzept, konzept_aussen, bausteine):
     anleitung = ["Räume: je Szene den Block komplett in ChatGPT oder Gemini kopieren und die Layout-Skizze als",
                  "Bild anhängen. Danach Prüfliste und Umwandeln wie in `../00-stil-und-werkzeuge.md` (Ablauf pro Szene)."]
     if rb:
-        anleitung = ["Räume: je Szene den Block komplett in Gemini kopieren und den Rohbau (graues Blender-Bild) als",
-                     "Bild anhängen, dazu wie immer das Stil-Referenzbild. Danach Prüfliste und Umwandeln wie in",
-                     "`../00-stil-und-werkzeuge.md` (Ablauf pro Szene)."]
+        anleitung = ["Räume: je Szene den Block komplett in Gemini kopieren und anhängen: den Rohbau (graues Blender-Bild),",
+                     "den Rohbau mit Notizen (`…_rohbau_notiz.png`) und die Layout-Skizze, dazu wie immer das",
+                     "Stil-Referenzbild (Sebastian, 27. November 2026). Grüne Ausgangsmarken und Beschriftungen danach",
+                     "im Bild prüfen. Danach Prüfliste und Umwandeln wie in `../00-stil-und-werkzeuge.md` (Ablauf pro Szene)."]
     elif name in OHNE_SKIZZE:
         anleitung = ["Räume: je Szene den Block komplett in ChatGPT oder Gemini kopieren. Keine Skizze anhängen: Für",
                      "diese Welt gibt es noch keine entworfenen Skizzen, die automatischen Raster widersprechen dem",

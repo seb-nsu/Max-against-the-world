@@ -1,0 +1,84 @@
+{
+ "raum": "zappmanns_studio",
+ "breite": 1280,
+ "hoehe": 720,
+ "labels": [
+  [
+   "WALL OF MONITORS, each a different show (bars, wheel, kitchen, savanna, graveyard, comic)",
+   640.0,
+   93.35855484008789
+  ],
+  [
+   "open elevator door (back to the lobby)",
+   233.7500762939453,
+   210.31097888946533
+  ],
+  [
+   "host desk with a coffee mug",
+   394.8862075805664,
+   448.12341928482056
+  ],
+  [
+   "SHINY GOLDEN SOFA (center)",
+   640.0,
+   446.62814140319824
+  ],
+  [
+   "applause sign on a stand (lit / off)",
+   904.6279144287109,
+   202.01102256774902
+  ],
+  [
+   "tall RATINGS METER (bar almost full / dropped, red)",
+   1062.8933715820312,
+   161.3365888595581
+  ],
+  [
+   "studio camera on a pedestal (front right, cut by the edge)",
+   1207.1987915039062,
+   347.72316455841064
+  ],
+  [
+   "small band riser in the dark back right (silhouettes only, part of the background)",
+   879.4171142578125,
+   405.5508828163147
+  ]
+ ],
+ "figuren": [
+  [
+   "Zappmann 1.94 m",
+   667.1076202392578,
+   276.74736499786377,
+   759.5162200927734,
+   627.4859976768494
+  ],
+  [
+   "contestant (crayons)",
+   356.4369583129883,
+   306.59528732299805,
+   439.41394805908203,
+   607.0305705070496
+  ],
+  [
+   "tomcat 0.56 m",
+   458.6532211303711,
+   564.1540217399597,
+   579.2155456542969,
+   675.4526978731155
+  ],
+  [
+   "Max 1.75 m (front)",
+   67.89924621582031,
+   328.325514793396,
+   153.63279342651367,
+   694.9562358856201
+  ],
+  [
+   "Max (back of walk area)",
+   993.2741546630859,
+   310.5875301361084,
+   1080.5126953125,
+   623.2278835773468
+  ]
+ ]
+}

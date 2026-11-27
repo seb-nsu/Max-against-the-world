@@ -1,0 +1,84 @@
+{
+ "raum": "spukhaus_keller",
+ "breite": 1280,
+ "hoehe": 720,
+ "labels": [
+  [
+   "LEFT EDGE: stone steps up to a heavy door in chains (R6: becomes the sitcom door)",
+   302.52655029296875,
+   164.12303924560547
+  ],
+  [
+   "door stays at the LEFT edge: in picture-in-picture it meets the kitchen door at the seam",
+   329.9622344970703,
+   158.44842910766602
+  ],
+  [
+   "old tube TV on a crate, grey static",
+   640.0,
+   405.6899070739746
+  ],
+  [
+   "shoebox of cassette tapes",
+   753.795166015625,
+   552.9486215114594
+  ],
+  [
+   "junk under white sheets",
+   825.7717895507812,
+   427.83971786499023
+  ],
+  [
+   "broken grave slab in the floor: tunnel up from the graveyard",
+   1041.8289947509766,
+   626.4462661743164
+  ],
+  [
+   "single bare bulb",
+   640.0,
+   159.93390083312988
+  ],
+  [
+   "tiny cobwebbed window high up",
+   928.7105560302734,
+   179.8088550567627
+  ]
+ ],
+ "figuren": [
+  [
+   "3 bedsheet ghosts 0.75 m (float)",
+   521.6241836547852,
+   406.7175364494324,
+   827.1805572509766,
+   532.7953720092773
+  ],
+  [
+   "sitcom dad on a crate (after R6)",
+   412.1171569824219,
+   388.2319235801697,
+   515.9104919433594,
+   614.9671947956085
+  ],
+  [
+   "tomcat 0.56 m",
+   861.6461181640625,
+   564.1540217399597,
+   984.4452667236328,
+   675.4526978731155
+  ],
+  [
+   "Max 1.75 m (front)",
+   67.89924621582031,
+   328.325514793396,
+   153.63279342651367,
+   694.9562358856201
+  ],
+  [
+   "Max (back of walk area)",
+   993.2741546630859,
+   310.5875301361084,
+   1080.5126953125,
+   623.2278835773468
+  ]
+ ]
+}

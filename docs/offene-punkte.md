@@ -162,6 +162,18 @@ Restpunkte aus der Umsetzung der Arbeitspakete AP-01 bis AP-11 (Stand je Paket i
 | W3-13 | Anspieltest über den echten Klick- und Gesprächsweg auch für Welt 1 und Welt 2 (L-S01, Vorbild `welt_3_anspiel.gd`) | Claude | `game/tests/` |
 | W3-14 | Rest aus AP-11 (Workflow): Statusliste aus den Daten erzeugen statt von Hand (WF-04), KI-Protokoll um Seed, Status, Kosten und Nacharbeit erweitern und Ist-Kosten Welt 3 mit Kontostand nachtragen (WF-05, WF-10), Lauf-Rig und Bein-Prüfung mit Grenzwerten ins Repo (WF-08, WF-09), Originale als PNG (WF-12), CI-Cache und Pfadfilter (WF-13), Werkzeug-Rezepte aus den Lessons ins `liesmich.md` (WF-15) | Claude; Kontostände Sebastian (AI Studio) | `review/2026-11-20/arbeitspakete.md` (AP-11) |
 
+## Welt 4, Grafik (26. November 2026)
+
+Aus der Vervollständigung der Prompts (`grafik/welt-4.md`, Zweig `claude/project-thread-pmnx1g`) und den Grafik-Befunden des Reviews vom 21. November 2026. W4-G1 (Käsemann nur im Comic-Kanal) und W4-G2 (Rauschen bleibt Raum) sind am 26. November entschieden, siehe `entscheidungen.md`.
+
+| Nr. | Was offen ist | Wer, was zu tun ist | Besitzer-Datei |
+| --- | --- | --- | --- |
+| W4-G3 | Sitcom-Küche, Werbespot-Set und Empfang sind jetzt 1280×360 (R5-W4-15); Layout ist verdoppelt, Anspieltest grün. Beim Einbau Laufwege und Startplätze im Spiel nachsehen | Claude beim Einbau | `tools/layout/welt-4.yaml` |
+| W4-G4 | Fünf neue Ansehen-Zeilen ohne Skriptzeile (ON-AIR-Lampe, Applaus-Leuchtkasten, Glühbirnenreihen, Zeitungskiosk, Band im Studio) | Sebastian gibt frei; danach Claude: Zeilen ins Skript | `skript/welt-4.md` |
+| W4-G5 | Kommissar raucht laut Skript Zigarre, das alte Figuren-Motiv hatte einen Lolli; Motiv auf Zigarre umgestellt | erledigt im Motiv, beim Figurenblatt prüfen | `grafik/welt-4.md` |
+| W4-G6 | Gepard als Probelauf für alle Tiere: erst wenn der Sprint im Raum passt, die übrigen fünf Tierarten | Claude nach dem Figurenblatt | `grafik/status-alle-shots.md` |
+| W4-G7 | Comic-Shader für Max, Pixel und Käsemann im Comic-Kanal (Kontur und Rasterpunkte) gibt es noch nicht | Claude beim Einbau | `game/` |
+
 ## Automatisierung
 
 Alle sechzehn Ideen sind in `03-produktion.md` (Abschnitt Automatisierung) mit Nutzen, Aufwand und Stufe beschrieben. Hier stehen nur die, an denen noch etwas offen ist. Erledigt und deshalb gestrichen: A13 (`tools/pruefen.py`), A14 (`tools/spieldaten.py`) und A16 (`game/tests/bildschirm_vergleich.gd`). Die Dokument-Prüfung deckt auch den Dokument-Teil von A2 ab.

@@ -1,6 +1,6 @@
 """Beschriftet die Rohbau-Renders aus rohbau_raeume.py (Pillow).
 
-Aufruf: py -3 tools/grafik_w3/rohbau_notiz.py ORDNER
+Aufruf: py -3 tools/grafik_w3/rohbau_notiz.py ORDNER (auch für Welt 4: docs/grafik/skizzen/welt-4/rohbau)
 Liest <raum>_rohbau.png und .json, schreibt <raum>_rohbau_notiz.png: Beschriftungen (englisch, wie
 die Prompts), Figurenplätze lila gestrichelt (Platz frei lassen, eigene Sprites), Max grau als Maßstab.
 """
@@ -11,10 +11,15 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
 ordner = Path(sys.argv[1])
-try:
-    font = ImageFont.truetype("C:/Windows/Fonts/arial.ttf", 17)
-    font_k = ImageFont.truetype("C:/Windows/Fonts/arial.ttf", 15)
-except OSError:
+font = font_k = None
+for _datei in ("C:/Windows/Fonts/arial.ttf", "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"):
+    try:
+        font = ImageFont.truetype(_datei, 17)
+        font_k = ImageFont.truetype(_datei, 15)
+        break
+    except OSError:
+        pass
+if font is None:
     font = font_k = ImageFont.load_default()
 
 

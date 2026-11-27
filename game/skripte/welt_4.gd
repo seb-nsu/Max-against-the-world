@@ -26,6 +26,8 @@ const KANAL_FREI := {"gluecksrad": "R2", "sitcom_kueche": "R2", "savanne": "R2",
 ## Genre je Raum (Spukhaus gehört zum Mitternachts-TV, die Fabrik zum Comic-Kanal)
 const GENRE := {"friedhof": "grusel", "spukhaus_keller": "grusel", "spukhaus_halle": "grusel",
 	"kapitolis": "comic", "fondue_fabrik": "comic"}
+## Räume, in denen Max nach R10 als Käsemann zu sehen ist
+const COMIC_KANAL := ["kapitolis", "fondue_fabrik", "werbespot_set"]
 const SENDERZENTRALE := ["empfang", "kellerarchiv", "zappmanns_studio"]
 const TASTEN := ["taste_pause", "taste_rueckspulen", "taste_stumm", "taste_untertitel",
 	"taste_sendersuchlauf", "splitscreen_adapter"]
@@ -398,6 +400,7 @@ func _figuren_anwenden(raum: CQRaum) -> void:
 func _raum_betreten(raum: CQRaum) -> void:
 	var rid := raum.raum_id()
 	_tanz_fehler = 0
+	_bildvarianten(rid)
 	if rid != "rauschen" and not Zustand.ist("W4_PIXEL_IM_RAUSCHEN"):
 		Zustand.setze_wert("W4_MAX_RAUM", rid)
 	# Genre-Logik: Max' Gegenstände nehmen das Genre des Senders an
@@ -413,6 +416,25 @@ func _raum_betreten(raum: CQRaum) -> void:
 				Zustand.loese("R10a")
 			if _hat("bananenschale") and _zustand_gegenstand("bananenschale") == "faulig":
 				Zustand.setze_wert("W4_BANANE", "Stinkbombe")
+
+
+## Figuren mit zweitem Bild (tools/grafik_w4/figuren_stand.py): Fledermann hängt in Kapitolis am Laternenarm,
+## der Vater sitzt im Spukhaus-Keller auf der Kiste, Löwe mit Krone nach dem Savannen-Fall, Gepard liegt nach dem Sprint.
+func _bildvarianten(rid: String) -> void:
+	_variante("Fledermann", "fledermann_kopfueber" if rid == "kapitolis" else "")
+	_variante("SitcomVater", "sitcom_vater_kiste" if rid == "spukhaus_keller" else "")
+	_variante("Loewe", "loewe_krone" if _g("R4") else "")
+	_variante("Gepard", "gepard_liegt" if _g("R4b") else "")
+
+
+## Figur sn auf eine Bildvariante setzen (leer = ihr normales Blatt), nur wenn sie im Raum steht.
+func _variante(sn: String, variante: String) -> void:
+	var c = C.get_character(sn)
+	if not c is CQFigur or not c.is_inside_tree():
+		return
+	var soll := variante if variante != c.objekt_id() else ""
+	if c.grafik_variante != soll:
+		c.grafik_laden(soll)
 
 
 ## Szene beim ersten Betreten (einmal je Raum)
@@ -569,6 +591,9 @@ func _sender_wechseln(ziel: String, von := "") -> void:
 			and not _g("R3") and _hat("billig_fernbedienung"):
 		Zustand.setze("W4_KOMMISSAR_KOMMT")
 	Zustand.setze("W4_KOMMISSAR_FOLGT", false)
+	# Käsemann gibt es nur im Comic-Kanal (Entscheidung 26. Nov. 2026): beim ersten Verlassen Maske ab
+	if von in COMIC_KANAL and not ziel in COMIC_KANAL and _g("R10") and _einmal("W4_KAESEMANN_ABGELEGT"):
+		await _sag("W4_FERN_MAX_0280")
 	Klang.geraeusch("umschalten")
 	await _sag("W4_FERN_NAR_0060")
 	I.active = null
@@ -926,6 +951,7 @@ func benutzen_flamingos(_obj, _x) -> bool:
 	if Zustand.ist("W4_GEPARD_VERHOERT") and not _g("R4b"):
 		await _szene(["W4_VERH_FLA_0180", "W4_VERH_MAX_0190"])
 		Zustand.loese("R4b")
+		_bildvarianten(_raum_id())
 		return true
 	return false
 
@@ -981,6 +1007,7 @@ func gegenstand_hyaene(_obj, iid) -> bool:
 		_geben.bind("taste_rueckspulen"), "W4_VERH_MAX_0420", "W4_VERH_ERZ_0430"])
 	await _geben("taste_rueckspulen")
 	Zustand.loese("R4")
+	_bildvarianten(_raum_id())
 	return true
 
 
@@ -1363,12 +1390,14 @@ func _kampf(t: String) -> void:
 				await _sag("W4_STUD_MAX_0570")
 			elif schritt == 3:
 				await _szene(["W4_STUD_MAX_0270", "W4_STUD_NAR_0280", "W4_STUD_MAX_0290"])
+				Zustand.setze("W4_APPLAUS_AUS")   # Hintergrund: Applaus-Schild aus
 				Zustand.setze_wert("W4_KAMPF", 4)
 			else:
 				await Spiel.ersatz()
 		"taste_untertitel":
 			if schritt == 4:
 				await _szene(["W4_STUD_ZAP_0300", "W4_STUD_MAX_0310", "W4_STUD_PIX_0320", "W4_STUD_NAR_0330"])
+				Zustand.setze("W4_QUOTE_ROT")     # Hintergrund: Quote eingebrochen
 				Zustand.setze_wert("W4_KAMPF", 5)
 			else:
 				await _sag("W4_STUD_MAX_0530")

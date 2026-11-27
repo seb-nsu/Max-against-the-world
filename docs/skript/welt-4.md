@@ -221,6 +221,7 @@ Ansehen und Benutzen der beiden Werkzeuge der Welt. Die Programmzeitschrift ist 
 | W4\_FERN\_MAX\_0250 | Max | Die Fernbedienung auf die Zeitschrift? Dafür hat man früher den Daumen benutzt. Zum Umblättern übrigens auch. | Fernbedienung mit Programmzeitschrift |
 | W4\_FERN\_PIX\_0260 | Pixel | Die ist aus Plastik. Nicht einmal aus Thunfisch-Plastik, falls es so etwas gibt. // Ich habe trotzdem kurz daran geleckt. Aus wissenschaftlichen Gründen. | Pixel auf Fernbedienung |
 | W4\_FERN\_MAX\_0270 | Max | Umschalten geht hier nicht. Das Studio hat keine Nachbarn, es ist eine Sackgasse mit sehr teurem Teppich. | Umschalten in Zappmanns Studio, vor R13 (in Empfang und Kellerarchiv geht Umschalten) |
+| W4\_FERN\_MAX\_0280 | Max | Maske ab, Laken zusammengelegt. Käsemann gibt es nur im Comic. Draußen bin ich wieder Max, und der reicht auch. | Umschalten aus dem Comic-Kanal nach R10, erstes Mal; Max nimmt Maske und Umhang ab (Käsemann nur im Comic-Kanal, Entscheidung 26. Nov. 2026) |
 
 ## 5. Küchen-Sitcom: Die Familie (Rätsel 3)
 
